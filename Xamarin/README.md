@@ -437,6 +437,29 @@ Click Add Packages.
 Navigate to the ```Project > Manage NuGet Packages...```
 Search for **Mobile Center**, then install ```Microsoft.Azure.Mobile.Analytics``` and ```Microsoft.Azure.Mobile.Crashes``` packages.
 
+**Package Manager Console** <br>
+Make sure the Package Manager Console is opened in either Xamarin Studio or Visual Studio. You will have to install an add-in for Xamarin Studio.
+Type the following commands:
+```
+PM> Install-Package Microsoft.Azure.Mobile.Analytics PM> Install-Package Microsoft.Azure.Mobile.Crashes 
+```
+Now that you've integrated the SDK in your application, it's time to start the SDK and make use of the Mobile Center services
+
+## 4. Start the SDK
+In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
+
+##### 4.1 Add the using statements
+Add the appropriate namespaces before you get started with using our APIs.
+ * Xamarin.Android - Open your ```MainActivity.cs``` and add the following lines below the existing ```using``` statements.
+ * Xamarin.iOS - Open you ```AppDelegate.cs``` and add the following lines below the existing ```using``` statements.
+ * Xamarin.Forms - Open your ```App.xaml.cs``` in your shared project and add the following lines below the existing ```using``` statements:
+ ```
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
+```
+
+
 # Supported versions and requirements
 Mobile Center supports Portable Class Library (PCL) projects, but does not currently support .NET Standard. Mobile Center has no support for Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available.
 
