@@ -363,13 +363,26 @@ Mobile Center Crash Reporting lets developers collect crashes in their apps whet
  
  **Troubleshooting** <br>
  **1) Why are crash reports not visible after a few minutes?**
-Right now crash reports are only visible if they can be symbolicated. For that to happen the proper symbols (dSYM) need to be uploaded. There will be a UI available later that shows which symbols are missing and how to find them.
+    * Right now crash reports are only visible if they can be symbolicated. For that to happen the proper symbols (dSYM) need       to be uploaded. There will be a UI available later that shows which symbols are missing and how to find them.
  **2) What could be another reason for the crash report to not appear?**
-Make sure the app doesn't crash on startup, as the SDK wouldn't have time to send the crash report. This is a limitation for any 3rd party crash reporting service.
+    * Make sure the app doesn't crash on startup, as the SDK wouldn't have time to send the crash report. This is a limitation       for any 3rd party crash reporting service.
  **3) The symbols are uploaded but the previous crash reports are not appearing.**
-As of now only new incoming crashes will be symbolicated. Processing pending crashes is on our roadmap.
+    * As of now only new incoming crashes will be symbolicated. Processing pending crashes is on our roadmap.
  
+## Android Crashes
+**Getting Started** <br>
+ 1) Integrate the SDK as described in the [Getting Started with Android documentation.](https://docs.microsoft.com/en-us/mobile-center/sdk/getting-started/android)
+ 2) Add a test crash to the apps code by calling the ```Crashes.generateTestCrash()``` method of the crash reporting module as an action to a buttone
+ 3) Run the app without the debugger connected, crash it and restart it
+ 4) After a few minutes the crash report should be visible in the UI
  
+**Troubleshooting** <br>
+ **1) Why are crash reports not visible after a few minutes?**
+    * Make sure the app doesn't crash on startup, as the SDK wouldn't have time to send the crash report. This is a limitation     for any 3rd party crash reporting service which is not possible to overcome.
+ **2) How can I see de-obfuscated stack traces?**
+    * This is currently not supported but on our roadmap.
+ **3) Do you have an Android NDK?**
+    * This is currently not available but on our roadmap.
  
  
 
