@@ -392,7 +392,28 @@ Mobile Center Crash Reporting lets developers collect crashes in their apps whet
  3) Do you have an Android NDK?
     * This is currently not available but on our roadmap.
  
+ # Mobile Center Analytics 
+ Let's get started with setting up Mobile Center Xamarin SDK in your app to use Mobile Center Analytics and Mobile Center Crashes. To add Mobile Center Distribute to you app, please have a look at the [documentation for Mobile Center Distribute.](https://docs.microsoft.com/en-us/mobile-center/sdk/distribute/xamarin)
  
+## 1. Prerequisites
+Before you begin, please make sure that the following prerequisites are met:
+ * Your project is set up in Xamarin Studio or Xamarin for Visual Studio.
+ * You are targeting devices running iOS 8.0 or later or Android 4.0.3 (API level 15) or later
+ * You are not using any other SDK that provides Crash Reporting functionality.
+The Mobile Center SDK for Xamarin supports the following platforms:
+ * Xamarin.Android
+ * Xamarin.iOS
+ * Xamarin.Forms (iOS, Android and UWP)
+ 
+##### 1.1 About Xamarin.Android
+Choose this option if you target no other platform but Android. You need to create one app in the Mobile Center portal with the **Android** as the OS and **Xamarin** as the platform.
+
+##### 1.2 About Xamarin.iOS
+Choose this option if you target no other platform but iOS. You need to create one app in the Mobile Center portal with **iOS** as the OS and **Xamarin** as the platform.
+
+##### 1.3 About Xamarin.Forms (iOS, Android and UWP)
+Choose this option if you want to create a cross platform app for iOS, Android and UWP devices. You need to create 3 apps in Mobile Center – one for each OS.
+You need to select **Xamarin** as the platform for Android and iOS applications (UWP does not have a Xamarin option
 
 
 # Supported versions and requirements
