@@ -3,8 +3,8 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="MobileAzureDevDays.Pages.HomePage"
-    IsBusy="{Binding IsInternetConnectionActive}"
-    BackgroundColor="Blue">
+    BackgroundColor= "#FF6F69" 
+    IsBusy="{Binding IsInternetConnectionActive}" >
 
      <ContentPage.Padding>
         <OnPlatform 
@@ -43,9 +43,9 @@
             HorizontalOptions ="Center" VerticalOptions= "Center" />
 
         <Label
-            IsVisible="{Binding IsInternetConnectionActive}"
             TextColor= "White"
             Text= "Calculating Sentiment..."
+            IsVisible="{Binding IsInternetConnectionActive}"
             HorizontalOptions= "Center" VerticalOptions= "Center"/>
         <Label
             FontSize="200"
