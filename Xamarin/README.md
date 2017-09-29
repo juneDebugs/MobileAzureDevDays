@@ -362,11 +362,11 @@ Mobile Center Crash Reporting lets developers collect crashes in their apps whet
  4) After the zip file is indexed by Mobile Center new incoming crashes will be symbolicated.
  
  **Troubleshooting** <br>
- **1) Why are crash reports not visible after a few minutes?**
+ 1) Why are crash reports not visible after a few minutes?
     * Right now crash reports are only visible if they can be symbolicated. For that to happen the proper symbols (dSYM) need       to be uploaded. There will be a UI available later that shows which symbols are missing and how to find them.
- **2) What could be another reason for the crash report to not appear?**
+ 2) What could be another reason for the crash report to not appear?
     * Make sure the app doesn't crash on startup, as the SDK wouldn't have time to send the crash report. This is a limitation       for any 3rd party crash reporting service.
- **3) The symbols are uploaded but the previous crash reports are not appearing.**
+ 3) The symbols are uploaded but the previous crash reports are not appearing.
     * As of now only new incoming crashes will be symbolicated. Processing pending crashes is on our roadmap.
  
 ## Android Crashes
