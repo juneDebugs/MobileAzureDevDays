@@ -377,11 +377,11 @@ Mobile Center Crash Reporting lets developers collect crashes in their apps whet
  4) After a few minutes the crash report should be visible in the UI
  
 **Troubleshooting** <br>
- **1) Why are crash reports not visible after a few minutes?**
+ 1) Why are crash reports not visible after a few minutes?
     * Make sure the app doesn't crash on startup, as the SDK wouldn't have time to send the crash report. This is a limitation     for any 3rd party crash reporting service which is not possible to overcome.
- **2) How can I see de-obfuscated stack traces?**
+ 2) How can I see de-obfuscated stack traces?
     * This is currently not supported but on our roadmap.
- **3) Do you have an Android NDK?**
+ 3) Do you have an Android NDK?
     * This is currently not available but on our roadmap.
  
  
