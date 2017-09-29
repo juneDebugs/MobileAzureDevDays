@@ -344,8 +344,30 @@ The Mobile Center roadmap includes a solution to automatically register device I
 ## Privacy concerns on username and password
 Mobile Center only uses your Apple ID once as a one-time transaction, and it does not store or in any other way have access to your username and password
  
+# Mobile Center Crash
+Mobile Center Crash Reporting lets developers collect crashes in their apps whether they occur in testing or in production.
+
+## iOS Crashes
+**Getting Started** <br>
+ 1) Integrate the SDK as described in the [Getting Started with iOS documentation.](https://docs.microsoft.com/en-us/mobile-center/sdk/getting-started/ios)
+ 2) Upload the symbols that are created with each build using the Incoming page under the app.
+ 3) Add a test crash to the app's code by calling the ```generateTestCrash``` method of the crash reporting module as an action to a button.
+ 4) Run the app without the debugger connected, crash it and restart it.
+ 5) After a few minutes the crash report should be visible in the UI.
  
+**Uploading symbols** <br>
+ 1) Create a ZIP file for the dSYM package on your Mac.
+ 2) Open the **Incoming page** under **Crash Reporting** on Mobile Center of the app.
+ 3) Upload the zip file.
+ 4) After the zip file is indexed by Mobile Center new incoming crashes will be symbolicated.
  
+ **Troubleshooting** <br>
+ **1) Why are crash reports not visible after a few minutes?**
+Right now crash reports are only visible if they can be symbolicated. For that to happen the proper symbols (dSYM) need to be uploaded. There will be a UI available later that shows which symbols are missing and how to find them.
+ **2) What could be another reason for the crash report to not appear?**
+Make sure the app doesn't crash on startup, as the SDK wouldn't have time to send the crash report. This is a limitation for any 3rd party crash reporting service.
+ **3) The symbols are uploaded but the previous crash reports are not appearing.**
+As of now only new incoming crashes will be symbolicated. Processing pending crashes is on our roadmap.
  
  
  
