@@ -306,8 +306,15 @@ To upload a package to Mobile Center, use the navigation bar on the left to navi
     a. Create an upload resource and get an ```upload_url``` (good for 24 hours) — [POST /createReleaseUpload](https://docs.mobile.azure.com/api/#!/distribute/createReleaseUpload)
     ```
     curl -X POST --header 'Content-Type: application/json' --header 'Accept:
-    application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'              'https://api.mobile.azure.com/v0.1/apps/JoshuaWeber/APIExample/release_uploads'
+    application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+    'https://api.mobile.azure.com/v0.1/apps/JoshuaWeber/APIExample/release_uploads'
     ```
+    b. Upload to upload_url (will be a rink.hockeyapp.net URL). Use ```multipart/form-data``` where the ```key``` is ipa (key is always ipa even when uploading APKs)
+    ```
+    curl -F "ipa=@Versions_1_1_0_12.ipa" https://rink.hockeyapp.net/api/sonoma/apps/cacf9867-87f7-4649-a400-
+    632a775dde2d/app_versions/upload\?upload_id\=c18df340-069f-0135-3290-22000b559634
+    ```
+    
 
 
 
