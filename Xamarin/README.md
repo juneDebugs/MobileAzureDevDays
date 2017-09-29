@@ -15,5 +15,6 @@ Next step once you have selected a repository is to select the branch you want t
 To kick off the first build, configure how the iOS project should get built.
 
 ###### 3.1. Project/solution
+Mobile Center automatically detects the solution and project files in your repository. Select the **.sln** or **.csproj/.fsproj** you would like to build.
 
 
