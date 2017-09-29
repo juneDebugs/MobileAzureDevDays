@@ -46,7 +46,7 @@ default settings for Debug and Release only.
   * A successful device build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](https://docs.microsoft.com/en-us/mobile-center/build/ios/code-signing/uploading-files), along with the password for the certificate. You can read more about code signing and device provisioning of Xamarin iOS apps in the [Xamarin official documentation](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning/).
 
 **3.9. Launch your successful build on a real device** <br>
-  * Use your newly produced IPA file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. You may want to check more comprehensive guide about testing your builds
+  * Use your newly produced IPA file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. You may want to check more [comprehensive guide about testing your builds](https://docs.microsoft.com/en-us/mobile-center/build/build-test-integration).
 
 **3.10. NuGet restore** <br>
   * If the NuGet.config file is checked-in into the repository and sitting next to the .sln or at the root, Mobile Center will auto-restore the NuGet feed. To restore private NuGet feeds, make sure you include the credentials in the NuGet.config file:
