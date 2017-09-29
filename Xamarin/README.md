@@ -105,16 +105,31 @@ If this is a simulator build, you can run the .app file on a simulator, but you 
 
 # Xamarin.Android Build
 
- * To start building an app, first of all, you need to connect to your repository service (GitHub, Bitbucket, VSTS) account, select a repository and a branch where your app lives and then you can set up your first build. Choose the Android project that you would like to build; for the app to run on a real device, the build needs to be code signed with a valid KeyStore.
+To start building an app, first of all, you need to connect to your repository service (GitHub, Bitbucket, VSTS) account, select a repository and a branch where your app lives and then you can set up your first build. Choose the Android project that you would like to build; for the app to run on a real device, the build needs to be code signed with a valid KeyStore.
 
 ## 1. Linking your repository
- * If you haven't done it previously already, first of all, you have to connect your repository service (GitHub, Bitbucket, VSTS) account. Once your account is connected, select the repository where your Android project is located. In order to setup a build for a repository, you need admin and pull rights for it.
+If you haven't done it previously already, first of all, you have to connect your repository service (GitHub, Bitbucket, VSTS) account. Once your account is connected, select the repository where your Android project is located. In order to setup a build for a repository, you need admin and pull rights for it.
 
 ## 2. Selecting a branch
- * The next step once you have selected a repository is to select the branch you want to build. By default, all the active branches will be listed. Upon selecting the branch you want to get started with, it is time to setup your first build!
+The next step once you have selected a repository is to select the branch you want to build. By default, all the active branches will be listed. Upon selecting the branch you want to get started with, it is time to setup your first build!
 
 ## 3. Configuring Your Build
- * To kick off the first build, configure how the Android project should get built.
+To kick off the first build, configure how the Android project should get built.
+
+**3.1. Build triggers** <br>
+ * By default, a new build is triggered on every push a developer does to the configured branch. This is often referred to as “Continuous Integration”. If you prefer to manually trigger a new build, you can change this setting in the configuration pane.
+
+**3.2. Project and Configuration** <br>
+ * The available projects in your repository will populate. Select the correct project for your Android build and select the appropriate configuration.
+ 
+**3.3. Mono version** <br>
+ * Mobile Center **allows using different Mono environments** for your build to maintain **backward compatibility** while releasing a support for new features. The default Mono version for a new branch configuration will be the latest one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries.
+ 
+ **3.4. Increment version number** <br>
+ When enabled, the version code in the AndroidManifest.xml of your app automatically increments for each build. The change happens pre build and won't be committed to your repository.
+ 
+ **3.5. Code signing** <br>
+ A successful build will produce an apk file. In order to release the build to the Play Store, it needs to be signed with a valid Keystore and Alias. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your Keystore, and provide the values needed in the configuration pane. You can read more [detailed code signing instructions.](https://docs.microsoft.com/en-us/mobile-center/build/android/code-signing/xamarin)
 
 
 
