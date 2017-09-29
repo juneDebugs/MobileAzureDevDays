@@ -265,13 +265,23 @@ Mobile Centre for Test does not support the following hardware features:
  * Physically rotating the device
  * Simulating different battery conditions
  
-# Test Cloud Security
+## Test Cloud Security
 Devices in Test Cloud are part of a shared public cloud, meaning that many users will install their app and run their tests on the same physical devices. While Test Cloud prohibits uploading personally identifiable information (PII), measures are taken to ensure security across test runs by different users. <br>
  * Any apps installed during a test run are uninstalled
  * All local storage is cleared from the device
  * Devices are restored to their default settings
 
+# Distribution with Mobile Center
+Mobile Center Distribution is a tool to for developers to release application binaries to their end user devices. The speed and integration capabilities make this tool perform admirably for release of pre-production or beta software to testing devices. Mobile Center Distribution supports the distribution of application packages for both iOS and Android.
 
+## Getting Started
+Distributing with Mobile Center is easy, and only requires a few steps. No need for an SDK. Just the application binary. <br>
+ 1) [Add users to your app](https://docs.microsoft.com/en-us/mobile-center/dashboard/creating-and-managing-apps) to grant access to all releases.
+ 2) [Create Distribution Groups](https://docs.microsoft.com/en-us/mobile-center/distribution/groups)to manage access.
+ 3) [Upload](https://docs.microsoft.com/en-us/mobile-center/distribution/uploading) a new application release.
+    * At the completion of the upload an email will be sent to all users of the app to notify them of the new release.
+ 4) [Install](https://docs.microsoft.com/en-us/mobile-center/distribution/installation) the release onto your device by clicking on the link in the email.
+ 5) Enable [In-App Updates](https://docs.microsoft.com/en-us/mobile-center/distribution/inappupdates) to help your users stay always on the latest release.
 
 
 # Supported versions and requirements
