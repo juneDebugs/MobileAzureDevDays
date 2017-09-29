@@ -282,6 +282,26 @@ Distributing with Mobile Center is easy, and only requires a few steps. No need 
     * At the completion of the upload an email will be sent to all users of the app to notify them of the new release.
  4) [Install](https://docs.microsoft.com/en-us/mobile-center/distribution/installation) the release onto your device by clicking on the link in the email.
  5) Enable [In-App Updates](https://docs.microsoft.com/en-us/mobile-center/distribution/inappupdates) to help your users stay always on the latest release.
+ 
+ ## Release a Build
+ In order to distribute a release via Mobile Center, you must first upload your application binary package to Mobile Center. Mobile Center supports both .ipa and .apk package uploads for iOS and Android, respectively.
+ 
+ **iOS** <br>
+You will need to use the following steps to generate an IPA package for your application. For full details of this process please see the official [Apple documentation.](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/TestingYouriOSApp/TestingYouriOSApp.html#//apple_ref/doc/uid/TP40012582-CH8-SW1) <br>
+ 1) [Register UDIDs](https://docs.microsoft.com/en-us/mobile-center/distribution/auto-provisioning) for all hardware devices in your provisioning profile.
+ 2) Archive your application. In Xcode go to ```Product > Archive```
+ 3) Export the archive using the proper provisioning profile. Make sure to remember where the IPA file was placed on disk.
+
+**Android** <br>
+For Android you will need to produce a properly signed apk file. For full details of this process please see the official [Google documentation.](https://developer.android.com/studio/publish/preparing.html) <br>
+ 1) Ensure you have [updated the manifest](https://developer.android.com/guide/topics/manifest/manifest-intro.html) and have a [properly configured Gradle build.](https://developer.android.com/studio/build/build-variants.html)
+Build the APK. From Android Studio select the build variant and then execute command ```Build > Build APK```
+
+## Uploading the package
+To upload a package to Mobile Center, use the navigation bar on the left to navigate to Distirbution. Then select "Distribute new release" button. Drag and drop or click to open a file dialog to upload your package. Optionally fill in some release notes. Select next and select a Distribution Group. This release will only be available to the users that have been added to that specific Distribution Group. Click next and review the release, then click distribute to release. On clicking the distribute button the release will be made available via Mobile Center and an email notification of the new version will be sent to all users of this application. Congrats, you have successful distributed a release via Mobile Center.
+
+##### Uploading using the APIs
+
 
 
 # Supported versions and requirements
