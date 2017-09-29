@@ -74,7 +74,7 @@ default settings for Debug and Release only.
 Once you save the configuration, a new build will be automatically kicked off.
 
 ## 4. Build results
-* After a build has been triggered, it can be in the following states:
+After a build has been triggered, it can be in the following states:
  * **queued** - the build is in a queue waiting for resources to be freed up
  * **building** - the build is running and performing the predefined tasks
  * **succeeded** - the build is completed and it has succeeded
@@ -98,6 +98,9 @@ Once you save the configuration, a new build will be automatically kicked off.
 If this is a simulator build, you can run the .app file on a simulator, but you cannot use it on a real device.
 
 **4.3. The symbol files (.dsym)** <br>
+* Symbol files are only generated for device builds. The .dsym files contains the debug symbols for the app.
+     1) If you have previously integrated the Mobile Center SDK in your app with the crash reporting module enabled, the crash reporting        beacon requires this .dsym file for a build in order to display human readable (symbolicated) crash reports
+     2) if you have previously integrated another SDK for crash reporting purposes in your app (e.g. HockeyApp SDK), the corresponding          service requires the .dsym file in order to display human readable (symbolicated) crash reports
 
 
 
