@@ -448,7 +448,7 @@ Now that you've integrated the SDK in your application, it's time to start the S
 ## 4. Start the SDK
 In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
-##### 4.1 Add the using statements
+**4.1 Add the using statements** <br>
 Add the appropriate namespaces before you get started with using our APIs.
  * Xamarin.Android - Open your ```MainActivity.cs``` and add the following lines below the existing ```using``` statements.
  * Xamarin.iOS - Open you ```AppDelegate.cs``` and add the following lines below the existing ```using``` statements.
@@ -458,6 +458,8 @@ using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Analytics;
 using Microsoft.Azure.Mobile.Crashes;
 ```
+
+**4.2 Add the ```Start()``` method** <br>
 
 
 # Supported versions and requirements
