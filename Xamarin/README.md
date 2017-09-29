@@ -42,4 +42,33 @@ Simulator builds can only be ran on simulators and cannot be installed on the de
 **3.7. Increment build number** <br>
 When enabled, the ```CFBundleVersion``` in the Info.plist of your app automatically increments for each build. The change happens pre build and won't be committed to your repository.
 
+**3.8. Code signing** <br>
+A successful device build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload a provisioning profile (.mobileprovision) and a valid certificate (.p12), along with the password for the certificate. You can read more about code signing and device provisioning of Xamarin iOS apps in the Xamarin official documentation.
+
+**3.9. Launch your successful build on a real device** <br>
+Use your newly produced IPA file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. You may want to check more comprehensive guide about testing your builds
+
+**3.10. NuGet restore** <br>
+If the NuGet.config file is checked-in into the repository and sitting next to the .sln or at the root, Mobile Center will auto-restore the NuGet feed. To restore private NuGet feeds, make sure you include the credentials in the NuGet.config file:
+```<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <add key="nuget" value="https://api.nuget.org/v2/index.json" />
+    <add key="MyGet" value="https://www.myget.org/F/MyUsername/api/v2/index.json" />
+    <add key="MyAuthNuget" value="https://nuget.example.com/v2/index.json" />
+  </packageSources>
+  <activePackageSource>
+    <add key="All" value="(Aggregate source)" />
+  </activePackageSource>
+  <packageSourceCredentials>
+    <MyAuthNuget>
+      <add key="Username" value="myusername" />
+      <add key="ClearTextPassword" value="password" />
+    </MyAuthNuget>
+  </packageSourceCredentials>
+</configuration>```
+
+**3.11. Distribution to a distribution group** <br>
+
+
 
