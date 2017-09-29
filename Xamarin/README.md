@@ -415,9 +415,29 @@ Choose this option if you target no other platform but iOS. You need to create o
 Choose this option if you want to create a cross platform app for iOS, Android and UWP devices. You need to create 3 apps in Mobile Center – one for each OS.
 You need to select **Xamarin** as the platform for Android and iOS applications (UWP does not have a Xamarin option
 
+## 2. Create your app in the Mobile Center Portal to obtain the App Secret
+If you have already created your app in the Mobile Center portal, you can skip this step.
+ 1) Head over to [mobile.azure.com.](https://mobile.azure.com/apps)
+ 2) Sign up or log in and hit the blue button on the top right corner of the portal that says ```Add new``` and select ```Add new app``` from the dropdown menu.
+ 3) Enter a name and an optional desciption for your app.
+ 4) Select the appropriate OS and platform depending on your project as described above.
+ 5) Hit the button at the bottom right that says ```Add new app```.
+
+Once you have created an app, you can obtain its **App Secret** on the **Getting Started** or **Manage App sections** of the Mobile Center Portal.
+
+## 3. Add the Mobile Center SDK to your solution
+The Mobile Center SDK can be integrated using Xamarin Studio, Visual Studio, or the Package Manager Console.
+
+**Visual Studio for Mac or Xamarin Studio** <br>
+Under your project, select Packages, open context menu and click Add packages.
+Search for Mobile Center, and select Mobile Center Analytics and Mobile Center Crashes.
+Click Add Packages.
+
+**Visual Studio for Windows** <br>
+Navigate to the ```Project > Manage NuGet Packages...```
+Search for **Mobile Center**, then install ```Microsoft.Azure.Mobile.Analytics``` and ```Microsoft.Azure.Mobile.Crashes``` packages.
 
 # Supported versions and requirements
 Mobile Center supports Portable Class Library (PCL) projects, but does not currently support .NET Standard. Mobile Center has no support for Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available.
-
 
 
