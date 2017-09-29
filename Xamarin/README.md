@@ -126,14 +126,63 @@ To kick off the first build, configure how the Android project should get built.
  * Mobile Center **allows using different Mono environments** for your build to maintain **backward compatibility** while releasing a support for new features. The default Mono version for a new branch configuration will be the latest one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries.
  
  **3.4. Increment version number** <br>
- When enabled, the version code in the AndroidManifest.xml of your app automatically increments for each build. The change happens pre build and won't be committed to your repository.
+  * When enabled, the version code in the AndroidManifest.xml of your app automatically increments for each build. The change happens pre build and won't be committed to your repository.
  
  **3.5. Code signing** <br>
- A successful build will produce an apk file. In order to release the build to the Play Store, it needs to be signed with a valid Keystore and Alias. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your Keystore, and provide the values needed in the configuration pane. You can read more [detailed code signing instructions.](https://docs.microsoft.com/en-us/mobile-center/build/android/code-signing/xamarin)
+  * A successful build will produce an apk file. In order to release the build to the Play Store, it needs to be signed with a valid Keystore and Alias. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your Keystore, and provide the values needed in the configuration pane. You can read more [detailed code signing instructions.](https://docs.microsoft.com/en-us/mobile-center/build/android/code-signing/xamarin)
 
+**3.6. Launch your successful build on a real device** <br>
+ * Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. There is more [specific test integration information.]("https://docs.microsoft.com/en-us/mobile-center/build/build-test-integration")
+ 
+**3.7. NuGet restore** <br>
+ * If the **NuGet.config file** is checked-in into the repository and sitting next to the ```.sln``` or at the root, Mobile Center will auto-restore the NuGet feed. To restore private NuGet feeds, make sure you include the credentials in the **NuGet.config file**:
+ ```
+ <?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <packageSources>
+    <add key="nuget" value="https://api.nuget.org/v2/index.json" />
+    <add key="MyGet" value="https://www.myget.org/F/MyUsername/api/v2/index.json" />
+    <add key="MyAuthNuget" value="https://nuget.example.com/v2/index.json" />
+  </packageSources>
+  <activePackageSource>
+    <add key="All" value="(Aggregate source)" />
+  </activePackageSource>
+  <packageSourceCredentials>
+    <MyAuthNuget>
+      <add key="Username" value="myusername" />
+      <add key="ClearTextPassword" value="password" />
+    </MyAuthNuget>
+  </packageSourceCredentials>
+</configuration>
 
+ ```
+ **3.8. Distribution to a distribution group** <br>
+You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app. <br>
+Once you save the configuration, a new build will be kicked off automatically.
 
-
+## 4. Build results
+After a build has been triggered, it can be in the following states: <br>
+ * **queued** - the build is in a queue waiting for resources to be freed up
+ * **building** - the build is running and performing the predefined tasks
+ * **succeeded** - the build is completed and it has succeeded
+ * **failed** - the build has completed but it has failed; you can troubleshoot what went wrong by downloading and inspecting the build log
+ * **canceled** - the build has been canceled by a user action or it has timed out
+ 
+ **4.1. Build logs** <br>
+ * For a completed build (succeeded or failed), download the logs to understand more about how the build went. Mobile Center provides an archive with the following files:
+ ```
+|-- 1_build.txt (this is the general build log)
+|-- build (this folder contains a separate log file for each build step)
+    |-- <build-step-1>
+    |-- <build-step-2>
+    |--
+    |-- <build-step-n> (e.g. n_Post Job Cleanup.txt
+    
+ ```
+ * The build step specific logs (located in the build/ directory of the archive) are helpful for troubleshooting and understanding in what step and why the build failed.
+ 
+ **4.2. The app (.apk)**<br>
+The APK is an Android application packaged file which stores the Android app. If the build has been correctly signed, the APK can be installed on a real device and deployed to the Play Store. If the build has not been signed, the APK can be run on an emulator or used for other purposes.
 
 
 # Supported versions and requirements
