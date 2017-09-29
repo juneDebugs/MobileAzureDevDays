@@ -83,12 +83,13 @@ After a build has been triggered, it can be in the following states:
 
 **4.1. Build logs** <br>
  * For a completed build (succeeded or failed), download the logs to understand more about how the build went. Mobile Center provides an archive with the following files:
- ```|-- 1_build.txt (this is the general build log)
-|-- build (this folder contains a separate log file for each build step)
-    |-- <build-step-1> (e.g. 2_Get Sources.txt)
-    |-- <build-step-2> (e.g. 3_Pod install.txt)
-    |--
-    |-- <build-step-n> (e.g. n_Post Job Cleanup.txt) 
+ ```
+    |-- 1_build.txt (this is the general build log)
+    |-- build (this folder contains a separate log file for each build step)
+       |-- <build-step-1> (e.g. 2_Get Sources.txt)
+       |-- <build-step-2> (e.g. 3_Pod install.txt)
+       |--
+       |-- <build-step-n> (e.g. n_Post Job Cleanup.txt) 
 ```  
 The build step specific logs (located in the ```build/``` directory of the archive) are helpful for troubleshooting and understanding in what step and why the build failed.
 
@@ -100,6 +101,9 @@ If this is a simulator build, you can run the .app file on a simulator, but you 
 * Symbol files are only generated for device builds. The .dsym files contains the debug symbols for the app.
      1) If you have previously integrated the Mobile Center SDK in your app with the crash reporting module enabled, the crash reporting        beacon requires this .dsym file for a build in order to display human readable (symbolicated) crash reports
      2) if you have previously integrated another SDK for crash reporting purposes in your app (e.g. HockeyApp SDK), the corresponding          service requires the .dsym file in order to display human readable (symbolicated) crash reports
+
+# Supported versions and requirements
+Mobile Center supports Portable Class Library (PCL) projects, but does not currently support .NET Standard. Mobile Center has no support for Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available.
 
 
 
