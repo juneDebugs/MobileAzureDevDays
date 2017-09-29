@@ -224,10 +224,50 @@ After the test run has been created, ensure that the following software is insta
 
 ## Preparing Xamarin.Android Apps
 The two steps detail what is necessary to prepare a Xamarin.Android app and UITest for submission to Mobile Centre for Test:
-Ensure that the app requests the INTERNET permission.
-Disable the Shared Mono Runtime. The Shared Mono Runtime will prevent UITests from running in Mobile Center for Test.
-On Visual Studio 2017, open the project properties, and select the Android Options tab. The first section, Packaging Properties will have a checkbox for the Shared Mono Runtime.
-On Visual Studio for Mac, look in the Project Options, under Build > Android Build. The Packaging and Deployment section of the General tab will have a checkbox for the Shared Mono Runtime.
+ 1) Ensure that the app requests the ```INTERNET``` permission.
+ 2) Disable the **Shared Mono Runtime**. The Shared Mono Runtime will prevent UITests from running in Mobile Center for Test.
+On Visual Studio 2017, open the project properties, and select the ```Android Options tab```. The first section, ```Packaging Properties``` will have a checkbox for the ```Shared Mono Runtime```.
+On Visual Studio for Mac, look in the ```Project Options```, under ```Build > Android Build```. The ```Packaging and Deployment``` section of the ```General``` tab will have a checkbox for the ```Shared Mono Runtime```.
+
+## Preparing Xamarin.iOS Apps
+Xamarin.iOS apps must have the Xamarin Test Cloud Agent linked into the IPA. If necessary, see the guide [Adding Xamarin.UITests to a Solution](https://developer.xamarin.com/guides/testcloud/uitest/adding-uitest/#Adding_the_Xamarin_Test_Cloud_Agent_to_the_iOS_Project) on the Xamarin website for details to how to add the Xamarin Test Cloud Agent to a Xamarin.iOS application.
+
+## Starting a Test Run
+This section provides instructions for initiating a test run with test suites that have been prepared for upload. To learn how to prepare a test suite for upload to Test Cloud, see [preparing tests for upload.](https://docs.microsoft.com/en-us/mobile-center/test-cloud/preparing-for-upload/index) <br>
+
+Initiating a test run in Test Cloud requires the [Mobile Center CLI tool.](https://docs.microsoft.com/en-us/mobile-center/cli/index) <br>
+
+With the Mobile Center CLI tool installed and upload preparation complete, initiating a test run is very straightforward as the UI will guide you through the necessary steps. Begin by navigating to the Test Cloud section within the desired app. Clicking the ```new test run``` button will launch a dialog which will lead you through the 3 steps of preparing a test run.
+
+**Device selection** <br>
+Select the devices against which this test run should execute. This collection of devices can optionally be saved as a set for future use. To save the set, follow the on-screen prompts.
+
+**Test run configuration** <br>
+Select the test framework, set the device locale, and select a test series. Device locale will determine the system-level device settings, such as language. For more on test series, [see this section.](https://docs.microsoft.com/en-us/mobile-center/test-cloud/core-concepts)
+
+**The generated command** <br>
+Each selection from the previous steps will be used to generate a command which is used with the Mobile Center CLI to initiate a test run. For example, a command generated for an Android app with Espresso tests might look like:
+```
+mobile-center test run espresso --app "mobile-center-username/app-name" --devices a32b320b --app-path pathToFile.apk  --test-series "master" --locale "en_US" --build-dir pathToEspressoBuildFolder
+```
+
+
+
+## Limitations
+Please be aware that Mobile Center for Test cannot control any of the following:
+ * Network throttling
+ * Started the app in specific device orientation
+ * VPN into corporate network instead of opening up ports to the firewall
+ * Integration with other apps installed on the device
+
+Mobile Centre for Test does not support the following hardware features:
+ * Bluetooth
+ * Throttling WiFi
+ * Camera
+ * Physically rotating the device
+ * Simulating different battery conditions
+
+
 
 
 # Supported versions and requirements
