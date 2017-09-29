@@ -14,12 +14,32 @@ Next step once you have selected a repository is to select the branch you want t
 ## 3. Setting up your first build
 To kick off the first build, configure how the iOS project should get built.
 
-**3.1. Project/solution**
+**3.1. Project/solution** <br>
 Mobile Center automatically detects the solution and project files in your repository. Select the **.sln** or **.csproj/.fsproj** you would like to build.
 
 ###### 3.1.1. Building from the solution file (.sln)
 In your code make sure to disable Android and UWP projects for build configs that are intended for iOS builds: go into the solution's configuration mappings, and for all mappings that target **iPhone** and **iPhoneSimulator**, uncheck all the projects which are targeting other platforms. This will ensure that when the **.sln** is building, it will not attempt to build the other projects. There is more solution configurations mapping information you can read.
 
 ###### 3.1.2. Building from the project file (.csproj/.fsproj)
-In order to build from a **.csproj/.fsproj** file all the referenced projects (e.g. your PCL project) must contain the configuration with the same name as the one from your source iOS project. So, if you run the **Debug** configuration for the simulator in Mobile Center, your PCL project must have the **Debug|iPhoneSimulator** configuration. In case they don't exist and to prevent further errors we add such configurations before building your projects. Those configurations have basic default settings for Debug and Release only.
+In order to build from a **.csproj/.fsproj** file all the referenced projects (e.g. your PCL project) must contain the configuration with the same name as the one from your source iOS project. So, if you run the **Debug** configuration for the simulator in Mobile Center, your PCL project must have the **Debug|iPhoneSimulator** configuration. In case they don't exist and to prevent further errors we add such configurations before building your projects. Those configurations have basic 
+default settings for Debug and Release only.
+
+**3.2. Configuration** <br>
+Select the configuration you would like to build with. The configurations are automatically detected depending on the source file picked in the previous step.
+
+**3.3. Mono version** <br>
+Mobile Center allows using different Mono environments for your build to maintain backward compatibility while releasing a support for new features. The default Mono version for a new branch configuration will be the latest one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries.
+
+**3.4. Xcode Version** <br>
+Current version of Xamarin requires **Xcode 8.0 or higher**.
+
+**3.5. Build triggers** <br>
+By default a new build is triggered on every push a developer does to the configured branch. This is often referred to as **"Continuous Integration"**. If you prefer to manually trigger a new build, you can change this setting in the configuration pane.
+
+**3.6. Simulator build** <br>
+Simulator builds can only be ran on simulators and cannot be installed on the device, however the builds complete faster then device builds. If your build is not a simulator build, you need to upload code signing files in the next step.
+
+**3.7. Increment build number** <br>
+When enabled, the ```CFBundleVersion``` in the Info.plist of your app automatically increments for each build. The change happens pre build and won't be committed to your repository.
+
 
