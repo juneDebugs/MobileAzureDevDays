@@ -1,4 +1,5 @@
 ﻿using Xamarin.Forms;
+using MobileAzureDevDays.Pages;
 
 namespace MobileAzureDevDays
 {
@@ -8,7 +9,7 @@ namespace MobileAzureDevDays
         {
             InitializeComponent();
 
-            MainPage = new MobileAzureDevDaysPage();
+            MainPage = new HomePage();
         }
 
         protected override void OnStart()

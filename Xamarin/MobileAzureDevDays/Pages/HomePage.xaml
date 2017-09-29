@@ -2,15 +2,15 @@
 <ContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-    x:Class="MobileAzureDevDays.Pages.HomePage">
+    x:Class="MobileAzureDevDays.Pages.HomePage"
+    IsBusy="{Binding IsInternetConnectionActive}"
+    BackgroundColor="Blue">
 
      <ContentPage.Padding>
         <OnPlatform 
             x:TypeArguments= "Thickness"
             iOS= "0, 20, 0, 0" />
     </ContentPage.Padding>
-
-
 
     <StackLayout 
         Padding = "30,5,30, 90"
@@ -22,19 +22,8 @@
             Margin= "10,10,10,50"
             VerticalOptions= "Start" HorizontalOptions= "Center"/>
 
-        <Frame>
-            <Frame.HasShadow>
-                <OnPlatform 
-                    x:TypeArguments="x:Boolean"
-                    iOS="false"
-                    Android="true"
-                    WinPhone="true" />
-            </Frame.HasShadow>
-                
-        <!--    <local:EditorWithPlaceholder 
-                Placeholder="Add Text here..."
-                Text="{Binding UserInputEditorText}"/> -->
-        </Frame>
+        <Entry
+            Placeholder="Add Text here..."/>
 
         <Button
             Text= "Submit"
