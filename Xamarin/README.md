@@ -300,7 +300,14 @@ Build the APK. From Android Studio select the build variant and then execute com
 ## Uploading the package
 To upload a package to Mobile Center, use the navigation bar on the left to navigate to Distirbution. Then select "Distribute new release" button. Drag and drop or click to open a file dialog to upload your package. Optionally fill in some release notes. Select next and select a Distribution Group. This release will only be available to the users that have been added to that specific Distribution Group. Click next and review the release, then click distribute to release. On clicking the distribute button the release will be made available via Mobile Center and an email notification of the new version will be sent to all users of this application. Congrats, you have successful distributed a release via Mobile Center.
 
-##### Uploading using the APIs
+**Uploading using the APIs** <br>
+ 1) Pre-req: [Obtain an API token.](https://docs.microsoft.com/en-us/mobile-center/api-docs/) API Token is used for authentication for all Mobile Center API calls.
+ 2) Upload a new release. This is 3 or more API calls.
+    a. Create an upload resource and get an ```upload_url``` (good for 24 hours) — [POST /createReleaseUpload](https://docs.mobile.azure.com/api/#!/distribute/createReleaseUpload)
+    ```
+    curl -X POST --header 'Content-Type: application/json' --header 'Accept:
+    application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'              'https://api.mobile.azure.com/v0.1/apps/JoshuaWeber/APIExample/release_uploads'
+    ```
 
 
 
