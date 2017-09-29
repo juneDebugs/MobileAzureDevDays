@@ -73,6 +73,31 @@ default settings for Debug and Release only.
   * You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app. <br>
 Once you save the configuration, a new build will be automatically kicked off.
 
+## 4. Build results
+* After a build has been triggered, it can be in the following states:
+ * **queued** - the build is in a queue waiting for resources to be freed up
+ * **building** - the build is running and performing the predefined tasks
+ * **succeeded** - the build is completed and it has succeeded
+ * **failed** - the build has completed but it has failed; you can troubleshoot what went wrong by downloading and inspecting the build log
+ * **canceled**- the build has been canceled by a user action or it has timed out
+
+**4.1. Build logs** <br>
+ * For a completed build (succeeded or failed), download the logs to understand more about how the build went. Mobile Center provides an archive with the following files:
+ ```
+ |-- 1_build.txt (this is the general build log)
+|-- build (this folder contains a separate log file for each build step)
+    |-- <build-step-1> (e.g. 2_Get Sources.txt)
+    |-- <build-step-2> (e.g. 3_Pod install.txt)
+    |--
+    |-- <build-step-n> (e.g. n_Post Job Cleanup.txt)
+    ```
+  * The build step specific logs (located in the ```build/``` directory of the archive) are helpful for troubleshooting and understanding in what step and why the build failed.
+
+**4.2. The app (.ipa or .app)** <br>
+ * The .ipa is an iPhone application archive file which stores the iOS app. If the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. There are more [details about code signing and distribution with Mobile Center.](https://docs.microsoft.com/en-us/mobile-center/build/ios/code-signing/index) <br>
+If this is a simulator build, you can run the .app file on a simulator, but you cannot use it on a real device.
+
+**4.3. The symbol files (.dsym)** <br>
 
 
 
