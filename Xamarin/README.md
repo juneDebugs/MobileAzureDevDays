@@ -83,15 +83,14 @@ After a build has been triggered, it can be in the following states:
 
 **4.1. Build logs** <br>
  * For a completed build (succeeded or failed), download the logs to understand more about how the build went. Mobile Center provides an archive with the following files:
- ```
- |-- 1_build.txt (this is the general build log)
+ ```|-- 1_build.txt (this is the general build log)
 |-- build (this folder contains a separate log file for each build step)
     |-- <build-step-1> (e.g. 2_Get Sources.txt)
     |-- <build-step-2> (e.g. 3_Pod install.txt)
     |--
-    |-- <build-step-n> (e.g. n_Post Job Cleanup.txt)
-    ```
-  * The build step specific logs (located in the ```build/``` directory of the archive) are helpful for troubleshooting and understanding in what step and why the build failed.
+    |-- <build-step-n> (e.g. n_Post Job Cleanup.txt) 
+```  
+The build step specific logs (located in the ```build/``` directory of the archive) are helpful for troubleshooting and understanding in what step and why the build failed.
 
 **4.2. The app (.ipa or .app)** <br>
  * The .ipa is an iPhone application archive file which stores the iOS app. If the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. There are more [details about code signing and distribution with Mobile Center.](https://docs.microsoft.com/en-us/mobile-center/build/ios/code-signing/index) <br>
