@@ -461,6 +461,14 @@ using Microsoft.Azure.Mobile.Crashes;
 
 **4.2 Add the ```Start()``` method** <br>
 
+##### 4.2.1 Xamarin.Android
+Open ```MainActivity.cs``` and add the ```Start()``` call inside the ```OnCreate()``` method
+```
+MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes)); 
+```
+##### 4.2.2 Xamarin.iOS
+Open your ```AppDelegate.cs``` and add the ```Start()`` call inside the ```FinishedLaunching()``` method
+
 
 # Supported versions and requirements
 Mobile Center supports Portable Class Library (PCL) projects, but does not currently support .NET Standard. Mobile Center has no support for Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available.
