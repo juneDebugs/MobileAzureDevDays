@@ -12,4 +12,8 @@ If you haven't done it previously already, first of all, you have to connect you
 Next step once you have selected a repository is to select the branch you want to build. By default all the active branches will be listed. Upon selecting the branch you want to get started with, it is time to setup your first build
 
 ## 3. Setting up your first build
+To kick off the first build, configure how the iOS project should get built.
+
+###### 3.1. Project/solution
+
 
