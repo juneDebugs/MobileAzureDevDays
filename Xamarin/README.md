@@ -14,7 +14,12 @@ Next step once you have selected a repository is to select the branch you want t
 ## 3. Setting up your first build
 To kick off the first build, configure how the iOS project should get built.
 
-###### 3.1. Project/solution
+**3.1. Project/solution**
 Mobile Center automatically detects the solution and project files in your repository. Select the **.sln** or **.csproj/.fsproj** you would like to build.
 
+###### 3.1.1. Building from the solution file (.sln)
+In your code make sure to disable Android and UWP projects for build configs that are intended for iOS builds: go into the solution's configuration mappings, and for all mappings that target **iPhone** and **iPhoneSimulator**, uncheck all the projects which are targeting other platforms. This will ensure that when the **.sln** is building, it will not attempt to build the other projects. There is more solution configurations mapping information you can read.
+
+###### 3.1.2. Building from the project file (.csproj/.fsproj)
+In order to build from a **.csproj/.fsproj** file all the referenced projects (e.g. your PCL project) must contain the configuration with the same name as the one from your source iOS project. So, if you run the **Debug** configuration for the simulator in Mobile Center, your PCL project must have the **Debug|iPhoneSimulator** configuration. In case they don't exist and to prevent further errors we add such configurations before building your projects. Those configurations have basic default settings for Debug and Release only.
 
