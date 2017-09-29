@@ -251,8 +251,6 @@ Each selection from the previous steps will be used to generate a command which 
 mobile-center test run espresso --app "mobile-center-username/app-name" --devices a32b320b --app-path pathToFile.apk  --test-series "master" --locale "en_US" --build-dir pathToEspressoBuildFolder
 ```
 
-
-
 ## Limitations
 Please be aware that Mobile Center for Test cannot control any of the following:
  * Network throttling
@@ -267,7 +265,7 @@ Mobile Centre for Test does not support the following hardware features:
  * Physically rotating the device
  * Simulating different battery conditions
  
-#Test Cloud Security
+# Test Cloud Security
 Devices in Test Cloud are part of a shared public cloud, meaning that many users will install their app and run their tests on the same physical devices. While Test Cloud prohibits uploading personally identifiable information (PII), measures are taken to ensure security across test runs by different users. <br>
  * Any apps installed during a test run are uninstalled
  * All local storage is cleared from the device
