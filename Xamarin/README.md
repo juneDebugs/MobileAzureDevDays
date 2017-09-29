@@ -311,11 +311,19 @@ To upload a package to Mobile Center, use the navigation bar on the left to navi
     ```
     b. Upload to upload_url (will be a rink.hockeyapp.net URL). Use ```multipart/form-data``` where the ```key``` is ipa (key is always ipa even when uploading APKs)
     ```
-    curl -F "ipa=@Versions_1_1_0_12.ipa" https://rink.hockeyapp.net/api/sonoma/apps/cacf9867-87f7-4649-a400-
-    632a775dde2d/app_versions/upload\?upload_id\=c18df340-069f-0135-3290-22000b559634
+    curl -F "ipa=@Versions_1_1_0_12.ipa" https://rink.hockeyapp.net/api/sonoma/apps/cacf9867-87f7-4649-
+    a400-632a775dde2d/app_versions/upload\?upload_id\=c18df340-069f-0135-3290-22000b559634
     ```
-    
-
+    c. After upload has finished, update upload resource's status to committed and get a ```release_url``` — [PATCH /updateReleaseUpload](https://docs.mobile.azure.com/api/#/distribute/updateReleaseUpload)
+    ```
+    curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header 
+    'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "status": "committed" }'
+    'https://api.mobile.azure.com/v0.1/apps/JoshuaWeber/APITesting/release_uploads/c18df340-069f-0135-3290-22000b559634'
+    ```
+ 3) Distribute the uploaded release to a distribution group — [PATCH /updateRelease](https://docs.mobile.azure.com/api/#!/distribute/updateRelease)
+ ```
+ curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "destination_name": "QA Testers", "release_notes": "Example new release via the APIs" }' 'https://api.mobile.azure.com/v0.1/apps/JoshuaWeber/APITesting/releases/2'
+ ```
 
 
 # Supported versions and requirements
