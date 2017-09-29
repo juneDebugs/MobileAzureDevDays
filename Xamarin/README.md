@@ -1,4 +1,4 @@
-##Xamarin.iOS Build
+# Xamarin.iOS Build
 
 To start building a Xamarin iOS app, first of all, you need to connect to your repository service (GitHub, Bitbucket, VSTS) account,
 select a repository and a branch where your app lives and then you can set up your first build. Choose the solution file and 
