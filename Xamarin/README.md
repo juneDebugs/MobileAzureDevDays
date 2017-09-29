@@ -110,7 +110,7 @@ If this is a simulator build, you can run the .app file on a simulator, but you 
      2) if you have previously integrated another SDK for crash reporting purposes in your app (e.g. HockeyApp SDK), the corresponding          service requires the .dsym file in order to display human readable (symbolicated) crash reports
 
 
-# Xamarin.Android Build
+## Xamarin.Android Build
 
 To start building an app, first of all, you need to connect to your repository service (GitHub, Bitbucket, VSTS) account, select a repository and a branch where your app lives and then you can set up your first build. Choose the Android project that you would like to build; for the app to run on a real device, the build needs to be code signed with a valid KeyStore.
 
