@@ -1,4 +1,11 @@
-# Xamarin.iOS Build
+# Mobile Center Build 
+
+Mobile Center helps you build the mobile apps you and your team is working on, using a secure infrastructure. You can forget about configuring build servers locally, complicated configurations and code that is working on a co-worker's machine, but not working on yours. <br>
+To get started, a member of the app in Mobile Center needs to connect to their source control and select the repository where the app is located and then start building your app with only a few clicks.
+Currently, you can build apps hosted on Git repositories in GitHub, Bitbucket and Visual Studio Team Services (VSTS).
+While in public preview, we are constantly adding features and further platform support. If you are developing a mobile app in a platform that is not supported, chances are our team is working on it. Don't hesitate to contact us and let us know more about your needs
+
+## Xamarin.iOS Build
 
 To start building a Xamarin iOS app, first of all, you need to connect to your repository service (GitHub, Bitbucket, VSTS) account,
 select a repository and a branch where your app lives and then you can set up your first build. Choose the solution file and 
