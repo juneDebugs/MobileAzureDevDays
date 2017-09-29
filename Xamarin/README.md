@@ -50,7 +50,8 @@ Use your newly produced IPA file to test if your app starts on a real device. Th
 
 **3.10. NuGet restore** <br>
 If the NuGet.config file is checked-in into the repository and sitting next to the .sln or at the root, Mobile Center will auto-restore the NuGet feed. To restore private NuGet feeds, make sure you include the credentials in the NuGet.config file:
-```<?xml version="1.0" encoding="utf-8"?>
+```
+<?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <packageSources>
     <add key="nuget" value="https://api.nuget.org/v2/index.json" />
@@ -66,9 +67,12 @@ If the NuGet.config file is checked-in into the repository and sitting next to t
       <add key="ClearTextPassword" value="password" />
     </MyAuthNuget>
   </packageSourceCredentials>
-</configuration>```
-
+</configuration> 
+```
 **3.11. Distribution to a distribution group** <br>
+You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app. <br>
+Once you save the configuration, a new build will be automatically kicked off.
+
 
 
 
