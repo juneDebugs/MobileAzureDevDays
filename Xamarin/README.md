@@ -459,16 +459,25 @@ using Microsoft.Azure.Mobile.Analytics;
 using Microsoft.Azure.Mobile.Crashes;
 ```
 
-**4.2 Add the ```Start()``` method** <br>
+### 4.2 Add the ```Start()``` method <br>
 
-##### 4.2.1 Xamarin.Android
+#### 4.2.1 Xamarin.Android
 Open ```MainActivity.cs``` and add the ```Start()``` call inside the ```OnCreate()``` method
 ```
 MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes)); 
 ```
-##### 4.2.2 Xamarin.iOS
+#### 4.2.2 Xamarin.iOS
 Open your ```AppDelegate.cs``` and add the ```Start()`` call inside the ```FinishedLaunching()``` method
+```
+MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
+```
+#### 4.2.3 Xamarin.Forms
+To use a Xamarin.Forms application targeting iOS, Android and UWP platforms, you need to create three applications in the Mobile Center portal - one for each platform. Creating three apps will give you three App secrets - one for each. Open your ```App.xaml.cs``` (or your class that inherits from ```Xamarin.Forms.Application```) in your shared or portable project and add the method below in the ```OnStart()``` override method.
+```
+MobileCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret}", typeof(Analytics), typeof(Crashes));
+```
 
+#### 4.3 Replace the placeholder with your App Secret
 
 # Supported versions and requirements
 Mobile Center supports Portable Class Library (PCL) projects, but does not currently support .NET Standard. Mobile Center has no support for Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available.
