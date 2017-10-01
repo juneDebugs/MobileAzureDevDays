@@ -2,6 +2,7 @@
 
 Mobile Center helps you build the mobile apps you and your team is working on, using a secure infrastructure. You can forget about configuring build servers locally, complicated configurations and code that is working on a co-worker's machine, but not working on yours. 
 <br>
+<br>
 To get started, a member of the app in Mobile Center needs to connect to their source control and select the repository where the app is located and then start building your app with only a few clicks.
 Currently, you can build apps hosted on Git repositories in GitHub, Bitbucket and Visual Studio Team Services (VSTS).
 While in public preview, we are constantly adding features and further platform support. If you are developing a mobile app in a platform that is not supported, chances are our team is working on it. Don't hesitate to contact us and let us know more about your needs
@@ -392,8 +393,8 @@ Mobile Center Crash Reporting lets developers collect crashes in their apps whet
  3) Do you have an Android NDK?
     * This is currently not available but on our roadmap.
  
- # Mobile Center Analytics 
- Let's get started with setting up Mobile Center Xamarin SDK in your app to use Mobile Center Analytics and Mobile Center Crashes. To add Mobile Center Distribute to you app, please have a look at the [documentation for Mobile Center Distribute.](https://docs.microsoft.com/en-us/mobile-center/sdk/distribute/xamarin)
+# Mobile Center Analytics 
+ Let's get started with setting up Mobile Center Xamarin SDK in your app to use Mobile Center Analytics.
  
 ## 1. Prerequisites
 Before you begin, please make sure that the following prerequisites are met:
@@ -459,7 +460,7 @@ using Microsoft.Azure.Mobile.Analytics;
 using Microsoft.Azure.Mobile.Crashes;
 ```
 
-### 4.2 Add the ```Start()``` method <br>
+### 4.2 Add the ```Start()``` method 
 
 #### 4.2.1 Xamarin.Android
 Open ```MainActivity.cs``` and add the ```Start()``` call inside the ```OnCreate()``` method
@@ -476,8 +477,84 @@ To use a Xamarin.Forms application targeting iOS, Android and UWP platforms, you
 ```
 MobileCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
+### 4.3 Replace the placeholder with your App Secret
+Make sure to replace {Your App Secret} text with the actual value for your application. The App Secret can be found on the **Getting Started** page on the Mobile Center portal or through the ```Manage App``` button.
+<br>
+<br>
+The Getting Started page contains the above code sample with your App Secret in it, you can just copy-paste the whole sample.
+The example above shows how to use the ```Start()``` method and include both Mobile Center Analytics and Mobile Center Crashes.
+<br>
+<br>
+If you do not want to use one of the two services, remove the corresponding parameter from the method call above.
+<br>
+<br>
+Note that, unless you explicitly specify each module as parameters in the start method, you can't use that Mobile Center service. In addition, the ```start()``` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
+<br>
+<br>
+For example - If you just want to onboard to Mobile Center Analytics, you should modify the ```Start()``` call as follows:
 
-#### 4.3 Replace the placeholder with your App Secret
+#### 4.3.1 Xamarin.Android and Xamarin.iOS
+```
+MobileCenter.Start("{Your App Secret}", typeof(Analytics));
+```
+
+#### 4.3.2 Xamarin.Forms
+```
+MobileCenter.Start("ios={Your App Secret};android={Your App secret};uwp={Your App secret}", typeof(Analytics));
+```
+
+Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
+<br>
+<br>
+Look at the documentation for [Mobile Center Analytics](https://docs.microsoft.com/en-us/mobile-center/sdk/analytics/xamarin) and [Mobile Center Crashes](https://docs.microsoft.com/en-us/mobile-center/sdk/crashes/xamarin) to learn how to customize and use more advanced functionalities of both services.
+<br>
+<br>
+To learn how to get started with in-app updates, read the documentation of [Mobile Center Distribute](https://docs.microsoft.com/en-us/mobile-center/sdk/distribute/xamarin).
+
+## Session and device information
+Once you add Mobile Center Analytics to your app and start the SDK, it will automatically track sessions and device properties like OS Version, model, etc. without writing any additional code.
+
+## Custom events
+You can track your own custom events with up to **five properties** to know what's happening in your app, understand user actions, and see the aggregates in the Mobile Center portal.
+<br>
+<br>
+Once you have started the SDK, use the ```TrackEvent()``` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there is a maximum limit of 256 characters per event name and 64 characters per event property name and event property value.
+```
+Analytics.TrackEvent("Video clicked", new Dictionary<string, string> {
+    { "Category", "Music" },
+    { "FileName", "favorite.avi"}
+});
+```
+Properties for events are entirely optional – if you just want to track an event, use this sample instead:
+```
+Analytics.TrackEvent("Video clicked");
+```
+## Enable or disable Mobile Center Analytics at runtime
+You can enable and disable Mobile Center Analytics at runtime. If you disable it, the SDK will not collect any more analytics information for the app.
+```
+Analytics.SetEnabledAsync(false);
+```
+To enable Mobile Center Analytics again, use the same API but pass ```true``` as a parameter.
+```
+Analytics.SetEnabledAsync(true);
+```
+You don't need to await this call to make other API calls (such as ```IsEnabledAsync```) consistent.
+
+## Check if Mobile Center Analytics is enabled
+You can also check if Mobile Center Analytics is enabled or not.
+```
+bool isEnabled = await Analytics.IsEnabledAsync();
+```
+
+
+
+
+
+
+
+
+
+
 
 # Supported versions and requirements
 Mobile Center supports Portable Class Library (PCL) projects, but does not currently support .NET Standard. Mobile Center has no support for Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available.
