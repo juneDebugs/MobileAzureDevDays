@@ -22,41 +22,41 @@ Next step once you have selected a repository is to select the branch you want t
 ## 3. Setting up your first build
 To kick off the first build, configure how the iOS project should get built.
 
-**3.1. Project/solution** <br>
+### 3.1. Project/solution
   * Mobile Center automatically detects the solution and project files in your repository. Select the **.sln** or  **.csproj/.fsproj** you would like to build.
 
-###### 3.1.1. Building from the solution file (.sln)
+##### 3.1.1. Building from the solution file (.sln)
   * In your code make sure to disable Android and UWP projects for build configs that are intended for iOS builds: go into the   solution's configuration mappings, and for all mappings that target **iPhone** and **iPhoneSimulator**, uncheck all the       projects which are targeting other platforms. This will ensure that when the **.sln** is building, it will not attempt to     build the other projects. There is more solution configurations mapping information you can read.
 
-###### 3.1.2. Building from the project file (.csproj/.fsproj)
+##### 3.1.2. Building from the project file (.csproj/.fsproj)
   * In order to build from a **.csproj/.fsproj** file all the referenced projects (e.g. your PCL project) must contain the configuration with the same name as the one from your source iOS project. So, if you run the **Debug** configuration for the simulator in Mobile Center, your PCL project must have the **Debug|iPhoneSimulator** configuration. In case they don't exist and to prevent further errors we add such configurations before building your projects. Those configurations have basic 
 default settings for Debug and Release only.
 
-**3.2. Configuration** <br>
+### 3.2. Configuration
   * Select the configuration you would like to build with. The configurations are automatically detected depending on the source file picked in the previous step.
 
-**3.3. Mono version** <br>
+### 3.3. Mono version
   * Mobile Center allows using different Mono environments for your build to maintain backward compatibility while releasing a support for new features. The default Mono version for a new branch configuration will be the latest one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries.
 
-**3.4. Xcode Version** <br>
+### 3.4. Xcode Version
   * Current version of Xamarin requires **Xcode 8.0 or higher**.
 
-**3.5. Build triggers** <br>
+### 3.5. Build triggers
   * By default a new build is triggered on every push a developer does to the configured branch. This is often referred to as **"Continuous Integration"**. If you prefer to manually trigger a new build, you can change this setting in the configuration pane.
 
-**3.6. Simulator build** <br>
+### 3.6. Simulator build
   * Simulator builds can only be ran on simulators and cannot be installed on the device, however the builds complete faster then device builds. If your build is not a simulator build, you need to upload code signing files in the next step.
 
-**3.7. Increment build number** <br>
+### 3.7. Increment build number
   * When enabled, the ```CFBundleVersion``` in the Info.plist of your app automatically increments for each build. The change happens pre build and won't be committed to your repository.
 
-**3.8. Code signing** <br>
+### 3.8. Code signing
   * A successful device build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](https://docs.microsoft.com/en-us/mobile-center/build/ios/code-signing/uploading-files), along with the password for the certificate. You can read more about code signing and device provisioning of Xamarin iOS apps in the [Xamarin official documentation](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning/).
 
-**3.9. Launch your successful build on a real device** <br>
+### 3.9. Launch your successful build on a real device
   * Use your newly produced IPA file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. You may want to check more [comprehensive guide about testing your builds](https://docs.microsoft.com/en-us/mobile-center/build/build-test-integration).
 
-**3.10. NuGet restore** <br>
+### 3.10. NuGet restore
   * If the NuGet.config file is checked-in into the repository and sitting next to the .sln or at the root, Mobile Center will auto-restore the NuGet feed. To restore private NuGet feeds, make sure you include the credentials in the NuGet.config file:
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -77,7 +77,7 @@ default settings for Debug and Release only.
   </packageSourceCredentials>
 </configuration> 
 ```
-**3.11. Distribution to a distribution group** <br>
+### 3.11. Distribution to a distribution group
   * You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app. <br>
 Once you save the configuration, a new build will be automatically kicked off.
 
@@ -89,7 +89,7 @@ After a build has been triggered, it can be in the following states:
  * **failed** - the build has completed but it has failed; you can troubleshoot what went wrong by downloading and inspecting the build log
  * **canceled**- the build has been canceled by a user action or it has timed out
 
-**4.1. Build logs** <br>
+### 4.1. Build logs
  * For a completed build (succeeded or failed), download the logs to understand more about how the build went. Mobile Center provides an archive with the following files:
  ```
     |-- 1_build.txt (this is the general build log)
@@ -101,11 +101,11 @@ After a build has been triggered, it can be in the following states:
 ```  
 The build step specific logs (located in the ```build/``` directory of the archive) are helpful for troubleshooting and understanding in what step and why the build failed.
 
-**4.2. The app (.ipa or .app)** <br>
+### 4.2. The app (.ipa or .app)
  * The .ipa is an iPhone application archive file which stores the iOS app. If the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. There are more [details about code signing and distribution with Mobile Center.](https://docs.microsoft.com/en-us/mobile-center/build/ios/code-signing/index) <br>
 If this is a simulator build, you can run the .app file on a simulator, but you cannot use it on a real device.
 
-**4.3. The symbol files (.dsym)** <br>
+### 4.3. The symbol files (.dsym)
 * Symbol files are only generated for device builds. The .dsym files contains the debug symbols for the app.
      1) If you have previously integrated the Mobile Center SDK in your app with the crash reporting module enabled, the crash reporting        beacon requires this .dsym file for a build in order to display human readable (symbolicated) crash reports
      2) if you have previously integrated another SDK for crash reporting purposes in your app (e.g. HockeyApp SDK), the corresponding          service requires the .dsym file in order to display human readable (symbolicated) crash reports
@@ -124,25 +124,25 @@ The next step once you have selected a repository is to select the branch you wa
 ## 3. Configuring Your Build
 To kick off the first build, configure how the Android project should get built.
 
-**3.1. Build triggers** <br>
+### 3.1. Build triggers
  * By default, a new build is triggered on every push a developer does to the configured branch. This is often referred to as “Continuous Integration”. If you prefer to manually trigger a new build, you can change this setting in the configuration pane.
 
-**3.2. Project and Configuration** <br>
+### 3.2. Project and Configuration
  * The available projects in your repository will populate. Select the correct project for your Android build and select the appropriate configuration.
  
-**3.3. Mono version** <br>
+### 3.3. Mono version
  * Mobile Center **allows using different Mono environments** for your build to maintain **backward compatibility** while releasing a support for new features. The default Mono version for a new branch configuration will be the latest one. You may choose to use one of the previous Mono environments to build older versions of frameworks or libraries.
  
- **3.4. Increment version number** <br>
+### 3.4. Increment version number
   * When enabled, the version code in the AndroidManifest.xml of your app automatically increments for each build. The change happens pre build and won't be committed to your repository.
  
- **3.5. Code signing** <br>
+### 3.5. Code signing
   * A successful build will produce an apk file. In order to release the build to the Play Store, it needs to be signed with a valid Keystore and Alias. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your Keystore, and provide the values needed in the configuration pane. You can read more [detailed code signing instructions.](https://docs.microsoft.com/en-us/mobile-center/build/android/code-signing/xamarin)
 
-**3.6. Launch your successful build on a real device** <br>
+### 3.6. Launch your successful build on a real device
  * Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. There is more [specific test integration information.]("https://docs.microsoft.com/en-us/mobile-center/build/build-test-integration")
  
-**3.7. NuGet restore** <br>
+### 3.7. NuGet restore
  * If the **NuGet.config file** is checked-in into the repository and sitting next to the ```.sln``` or at the root, Mobile Center will auto-restore the NuGet feed. To restore private NuGet feeds, make sure you include the credentials in the **NuGet.config file**:
  ```
  <?xml version="1.0" encoding="utf-8"?>
@@ -163,7 +163,7 @@ To kick off the first build, configure how the Android project should get built.
   </packageSourceCredentials>
 </configuration>
  ```
- **3.8. Distribution to a distribution group** <br>
+### 3.8. Distribution to a distribution group
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app. <br>
 Once you save the configuration, a new build will be kicked off automatically.
 
@@ -175,7 +175,7 @@ After a build has been triggered, it can be in the following states: <br>
  * **failed** - the build has completed but it has failed; you can troubleshoot what went wrong by downloading and inspecting the build log
  * **canceled** - the build has been canceled by a user action or it has timed out
  
- **4.1. Build logs** <br>
+### 4.1. Build logs
  * For a completed build (succeeded or failed), download the logs to understand more about how the build went. Mobile Center provides an archive with the following files:
  ```
 |-- 1_build.txt (this is the general build log)
@@ -187,7 +187,7 @@ After a build has been triggered, it can be in the following states: <br>
  ```
  * The build step specific logs (located in the build/ directory of the archive) are helpful for troubleshooting and understanding in what step and why the build failed.
  
- **4.2. The app (.apk)**<br>
+### 4.2. The app (.apk)
 The APK is an Android application packaged file which stores the Android app. If the build has been correctly signed, the APK can be installed on a real device and deployed to the Play Store. If the build has not been signed, the APK can be run on an emulator or used for other purposes.
 
 
@@ -247,13 +247,13 @@ Initiating a test run in Test Cloud requires the [Mobile Center CLI tool.](https
 
 With the Mobile Center CLI tool installed and upload preparation complete, initiating a test run is very straightforward as the UI will guide you through the necessary steps. Begin by navigating to the Test Cloud section within the desired app. Clicking the ```new test run``` button will launch a dialog which will lead you through the 3 steps of preparing a test run.
 
-**Device selection** <br>
+### Device selection
 Select the devices against which this test run should execute. This collection of devices can optionally be saved as a set for future use. To save the set, follow the on-screen prompts.
 
-**Test run configuration** <br>
+### Test run configuration
 Select the test framework, set the device locale, and select a test series. Device locale will determine the system-level device settings, such as language. For more on test series, [see this section.](https://docs.microsoft.com/en-us/mobile-center/test-cloud/core-concepts)
 
-**The generated command** <br>
+### The generated command
 Each selection from the previous steps will be used to generate a command which is used with the Mobile Center CLI to initiate a test run. For example, a command generated for an Android app with Espresso tests might look like:
 ```
 mobile-center test run espresso --app "mobile-center-username/app-name" --devices a32b320b --app-path pathToFile.apk  --test-series "master" --locale "en_US" --build-dir pathToEspressoBuildFolder
@@ -291,16 +291,16 @@ Distributing with Mobile Center is easy, and only requires a few steps. No need 
  4) [Install](https://docs.microsoft.com/en-us/mobile-center/distribution/installation) the release onto your device by clicking on the link in the email.
  5) Enable [In-App Updates](https://docs.microsoft.com/en-us/mobile-center/distribution/inappupdates) to help your users stay always on the latest release.
  
- ## Release a Build
+## Release a Build
  In order to distribute a release via Mobile Center, you must first upload your application binary package to Mobile Center. Mobile Center supports both .ipa and .apk package uploads for iOS and Android, respectively.
  
- **iOS** <br>
+### iOS
 You will need to use the following steps to generate an IPA package for your application. For full details of this process please see the official [Apple documentation.](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/TestingYouriOSApp/TestingYouriOSApp.html#//apple_ref/doc/uid/TP40012582-CH8-SW1) <br>
  1) [Register UDIDs](https://docs.microsoft.com/en-us/mobile-center/distribution/auto-provisioning) for all hardware devices in your provisioning profile.
  2) Archive your application. In Xcode go to ```Product > Archive```
  3) Export the archive using the proper provisioning profile. Make sure to remember where the IPA file was placed on disk.
 
-**Android** <br>
+### Android
 For Android you will need to produce a properly signed apk file. For full details of this process please see the official [Google documentation.](https://developer.android.com/studio/publish/preparing.html) <br>
  1) Ensure you have [updated the manifest](https://developer.android.com/guide/topics/manifest/manifest-intro.html) and have a [properly configured Gradle build.](https://developer.android.com/studio/build/build-variants.html)
 Build the APK. From Android Studio select the build variant and then execute command ```Build > Build APK```
@@ -308,7 +308,7 @@ Build the APK. From Android Studio select the build variant and then execute com
 ## Uploading the package
 To upload a package to Mobile Center, use the navigation bar on the left to navigate to Distirbution. Then select "Distribute new release" button. Drag and drop or click to open a file dialog to upload your package. Optionally fill in some release notes. Select next and select a Distribution Group. This release will only be available to the users that have been added to that specific Distribution Group. Click next and review the release, then click distribute to release. On clicking the distribute button the release will be made available via Mobile Center and an email notification of the new version will be sent to all users of this application. Congrats, you have successful distributed a release via Mobile Center.
 
-**Uploading using the APIs** <br>
+### Uploading using the APIs
  1) Pre-req: [Obtain an API token.](https://docs.microsoft.com/en-us/mobile-center/api-docs/) API Token is used for authentication for all Mobile Center API calls.
  2) Upload a new release. This is 3 or more API calls.
     a. Create an upload resource and get an ```upload_url``` (good for 24 hours) — [POST /createReleaseUpload](https://docs.mobile.azure.com/api/#!/distribute/createReleaseUpload)
@@ -356,20 +356,20 @@ Mobile Center only uses your Apple ID once as a one-time transaction, and it doe
 Mobile Center Crash Reporting lets developers collect crashes in their apps whether they occur in testing or in production.
 
 ## iOS Crashes
-**Getting Started** <br>
+### Getting Started
  1) Integrate the SDK as described in the [Getting Started with iOS documentation.](https://docs.microsoft.com/en-us/mobile-center/sdk/getting-started/ios)
  2) Upload the symbols that are created with each build using the Incoming page under the app.
  3) Add a test crash to the app's code by calling the ```generateTestCrash``` method of the crash reporting module as an action to a button.
  4) Run the app without the debugger connected, crash it and restart it.
  5) After a few minutes the crash report should be visible in the UI.
  
-**Uploading symbols** <br>
+### Uploading symbols
  1) Create a ZIP file for the dSYM package on your Mac.
  2) Open the **Incoming page** under **Crash Reporting** on Mobile Center of the app.
  3) Upload the zip file.
  4) After the zip file is indexed by Mobile Center new incoming crashes will be symbolicated.
  
- **Troubleshooting** <br>
+### Troubleshooting
  1) Why are crash reports not visible after a few minutes?
     * Right now crash reports are only visible if they can be symbolicated. For that to happen the proper symbols (dSYM) need       to be uploaded. There will be a UI available later that shows which symbols are missing and how to find them.
  2) What could be another reason for the crash report to not appear?
@@ -378,13 +378,13 @@ Mobile Center Crash Reporting lets developers collect crashes in their apps whet
     * As of now only new incoming crashes will be symbolicated. Processing pending crashes is on our roadmap.
  
 ## Android Crashes
-**Getting Started** <br>
+### Getting Started
  1) Integrate the SDK as described in the [Getting Started with Android documentation.](https://docs.microsoft.com/en-us/mobile-center/sdk/getting-started/android)
  2) Add a test crash to the apps code by calling the ```Crashes.generateTestCrash()``` method of the crash reporting module as an action to a buttone
  3) Run the app without the debugger connected, crash it and restart it
  4) After a few minutes the crash report should be visible in the UI
  
-**Troubleshooting** <br>
+### Troubleshooting
  1) Why are crash reports not visible after a few minutes?
     * Make sure the app doesn't crash on startup, as the SDK wouldn't have time to send the crash report. This is a limitation     for any 3rd party crash reporting service which is not possible to overcome.
  2) How can I see de-obfuscated stack traces?
@@ -405,13 +405,13 @@ The Mobile Center SDK for Xamarin supports the following platforms:
  * Xamarin.iOS
  * Xamarin.Forms (iOS, Android and UWP)
  
-##### 1.1 About Xamarin.Android
+### 1.1 About Xamarin.Android
 Choose this option if you target no other platform but Android. You need to create one app in the Mobile Center portal with the **Android** as the OS and **Xamarin** as the platform.
 
-##### 1.2 About Xamarin.iOS
+### 1.2 About Xamarin.iOS
 Choose this option if you target no other platform but iOS. You need to create one app in the Mobile Center portal with **iOS** as the OS and **Xamarin** as the platform.
 
-##### 1.3 About Xamarin.Forms (iOS, Android and UWP)
+### 1.3 About Xamarin.Forms (iOS, Android and UWP)
 Choose this option if you want to create a cross platform app for iOS, Android and UWP devices. You need to create 3 apps in Mobile Center – one for each OS.
 You need to select **Xamarin** as the platform for Android and iOS applications (UWP does not have a Xamarin option
 
@@ -428,16 +428,16 @@ Once you have created an app, you can obtain its **App Secret** on the **Getting
 ## 3. Add the Mobile Center SDK to your solution
 The Mobile Center SDK can be integrated using Xamarin Studio, Visual Studio, or the Package Manager Console.
 
-**Visual Studio for Mac or Xamarin Studio** <br>
+### Visual Studio for Mac or Xamarin Studio
 Under your project, select Packages, open context menu and click Add packages.
 Search for Mobile Center, and select Mobile Center Analytics and Mobile Center Crashes.
 Click Add Packages.
 
-**Visual Studio for Windows** <br>
+### Visual Studio for Windows
 Navigate to the ```Project > Manage NuGet Packages...```
 Search for **Mobile Center**, then install ```Microsoft.Azure.Mobile.Analytics``` and ```Microsoft.Azure.Mobile.Crashes``` packages.
 
-**Package Manager Console** <br>
+### Package Manager Console
 Make sure the Package Manager Console is opened in either Xamarin Studio or Visual Studio. You will have to install an add-in for Xamarin Studio.
 Type the following commands:
 ```
@@ -448,7 +448,7 @@ Now that you've integrated the SDK in your application, it's time to start the S
 ## 4. Start the SDK
 In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
 
-**4.1 Add the using statements** <br>
+### 4.1 Add the using statements
 Add the appropriate namespaces before you get started with using our APIs.
  * Xamarin.Android - Open your ```MainActivity.cs``` and add the following lines below the existing ```using``` statements.
  * Xamarin.iOS - Open you ```AppDelegate.cs``` and add the following lines below the existing ```using``` statements.
