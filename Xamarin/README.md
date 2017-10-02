@@ -627,7 +627,15 @@ public override void DidReceiveRemoteNotification(UIApplication application, NSD
     }
 }
 ```
-
+### Android additional steps
+If your launcher activity uses a ```launchMode``` of ```singleTop```, ```singleInstance``` or ```singleTask```, you need add this in the activity ```OnNewIntent``` method:
+```
+protected override void OnNewIntent(Android.Content.Intent intent)
+        {
+            base.OnNewIntent(intent);
+            Push.CheckLaunchedFromNotification(this, intent);
+        }
+```        
 
 
 # Supported versions and requirements
