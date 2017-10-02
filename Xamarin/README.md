@@ -309,6 +309,8 @@ Mobile Center Distribute will let your users install a new version of the app wh
 <br>
 **This feature will *NOT* work if your app is deployed to the app store.**
 
+## Add in-app updates to your app
+Please follow the [Get started](https://docs.microsoft.com/en-us/mobile-center/sdk/getting-started/xamarin) section if you haven't set up and started the SDK in your application, yet.
 
 
 
@@ -326,11 +328,9 @@ Mobile Center Distribute will let your users install a new version of the app wh
 
 
 
-# Distribution with Mobile Center
-Mobile Center Distribution is a tool to for developers to release application binaries to their end user devices. The speed and integration capabilities make this tool perform admirably for release of pre-production or beta software to testing devices. Mobile Center Distribution supports the distribution of application packages for both iOS and Android.
 
-## Getting Started
-Distributing with Mobile Center is easy, and only requires a few steps. No need for an SDK. Just the application binary. <br>
+
+## Getting Started 
  1) [Add users to your app](https://docs.microsoft.com/en-us/mobile-center/dashboard/creating-and-managing-apps) to grant access to all releases.
  2) [Create Distribution Groups](https://docs.microsoft.com/en-us/mobile-center/distribution/groups)to manage access.
  3) [Upload](https://docs.microsoft.com/en-us/mobile-center/distribution/uploading) a new application release.
