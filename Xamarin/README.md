@@ -18,6 +18,8 @@
      * [Android Crashes](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#android-crashes)
  * [Mobile Center Analytics](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#mobile-center-analytics)
  * [Mobile Center Push](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#xamarinforms-mobile-center-push)
+     * [iOS additional steps](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#ios-additional-steps)
+     * [Android additional steps](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#android-additional-steps)
 
 
 # Mobile Center Build 
