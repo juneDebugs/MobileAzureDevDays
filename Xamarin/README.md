@@ -475,6 +475,14 @@ Distribute.SetEnabledAsync(true);
 ```
 You don't need to await this call to make other API calls (such as ```IsEnabledAsync```) consistent
 
+## Check if Mobile Center Distribute is enabled
+You can also check if Mobile Center Distribute is enabled or not:
+```
+bool enabled = await Distribute.IsEnabledAsync();
+```
+
+## How do in-app updates work?
+
 
 <br>
 <br>
