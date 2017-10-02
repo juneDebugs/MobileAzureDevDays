@@ -340,6 +340,28 @@ Add the appropriate namespaces before you get started with using our APIs.
    * Xamarin.iOS - Open your ```AppDelegate.cs``` and add the lines below the existing using statements
    * Xamarin.Android - Open your ```MainActivity.cs``` and add the lines below the existing using statements
    * Xamarin.Forms - Open your ```App.xaml.cs``` in your shared project and add the following using statements
+```
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Distribute;
+```
+
+#### 2.2 Add the ```Start()``` method
+Add ```Distribute``` to your ```Start()``` method to start Mobile Center Distribute service.
+
+##### Xamarin.iOS
+Open your ```AppDelegate.cs``` and add the ```Start()``` call inside the ```FinishedLaunching()``` method
+```
+Distribute.DontCheckForUpdatesInDebug();
+MobileCenter.Start("{Your Xamarin iOS App Secret}", typeof(Distribute));
+```
+
+##### Xamarin.Android
+Open ```MainActivity.cs``` and add the ```Start()``` call inside the ```OnCreate()``` method
+```
+MobileCenter.Start("{Your Xamarin Android App Secret}", typeof(Distribute));
+```
+
+
 
 <br>
 <br>
