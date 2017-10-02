@@ -546,6 +546,13 @@ You can also check if Mobile Center Analytics is enabled or not.
 bool isEnabled = await Analytics.IsEnabledAsync();
 ```
 
+# Xamarin.Fomrs Mobile Center Push
+Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
+
+**Even if you only access ```MobileCenter``` or ```Push``` class from your shared or PCL project, the Mobile Center NuGet packages must be added to each platform-specific project.**
+
+## Add Mobile Center Push to your app
+
 
 
 
