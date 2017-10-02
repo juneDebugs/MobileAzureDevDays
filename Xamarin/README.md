@@ -361,7 +361,36 @@ Open ```MainActivity.cs``` and add the ```Start()``` call inside the ```OnCreate
 MobileCenter.Start("{Your Xamarin Android App Secret}", typeof(Distribute));
 ```
 
+##### Xamarin.Forms
+For creating a Xamarin.Forms application targeting both iOS and Android platforms, you need to create two applications in the Mobile Center portal - one for each platform. Creating two apps will give you two App secrets - one for iOS and another one for Android. Open your ```App.xaml.cs``` (or your class that inherits from ```Xamarin.Forms.Application```) in your shared or portable project and add the method below in the ```OnStart()``` override method.
 
+```
+MobileCenter.Start("ios={Your Xamarin iOS App Secret};android={Your Xamarin Android App secret}", typeof(Distribute);
+```
+For your iOS application, open the ```AppDelegate.cs``` and add the following line before the call to ```LoadApplicaton```:
+```
+Distribute.DontCheckForUpdatesInDebug();
+```
+This step is **not necessary** on Android where the debug configuration is detected automatically at runtime.
+
+#### 2.3 [For iOS only] Modify your Info.plist
+   1) Add a new key for ```URL types``` or ```CFBundleURLTypes``` in your ```Info.plist``` file (in case Xcode displays your Info.plist as source code).
+   2) Change the key of the first child item to ```URL Schemes``` or ```CFBundleURLSchemes```.
+   3) Enter ```mobilecenter-${APP_SECRET}``` as the URL scheme and replace ```${APP_SECRET}``` with the App Secret of your app.
+   4) If you want to verify that you modified the ```Info.plist``` correctly, open it as source code. It should contain the following entry with your App Secret instead of ```${APP_SECRET}```:
+```
+<key>CFBundleURLTypes</key>
+  <array>
+      <dict>
+          <key>CFBundleURLSchemes</key>
+          <array>
+              <string>mobilecenter-${APP_SECRET}</string>
+          </array>
+      </dict>
+  </array>
+ ```
+ 
+ ## Customize or localize the in-app update dialog
 
 <br>
 <br>
