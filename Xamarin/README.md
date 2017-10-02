@@ -591,11 +591,20 @@ Make sure to call FirebaseApp.initializeApp(Context) first
 ```
 Make sure the ```google-services.json``` has the ```GoogleServicesJson``` build action. If you are sure, then clean and build again, this is a known issue when reusing builds (this issue is not caused by Mobile Center SDK, you can read more about this issue in the [Xamarin forums](https://forums.xamarin.com/discussion/96263/default-firebaseapp-is-not-initialized-in-this-process)).
 
+### 2. Start Mobile Center Push
 
-
-
-
-
+In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
+<br>
+<br>
+Add the following using statement to the top of the file you are referencing ```Push``` from:
+```
+using Microsoft.Azure.Mobile.Push
+```
+Next, add ```typeof(Push)``` to your ```MobileCenter.Start()``` method to start Mobile Center Push service.
+```
+MobileCenter.Start("{Your App Secret}", typeof(Push));
+```
+Make sure you have replaced ```{Your App Secret}``` in the code sample above with your app secret.
 
 
 
