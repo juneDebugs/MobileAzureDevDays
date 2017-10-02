@@ -660,6 +660,40 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 }
 ```
 
+### Subscribe to the push event
+You can subscribe to the event ```Push.PushNotificationReceived``` to be notified whenever a push notification is received in the foreground or a background push notification has been clicked by the user. The following example demonstrates how to use the event and get the push data.
+```
+// This should come before MobileCenter.Start() is called
+Push.PushNotificationReceived += (sender, e) => {
+
+    // Add the notification message and title to the message
+    var summary =  $"Push notification received:" +
+                        $"\n\tNotification title: {e.Title}" +
+                        $"\n\tMessage: {e.Message}";
+
+    // If there is custom data associated with the notification,
+    // print the entries
+    if (e.CustomData != null)
+    {
+        summary += "\n\tCustom data:\n";
+        foreach (var key in e.CustomData.Keys)
+        {
+            summary += $"\t\t{key} : {e.CustomData[key]}\n";
+        }
+    }
+
+    // Send the notification summary to debug output
+    System.Diagnostics.Debug.WriteLine(summary);
+};
+```
+
+## Enable or disable Push at runtime
+You can enable and disable Mobile Center Push at runtime. If you disable it, the SDK will stop updating the WNS registration identifier that is used to push notifications, but the existing one will continue to work. In other words, disabling the Mobile Center Push in the SDK will **NOT** stop your application from receiving push notifications.
+```
+Push.SetEnabledAsync(false);
+```
+To enable Mobile Center Push again, use the same API but pass ```true``` as a parameter.
+
 
 # Supported versions and requirements
 Mobile Center supports Portable Class Library (PCL) projects, but does not currently support .NET Standard. Mobile Center has no support for Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available.
