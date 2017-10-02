@@ -466,6 +466,15 @@ In that case, the activity hosting the dialog might be replaced without user int
 
 ## Enable or disable Mobile Center Distribute at runtime
 You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality but you can still use Distribute service in Mobile Center portal.
+```
+Distribute.SetEnabledAsync(false);
+```
+To enable Mobile Center Distribute again, use the same API but pass ```true``` as a parameter.
+```
+Distribute.SetEnabledAsync(true);
+```
+You don't need to await this call to make other API calls (such as ```IsEnabledAsync```) consistent
+
 
 <br>
 <br>
@@ -489,7 +498,7 @@ You can enable and disable Mobile Center Distribute at runtime. If you disable i
 
 
 
-## Getting Started 
+## Getting Started with Distribution
  1) [Add users to your app](https://docs.microsoft.com/en-us/mobile-center/dashboard/creating-and-managing-apps) to grant access to all releases.
  2) [Create Distribution Groups](https://docs.microsoft.com/en-us/mobile-center/distribution/groups)to manage access.
  3) [Upload](https://docs.microsoft.com/en-us/mobile-center/distribution/uploading) a new application release.
