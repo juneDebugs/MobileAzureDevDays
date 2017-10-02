@@ -552,7 +552,17 @@ Mobile Center Push enables you to send push notifications to users of your app f
 **Even if you only access ```MobileCenter``` or ```Push``` class from your shared or PCL project, the Mobile Center NuGet packages must be added to each platform-specific project.**
 
 ## Add Mobile Center Push to your app
+Please follow the [Get started section](https://docs.microsoft.com/en-us/mobile-center/sdk/getting-started/xamarin) if you haven't set up and started the SDK in your application yet.
 
+### 1. Add the Mobile Center Push module
+Visual Studio for Mac or Xamarin Studio
+ * Under your project, select ```Packages```, open context menu and click ```Add packages```.
+ * Search for **Mobile Center**, and select ```Mobile Center Push```.
+ * Click ```Add Packages```
+
+Visual Studio for Windows
+ * Navigate to the ```Project > Manage NuGet Packages```
+ * Search for **Mobile Center**, then install ```Microsoft.Azure.Mobile.Push```.
 
 
 
