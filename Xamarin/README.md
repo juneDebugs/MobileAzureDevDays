@@ -555,14 +555,31 @@ Mobile Center Push enables you to send push notifications to users of your app f
 Please follow the [Get started section](https://docs.microsoft.com/en-us/mobile-center/sdk/getting-started/xamarin) if you haven't set up and started the SDK in your application yet.
 
 ### 1. Add the Mobile Center Push module
-Visual Studio for Mac or Xamarin Studio
+#### Visual Studio for Mac or Xamarin Studio
  * Under your project, select ```Packages```, open context menu and click ```Add packages```.
  * Search for **Mobile Center**, and select ```Mobile Center Push```.
  * Click ```Add Packages```
 
-Visual Studio for Windows
+#### Visual Studio for Windows
  * Navigate to the ```Project > Manage NuGet Packages```
  * Search for **Mobile Center**, then install ```Microsoft.Azure.Mobile.Push```.
+ 
+#### Package Manager Console
+Type the following command in Package Manager Console:
+```
+PM> Install-Package Microsoft.Azure.Mobile.Push
+```
+
+**If you use the Mobile Center SDK in a portable project (such as Xamarin.Forms), you need to install the packages in each of the projects: the portable, Android, iOS and UWP ones.**
+
+#### You may have the following known issues while building on Android:
+
+ 1) After adding if you see java exited with code 2, it is caused by the Firebase dependency. Xamarin team is tracking an issue where Xamarin.Android projects hit the multidex limit.
+ 
+  * For debug builds, we recommend enabling Multi-dex in build options to work around that issue.
+  
+  * For release builds, you can also use multi-dex but it's better to try using Proguard first (and if you can, Link All). Read more about linker settings and how they work.
+
 
 
 
