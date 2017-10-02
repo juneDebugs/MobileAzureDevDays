@@ -606,7 +606,27 @@ MobileCenter.Start("{Your App Secret}", typeof(Push));
 ```
 Make sure you have replaced ```{Your App Secret}``` in the code sample above with your app secret.
 
+## Intercept push notifications
+Mobile Center Push makes it possible to intercept push notifications but there is some additional setup required to enable this feature in iOS and UWP projects.
 
+### iOS additional steps
+**You only need this step if you disabled method swizzling while setting up** [Xamarin.iOS](https://docs.microsoft.com/en-us/mobile-center/sdk/push/xamarin-ios).
+
+To enable the push event feature, implement ```DidReceiveRemoteNotification``` in your ```AppDelegate``` class as follows:
+```
+public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, System.Action<UIBackgroundFetchResult> completionHandler)
+{
+    var result = Push.DidReceiveRemoteNotification(userInfo);
+    if (result)
+    {
+        completionHandler?.Invoke(UIBackgroundFetchResult.NewData);
+    }
+    else
+    {
+        completionHandler?.Invoke(UIBackgroundFetchResult.NoData);
+    }
+}
+```
 
 
 
