@@ -392,6 +392,65 @@ This step is **not necessary** on Android where the debug configuration is detec
  
  ## Customize or localize the in-app update dialog
 
+### 1. Customize or localize text
+
+You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at the string files for iOS in this [resource file](https://github.com/Microsoft/mobile-center-sdk-ios/blob/master/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings) and those for Android in [this resource file](https://github.com/Microsoft/mobile-center-sdk-android/). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.
+
+### 2. Customize the update dialog
+
+You can customize the default update dialog's appearance by implementing the ```ReleaseAvailable``` callback. You need to register the callback before calling ```MobileCenter.Start``` as shown in the following example:
+```
+// In this example OnReleaseAvailable is a method name in same class
+Distribute.ReleaseAvailable = OnReleaseAvailable;
+MobileCenter.Start(...);
+```
+
+Here is an example on **Xamarin.Forms** of the callback implementation that replaces the SDK dialog with a custom one:
+```
+bool OnReleaseAvailable(ReleaseDetails releaseDetails)
+{
+    // Look at releaseDetails public properties to get version information, release notes text or release notes URL
+    string versionName = releaseDetails.ShortVersion;
+    string versionCodeOrBuildNumber = releaseDetails.Version;
+    string releaseNotes = releaseDetails.ReleaseNotes;
+    Uri releaseNotesUrl = releaseDetails.ReleaseNotesUrl;
+
+    // custom dialog
+    var title = "Version " + versionName + " available!";
+    Task answer;
+
+    // On mandatory update, user cannot postpone
+    if (releaseDetails.MandatoryUpdate)
+    {
+        answer = Current.MainPage.DisplayAlert(title, releaseNotes, "Download and Install");
+    }
+    else
+    {
+        answer = Current.MainPage.DisplayAlert(title, releaseNotes, "Download and Install", "Maybe tomorrow...");
+    }
+    answer.ContinueWith((task) =>
+    {
+        // If mandatory or if answer was positive
+        if (releaseDetails.MandatoryUpdate || (task as Task<bool>).Result)
+        {
+            // Notify SDK that user selected update
+            Distribute.NotifyUpdateAction(UpdateAction.Update);
+        }
+        else
+        {
+            // Notify SDK that user selected postpone (for 1 day)
+            // Note that this method call is ignored by the SDK if the update is mandatory
+            Distribute.NotifyUpdateAction(UpdateAction.Postpone);
+        }
+    });
+
+    // Return true if you are using your own dialog, false otherwise
+    return true;
+}
+```
+
+Implementation notes for Xamarin.Android:
+
 <br>
 <br>
 <br>
