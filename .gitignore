@@ -294,3 +294,7 @@ project.lock.json
 .vs/
 
 *.paw
+
+*.xcbkptlist
+*.xcuserstate
+*.xcworkspacedata
