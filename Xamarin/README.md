@@ -318,11 +318,18 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
 ### Visual Studio for Mac or Xamarin Studio
 Under your project, select ```Packages```, open context menu and click ```Add packages```.
-    * Search for **Mobile Center**, and select ```Mobile Center Distribute```.
+    * Search for Mobile Center, and select ```Mobile Center Distribute```.
     * Click ```Add Packages```.
 
 
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
 
 
