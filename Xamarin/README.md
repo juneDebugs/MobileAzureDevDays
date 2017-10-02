@@ -1,7 +1,11 @@
 # Table of Contents
  * [Mobile Center Build](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#mobile-center-build)
      *  [Xamarin.iOS Build](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#xamarinios-build)
-     *  Xamarin.Android Build
+     *  [Xamarin.Android Build](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#xamarinandroid-build)
+ * [Mobile Center Test](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#mobile-center-test)
+     * [Preparing Xamarin.UITests for Upload](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#preparing-xamarinuitests-for-upload)
+     * [Preparing Xamarin.Android Apps](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#preparing-xamarinandroid-apps)
+     * [Preparing Xamarin.iOS Apps](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#preparing-xamarinios-apps)
 
 
 
