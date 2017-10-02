@@ -449,7 +449,21 @@ bool OnReleaseAvailable(ReleaseDetails releaseDetails)
 }
 ```
 
-Implementation notes for Xamarin.Android:
+Implementation notes for **Xamarin.Android**:
+As shown in the example, you have to either call ```Distribute.NotifyUpdateAction```(UpdateAction.UPDATE); or ```Distribute.NotifyUpdateAction```(UpdateAction.POSTPONE); if your callback returns ```true```.
+
+If you don't call NotifyUpdateAction, the callback will repeat on every activity change.
+
+The callback can be called again with the same release if the activity changes before the user action is notified to the SDK.
+<br>
+<br>
+This behavior is needed to cover the following scenarios:
+* Your application is sent to the background (like pressing **HOME**) then resumed in a different activity.
+* Your activity is covered by another one without leaving the application (like clicking on some notifications).
+* Other similar scenarios.
+
+<br>
+In that case, the activity hosting the dialog might be replaced without user interaction. So the SDK calls the listener again so that you can restore the custom dialog
 
 <br>
 <br>
