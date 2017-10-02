@@ -462,8 +462,10 @@ This behavior is needed to cover the following scenarios:
 * Your activity is covered by another one without leaving the application (like clicking on some notifications).
 * Other similar scenarios.
 
-<br>
 In that case, the activity hosting the dialog might be replaced without user interaction. So the SDK calls the listener again so that you can restore the custom dialog
+
+## Enable or disable Mobile Center Distribute at runtime
+You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality but you can still use Distribute service in Mobile Center portal.
 
 <br>
 <br>
