@@ -312,7 +312,14 @@ Mobile Center Distribute will let your users install a new version of the app wh
 ## Add in-app updates to your app
 Please follow the [Get started](https://docs.microsoft.com/en-us/mobile-center/sdk/getting-started/xamarin) section if you haven't set up and started the SDK in your application, yet.
 
+## 1. Add the Mobile Center Distribute module
 
+The Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
+
+### Visual Studio for Mac or Xamarin Studio
+Under your project, select ```Packages```, open context menu and click ```Add packages```.
+    * Search for **Mobile Center**, and select ```Mobile Center Distribute```.
+    * Click ```Add Packages```.
 
 
 
