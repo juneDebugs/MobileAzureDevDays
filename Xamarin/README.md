@@ -693,6 +693,17 @@ You can enable and disable Mobile Center Push at runtime. If you disable it, the
 Push.SetEnabledAsync(false);
 ```
 To enable Mobile Center Push again, use the same API but pass ```true``` as a parameter.
+```
+Push.SetEnabledAsync(true);
+```
+You don't need to await this call to make other API calls (such as ```IsEnabledAsync```) consistent.
+
+## Check if Mobile Center Push is enabled
+You can also check if Mobile Center Push is enabled or not:
+```
+bool isEnabled = await Push.IsEnabledAsync();
+```
+
 
 
 # Supported versions and requirements
