@@ -635,7 +635,30 @@ protected override void OnNewIntent(Android.Content.Intent intent)
             base.OnNewIntent(intent);
             Push.CheckLaunchedFromNotification(this, intent);
         }
-```        
+```     
+
+### UWP additional steps
+To enable the push event feature, modify your UWP application's ```OnLaunched``` method to include ```Push.CheckLaunchedFromNotification(e)```; at the end as follows:
+```
+protected override void OnLaunched(LaunchActivatedEventArgs e)
+{
+    // ... not showing entire long method ...
+    if (e.PrelaunchActivated == false)
+    {
+        if (rootFrame.Content == null)
+        {
+            // This is what triggers Xamarin.Forms portable App.OnStart method where you typically call MobileCenter.Start
+            rootFrame.Navigate(typeof(MainPage), e.Arguments);
+        }
+        Window.Current.Activate();
+    }
+
+    // Best place to call this method
+    Push.CheckLaunchedFromNotification(e);
+
+    // End of method
+}
+```
 
 
 # Supported versions and requirements
