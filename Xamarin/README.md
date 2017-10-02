@@ -330,8 +330,16 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
    ```
    PM> Install-Package Microsoft.Azure.Mobile.Distribute
 ```
+**If you use the Mobile Center SDK in a portable project (such as Xamarin.Forms), you need to install the packages in each of the projects: the portable, Android and iOS ones**
 
+## 2. Start Mobile Center Distribute
+In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK
 
+#### 2.1 Add the using statement for Mobile Center Distribute
+Add the appropriate namespaces before you get started with using our APIs.
+   * Xamarin.iOS - Open your ```AppDelegate.cs``` and add the lines below the existing using statements
+   * Xamarin.Android - Open your ```MainActivity.cs``` and add the lines below the existing using statements
+   * Xamarin.Forms - Open your ```App.xaml.cs``` in your shared project and add the following using statements
 
 <br>
 <br>
