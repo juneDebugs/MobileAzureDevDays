@@ -9,11 +9,11 @@
   * [Distribution with Mobile Center](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#distribution-with-mobile-center)
      * [Release a Build iOS](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#ios)
      * [Release a Build Android](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#android)
-
-
-
-
-
+ * [Mobile Center Crash](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#mobile-center-crash)
+     * [iOS Crashes](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#ios-crashes)
+     * [Android Crashes](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#android-crashes)
+ * [Mobile Center Analytics](Mobile Center Analytics)
+ * [Mobile Center Push](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#xamarinforms-mobile-center-push)
 
 
 # Mobile Center Build 
