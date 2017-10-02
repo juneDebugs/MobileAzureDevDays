@@ -6,6 +6,10 @@
      * [Preparing Xamarin.UITests for Upload](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#preparing-xamarinuitests-for-upload)
      * [Preparing Xamarin.Android Apps](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#preparing-xamarinandroid-apps)
      * [Preparing Xamarin.iOS Apps](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#preparing-xamarinios-apps)
+  * [Distribution with Mobile Center](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#distribution-with-mobile-center)
+     * [Release a Build iOS](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#ios)
+     * [Release a Build Android](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#android)
+
 
 
 
