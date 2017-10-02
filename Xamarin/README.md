@@ -317,10 +317,14 @@ Please follow the [Get started](https://docs.microsoft.com/en-us/mobile-center/s
 The Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
 
 ### Visual Studio for Mac or Xamarin Studio
+
 Under your project, select ```Packages```, open context menu and click ```Add packages```.
     * Search for Mobile Center, and select ```Mobile Center Distribute```.
     
-    * Click ```Add Packages```.
+    * Click 
+    ```
+    Add Packages
+    ```.
 
 
 <br>
