@@ -304,6 +304,29 @@ Devices in Test Cloud are part of a shared public cloud, meaning that many users
  * Devices are restored to their default settings
 
 # Distribution with Mobile Center
+Mobile Center Distribute will let your users install a new version of the app when you distribute it via Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application. 
+<br>
+<br>
+**This feature will *NOT* work if your app is deployed to the app store.**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Distribution with Mobile Center
 Mobile Center Distribution is a tool to for developers to release application binaries to their end user devices. The speed and integration capabilities make this tool perform admirably for release of pre-production or beta software to testing devices. Mobile Center Distribution supports the distribution of application packages for both iOS and Android.
 
 ## Getting Started
