@@ -10,6 +10,8 @@ This simple app has a Text Entry Box and a button that triggers the text to hit 
      * [Preparing Xamarin.Android Apps](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#preparing-xamarinandroid-apps)
      * [Preparing Xamarin.iOS Apps](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#preparing-xamarinios-apps)
   * [Distribution with Mobile Center](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#distribution-with-mobile-center)
+     * [Xamarin Distribution Setup] (https://github.com/jCho23/MobileAzureDevDays/tree/master/Xamarin#xamarin-distribution-setup)
+     * [Customize or localize the in-app update dialog](https://github.com/jCho23/MobileAzureDevDays/tree/master/Xamarin#customize-or-localize-the-in-app-update-dialog)
      * [Release a Build iOS](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#ios)
      * [Release a Build Android](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#android)
  * [Mobile Center Crash](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#mobile-center-crash)
