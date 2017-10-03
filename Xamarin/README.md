@@ -309,30 +309,31 @@ Mobile Center Distribute will let your users install a new version of the app wh
 <br>
 **This feature will *NOT* work if your app is deployed to the app store.**
 
-## Add in-app updates to your app
+### Add in-app updates to your app
 Please follow the [Get started](https://docs.microsoft.com/en-us/mobile-center/sdk/getting-started/xamarin) section if you haven't set up and started the SDK in your application, yet.
 
-## 1. Add the Mobile Center Distribute module
+## Xamarin Distribution Setup 
+### 1. Add the Mobile Center Distribute module
 
 The Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
 
-### Visual Studio for Mac or Xamarin Studio
+#### Visual Studio for Mac or Xamarin Studio
    1) Under your project, select ```Packages```, open context menu and click ```Add packages```.
    2) Search for ```Mobile Center```, and select ```Mobile Center Distribute```.
    3) Click ```Add Packages```.
 
-### Visual Studio for Windows
+#### Visual Studio for Windows
    1) Navigate to the ```Project > Manage NuGet Packages```
    2) Search for ```Mobile Center```, then install ```Microsoft.Azure.Mobile.Distribute```
 
-### Package Manager Console
+#### Package Manager Console
    * Make sure the Package Manager Console is opened in either Xamarin Studio or Visual Studio. You will have to install an add-in for Xamarin Studio. Type the following command:
    ```
    PM> Install-Package Microsoft.Azure.Mobile.Distribute
 ```
 **If you use the Mobile Center SDK in a portable project (such as Xamarin.Forms), you need to install the packages in each of the projects: the portable, Android and iOS ones**
 
-## 2. Start Mobile Center Distribute
+### 2. Start Mobile Center Distribute
 In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK
 
 #### 2.1 Add the using statement for Mobile Center Distribute
