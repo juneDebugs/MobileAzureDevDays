@@ -18,6 +18,8 @@ This simple app has a Text Entry Box and a button that triggers the text to hit 
      * [iOS Crashes](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#ios-crashes)
      * [Android Crashes](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#android-crashes)
  * [Mobile Center Analytics](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#mobile-center-analytics)
+     * [Prerequisites](https://github.com/jCho23/MobileAzureDevDays/tree/master/Xamarin#1-prerequisites)
+     * [Custom events](https://github.com/jCho23/MobileAzureDevDays/tree/master/Xamarin#custom-events)
  * [Mobile Center Push](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#xamarinforms-mobile-center-push)
      * [iOS additional steps](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#ios-additional-steps)
      * [Android additional steps](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#android-additional-steps)
