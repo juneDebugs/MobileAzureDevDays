@@ -500,7 +500,7 @@ The in-app updates feature works as follows:
         * a higher value of ```versionCode``` or
         * an equal value of ```versionCode``` but a higher value of ```versionName```.
 
-# How do I test in-app updates?
+## How do I test in-app updates?
 You need to upload release builds (that use the Distribute module of the Mobile Center SDK) to the Mobile Center Portal to test in-app updates, increasing version numbers every time.
 
 1) Create your app in the Mobile Center Portal if you haven't done that already.
@@ -514,30 +514,18 @@ You need to upload release builds (that use the Distribute module of the Mobile 
 9) Bump the version of your app (```CFBundleShortVersionString``` or ```CFBundleVersion``` for iOS, versionCode for Android)
 10) Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the **Distribution Group** you created earlier. Members of the Distribution Group will be prompted for a new version the next time the app enters the foreground.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+## Disable automatic forwarding of application delegate's methods to Mobile Center services
+Mobile Center uses swizzling to automatically forward your application delegate's methods to Mobile Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the Mobile Center application delegate forwarding for all Mobile Center services by following the steps below:
+1) Open your **Info.plist** file.
+2) Add ```MobileCenterAppDelegateForwarderEnabled``` key and set the value to ```0```. This will disable application delegate forwarding for all Mobile Center services.
+3) Add ```OpenUrl``` callback in your ```AppDelegate.cs``` file.
+```
+public override bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
+{
+    Distribute.OpenUrl(url);
+    return true;
+}
+```
 
 ## Getting Started with Distribution
  1) [Add users to your app](https://docs.microsoft.com/en-us/mobile-center/dashboard/creating-and-managing-apps) to grant access to all releases.
