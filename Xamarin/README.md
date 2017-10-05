@@ -959,5 +959,7 @@ bool isEnabled = await Push.IsEnabledAsync();
 ```
 
 
+# Supported versions and requirements
+Mobile Center supports Portable Class Library (PCL) projects, but does not currently support .NET Standard. Mobile Center has no support for Components from the Xamarin Component Store and we advise using NuGet packages whenever they are available.
 
 
