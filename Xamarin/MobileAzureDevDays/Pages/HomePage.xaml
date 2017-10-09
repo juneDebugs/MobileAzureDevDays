@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="MobileAzureDevDays.Pages.HomePage"
+    IsBusy="{Binding IsInternetConnectionActive}"
+    BackgroundColor= "{Binding BackgroundColor}" >
+
+    <ContentPage.Padding>
+        <OnPlatform 
+            x:TypeArguments= "Thickness"
+            iOS= "0, 20, 0, 0" />
+    </ContentPage.Padding>
+
+   <StackLayout 
+        Padding = "30,5,30, 90"
+        VerticalOptions="StartAndExpand" >
+        <Label
+            Text= "Sentiment"
+            TextColor= "White"
+            FontSize= "Large"
+            Margin= "10,10,10,50"
+            VerticalOptions= "Start" HorizontalOptions= "Center"/>
+
+        <Entry 
+            Placeholder="Add Text here..."
+            Text="{Binding UserInputEntryText}"/> 
+
+        <Button
+            Text= "Submit"
+            Margin= "50,10"
+            FontSize= "Large"
+            TextColor= "White"
+            Command="{Binding SubmitButtonCommand}"
+            IsEnabled="{Binding IsInternetConnectionInactive}"
+            BorderRadius="0" BorderWidth="1" BorderColor = "White"
+            HorizontalOptions= "FillAndExpand" VerticalOptions= "Center" />
+
+        <ActivityIndicator
+            Color= "White"
+            Margin= "20,20"
+            IsVisible="{Binding IsInternetConnectionActive}"
+            IsRunning="{Binding IsInternetConnectionActive}"
+            HorizontalOptions ="Center" VerticalOptions= "Center" />
+
+        <Label
+            IsVisible="{Binding IsInternetConnectionActive}"
+            TextColor= "White"
+            Text= "Calculating Sentiment..."
+            HorizontalOptions= "Center" VerticalOptions= "Center"/>
+        <Label
+            FontSize="200"
+            Text="{Binding EmojiLabelText}"
+            HorizontalTextAlignment="Center"
+            HorizontalOptions= "Center" VerticalOptions= "Center"/>
+    </StackLayout>
+</ContentPage>
