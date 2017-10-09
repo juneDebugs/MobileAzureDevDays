@@ -3,6 +3,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="MobileAzureDevDays.Pages.HomePage"
+    xmlns:controls="clr-namespace:MobileAzureDevDays.Controls"
     IsBusy="{Binding IsInternetConnectionActive}"
     BackgroundColor= "{Binding BackgroundColor}" >
 
@@ -26,7 +27,7 @@
             Placeholder="Add Text here..."
             Text="{Binding UserInputEntryText}"/> 
 
-        <Button
+        <controls:SubmitButton
             Text= "Submit"
             Margin= "50,10"
             FontSize= "Large"

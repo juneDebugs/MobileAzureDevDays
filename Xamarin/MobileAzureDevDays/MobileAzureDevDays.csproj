@@ -9,6 +9,7 @@
     <Folder Include="Pages\" />
     <Folder Include="Services\" />
     <Folder Include="ViewModels\" />
+    <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="2.4.0.282" />
@@ -19,10 +20,10 @@
       <DependentUpon>*.xaml</DependentUpon>
     </Compile>
     <Compile Update="Pages\HomePage.xaml.cs">
-      <DependentUpon>HomePage.xaml</DependentUpon>
+      <DependentUpon>*.xaml</DependentUpon>
     </Compile>
     <Compile Update="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
+      <DependentUpon>*.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
