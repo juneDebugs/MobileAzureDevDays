@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
+using Microsoft.ProjectOxford.Text.Core;
+
 using Xamarin.Forms;
 
 using MobileAzureDevDays.Services;
@@ -15,7 +17,7 @@ namespace MobileAzureDevDays.ViewModels
     public class HomeViewModel : INotifyPropertyChanged
     {
         string emojiLabelText = string.Empty;
-        string userInputEditorText = string.Empty;
+        string userInputEntryText = string.Empty;
         bool isInternetConnectionActive;
         ICommand submitButtonCommand;
         Color backgroundColor = ColorConstants.DefaultBackgroundColor;
@@ -42,8 +44,8 @@ namespace MobileAzureDevDays.ViewModels
 
         public string UserInputEntryText
         {
-            get => userInputEditorText;
-            set => SetProperty(ref userInputEditorText, value);
+            get => userInputEntryText;
+            set => SetProperty(ref userInputEntryText, value);
         }
 
         public Color BackgroundColor
@@ -69,6 +71,10 @@ namespace MobileAzureDevDays.ViewModels
                     SetEmoji((float)result);
                 }
 
+            }
+            catch(DocumentMinSizeException e) when (e.DocumentSize.Equals(0))
+            {
+                OnSentimentAnalyisFailed("No text submited"); 
             }
             catch (Exception e)
             {

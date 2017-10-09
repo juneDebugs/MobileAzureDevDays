@@ -49,7 +49,7 @@
             Text= "Calculating Sentiment..."
             HorizontalOptions= "Center" VerticalOptions= "Center"/>
         <Label
-            FontSize="200"
+            FontSize="100"
             Text="{Binding EmojiLabelText}"
             HorizontalTextAlignment="Center"
             HorizontalOptions= "Center" VerticalOptions= "Center"/>
