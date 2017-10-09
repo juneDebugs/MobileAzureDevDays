@@ -3,16 +3,17 @@
     xmlns="http://xamarin.com/schemas/2014/forms" 
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
     x:Class="MobileAzureDevDays.Pages.HomePage"
-    BackgroundColor= "#FF6F69" 
-    IsBusy="{Binding IsInternetConnectionActive}" >
+    xmlns:local="clr-namespace:MobileAzureDevDays.Controls"
+    IsBusy="{Binding IsInternetConnectionActive}"
+    BackgroundColor= "{Binding BackgroundColor}" >
 
-     <ContentPage.Padding>
+    <ContentPage.Padding>
         <OnPlatform 
             x:TypeArguments= "Thickness"
             iOS= "0, 20, 0, 0" />
     </ContentPage.Padding>
 
-    <StackLayout 
+   <StackLayout 
         Padding = "30,5,30, 90"
         VerticalOptions="StartAndExpand" >
         <Label
@@ -22,8 +23,19 @@
             Margin= "10,10,10,50"
             VerticalOptions= "Start" HorizontalOptions= "Center"/>
 
-        <Entry
-            Placeholder="Add Text here..."/>
+        <Frame>
+            <Frame.HasShadow>
+                <OnPlatform 
+                    x:TypeArguments="x:Boolean"
+                    iOS="false"
+                    Android="true"
+                    WinPhone="true" />
+            </Frame.HasShadow>
+                
+            <local:EditorWithPlaceholder 
+                Placeholder="Add Text here..."
+                Text="{Binding UserInputEditorText}"/> 
+        </Frame>
 
         <Button
             Text= "Submit"
@@ -43,20 +55,14 @@
             HorizontalOptions ="Center" VerticalOptions= "Center" />
 
         <Label
+            IsVisible="{Binding IsInternetConnectionActive}"
             TextColor= "White"
             Text= "Calculating Sentiment..."
-            IsVisible="{Binding IsInternetConnectionActive}"
             HorizontalOptions= "Center" VerticalOptions= "Center"/>
         <Label
             FontSize="200"
             Text="{Binding EmojiLabelText}"
             HorizontalTextAlignment="Center"
             HorizontalOptions= "Center" VerticalOptions= "Center"/>
-
     </StackLayout>
 </ContentPage>
-    
-
-
-    
-
