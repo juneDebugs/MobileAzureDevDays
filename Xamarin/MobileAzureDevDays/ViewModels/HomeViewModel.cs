@@ -40,7 +40,7 @@ namespace MobileAzureDevDays.ViewModels
             set => SetProperty(ref emojiLabelText, value);
         }
 
-        public string UserInputEditorText
+        public string UserInputEntryText
         {
             get => userInputEditorText;
             set => SetProperty(ref userInputEditorText, value);
@@ -58,7 +58,7 @@ namespace MobileAzureDevDays.ViewModels
 
             try
             {
-                var result = await TextAnalysis.GetSentiment(UserInputEditorText);
+                var result = await TextAnalysis.GetSentiment(UserInputEntryText);
                 if (result == null)
                 {
                     OnSentimentAnalyisFailed("No Results Returned");
@@ -91,7 +91,7 @@ namespace MobileAzureDevDays.ViewModels
                     EmojiLabelText = EmojiConstants.NeutralFaceEmoji;
                     break;
                 case float number when (number > 0.6):
-                    EmojiLabelText = EmojiConstants.HappyFaceEMoji;
+                    EmojiLabelText = EmojiConstants.HappyFaceEmoji;
                     break;
             }
         }
