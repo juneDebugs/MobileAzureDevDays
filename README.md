@@ -1,21 +1,6 @@
-# Mobile Center / Azure Dev Days Content
+Mobile Azure DevDays are hands-on learning experiences geared towards all Mobile Developers to help build, test, and connect native iOS, Android, React Native, and Xamarin apps.
 
-## Mobile Center Requirements 
-* Please intergrate all services of Mobile Center into your App
-* Have at least one Sample Test
+Explore mobile development with free training courses from Mobile experts and local community members. 
+Then, after lunch, get the opportunity to learn the best practices of Azure.
 
-## Branching and Pull Requests Guideline
-
-* Never commit to master, you will be shamed
-* Branches will be deleted after a Pull Request has been approved into Master.
-
-## General flow for creating a new branch
-
-1. Perform work in chunks and commit to your branch
-    * Make sure commit titles are meaningful
-    * Be descriptive in the title and the notes
-2. Format code before creating pull request
-3. Create pull request and reference issue in the comments. Assign all pull requests to [@JuneCho.](https://github.com/jcho23)
-
-## Code formatting guidelines:
-All code should be formatted to our code guidelines. This will be considered in all pull requests and is a best practice to develop as a team. Please use [David Siegel's cSharp styling guideline.](https://github.com/dvdsgl/csharp-in-style)
+Inside this repo you will find all of the presentations, demos, and hands-on labs that you will experience at Azure Mobile DevDays!
