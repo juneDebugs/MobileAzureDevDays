@@ -178,3 +178,39 @@ Crashes.setListener(customListener);
 
 #### Should the crash be processed?
 Implement this callback if you'd like to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to Mobile Center.
+```
+@Override
+public boolean shouldProcess(ErrorReport report) {
+     return true; // return true if the crash report should be processed, otherwise false.
+}
+```
+
+#### Ask for the users' consent to send a crash log
+If user privacy is important to you, you might want to get your users' confirmation before sending a crash report to Mobile Center. The SDK exposes a callback that tells Mobile Center Crashes to await your users' confirmation before sending any crash reports.
+<br>
+<br>
+If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send, Send,** and **Don't send**. Based on the input, you will tell the Mobile Center Crashes what to do and the crash will then be handled accordingly.
+<br>
+<br>
+No dialog is shown by the SDK, it is up to you to provide UI code if you want to ask for users' consent.
+<br>
+<br>
+The following callback shows how to tell the SDK to wait for user confirmation before sending crashes:
+```
+@Override
+public boolean shouldAwaitUserConfirmation() {
+
+    // Build your own UI to ask for user consent here. SDK does not provide one by default.
+
+    // Return true if you just built a UI for user consent and are waiting for user input on that custom U.I, otherwise false.
+    return true;
+}
+```
+If you return ```true```, your app must obtain (using your own code) the user's permission and message the SDK with the result using the following API:
+```
+// Depending on the user's choice, call Crashes.notifyUserConfirmation() with the right value.
+Crashes.notifyUserConfirmation(Crashes.DONT_SEND);
+Crashes.notifyUserConfirmation(Crashes.SEND);
+Crashes.notifyUserConfirmation(Crashes.ALWAYS_SEND);
+```
+As an example you can refer to our [custom dialog example](https://github.com/Microsoft/mobile-center-sdk-android/blob/0.12.0/apps/sasquatch/src/main/java/com/microsoft/azure/mobile/sasquatch/activities/MainActivity.java#L218).
