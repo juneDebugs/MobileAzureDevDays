@@ -126,4 +126,17 @@ Mobile Center Crashes will automatically generate a crash log every time your ap
 <br>
 Please follow the [Getting Started](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#1-prerequisites) section if you haven't set up the SDK in your application yet.
 
+## Generate a test crash
+Mobile Center Crashes provides you with an API to generate a test crash for easy testing of the SDK. This API can only be used in debug builds and won't do anything in release builds.
+```
+Crashes.generateTestCrash();
+```
+## Get more information about a previous crash
+Mobile Center Crashes has two APIs that give you more information in case your app has crashed.
+
+### Did the app crash in the previous session?
+At any time after starting the SDK, you can check if the app crashed in the previous launch:
+```
+Crashes.hasCrashedInLastSession();
+```
 
