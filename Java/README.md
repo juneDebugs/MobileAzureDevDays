@@ -121,6 +121,43 @@ You can configure each successful build from a branch to be distributed to a pre
 Once you save the configuration, a new build will be kicked off automatically.
 
 ## 4. Build results
+After a build has been triggered, it can be in the following states:
+<br>
+<br>
+* queued - the build is in a queue waiting for resources to be freed up
+* building - the build is running and performing the predefined tasks
+* succeeded - the build is completed and it has succeeded
+* failed - the build has completed but it has failed; you can troubleshoot what went wrong by downloading and inspecting the build log
+* canceled - the build has been canceled by a user action or it has timed out
+
+### 4.1. Build logs
+
+For a completed build (succeeded or failed), download the logs to understand more about how the build went. Mobile Center provides an archive with the following files:
+```csharp
+|-- 1_build.txt (this is the general build log)
+|-- build (this folder contains a separate log file for each build step)
+    |-- <build-step-1>
+    |-- <build-step-2>
+    |--
+    |-- <build-step-n> (e.g. n_Post Job Cleanup.txt)
+```    
+The build step specific logs (located in the build/ directory of the archive) are helpful for troubleshooting and understanding in what step and why the build failed
+
+### 4.2. The app package (APK)
+
+The APK is an Android application packaged file which contains the Android app and assets. If the build has been correctly signed, the APK can be installed on a real device and deployed to the Play Store. If the build has not been signed, the APK can be run on an emulator or used for other purposes.
+
+### 4.3. Building multiple APKs
+
+If your app configuration is set up to build multiple APKs, e.g. different ones per CPU architecture or screen configuration, you need to make sure a universal APK is built as well. Our build system works with one main APK file and will ignore all APKs specific to a certain CPU ABI or screen density. To learn more about APK splits and how to build a universal APK, please read the corresponding [Android developer guide](https://developer.android.com/studio/build/configure-apk-splits.html#configure-abi-split).
+
+## 5. Supported versions and requirements
+The minimum version supported to build Android apps is 4.0.3 (API level 15). Android apps can have a lower minimum API level required to run, but have to target at least API level 15.
+<br>
+<br>
+Apps need to be built with Gradle and the Android Gradle plugin to be configured correctly. Your repository needs to include a Gradle wrapp
+
+
 
 # Mobile Center Analytics
 Mobile Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the Mobile Center portal for you to analyze the data.
