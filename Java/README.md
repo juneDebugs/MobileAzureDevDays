@@ -435,3 +435,10 @@ You need to upload release builds (that use the Distribute module of the Mobile 
  9) Bump the ```versionCode``` of your app.
  10) Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the Distribution Group you created earlier. Members of the **Distribution Group** will be prompted for a new version the next time the app enters the foreground.
 
+# Mobile Center Push
+Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal. Mobile Center portal and the Push SDK is integrated with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
+<br>
+<br>
+Note that only devices having the [Google Play](https://play.google.com/store) store application or emulators with **Google APIs** images can receive the notifications.
+
+## Prerequisite - Add Firebase to your app
