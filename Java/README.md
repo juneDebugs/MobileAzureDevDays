@@ -159,3 +159,13 @@ Mobile Center Crashes provides callbacks for developers to perform additional ac
 <br>
 <br>
 To handle the callbacks, you must either implement all methods in the ```CrashesListener``` interface, or override the ```AbstractCrashesListener``` class and pick only the ones you're interested in.
+
+#### Use your own CrashesListener
+Create your own CrashesListener and assign it like this:
+```
+CrashesListener customListener = new CrashesListener() {
+    // Implement all callbacks here.
+};
+Crashes.setListener(customListener);
+```
+
