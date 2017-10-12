@@ -448,3 +448,7 @@ Before using Mobile Center Push service, you need to add Firebase to your applic
 Please learn about [Prerequisites](https://firebase.google.com/docs/android/setup#prerequisites), in particular please make sure to keep **Google Repository** up-to-date in the [Android SDK Manager](https://developer.android.com/studio/intro/update.html#sdk-manager).
 
 ### 2. Manual integration
+ 1) Follow the instructions listed in [Manually add Firebase section](https://firebase.google.com/docs/android/setup#manually_add_firebase).
+ 2) Make sure to continue following instructions in Add the SDK sub section right after but do not add compile "com.google.firebase:firebase-core:${version}" as the SDK manages this step for you can it could trigger incompatibilities if versions mismatch.
+
+### 3. Using Firebase Assistant
