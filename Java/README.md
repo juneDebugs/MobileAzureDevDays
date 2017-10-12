@@ -326,7 +326,7 @@ Distribute.setListener(new MyDistributeListener());
 MobileCenter.start(...);
 ```
 Here is an example of the listener implementation that replaces the SDK dialog with a custom one:
-```
+```csharp
 public class MyDistributeListener implements DistributeListener {
 
     @Override
