@@ -152,7 +152,7 @@ Crashes.getLastSessionCrashReport();
 This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
 <br>
 <br>
-There are numerous use cases for this API, the most common one is people who call this API and implement their custom CrashesListener.
+There are numerous use cases for this API, the most common one is people who call this API and implement their [custom CrashesListener](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#use-your-own-crasheslistener).
 
 ### Customize your usage of Mobile Center Crashes
 Mobile Center Crashes provides callbacks for developers to perform additional actions before and when sending crash logs to Mobile Center.
@@ -168,4 +168,13 @@ CrashesListener customListener = new CrashesListener() {
 };
 Crashes.setListener(customListener);
 ```
+In case you are only interested in customizing some of the callbacks, use the ```AbstractCrashesListener``` instead:
+```
+AbstractCrashesListener customListener = new AbstractCrashesListener() {
+    // Implement any callback here as required.
+};
+Crashes.setListener(customListener);
+```
 
+#### Should the crash be processed?
+Implement this callback if you'd like to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to Mobile Center.
