@@ -15,7 +15,7 @@ This simple app has a Text Entry Box and a button that triggers the text to hit 
 * [Distribute](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#mobile-center-distribute)
     * [Customize the in-app update dialog](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#customize-or-localize-the-in-app-update-dialog)
 * [Push](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#mobile-center-push)
-    * [Prerequisite](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#prerequisite---add-firebase-to-your-app)
+    * [Prerequisites](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#prerequisite---add-firebase-to-your-app)
 
 
 
