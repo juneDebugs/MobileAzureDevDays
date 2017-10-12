@@ -154,3 +154,8 @@ This API is asynchronous, you can read more about that in our [Mobile Center Asy
 <br>
 There are numerous use cases for this API, the most common one is people who call this API and implement their custom CrashesListener.
 
+### Customize your usage of Mobile Center Crashes
+Mobile Center Crashes provides callbacks for developers to perform additional actions before and when sending crash logs to Mobile Center.
+<br>
+<br>
+To handle the callbacks, you must either implement all methods in the ```CrashesListener``` interface, or override the ```AbstractCrashesListener``` class and pick only the ones you're interested in.
