@@ -77,6 +77,8 @@ To learn how to get started with in-app updates, read the documentation of [Mobi
 <br>
 To learn how to get started with Push, read the documentation of [Mobile Center Push].
 
+# Building Java apps for Android
+
 # Mobile Center Analytics
 Mobile Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the Mobile Center portal for you to analyze the data.
 <br>
