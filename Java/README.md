@@ -410,3 +410,13 @@ Distribute.isEnabled();
 ```
 This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
 
+## How do in-app updates work?
+The in-app updates feature works as follows:
+ 1) This feature will ONLY work with RELEASE builds that are distributed using Mobile Center Distribute service.
+ 2) Once you integrate the SDK, build release version of your app and upload to Mobile Center, users in that distribution group will be notified for the new release via an email.
+ 3) When each user opens the link in their email, the application will be installed on their device. It's important that they use the email link to install - we do not support side-loading.
+ 4) Once the app is installed and opened for the first time after the Mobile Center Distribute SDK has been added, a browser will open to enable in-app updates. This is a ONE TIME step that will not occur for subsequent releases of your app.
+ 5) Once the above step is successful, they should navigate back to the app.
+ 6) A new release of the app shows the in-app update dialog asking users to update your application if it has
+  * a higher value of versionCode or
+  * an equal value of versionCode but a higher value of versionName.
