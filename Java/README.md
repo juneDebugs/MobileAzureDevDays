@@ -291,3 +291,13 @@ Please follow the [Getting Started](https://github.com/jCho23/MobileAzureDevDays
 ### 1. Add the Mobile Center Distribute module
 The Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
  1) Open your app level ```build.gradle``` file (```app/build.gradle```) and add the following lines after ```apply plugin```.
+```
+dependencies {
+   def mobileCenterSdkVersion = '0.12.0'
+   compile "com.microsoft.azure.mobile:mobile-center-distribute:${mobileCenterSdkVersion}"
+}
+```
+ 2) Save your ```build.gradle``` file and make sure to trigger a Gradle sync in Android Studio
+
+### 2. Start Mobile Center Distribute
+
