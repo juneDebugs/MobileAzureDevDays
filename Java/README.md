@@ -420,3 +420,4 @@ The in-app updates feature works as follows:
  6) A new release of the app shows the in-app update dialog asking users to update your application if it has
   * a higher value of versionCode or
   * an equal value of versionCode but a higher value of versionName.
+ **If you upload the same APK a second time, the dialog will NOT appear as the versions are identical**
