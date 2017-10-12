@@ -381,3 +381,13 @@ If you don't call ```notifyUpdateAction```, the callback will repeat on every ac
 <br>
 <br>
 The listener can be called again with the same release if the activity changes before the user action is notified to the SDK.
+<br>
+<br>
+This behavior is needed to cover the following scenarios:
+<br>
+<br>
+ *Your application is sent to the background (like pressing HOME) then resumed in a different activity.
+ *Your activity is covered by another one without leaving the application (like clicking on some notifications).
+ *Other similar scenarios.
+ 
+In that case, the activity hosting the dialog might be replaced without user interaction. So the SDK calls the listener again so that you can restore the custom dialog.
