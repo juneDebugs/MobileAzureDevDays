@@ -278,3 +278,16 @@ You can also check if Mobile Center Crashes is enabled or not:
 Crashes.isEnabled();
 ```
 This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
+
+# Mobile Center Distribute
+Mobile Center Distribute will let your users install a new version of the app when you distribute it via Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application.
+<br>
+<br>
+**This feature will NOT work if your app is deployed to the app store**
+
+## Add in-app updates to your app
+Please follow the [Getting Started](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#1-prerequisites) section if you haven't set up the SDK in your application yet.
+
+### 1. Add the Mobile Center Distribute module
+The Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
+ 1) Open your app level ```build.gradle``` file (```app/build.gradle```) and add the following lines after ```apply plugin```.
