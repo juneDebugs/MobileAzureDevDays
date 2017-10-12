@@ -261,3 +261,20 @@ public Iterable<ErrorAttachmentLog> getErrorAttachments(ErrorReport report) {
 }
 ```
 
+### Enable or disable Mobile Center Crashes at runtime
+You can enable and disable Mobile Center Crashes at runtime. If you disable it, the SDK will not do any crash reporting for the app.
+```
+Crashes.setEnabled(false);
+```
+To enable Mobile Center Crashes again, use the same API but pass ```true``` as a parameter.
+```
+Crashes.setEnabled(true);
+```
+This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
+
+### Check if Mobile Center Crashes is enabled
+You can also check if Mobile Center Crashes is enabled or not:
+```
+Crashes.isEnabled();
+```
+This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
