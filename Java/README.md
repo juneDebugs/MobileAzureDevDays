@@ -428,10 +428,10 @@ You need to upload release builds (that use the Distribute module of the Mobile 
  2) Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
  3) Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that was not used for that app on Mobile Center. This ensures that you have an experience that's close to the experience of your real testers.
  4) Create a new build of your app that includes **Mobile Center Distribute** and contains the setup logic as described below.
- 6) Click on the Distribute new release button in the portal and upload your build of the app.
- 7) Once the upload has finished, click Next and select the Distribution group that you just created as the Destination of that app distribution.
- 8) Review the Distribution and distribute the build to your in-app testing group.
-  People in that group will receive an invite to be testers of the app. Once they need to accept the invite, they can download the app from the Mobile Center Portal from their mobile device. Once they have in-app updates installed, you're ready to test in-app updates.
+ 5) Click on the **Distribute new release** button in the portal and upload your build of the app.
+ 6) Once the upload has finished, click **Next** and select the **Distribution group** that you just created as the **Destination** of that app distribution.
+ 7) Review the Distribution and distribute the build to your in-app testing group.
+ 8) People in that group will receive an invite to be testers of the app. Once they need to accept the invite, they can download the app from the Mobile Center Portal from their mobile device. Once they have in-app updates installed, you're ready to test in-app updates.
  9) Bump the ```versionCode``` of your app.
  10) Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the Distribution Group you created earlier. Members of the **Distribution Group** will be prompted for a new version the next time the app enters the foreground.
 
