@@ -21,9 +21,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	
 	func applicationDidBecomeActive(_ application: UIApplication) {
-		showApiKeyAlert(application)
-	}
+        SentimentClient.shared.obtainKey(){keyResponse in
+            if let document = keyResponse {
+                SentimentClient.shared.apiKey = document.key
+                SentimentClient.shared.region = document.region
+            } else {
+                self.showApiKeyAlert(application)
+            }
+        }
 
+	}
 
 	func showApiKeyAlert(_ application: UIApplication) {
 		
