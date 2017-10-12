@@ -500,3 +500,80 @@ import com.microsoft.azure.mobile.push.Push;
 ```
 ## Intercept push notifications
 You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user.
+<br>
+<br>
+You need to register the listener before calling ```MobileCenter.start``` as shown in the following example:
+```
+Push.setListener(new MyPushListener());
+MobileCenter.start(...);
+```
+If (and only if) your launcher activity uses a ```launchMode``` of ```singleTop```, ```singleInstance``` or ```singleTask```, you need to add this in the activity ```onNewIntent``` method:
+```
+@Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        Push.checkLaunchedFromNotification(this, intent);
+    }
+```
+Here is an example of the listener implementation that displays an alert dialog if the message is received in foreground or a toast if a background push has been clicked:
+```
+public class MyPushListener implements PushListener {
+
+    @Override
+    public void onPushNotificationReceived(Activity activity, PushNotification pushNotification) {
+
+        /* The following notification properties are available. */
+        String title = pushNotification.getTitle();
+        String message = pushNotification.getMessage();
+        Map<String, String> customData = pushNotification.getCustomData();
+
+        /*
+         * Message and title cannot be read from a background notification object.
+         * Message being a mandatory field, you can use that to check foreground vs background.
+         */
+        if (message != null) {
+
+            /* Display an alert for foreground push. */
+            AlertDialog.Builder dialog = new AlertDialog.Builder(activity);
+            if (title != null) {
+                dialog.setTitle(title);
+            }
+            dialog.setMessage(message);
+            if (!customData.isEmpty()) {
+                dialog.setMessage(message + "\n" + customData);
+            }
+            dialog.setPositiveButton(android.R.string.ok, null);
+            dialog.show();
+        } else {
+
+            /* Display a toast when a background push is clicked. */
+            Toast.makeText(activity, String.format(activity.getString(R.string.push_toast), customData), Toast.LENGTH_LONG).show(); // For example R.string.push_toast would be "Push clicked with data=%1s"
+        }
+    }
+});
+```
+## Existing Firebase Analytics users
+Mobile Center Push has a dependency on Firebase. Firebase Analytics is included in the core Firebase module and therefore, it's a dependency for Firebase messaging. Mobile Center Push SDK automatically disables Firebase Analytics to prevent unwanted data collection by Firebase.
+<br>
+<br>
+If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call the following method before ```MobileCenter.start```:
+```
+Push.enableFirebaseAnalytics(getApplication());
+MobileCenter.start(getApplication(), "{Your App Secret}", Push.class);
+```
+## Enable or disable Mobile Center Push at runtime
+You can enable and disable Mobile Center Push at runtime. If you disable it, the SDK will stop updating the Google registration identifier used to push but the existing one will continue working. In other words, disabling the Mobile Center Push in the SDK will **NOT** stop your application from receiving push notifications.
+```
+Push.setEnabled(false);
+```
+To enable Mobile Center Push again, use the same API but pass ```true``` as a parameter.
+```csharp
+Push.setEnabled(true);
+```
+This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
+
+## Check if Mobile Center Push is enabled
+You can also check if Mobile Center Push is enabled or not:
+```
+Push.isEnabled();
+```
