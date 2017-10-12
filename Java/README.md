@@ -76,3 +76,45 @@ To learn how to get started with in-app updates, read the documentation of [Mobi
 <br>
 <br>
 To learn how to get started with Push, read the documentation of [Mobile Center Push].
+
+# Mobile Center Analytics
+Mobile Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the Mobile Center portal for you to analyze the data.
+
+## Session and Device information
+Once you add Mobile Center Analytics to your app and start the SDK, it will automatically track sessions and device properties like OS Version, model, etc. without writing any additional code.
+
+## Custom Events
+You can track your own custom events with **up to five properties** to know what's happening in your app, understand user actions, and see the aggregates in the Mobile Center portal.
+<br>
+<br>
+Once you have started the SDK, use the ```trackEvent()``` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there is a maximum limit of 256 characters per event name and 64 characters per event property name and event property value.
+```
+Map<String, String> properties = new HashMap<>();
+properties.put("Category", "Music");
+properties.put("FileName", "favorite.avi");
+
+Analytics.trackEvent("Video clicked", properties);
+```
+Properties for events are entirely optional – if you just want to track an event, use this sample instead:
+```
+Analytics.trackEvent("Video clicked");
+```
+
+## Enable or disable Mobile Center Analytics at runtime
+You can enable and disable Mobile Center Analytics at runtime. If you disable it, the SDK will not collect any more analytics information for the app.
+```
+Analytics.setEnabled(false);
+```
+To enable Mobile Center Analytics again, use the same API but pass ```true``` as a parameter.
+```
+Analytics.setEnabled(true);
+```
+This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
+
+## Check if Mobile Center Analytics is enabled
+You can also check if Mobile Center Analytics is enabled or not.
+```
+Analytics.isEnabled();
+```
+
+
