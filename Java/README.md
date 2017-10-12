@@ -31,3 +31,40 @@ If you have already created your app in the Mobile Center portal, you can skip t
  2) Make sure to trigger a Gradle sync in Android Studio.
  
  Now that you've integrated the SDK in your application, it's time to start the SDK and make use of Mobile Center.
+
+## 4. Start the SDK
+### 4.1 Add the start() method
+
+In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK. Insert the following line inside your app's main activity class' ```onCreate```-callback to use **Mobile Center Analytics** and **Mobile Center Crashes**:
+```
+MobileCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.class);
+```
+### 4.2 Replace the placeholder with your App Secret
+
+Make sure to replace ```{Your App Secret}``` text with the actual value for your application. The App Secret can be found on the **Getting Started** page on the Mobile Center portal or through the **Manage App** button.
+<br>
+The Getting Started page contains the above code sample with your App Secret in it, you can just copy-paste the whole sample.
+<br>
+The example above shows how to use the ```start()``` method and include both Mobile Center Analytics and Mobile Center Crashes.
+<br>
+If you do not want to use one of the two services, remove the corresponding parameter from the method call above.
+<br>
+Note that, unless you explicitly specify each module as parameters in the start method, you can't use that Mobile Center service. In addition, the ```start()``` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
+<br>
+For example - If you just want to onboard to Mobile Center Analytics, you should modify the ```start()``` API call as follows:
+```
+MobileCenter.start(getApplication(), "{Your App Secret}", Analytics.class);
+```
+Android Studio will automatically suggest the required import statements once you insert the ```start()``` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
+```
+import com.microsoft.azure.mobile.MobileCenter;
+import com.microsoft.azure.mobile.analytics.Analytics;
+import com.microsoft.azure.mobile.crashes.Crashes;
+```
+Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
+<br>
+Look at the documentation for [Mobile Center Analytics](https://docs.microsoft.com/en-us/mobile-center/sdk/analytics/android) and [Mobile Center Crashes](https://docs.microsoft.com/en-us/mobile-center/sdk/crashes/android) to learn how to customize and use more advanced functionalities of both services.
+<br>
+To learn how to get started with in-app updates, read the documentation of [Mobile Center Distribute].
+<br>
+To learn how to get started with Push, read the documentation of [Mobile Center Push].
