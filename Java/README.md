@@ -403,3 +403,10 @@ Distribute.setEnabled(true);
 ```
 This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
 
+## Check if Mobile Center Distribute is enabled
+You can also check if Mobile Center Distribute is enabled or not:
+```
+Distribute.isEnabled();
+```
+This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
+
