@@ -490,4 +490,13 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
  ```
  MobileCenter.start(getApplication(), "{Your App Secret}", Push.class);
  ```
-
+Make sure you have replaced ```{Your App Secret}``` in the code sample above with your App Secret. Please check out the Get started section if you haven't set up and started the SDK in your application, yet. Please follow the [Getting Started](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#1-prerequisites) section if you haven't set up the SDK in your application yet.
+<br>
+<br>
+Android Studio will automatically suggest the required import statement once you add ```Push.class``` to the ```start()``` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
+```
+import com.microsoft.azure.mobile.MobileCenter;
+import com.microsoft.azure.mobile.push.Push;
+```
+## Intercept push notifications
+You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user.
