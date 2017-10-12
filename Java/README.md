@@ -471,3 +471,23 @@ Go to Project Settings and under Cloud Messaging, copy your Server Key. This wil
 ## Add Mobile Center Push to your app
 Please follow the [Getting Started](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#1-prerequisites) section if you haven't set up the SDK in your application yet.
 
+### 1. Add the Mobile Center Push module
+The Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
+ 1) Open your app level ```build.gradle``` file (```app/build.gradle```) and add the following lines after ```apply plugin```. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. For integrating the Push module, add the following lines:
+ ```
+ dependencies {
+   def mobileCenterSdkVersion = '0.12.0'
+   compile "com.microsoft.azure.mobile:mobile-center-push:${mobileCenterSdkVersion}"
+}
+```
+ 2) Make sure to trigger a Gradle sync in Android Studio.
+ 
+ ### 2. Start Mobile Center Push
+ In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
+ <br>
+ <br>
+ Add ```Push.class``` to your ```MobileCenter.start()``` method to start Mobile Center Push service
+ ```
+ MobileCenter.start(getApplication(), "{Your App Secret}", Push.class);
+ ```
+
