@@ -2,14 +2,20 @@
 This simple app has a Text Entry Box and a button that triggers the text to hit the [Azure Sentiment Analysis API](https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-sentiment-analysis) and returns a corresponding Emoji and changes the background color appropriately.
 
 # Table of Contents
-* Get Started with Android
-   * Prerequisites
-* Build
-* Test
-* Distribute
-* Crashes
-* Analytics
-* Push
+* [Get Started with Android](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#get-started-with-android)
+   * [Prerequisites](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#1-prerequisites)
+* [Build](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#mobile-center-build)
+   * [Linking your repository](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#1-linking-your-repository)
+* [Test](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#mobile-center-test)
+    * [Preparing Espresso Tests for Upload](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#preparing-espresso-tests-for-upload)
+* [Analytics](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#mobile-center-analytics)  
+    * [Custom Events](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#custom-events)
+* [Crashes](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#mobile-center-crashes)    
+    * [Customize Mobile Center Crashes](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#customize-your-usage-of-mobile-center-crashes)
+* [Distribute](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#mobile-center-distribute)
+    * [Customize the in-app update dialog](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#customize-or-localize-the-in-app-update-dialog)
+* [Push](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#mobile-center-push)
+    * [Prerequisite](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#prerequisite---add-firebase-to-your-app)
 
 
 
