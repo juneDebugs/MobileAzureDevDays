@@ -563,7 +563,7 @@ MobileCenter.start(getApplication(), "{Your App Secret}", Push.class);
 ```
 ## Enable or disable Mobile Center Push at runtime
 You can enable and disable Mobile Center Push at runtime. If you disable it, the SDK will stop updating the Google registration identifier used to push but the existing one will continue working. In other words, disabling the Mobile Center Push in the SDK will **NOT** stop your application from receiving push notifications.
-```
+```csharp
 Push.setEnabled(false);
 ```
 To enable Mobile Center Push again, use the same API but pass ```true``` as a parameter.
@@ -574,6 +574,7 @@ This API is asynchronous, you can read more about that in our [Mobile Center Asy
 
 ## Check if Mobile Center Push is enabled
 You can also check if Mobile Center Push is enabled or not:
-```
+```csharp
 Push.isEnabled();
 ```
+This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
