@@ -21,7 +21,7 @@ If you have already created your app in the Mobile Center portal, you can skip t
  
 ## 3. Add the Mobile Center SDK modules
  1) Open your app level ```build.gradle``` file (```app/build.gradle```) and add the following lines after ```apply plugin```. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. If you would want to use Mobile Center Analytics and Crashes, add the following lines:
- ```
+ ```csharp
  dependencies {
     def mobileCenterSdkVersion = '0.12.0'
     compile "com.microsoft.azure.mobile:mobile-center-analytics:${mobileCenterSdkVersion}"
@@ -36,7 +36,7 @@ If you have already created your app in the Mobile Center portal, you can skip t
 ### 4.1 Add the start() method
 
 In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK. Insert the following line inside your app's main activity class' ```onCreate```-callback to use **Mobile Center Analytics** and **Mobile Center Crashes**:
-```
+```csharp
 MobileCenter.start(getApplication(), "{Your App Secret}", Analytics.class, Crashes.class);
 ```
 ### 4.2 Replace the placeholder with your App Secret
@@ -57,11 +57,11 @@ Note that, unless you explicitly specify each module as parameters in the start 
 <br>
 <br>
 For example - If you just want to onboard to Mobile Center Analytics, you should modify the ```start()``` API call as follows:
-```
+```csharp
 MobileCenter.start(getApplication(), "{Your App Secret}", Analytics.class);
 ```
 Android Studio will automatically suggest the required import statements once you insert the ```start()``` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
-```
+```csharp
 import com.microsoft.azure.mobile.MobileCenter;
 import com.microsoft.azure.mobile.analytics.Analytics;
 import com.microsoft.azure.mobile.crashes.Crashes;
@@ -91,7 +91,7 @@ You can track your own custom events with **up to five properties** to know what
 <br>
 <br>
 Once you have started the SDK, use the ```trackEvent()``` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there is a maximum limit of 256 characters per event name and 64 characters per event property name and event property value.
-```
+```csharp
 Map<String, String> properties = new HashMap<>();
 properties.put("Category", "Music");
 properties.put("FileName", "favorite.avi");
@@ -99,24 +99,24 @@ properties.put("FileName", "favorite.avi");
 Analytics.trackEvent("Video clicked", properties);
 ```
 Properties for events are entirely optional – if you just want to track an event, use this sample instead:
-```
+```csharp
 Analytics.trackEvent("Video clicked");
 ```
 
 ## Enable or disable Mobile Center Analytics at runtime
 You can enable and disable Mobile Center Analytics at runtime. If you disable it, the SDK will not collect any more analytics information for the app.
-```
+```csharp
 Analytics.setEnabled(false);
 ```
 To enable Mobile Center Analytics again, use the same API but pass ```true``` as a parameter.
-```
+```csharp
 Analytics.setEnabled(true);
 ```
 This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
 
 ## Check if Mobile Center Analytics is enabled
 You can also check if Mobile Center Analytics is enabled or not.
-```
+```csharp
 Analytics.isEnabled();
 ```
 
@@ -128,7 +128,7 @@ Please follow the [Getting Started](https://github.com/jCho23/MobileAzureDevDays
 
 ## Generate a test crash
 Mobile Center Crashes provides you with an API to generate a test crash for easy testing of the SDK. This API can only be used in debug builds and won't do anything in release builds.
-```
+```csharp
 Crashes.generateTestCrash();
 ```
 ## Get more information about a previous crash
@@ -136,7 +136,7 @@ Mobile Center Crashes has two APIs that give you more information in case your a
 
 ### Did the app crash in the previous session?
 At any time after starting the SDK, you can check if the app crashed in the previous launch:
-```
+```csharp
 Crashes.hasCrashedInLastSession();
 ```
 This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
@@ -146,7 +146,7 @@ This comes in handy in case you want to adjust the behavior or UI of your app af
 
 ### Details about the last crash
 If your app crashed previously, you can get details about the last crash.
-```
+```csharp
 Crashes.getLastSessionCrashReport();
 ```
 This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
@@ -162,14 +162,14 @@ To handle the callbacks, you must either implement all methods in the ```Crashes
 
 #### Use your own CrashesListener
 Create your own CrashesListener and assign it like this:
-```
+```csharp
 CrashesListener customListener = new CrashesListener() {
     // Implement all callbacks here.
 };
 Crashes.setListener(customListener);
 ```
 In case you are only interested in customizing some of the callbacks, use the ```AbstractCrashesListener``` instead:
-```
+```csharp
 AbstractCrashesListener customListener = new AbstractCrashesListener() {
     // Implement any callback here as required.
 };
@@ -178,7 +178,7 @@ Crashes.setListener(customListener);
 
 #### Should the crash be processed?
 Implement this callback if you'd like to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to Mobile Center.
-```
+```csharp
 @Override
 public boolean shouldProcess(ErrorReport report) {
      return true; // return true if the crash report should be processed, otherwise false.
@@ -196,7 +196,7 @@ No dialog is shown by the SDK, it is up to you to provide UI code if you want to
 <br>
 <br>
 The following callback shows how to tell the SDK to wait for user confirmation before sending crashes:
-```
+```csharp
 @Override
 public boolean shouldAwaitUserConfirmation() {
 
@@ -207,7 +207,7 @@ public boolean shouldAwaitUserConfirmation() {
 }
 ```
 If you return ```true```, your app must obtain (using your own code) the user's permission and message the SDK with the result using the following API:
-```
+```csharp
 // Depending on the user's choice, call Crashes.notifyUserConfirmation() with the right value.
 Crashes.notifyUserConfirmation(Crashes.DONT_SEND);
 Crashes.notifyUserConfirmation(Crashes.SEND);
@@ -220,21 +220,21 @@ At times, you would like to know the status of your app crash. A common use case
 <br>
 <br>
 ##### The following callback will be invoked before the SDK sends a crash log.
-```
+```csharp
 @Override
 public void onBeforeSending(ErrorReport errorReport) {
     // Your code, e.g. to present a custom UI.
 }
 ```
 ##### The following callback will be invoked after the SDK sent a crash log successfully.
-```
+```csharp
 @Override
 public void onSendingSucceeded(ErrorReport report) {
     // Your code, e.g. to hide the custom UI.
 }
 ```
 ##### The following callback will be invoked if the SDK failed to send a crash log.
-```
+```csharp
 @Override
 public void onSendingFailed(ErrorReport report, Exception e) {
     // Your code goes here.
@@ -242,7 +242,7 @@ public void onSendingFailed(ErrorReport report, Exception e) {
 ```
 #### Add attachments to a crash report
 You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in Mobile Center portal. The following callback will be invoked if you want to add attachments to a crash report. Here is an example to attach a text and an image to a crash:
-```
+```csharp
 @Override
 public Iterable<ErrorAttachmentLog> getErrorAttachments(ErrorReport report) {
 
@@ -263,18 +263,18 @@ public Iterable<ErrorAttachmentLog> getErrorAttachments(ErrorReport report) {
 
 ### Enable or disable Mobile Center Crashes at runtime
 You can enable and disable Mobile Center Crashes at runtime. If you disable it, the SDK will not do any crash reporting for the app.
-```
+```csharp
 Crashes.setEnabled(false);
 ```
 To enable Mobile Center Crashes again, use the same API but pass ```true``` as a parameter.
-```
+```csharp
 Crashes.setEnabled(true);
 ```
 This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
 
 ### Check if Mobile Center Crashes is enabled
 You can also check if Mobile Center Crashes is enabled or not:
-```
+```csharp
 Crashes.isEnabled();
 ```
 This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
@@ -291,7 +291,7 @@ Please follow the [Getting Started](https://github.com/jCho23/MobileAzureDevDays
 ### 1. Add the Mobile Center Distribute module
 The Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
  1) Open your app level ```build.gradle``` file (```app/build.gradle```) and add the following lines after ```apply plugin```.
-```
+```csharp
 dependencies {
    def mobileCenterSdkVersion = '0.12.0'
    compile "com.microsoft.azure.mobile:mobile-center-distribute:${mobileCenterSdkVersion}"
@@ -304,11 +304,11 @@ In order to use Mobile Center, you need to opt in to the module(s) that you want
 <br>
 <br>
 Add ```Distribute.class``` to your ```MobileCenter.start()``` method to start Mobile Center Distribute service.
-```
+```csharp
 MobileCenter.start(getApplication(), "{Your App Secret}", Distribute.class);
 ```
 Make sure you have replaced ```{Your App Secret}``` in the code sample above with your App Secret. Android Studio will automatically suggest the required import statement once you add ```Distribute.class``` to the ```start()``` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
-```
+```csharp
 import com.microsoft.azure.mobile.MobileCenter;
 import com.microsoft.azure.mobile.distribute.Distribute;
 ```
@@ -321,7 +321,7 @@ You can easily provide your own resource strings if you'd like to change or loca
 
 ### 2. Customize the update dialog
 You can customize the default update dialog's appearance by implementing the ```DistributeListener``` interface. You need to register the listener before calling ```MobileCenter.start``` as shown in the following example:
-```
+```csharp
 Distribute.setListener(new MyDistributeListener());
 MobileCenter.start(...);
 ```
@@ -394,18 +394,18 @@ In that case, the activity hosting the dialog might be replaced without user int
 
 ## Enable or disable Mobile Center Distribute at runtime
 You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality but you can still use Distribute service in Mobile Center porta
-```
+```csharp
 Distribute.setEnabled(false);
 ```
 To enable Mobile Center Distribute again, use the same API but pass ```true``` as a parameter.
-```
+```csharp
 Distribute.setEnabled(true);
 ```
 This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
 
 ## Check if Mobile Center Distribute is enabled
 You can also check if Mobile Center Distribute is enabled or not:
-```
+```csharp
 Distribute.isEnabled();
 ```
 This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
@@ -460,7 +460,7 @@ Step 3 is managed by Mobile Center SDK automatically, so you can stop after step
 <br>
 <br>
 Please remove this if added automatically as the SDK manages this for you can it can trigger build errors if versions mismatch:
-```
+```csharp
 compile "com.google.firebase:firebase-core:${version}"
 compile "com.google.firebase:firebase-messaging:${version}"
 ```
@@ -474,7 +474,7 @@ Please follow the [Getting Started](https://github.com/jCho23/MobileAzureDevDays
 ### 1. Add the Mobile Center Push module
 The Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
  1) Open your app level ```build.gradle``` file (```app/build.gradle```) and add the following lines after ```apply plugin```. Include the dependencies that you want in your project. Each SDK module needs to be added as a separate dependency in this section. For integrating the Push module, add the following lines:
- ```
+ ```csharp
  dependencies {
    def mobileCenterSdkVersion = '0.12.0'
    compile "com.microsoft.azure.mobile:mobile-center-push:${mobileCenterSdkVersion}"
@@ -487,14 +487,14 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
  <br>
  <br>
  Add ```Push.class``` to your ```MobileCenter.start()``` method to start Mobile Center Push service
- ```
+ ```csharp
  MobileCenter.start(getApplication(), "{Your App Secret}", Push.class);
  ```
 Make sure you have replaced ```{Your App Secret}``` in the code sample above with your App Secret. Please check out the Get started section if you haven't set up and started the SDK in your application, yet. Please follow the [Getting Started](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#1-prerequisites) section if you haven't set up the SDK in your application yet.
 <br>
 <br>
 Android Studio will automatically suggest the required import statement once you add ```Push.class``` to the ```start()``` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
-```
+```csharp
 import com.microsoft.azure.mobile.MobileCenter;
 import com.microsoft.azure.mobile.push.Push;
 ```
@@ -503,12 +503,12 @@ You can set up a listener to be notified whenever a push notification is receive
 <br>
 <br>
 You need to register the listener before calling ```MobileCenter.start``` as shown in the following example:
-```
+```csharp
 Push.setListener(new MyPushListener());
 MobileCenter.start(...);
 ```
 If (and only if) your launcher activity uses a ```launchMode``` of ```singleTop```, ```singleInstance``` or ```singleTask```, you need to add this in the activity ```onNewIntent``` method:
-```
+```csharp
 @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
@@ -516,7 +516,7 @@ If (and only if) your launcher activity uses a ```launchMode``` of ```singleTop`
     }
 ```
 Here is an example of the listener implementation that displays an alert dialog if the message is received in foreground or a toast if a background push has been clicked:
-```
+```csharp
 public class MyPushListener implements PushListener {
 
     @Override
@@ -557,7 +557,7 @@ Mobile Center Push has a dependency on Firebase. Firebase Analytics is included 
 <br>
 <br>
 If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call the following method before ```MobileCenter.start```:
-```
+```csharp
 Push.enableFirebaseAnalytics(getApplication());
 MobileCenter.start(getApplication(), "{Your App Secret}", Push.class);
 ```
