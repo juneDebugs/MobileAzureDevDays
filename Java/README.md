@@ -157,6 +157,36 @@ The minimum version supported to build Android apps is 4.0.3 (API level 15). And
 <br>
 Apps need to be built with Gradle and the Android Gradle plugin to be configured correctly. Your repository needs to include a Gradle wrapp
 
+# Mobile Center Test
+
+## Getting Started with Test Cloud
+The prerequisite steps below must be completed before a project can be used with Mobile Center Test Cloud.
+  1. Create a Mobile Center account
+Create a Mobile Center account at [mobile.azure.com](https://mobile.azure.com/login?original_url=%2F) to gain access to Test Cloud.
+  2. Install the Mobile Center CLI
+Test runs are executed using the Mobile Center CLI. If not already installed, follow [these instructions](https://docs.microsoft.com/en-us/mobile-center/cli/index) to install. After installation, run ```mobile-center login``` to link a Mobile Center account with the tool.
+  3. Create an app in Mobile Center
+All test assets and operations are within the context of an app. Create the app project to be tested.
+  4. Review the core concepts
+Understanding the core concepts of the Test Cloud experience improve ease of use, navigation, and communications with support. It is recommended to become familiar with [these concepts](https://docs.microsoft.com/en-us/mobile-center/test-cloud/core-concepts) before running your first tests.
+  5. Prepare the project for upload
+Each test framework has different requirements for uploading to Test Cloud. Follow the appropriate test framework branch from [this page.](https://docs.microsoft.com/en-us/mobile-center/test-cloud/preparing-for-upload/index)
+
+## Preparing Espresso Tests for Upload
+The steps necessary to prepare an app and its corresponding test suite for upload to Test Cloud vary depending on the test framework. The section below provides instructions for preparing Espresso tests for upload to Test Cloud. For guidance on authoring Espresso tests, see the [Espresso documentation](https://developer.android.com/training/testing/ui-testing/espresso-testing.html).
+
+### 1. Changes to the build system
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Mobile Center Analytics
