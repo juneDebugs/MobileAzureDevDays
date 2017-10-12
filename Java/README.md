@@ -300,4 +300,78 @@ dependencies {
  2) Save your ```build.gradle``` file and make sure to trigger a Gradle sync in Android Studio
 
 ### 2. Start Mobile Center Distribute
+In order to use Mobile Center, you need to opt in to the module(s) that you want to use, meaning by default no modules are started and you will have to explicitly call each of them when starting the SDK.
+<br>
+<br>
+Add ```Distribute.class``` to your ```MobileCenter.start()``` method to start Mobile Center Distribute service.
+```
+MobileCenter.start(getApplication(), "{Your App Secret}", Distribute.class);
+```
+Make sure you have replaced ```{Your App Secret}``` in the code sample above with your App Secret. Android Studio will automatically suggest the required import statement once you add ```Distribute.class``` to the ```start()``` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
+```
+import com.microsoft.azure.mobile.MobileCenter;
+import com.microsoft.azure.mobile.distribute.Distribute;
+```
+
+## Customize or localize the in-app update dialog
+
+### 1. Customize or localize text
+
+You can easily provide your own resource strings if you'd like to change or localize the text displayed in the update dialog. Look at the string files in [this resource file](https://github.com/Microsoft/mobile-center-sdk-android/blob/develop/sdk/mobile-center-distribute/src/main/res/values/mobile_center_distribute.xml). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.
+
+### 2. Customize the update dialog
+You can customize the default update dialog's appearance by implementing the ```DistributeListener``` interface. You need to register the listener before calling ```MobileCenter.start``` as shown in the following example:
+```
+Distribute.setListener(new MyDistributeListener());
+MobileCenter.start(...);
+```
+Here is an example of the listener implementation that replaces the SDK dialog with a custom one:
+```
+public class MyDistributeListener implements DistributeListener {
+
+    @Override
+    public boolean onReleaseAvailable(Activity activity, ReleaseDetails releaseDetails) {
+
+        // Look at releaseDetails public methods to get version information, release notes text or release notes URL
+        String versionName = releaseDetails.getShortVersion();
+        int versionCode = releaseDetails.getVersion();
+        String releaseNotes = releaseDetails.getReleaseNotes();
+        Uri releaseNotesUrl = releaseDetails.getReleaseNotesUrl();
+
+        // Build our own dialog title and message
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(activity);
+        dialogBuilder.setTitle("Version " + versionName + " available!"); // you should use a string resource instead of course, this is just to simplify example
+        dialogBuilder.setMessage(releaseNotes);
+
+        // Mimic default SDK buttons
+        dialogBuilder.setPositiveButton(com.microsoft.azure.mobile.distribute.R.string.mobile_center_distribute_update_dialog_download, new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                // This method is used to tell the SDK what button was clicked
+                Distribute.notifyUpdateAction(UpdateAction.UPDATE);
+            }
+        });
+
+        // We can postpone the release only if the update is not mandatory
+        if (!releaseDetails.isMandatoryUpdate()) {
+            dialogBuilder.setNegativeButton(com.microsoft.azure.mobile.distribute.R.string.mobile_center_distribute_update_dialog_postpone, new DialogInterface.OnClickListener() {
+
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                    // This method is used to tell the SDK what button was clicked
+                    Distribute.notifyUpdateAction(UpdateAction.POSTPONE);
+                }
+            });
+        }
+        dialogBuilder.setCancelable(false); // if it's cancelable you should map cancel to postpone, but only for optional updates
+        dialogBuilder.create().show();        
+
+        // Return true if you are using your own dialog, false otherwise
+        return true;
+    }
+}
+```
 
