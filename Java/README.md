@@ -214,3 +214,50 @@ Crashes.notifyUserConfirmation(Crashes.SEND);
 Crashes.notifyUserConfirmation(Crashes.ALWAYS_SEND);
 ```
 As an example you can refer to our [custom dialog example](https://github.com/Microsoft/mobile-center-sdk-android/blob/0.12.0/apps/sasquatch/src/main/java/com/microsoft/azure/mobile/sasquatch/activities/MainActivity.java#L218).
+
+#### Get information about the sending status for a crash log
+At times, you would like to know the status of your app crash. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. Mobile Center Crashes has three different callbacks that you can use in your app to be notified of what is going on
+<br>
+<br>
+##### The following callback will be invoked before the SDK sends a crash log.
+```
+@Override
+public void onBeforeSending(ErrorReport errorReport) {
+    // Your code, e.g. to present a custom UI.
+}
+```
+##### The following callback will be invoked after the SDK sent a crash log successfully.
+```
+@Override
+public void onSendingSucceeded(ErrorReport report) {
+    // Your code, e.g. to hide the custom UI.
+}
+```
+##### The following callback will be invoked if the SDK failed to send a crash log.
+```
+@Override
+public void onSendingFailed(ErrorReport report, Exception e) {
+    // Your code goes here.
+}
+```
+#### Add attachments to a crash report
+You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in Mobile Center portal. The following callback will be invoked if you want to add attachments to a crash report. Here is an example to attach a text and an image to a crash:
+```
+@Override
+public Iterable<ErrorAttachmentLog> getErrorAttachments(ErrorReport report) {
+
+    /* Attach some text. */
+    ErrorAttachmentLog textLog = ErrorAttachmentLog.attachmentWithText("This is a text attachment.", "text.txt");
+
+    /* Attach app icon. */
+    Bitmap bitmap = BitmapFactory.decodeResource(context.getResources(), R.mipmap.ic_launcher);
+    ByteArrayOutputStream stream = new ByteArrayOutputStream();
+    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+    byte[] bitMapData = stream.toByteArray();
+    ErrorAttachmentLog binaryLog = ErrorAttachmentLog.attachmentWithBinary(bitMapData, "ic_launcher.jpeg", "image/jpeg");
+
+    /* Return attachments as list. */
+    return Arrays.asList(textLog, binaryLog);
+}
+```
+
