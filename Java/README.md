@@ -386,8 +386,20 @@ The listener can be called again with the same release if the activity changes b
 This behavior is needed to cover the following scenarios:
 <br>
 <br>
- *Your application is sent to the background (like pressing HOME) then resumed in a different activity.
- *Your activity is covered by another one without leaving the application (like clicking on some notifications).
- *Other similar scenarios.
+* Your application is sent to the background (like pressing **HOME**) then resumed in a different activity.
+* Your activity is covered by another one without leaving the application (like clicking on some notifications).
+* Other similar scenarios.
  
 In that case, the activity hosting the dialog might be replaced without user interaction. So the SDK calls the listener again so that you can restore the custom dialog.
+
+## Enable or disable Mobile Center Distribute at runtime
+You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality but you can still use Distribute service in Mobile Center porta
+```
+Distribute.setEnabled(false);
+```
+To enable Mobile Center Distribute again, use the same API but pass ```true``` as a parameter.
+```
+Distribute.setEnabled(true);
+```
+This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
+
