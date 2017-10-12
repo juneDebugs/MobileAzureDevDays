@@ -117,4 +117,9 @@ You can also check if Mobile Center Analytics is enabled or not.
 Analytics.isEnabled();
 ```
 
+# Mobile Center Crashes
+Mobile Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to Mobile Center. Collecting crashes works for both beta and live apps, i.e. those submitted to Google Play. Crash logs contain valuable information for you to help fix the crash.
+
+Please follow the Getting Started section if you haven't set up the SDK in your application yet.
+
 
