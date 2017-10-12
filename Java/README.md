@@ -442,3 +442,9 @@ Mobile Center Push enables you to send push notifications to users of your app f
 Note that only devices having the [Google Play](https://play.google.com/store) store application or emulators with **Google APIs** images can receive the notifications.
 
 ## Prerequisite - Add Firebase to your app
+Before using Mobile Center Push service, you need to add Firebase to your application. You can either choose a manual integration or Firebase Assistant.
+
+### 1. Prerequisites
+Please learn about [Prerequisites](https://firebase.google.com/docs/android/setup#prerequisites), in particular please make sure to keep **Google Repository** up-to-date in the [Android SDK Manager](https://developer.android.com/studio/intro/update.html#sdk-manager).
+
+### 2. Manual integration
