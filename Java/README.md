@@ -3,7 +3,7 @@ This simple app has a Text Entry Box and a button that triggers the text to hit 
 
 # Table of Contents
 * Get Started with Android
- * Prerequisites
+   * Prerequisites
 * Build
 * Test
 * Distribute
