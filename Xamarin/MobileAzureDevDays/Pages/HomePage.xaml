@@ -25,7 +25,8 @@
 
         <Entry 
             Placeholder="Add Text here..."
-            Text="{Binding UserInputEntryText}"/> 
+            Text="{Binding UserInputEntryText}"
+            AutomationId="EnterTextBox" /> 
 
         <controls:SubmitButton
             Text= "Submit"
@@ -35,7 +36,8 @@
             Command="{Binding SubmitButtonCommand}"
             IsEnabled="{Binding IsInternetConnectionInactive}"
             BorderRadius="0" BorderWidth="1" BorderColor = "White"
-            HorizontalOptions= "FillAndExpand" VerticalOptions= "Center" />
+            HorizontalOptions= "FillAndExpand" VerticalOptions= "Center" 
+            AutomationId="SubmitButton" />
 
         <ActivityIndicator
             Color= "White"
@@ -53,6 +55,7 @@
             FontSize="100"
             Text="{Binding EmojiLabelText}"
             HorizontalTextAlignment="Center"
-            HorizontalOptions= "Center" VerticalOptions= "Center"/>
+            HorizontalOptions= "Center" VerticalOptions= "Center"
+            AutomationId="ResultEmojiLabel" />
     </StackLayout>
 </ContentPage>

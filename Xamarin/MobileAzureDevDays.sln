@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileAzureDevDays.Droid", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileAzureDevDays", "MobileAzureDevDays\MobileAzureDevDays.csproj", "{F04F72BA-CAB2-4206-993E-C4B58E5442BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileAzureDevDays.UITests", "MobileAzureDevDays.UITests\MobileAzureDevDays.UITests.csproj", "{61A21751-B285-40B1-8A46-EA63E00AFBFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,5 +55,17 @@ Global
 		{F04F72BA-CAB2-4206-993E-C4B58E5442BD}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{F04F72BA-CAB2-4206-993E-C4B58E5442BD}.Debug|iPhone.ActiveCfg = Debug|Any CPU
 		{F04F72BA-CAB2-4206-993E-C4B58E5442BD}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{61A21751-B285-40B1-8A46-EA63E00AFBFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61A21751-B285-40B1-8A46-EA63E00AFBFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61A21751-B285-40B1-8A46-EA63E00AFBFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61A21751-B285-40B1-8A46-EA63E00AFBFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61A21751-B285-40B1-8A46-EA63E00AFBFD}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{61A21751-B285-40B1-8A46-EA63E00AFBFD}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{61A21751-B285-40B1-8A46-EA63E00AFBFD}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{61A21751-B285-40B1-8A46-EA63E00AFBFD}.Release|iPhone.Build.0 = Release|Any CPU
+		{61A21751-B285-40B1-8A46-EA63E00AFBFD}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{61A21751-B285-40B1-8A46-EA63E00AFBFD}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{61A21751-B285-40B1-8A46-EA63E00AFBFD}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{61A21751-B285-40B1-8A46-EA63E00AFBFD}.Debug|iPhone.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal

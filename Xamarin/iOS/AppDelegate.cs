@@ -14,6 +14,8 @@ namespace MobileAzureDevDays.iOS
         {
             global::Xamarin.Forms.Forms.Init();
 
+            Xamarin.Calabash.Start();
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9010155F1F8E8AFF00A5274E /* MobileAzureDevDaysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9010155E1F8E8AFF00A5274E /* MobileAzureDevDaysUITests.swift */; };
 		B576FD021F75987E007E2415 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B576FD011F75987E007E2415 /* AppDelegate.swift */; };
 		B576FD041F75987E007E2415 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B576FD031F75987E007E2415 /* ViewController.swift */; };
 		B576FD071F75987E007E2415 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B576FD051F75987E007E2415 /* Main.storyboard */; };
@@ -17,7 +18,32 @@
 		B576FD181F76B01F007E2415 /* SentimentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B576FD171F76B01F007E2415 /* SentimentResponse.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		901015611F8E8AFF00A5274E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B576FCF61F75987E007E2415 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B576FCFD1F75987E007E2415;
+			remoteInfo = MobileAzureDevDays;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		901015B31F8EF24C00A5274E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		9010155C1F8E8AFF00A5274E /* MobileAzureDevDaysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileAzureDevDaysUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9010155E1F8E8AFF00A5274E /* MobileAzureDevDaysUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAzureDevDaysUITests.swift; sourceTree = "<group>"; };
+		901015601F8E8AFF00A5274E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B576FCFE1F75987E007E2415 /* MobileAzureDevDays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAzureDevDays.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B576FD011F75987E007E2415 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B576FD031F75987E007E2415 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +57,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		901015591F8E8AFF00A5274E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B576FCFB1F75987E007E2415 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,11 +74,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9010155D1F8E8AFF00A5274E /* MobileAzureDevDaysUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9010155E1F8E8AFF00A5274E /* MobileAzureDevDaysUITests.swift */,
+				901015601F8E8AFF00A5274E /* Info.plist */,
+			);
+			path = MobileAzureDevDaysUITests;
+			sourceTree = "<group>";
+		};
+		901015B01F8EF24300A5274E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B576FCF51F75987E007E2415 = {
 			isa = PBXGroup;
 			children = (
 				B576FD001F75987E007E2415 /* MobileAzureDevDays */,
+				9010155D1F8E8AFF00A5274E /* MobileAzureDevDaysUITests */,
 				B576FCFF1F75987E007E2415 /* Products */,
+				901015B01F8EF24300A5274E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				B576FCFE1F75987E007E2415 /* MobileAzureDevDays.app */,
+				9010155C1F8E8AFF00A5274E /* MobileAzureDevDaysUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,6 +128,25 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9010155B1F8E8AFF00A5274E /* MobileAzureDevDaysUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 901015631F8E8AFF00A5274E /* Build configuration list for PBXNativeTarget "MobileAzureDevDaysUITests" */;
+			buildPhases = (
+				901015581F8E8AFF00A5274E /* Sources */,
+				901015591F8E8AFF00A5274E /* Frameworks */,
+				9010155A1F8E8AFF00A5274E /* Resources */,
+				901015B31F8EF24C00A5274E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				901015621F8E8AFF00A5274E /* PBXTargetDependency */,
+			);
+			name = MobileAzureDevDaysUITests;
+			productName = MobileAzureDevDaysUITests;
+			productReference = 9010155C1F8E8AFF00A5274E /* MobileAzureDevDaysUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		B576FCFD1F75987E007E2415 /* MobileAzureDevDays */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B576FD101F75987E007E2415 /* Build configuration list for PBXNativeTarget "MobileAzureDevDays" */;
@@ -103,6 +174,11 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Colby Williams";
 				TargetAttributes = {
+					9010155B1F8E8AFF00A5274E = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B576FCFD1F75987E007E2415;
+					};
 					B576FCFD1F75987E007E2415 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
@@ -123,11 +199,19 @@
 			projectRoot = "";
 			targets = (
 				B576FCFD1F75987E007E2415 /* MobileAzureDevDays */,
+				9010155B1F8E8AFF00A5274E /* MobileAzureDevDaysUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9010155A1F8E8AFF00A5274E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B576FCFC1F75987E007E2415 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -141,6 +225,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		901015581F8E8AFF00A5274E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9010155F1F8E8AFF00A5274E /* MobileAzureDevDaysUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B576FCFA1F75987E007E2415 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -154,6 +246,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		901015621F8E8AFF00A5274E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B576FCFD1F75987E007E2415 /* MobileAzureDevDays */;
+			targetProxy = 901015611F8E8AFF00A5274E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B576FD051F75987E007E2415 /* Main.storyboard */ = {
@@ -175,6 +275,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		901015641F8E8AFF00A5274E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K3Y5TRTVEX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = MobileAzureDevDaysUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.colbylwilliams.MobileAzureDevDaysUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MobileAzureDevDays;
+			};
+			name = Debug;
+		};
+		901015651F8E8AFF00A5274E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K3Y5TRTVEX;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = MobileAzureDevDaysUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.colbylwilliams.MobileAzureDevDaysUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MobileAzureDevDays;
+			};
+			name = Release;
+		};
 		B576FD0E1F75987E007E2415 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -288,10 +426,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N7C38P267Q;
+				DEVELOPMENT_TEAM = K3Y5TRTVEX;
 				INFOPLIST_FILE = MobileAzureDevDays/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.colbylwilliams.MobileAzureDevDays;
+				PRODUCT_BUNDLE_IDENTIFIER = com.colbywillams.MobileAzureDevDays;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -306,10 +444,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N7C38P267Q;
+				DEVELOPMENT_TEAM = K3Y5TRTVEX;
 				INFOPLIST_FILE = MobileAzureDevDays/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.colbylwilliams.MobileAzureDevDays;
+				PRODUCT_BUNDLE_IDENTIFIER = com.colbywillams.MobileAzureDevDays;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
@@ -320,6 +458,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		901015631F8E8AFF00A5274E /* Build configuration list for PBXNativeTarget "MobileAzureDevDaysUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				901015641F8E8AFF00A5274E /* Debug */,
+				901015651F8E8AFF00A5274E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B576FCF91F75987E007E2415 /* Build configuration list for PBXProject "MobileAzureDevDays" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
