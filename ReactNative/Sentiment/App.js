@@ -1,7 +1,9 @@
+
 import { Container, Header, Content, Footer, Title, Button, Spinner } from 'native-base';
 import React, { Component } from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 import config from './config';
+import Prompt from 'react-native-prompt';
 
 import Analytics from "mobile-center-analytics";
 import Crashes from "mobile-center-crashes";
@@ -136,6 +138,7 @@ export default class SentimentApp extends Component {
               onChangeText={(text) => this.setState({ text })}
             />
           </View>
+          
           <Button bordered light
             onPress={this.onPressLearnMore}
             style={styles.submit}
@@ -146,6 +149,14 @@ export default class SentimentApp extends Component {
           {emojiOrLoading}
         </Content>
 
+        <Prompt
+          title="Enter analytics subscription key."
+          placeholder="key"
+          visible={true}
+          onCancel={() => this.setState({ promptVisible: false, message: "You cancelled" })}
+          onSubmit={(value) => { 
+            config.key = value; 
+          }}/>
       </Container>
     );
   }
