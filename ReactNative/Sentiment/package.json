@@ -20,6 +20,10 @@
   },
   "dependencies": {
     "expo": "^21.0.2",
+    "mobile-center": "^0.10.0",
+    "mobile-center-analytics": "^0.10.0",
+    "mobile-center-crashes": "^0.10.0",
+    "mobile-center-push": "^0.10.0",
     "native-base": "^2.3.2",
     "node-fetch": "^1.7.3",
     "react": "16.0.0-alpha.12",

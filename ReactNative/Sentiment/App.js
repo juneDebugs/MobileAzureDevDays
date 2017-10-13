@@ -3,14 +3,23 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 import config from './config';
 
+import Analytics from "mobile-center-analytics";
+import Crashes from "mobile-center-crashes";
+
 export default class SentimentApp extends Component {
   constructor(props) {
     super(props);
+
+    // add in to test crash reports with mobile centre
+    //Crashes.generateTestCrash();
+    
     this.state = { text: '', emoji: '' };
     this.onPressLearnMore = this.onPressLearnMore.bind(this);
   }
 
   componentWillMount() {
+    Analytics.trackEvent("app.js - componentWillMount", {});
+
     this.setState({
       text: '',
       bgColor: '#FF6F69',
@@ -20,6 +29,8 @@ export default class SentimentApp extends Component {
   }
 
   onPressLearnMore() {
+    Analytics.trackEvent("app.js - onPressLearnMore", {});
+
     this.setState({busy: true});
 
     var data = {
@@ -55,6 +66,8 @@ export default class SentimentApp extends Component {
   }
 
   getEmoji(score) {
+    Analytics.trackEvent("app.js - getEmoji", { Score: score });
+
     if (score < 0.4) {
       return '🙁';
     } else if (score <= 0.6) {
@@ -65,6 +78,8 @@ export default class SentimentApp extends Component {
   }
 
   getBackgroundColor(score) {
+    Analytics.trackEvent("app.js - getBackgroundColor", { Score: score });
+
     if (score < 0.2) {
       return '#7F1437';
     } else if (score < 0.3) {
@@ -85,6 +100,8 @@ export default class SentimentApp extends Component {
   }
 
   render() {
+    Analytics.trackEvent("app.js - render", {});
+
     let emojiOrLoading;
     if (!this.state.busy) {
       emojiOrLoading = (
