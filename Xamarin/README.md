@@ -1,28 +1,28 @@
 # Abstract
-This simple app has a Text Entry Box and a button that triggers the text to hit the [Azure Sentiment Analysis API](https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-sentiment-analysis) and returns a corresponding Emoji and changes the background color appropriately. 
+This simple app has a Text Entry Box and a button that triggers the text to hit the [Azure Sentiment Analysis API](http://bit.ly/2i9jc13) and returns a corresponding Emoji and changes the background color appropriately. 
 
 # Table of Contents
- * [Mobile Center Build](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#mobile-center-build)
-     *  [Xamarin.iOS Build](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#xamarinios-build)
-     *  [Xamarin.Android Build](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#xamarinandroid-build)
- * [Mobile Center Test](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#mobile-center-test)
-     * [Preparing Xamarin.UITests for Upload](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#preparing-xamarinuitests-for-upload)
-     * [Preparing Xamarin.Android Apps](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#preparing-xamarinandroid-apps)
-     * [Preparing Xamarin.iOS Apps](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#preparing-xamarinios-apps)
-  * [Distribution with Mobile Center](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#distribution-with-mobile-center)
-     * [Xamarin Distribution Setup](https://github.com/jCho23/MobileAzureDevDays/tree/master/Xamarin#xamarin-distribution-setup)
-     * [Customize or localize the in-app update dialog](https://github.com/jCho23/MobileAzureDevDays/tree/master/Xamarin#customize-or-localize-the-in-app-update-dialog)
-     * [Release a Build iOS](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#ios)
-     * [Release a Build Android](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#android)
- * [Mobile Center Crash](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#mobile-center-crash)
-     * [iOS Crashes](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#ios-crashes)
-     * [Android Crashes](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#android-crashes)
- * [Mobile Center Analytics](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#mobile-center-analytics)
-     * [Prerequisites](https://github.com/jCho23/MobileAzureDevDays/tree/master/Xamarin#1-prerequisites)
-     * [Custom events](https://github.com/jCho23/MobileAzureDevDays/tree/master/Xamarin#custom-events)
- * [Mobile Center Push](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#xamarinforms-mobile-center-push)
-     * [iOS additional steps](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#ios-additional-steps)
-     * [Android additional steps](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#android-additional-steps)
+ * [Mobile Center Build](http://bit.ly/2i84mb9)
+     *  [Xamarin.iOS Build](http://bit.ly/2zmxiQY)
+     *  [Xamarin.Android Build](http://bit.ly/2xE7YbQ)
+ * [Mobile Center Test](http://bit.ly/2wTFne5)
+     * [Preparing Xamarin.UITests for Upload](http://bit.ly/2xDLYZJ)
+     * [Preparing Xamarin.Android Apps](http://bit.ly/2xDElCF)
+     * [Preparing Xamarin.iOS Apps](http://bit.ly/2yk45Gg)
+  * [Distribution with Mobile Center](http://bit.ly/2kN1v8h)
+     * [Xamarin Distribution Setup](http://bit.ly/2z63VkI)
+     * [Customize or localize the in-app update dialog](http://bit.ly/2ggBdtB)
+     * [Release a Build iOS](http://bit.ly/2kM2qpD)
+     * [Release a Build Android](http://bit.ly/2wSMHqg)
+ * [Mobile Center Crash](http://bit.ly/2ym1BZF)
+     * [iOS Crashes](http://bit.ly/2iagEQq)
+     * [Android Crashes](http://bit.ly/2kMKQC1)
+ * [Mobile Center Analytics](http://bit.ly/2ibaUpf)
+     * [Prerequisites](http://bit.ly/2hG7BT5)
+     * [Custom events](http://bit.ly/2hEpL7K)
+ * [Mobile Center Push](http://bit.ly/2yfRN3Y)
+     * [iOS additional steps](http://bit.ly/2gCEVek)
+     * [Android additional steps](http://bit.ly/2ykqrY8)
 
 
 # Mobile Center Build 
@@ -79,10 +79,10 @@ default settings for Debug and Release only.
   * When enabled, the ```CFBundleVersion``` in the Info.plist of your app automatically increments for each build. The change happens pre build and won't be committed to your repository.
 
 #### 3.8. Code signing
-  * A successful device build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](https://docs.microsoft.com/en-us/mobile-center/build/ios/code-signing/uploading-files), along with the password for the certificate. You can read more about code signing and device provisioning of Xamarin iOS apps in the [Xamarin official documentation](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning/).
+  * A successful device build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](http://bit.ly/2g8RjSF), along with the password for the certificate. You can read more about code signing and device provisioning of Xamarin iOS apps in the [Xamarin official documentation](http://bit.ly/2yn5WvR).
 
 #### 3.9. Launch your successful build on a real device
-  * Use your newly produced IPA file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. You may want to check more [comprehensive guide about testing your builds](https://docs.microsoft.com/en-us/mobile-center/build/build-test-integration).
+  * Use your newly produced IPA file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. You may want to check more [comprehensive guide about testing your builds](http://bit.ly/2yk8SaG).
 
 #### 3.10. NuGet restore
   * If the NuGet.config file is checked-in into the repository and sitting next to the .sln or at the root, Mobile Center will auto-restore the NuGet feed. To restore private NuGet feeds, make sure you include the credentials in the NuGet.config file:
