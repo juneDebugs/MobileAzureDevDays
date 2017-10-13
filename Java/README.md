@@ -2,27 +2,27 @@
 This simple app has a Text Entry Box and a button that triggers the text to hit the [Azure Sentiment Analysis API](https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-sentiment-analysis) and returns a corresponding Emoji and changes the background color appropriately.
 
 # Table of Contents
-* [Get Started with Android](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#get-started-with-android)
-   * [Prerequisites](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#1-prerequisites)
-* [Build](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#mobile-center-build)
-   * [Linking your repository](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#1-linking-your-repository)
-* [Test](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#mobile-center-test)
-    * [Preparing Espresso Tests for Upload](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#preparing-espresso-tests-for-upload)
-* [Analytics](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#mobile-center-analytics)  
-    * [Custom Events](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#custom-events)
-* [Crashes](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#mobile-center-crashes)    
-    * [Customize Mobile Center Crashes](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#customize-your-usage-of-mobile-center-crashes)
-* [Distribute](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#mobile-center-distribute)
-    * [Customize the in-app update dialog](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#customize-or-localize-the-in-app-update-dialog)
-* [Push](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#mobile-center-push)
-    * [Prerequisites](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#prerequisite---add-firebase-to-your-app)
+* [Get Started with Android](http://bit.ly/2yJDHZo)
+   * [Prerequisites](http://bit.ly/2i7YQ8u)
+* [Build](http://bit.ly/2yiPWsJ)
+   * [Linking your repository](http://bit.ly/2xEptE4)
+* [Test](http://bit.ly/2hEihSv)
+    * [Preparing Espresso Tests for Upload](http://bit.ly/2ylChTd)
+* [Analytics](http://bit.ly/2xDM5Vn)  
+    * [Custom Events](http://bit.ly/2wSL9N1)
+* [Crashes](http://bit.ly/2iaOLHX)    
+    * [Customize Mobile Center Crashes](http://bit.ly/2xDfjIB)
+* [Distribute](http://bit.ly/2xE16Lu)
+    * [Customize the in-app update dialog](http://bit.ly/2ggVRKu)
+* [Push](http://bit.ly/2wT151Z)
+    * [Prerequisites](http://bit.ly/2wTR2tw)
 
 
 
 
 # Get Started with Android
 The Mobile Center SDK uses a modular architecture so you can use any or all of the services.
-Let's get started with setting up Mobile Center Android SDK in your app to use Mobile Center Analytics and Mobile Center Crashes. To add Mobile Center Distribute to you app, please have a look at the documentation for [Mobile Center Distribute](https://docs.microsoft.com/en-us/mobile-center/sdk/distribute/android).
+Let's get started with setting up Mobile Center Android SDK in your app to use Mobile Center Analytics and Mobile Center Crashes. To add Mobile Center Distribute to you app, please have a look at the documentation for [Mobile Center Distribute](http://bit.ly/2gCC2Kr).
 
 ## 1. Prerequisites
 Before you begin, please make sure that the following prerequisites are met:
@@ -31,7 +31,7 @@ Before you begin, please make sure that the following prerequisites are met:
 
 ## 2. Create your app in the Mobile Center Portal to obtain the App Secret
 If you have already created your app in the Mobile Center portal, you can skip this step.
- 1) Head over to [mobile.azure.com](https://mobile.azure.com).
+ 1) Head over to [mobile.azure.com](http://bit.ly/2ygLNrH).
  2) Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
  3) Enter a name and an optional desciption for your app.
  4) Select **Android** as the OS and **Java** as a platform.
@@ -88,7 +88,7 @@ import com.microsoft.azure.mobile.crashes.Crashes;
 Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
 <br>
 <br>
-Look at the documentation for [Mobile Center Analytics](https://docs.microsoft.com/en-us/mobile-center/sdk/analytics/android) and [Mobile Center Crashes](https://docs.microsoft.com/en-us/mobile-center/sdk/crashes/android) to learn how to customize and use more advanced functionalities of both services.
+Look at the documentation for [Mobile Center Analytics](http://bit.ly/2geXoQW) and [Mobile Center Crashes](http://bit.ly/2yfTO07) to learn how to customize and use more advanced functionalities of both services.
 <br>
 <br>
 To learn how to get started with in-app updates, read the documentation of [Mobile Center Distribute].
@@ -122,11 +122,11 @@ When enabled, the version code in the AndroidManifest.xml of your app automatica
 
 ### 3.4. Code signing
 
-A successful build will produce an APK file. In order to release the build to the Play Store, it needs to be signed with a valid certificate stored in a keystore. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your keystore to your repository, and provide the relevant credentials in the configuration pane. You can read more about [code signing here](https://docs.microsoft.com/en-us/mobile-center/build/android/code-signing/setup).
+A successful build will produce an APK file. In order to release the build to the Play Store, it needs to be signed with a valid certificate stored in a keystore. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your keystore to your repository, and provide the relevant credentials in the configuration pane. You can read more about [code signing here](http://bit.ly/2kN5bXD).
 
 ### 3.5. Launch your successful build on a real device
 
-Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. Read more about it [here](https://docs.microsoft.com/en-us/mobile-center/build/build-test-integration).
+Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. Read more about it [here](http://bit.ly/2yk8SaG).
 
 ### 3.6. build.gradle File
 
@@ -168,7 +168,7 @@ The APK is an Android application packaged file which contains the Android app a
 
 ### 4.3. Building multiple APKs
 
-If your app configuration is set up to build multiple APKs, e.g. different ones per CPU architecture or screen configuration, you need to make sure a universal APK is built as well. Our build system works with one main APK file and will ignore all APKs specific to a certain CPU ABI or screen density. To learn more about APK splits and how to build a universal APK, please read the corresponding [Android developer guide](https://developer.android.com/studio/build/configure-apk-splits.html#configure-abi-split).
+If your app configuration is set up to build multiple APKs, e.g. different ones per CPU architecture or screen configuration, you need to make sure a universal APK is built as well. Our build system works with one main APK file and will ignore all APKs specific to a certain CPU ABI or screen density. To learn more about APK splits and how to build a universal APK, please read the corresponding [Android developer guide](http://bit.ly/2ykaykj).
 
 ## 5. Supported versions and requirements
 The minimum version supported to build Android apps is 4.0.3 (API level 15). Android apps can have a lower minimum API level required to run, but have to target at least API level 15.
@@ -181,18 +181,18 @@ Apps need to be built with Gradle and the Android Gradle plugin to be configured
 ## Getting Started with Test Cloud
 The prerequisite steps below must be completed before a project can be used with Mobile Center Test Cloud.
   1. Create a Mobile Center account
-Create a Mobile Center account at [mobile.azure.com](https://mobile.azure.com/login?original_url=%2F) to gain access to Test Cloud.
+Create a Mobile Center account at [mobile.azure.com](http://bit.ly/2ygLNrH) to gain access to Test Cloud.
   2. Install the Mobile Center CLI
-Test runs are executed using the Mobile Center CLI. If not already installed, follow [these instructions](https://docs.microsoft.com/en-us/mobile-center/cli/index) to install. After installation, run ```mobile-center login``` to link a Mobile Center account with the tool.
+Test runs are executed using the Mobile Center CLI. If not already installed, follow [these instructions](http://bit.ly/2gClGRM) to install. After installation, run ```mobile-center login``` to link a Mobile Center account with the tool.
   3. Create an app in Mobile Center
 All test assets and operations are within the context of an app. Create the app project to be tested.
   4. Review the core concepts
-Understanding the core concepts of the Test Cloud experience improve ease of use, navigation, and communications with support. It is recommended to become familiar with [these concepts](https://docs.microsoft.com/en-us/mobile-center/test-cloud/core-concepts) before running your first tests.
+Understanding the core concepts of the Test Cloud experience improve ease of use, navigation, and communications with support. It is recommended to become familiar with [these concepts](http://bit.ly/2xDn38x) before running your first tests.
   5. Prepare the project for upload
-Each test framework has different requirements for uploading to Test Cloud. Follow the appropriate test framework branch from [this page.](https://docs.microsoft.com/en-us/mobile-center/test-cloud/preparing-for-upload/index)
+Each test framework has different requirements for uploading to Test Cloud. Follow the appropriate test framework branch from [this page.](http://bit.ly/2yhxeBC)
 
 ## Preparing Espresso Tests for Upload
-The steps necessary to prepare an app and its corresponding test suite for upload to Test Cloud vary depending on the test framework. The section below provides instructions for preparing Espresso tests for upload to Test Cloud. For guidance on authoring Espresso tests, see the [Espresso documentation](https://developer.android.com/training/testing/ui-testing/espresso-testing.html).
+The steps necessary to prepare an app and its corresponding test suite for upload to Test Cloud vary depending on the test framework. The section below provides instructions for preparing Espresso tests for upload to Test Cloud. For guidance on authoring Espresso tests, see the [Espresso documentation](http://bit.ly/2i9Vqlw).
 
 ### 1. Changes to the build system
 Add the following dependency in your app module's ```build.gradle``` file:
@@ -234,7 +234,7 @@ To build the project and test apk files, run each of the following commands.
 ./gradlew assembleDebug
 ./gradlew assembleDebugAndroidTest
 ```
-Once a test suite has been instrumented with the Test Cloud extensions, it can be [uploaded to Test Cloud](https://docs.microsoft.com/en-us/mobile-center/test-cloud/starting-a-test-run).
+Once a test suite has been instrumented with the Test Cloud extensions, it can be [uploaded to Test Cloud](http://bit.ly/2ymnCaM).
 
 
 
@@ -247,7 +247,7 @@ Once a test suite has been instrumented with the Test Cloud extensions, it can b
 Mobile Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the Mobile Center portal for you to analyze the data.
 <br>
 <br>
-Please follow the [Getting Started](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#1-prerequisites) section if you haven't set up the SDK in your application yet.
+Please follow the [Getting Started](http://bit.ly/2i7YQ8u) section if you haven't set up the SDK in your application yet.
 
 ## Session and Device information
 Once you add Mobile Center Analytics to your app and start the SDK, it will automatically track sessions and device properties like OS Version, model, etc. without writing any additional code.
@@ -278,7 +278,7 @@ To enable Mobile Center Analytics again, use the same API but pass ```true``` as
 ```csharp
 Analytics.setEnabled(true);
 ```
-This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
+This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](http://bit.ly/2z6VtC2).
 
 ## Check if Mobile Center Analytics is enabled
 You can also check if Mobile Center Analytics is enabled or not.
@@ -290,7 +290,7 @@ Analytics.isEnabled();
 Mobile Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to Mobile Center. Collecting crashes works for both beta and live apps, i.e. those submitted to Google Play. Crash logs contain valuable information for you to help fix the crash.
 <br>
 <br>
-Please follow the [Getting Started](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#1-prerequisites) section if you haven't set up the SDK in your application yet.
+Please follow the [Getting Started](http://bit.ly/2i7YQ8u) section if you haven't set up the SDK in your application yet.
 
 ## Generate a test crash
 Mobile Center Crashes provides you with an API to generate a test crash for easy testing of the SDK. This API can only be used in debug builds and won't do anything in release builds.
@@ -305,7 +305,7 @@ At any time after starting the SDK, you can check if the app crashed in the prev
 ```csharp
 Crashes.hasCrashedInLastSession();
 ```
-This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
+This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](http://bit.ly/2z6VtC2).
 <br>
 <br>
 This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occured. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occured.
@@ -315,10 +315,10 @@ If your app crashed previously, you can get details about the last crash.
 ```csharp
 Crashes.getLastSessionCrashReport();
 ```
-This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
+This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](http://bit.ly/2z6VtC2).
 <br>
 <br>
-There are numerous use cases for this API, the most common one is people who call this API and implement their [custom CrashesListener](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#use-your-own-crasheslistener).
+There are numerous use cases for this API, the most common one is people who call this API and implement their [custom CrashesListener](http://bit.ly/2i9ZX7J).
 
 ### Customize your usage of Mobile Center Crashes
 Mobile Center Crashes provides callbacks for developers to perform additional actions before and when sending crash logs to Mobile Center.
@@ -379,7 +379,7 @@ Crashes.notifyUserConfirmation(Crashes.DONT_SEND);
 Crashes.notifyUserConfirmation(Crashes.SEND);
 Crashes.notifyUserConfirmation(Crashes.ALWAYS_SEND);
 ```
-As an example you can refer to our [custom dialog example](https://github.com/Microsoft/mobile-center-sdk-android/blob/0.12.0/apps/sasquatch/src/main/java/com/microsoft/azure/mobile/sasquatch/activities/MainActivity.java#L218).
+As an example you can refer to our [custom dialog example](http://bit.ly/2wUsNev).
 
 #### Get information about the sending status for a crash log
 At times, you would like to know the status of your app crash. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. Mobile Center Crashes has three different callbacks that you can use in your app to be notified of what is going on
@@ -436,14 +436,14 @@ To enable Mobile Center Crashes again, use the same API but pass ```true``` as a
 ```csharp
 Crashes.setEnabled(true);
 ```
-This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
+This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](http://bit.ly/2z6VtC2).
 
 ### Check if Mobile Center Crashes is enabled
 You can also check if Mobile Center Crashes is enabled or not:
 ```csharp
 Crashes.isEnabled();
 ```
-This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
+This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](http://bit.ly/2z6VtC2).
 
 # Mobile Center Distribute
 Mobile Center Distribute will let your users install a new version of the app when you distribute it via Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application.
@@ -452,7 +452,7 @@ Mobile Center Distribute will let your users install a new version of the app wh
 **This feature will NOT work if your app is deployed to the app store**
 
 ## Add in-app updates to your app
-Please follow the [Getting Started](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#1-prerequisites) section if you haven't set up the SDK in your application yet.
+Please follow the [Getting Started](http://bit.ly/2i7YQ8u) section if you haven't set up the SDK in your application yet.
 
 ### 1. Add the Mobile Center Distribute module
 The Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
@@ -483,7 +483,7 @@ import com.microsoft.azure.mobile.distribute.Distribute;
 
 ### 1. Customize or localize text
 
-You can easily provide your own resource strings if you'd like to change or localize the text displayed in the update dialog. Look at the string files in [this resource file](https://github.com/Microsoft/mobile-center-sdk-android/blob/develop/sdk/mobile-center-distribute/src/main/res/values/mobile_center_distribute.xml). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.
+You can easily provide your own resource strings if you'd like to change or localize the text displayed in the update dialog. Look at the string files in [this resource file](http://bit.ly/2i7Sjuh). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app resource files.
 
 ### 2. Customize the update dialog
 You can customize the default update dialog's appearance by implementing the ```DistributeListener``` interface. You need to register the listener before calling ```MobileCenter.start``` as shown in the following example:
@@ -567,14 +567,14 @@ To enable Mobile Center Distribute again, use the same API but pass ```true``` a
 ```csharp
 Distribute.setEnabled(true);
 ```
-This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
+This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](http://bit.ly/2z6VtC2).
 
 ## Check if Mobile Center Distribute is enabled
 You can also check if Mobile Center Distribute is enabled or not:
 ```csharp
 Distribute.isEnabled();
 ```
-This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
+This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](http://bit.ly/2z6VtC2).
 
 ## How do in-app updates work?
 The in-app updates feature works as follows:
@@ -602,23 +602,23 @@ You need to upload release builds (that use the Distribute module of the Mobile 
  10) Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the Distribution Group you created earlier. Members of the **Distribution Group** will be prompted for a new version the next time the app enters the foreground.
 
 # Mobile Center Push
-Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal. Mobile Center portal and the Push SDK is integrated with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
+Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal. Mobile Center portal and the Push SDK is integrated with [Firebase Cloud Messaging](http://bit.ly/2ylZCEt).
 <br>
 <br>
-Note that only devices having the [Google Play](https://play.google.com/store) store application or emulators with **Google APIs** images can receive the notifications.
+Note that only devices having the [Google Play](http://bit.ly/2kNmQ1p) store application or emulators with **Google APIs** images can receive the notifications.
 
 ## Prerequisite - Add Firebase to your app
 Before using Mobile Center Push service, you need to add Firebase to your application. You can either choose a manual integration or Firebase Assistant.
 
 ### 1. Prerequisites
-Please learn about [Prerequisites](https://firebase.google.com/docs/android/setup#prerequisites), in particular please make sure to keep **Google Repository** up-to-date in the [Android SDK Manager](https://developer.android.com/studio/intro/update.html#sdk-manager).
+Please learn about [Prerequisites](http://bit.ly/2z6oEov), in particular please make sure to keep **Google Repository** up-to-date in the [Android SDK Manager](http://bit.ly/2xDNqQI).
 
 ### 2. Manual integration
- 1) Follow the instructions listed in [Manually add Firebase section](https://firebase.google.com/docs/android/setup#manually_add_firebase).
+ 1) Follow the instructions listed in [Manually add Firebase section](http://bit.ly/2ylgRGo).
  2) Make sure to continue following instructions in Add the SDK sub section right after but do not add compile "com.google.firebase:firebase-core:${version}" as the SDK manages this step for you can it could trigger incompatibilities if versions mismatch.
 
 ### 3. Using Firebase Assistant
- 1) Follow [these instructions](https://developer.android.com/studio/write/firebase.html) if you don't see **Firebase** in the **Tools** menu.
+ 1) Follow [these instructions](http://bit.ly/2gak4hQ) if you don't see **Firebase** in the **Tools** menu.
  2) Click on ```Tools > Firebase``` and follow **only** the first two following steps:
   * Connect your app to Firebase
   * Add FCM to your app
@@ -635,7 +635,7 @@ compile "com.google.firebase:firebase-messaging:${version}"
 Go to Project Settings and under Cloud Messaging, copy your Server Key. This will be the Android API Key that you will need to set in the Mobile Center Push portal
 
 ## Add Mobile Center Push to your app
-Please follow the [Getting Started](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#1-prerequisites) section if you haven't set up the SDK in your application yet.
+Please follow the [Getting Started](http://bit.ly/2i7YQ8u) section if you haven't set up the SDK in your application yet.
 
 ### 1. Add the Mobile Center Push module
 The Mobile Center SDK is designed with a modular approach – a developer only needs to integrate the modules of the services that they're interested in.
@@ -656,7 +656,7 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
  ```csharp
  MobileCenter.start(getApplication(), "{Your App Secret}", Push.class);
  ```
-Make sure you have replaced ```{Your App Secret}``` in the code sample above with your App Secret. Please check out the Get started section if you haven't set up and started the SDK in your application, yet. Please follow the [Getting Started](https://github.com/jCho23/MobileAzureDevDays/tree/master/Java#1-prerequisites) section if you haven't set up the SDK in your application yet.
+Make sure you have replaced ```{Your App Secret}``` in the code sample above with your App Secret. Please check out the Get started section if you haven't set up and started the SDK in your application, yet. Please follow the [Getting Started](http://bit.ly/2i7YQ8u) section if you haven't set up the SDK in your application yet.
 <br>
 <br>
 Android Studio will automatically suggest the required import statement once you add ```Push.class``` to the ```start()``` method, but if you see an error that the class names are not recognized, add the following lines to the import statements in your activity class:
@@ -736,11 +736,11 @@ To enable Mobile Center Push again, use the same API but pass ```true``` as a pa
 ```csharp
 Push.setEnabled(true);
 ```
-This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
+This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](http://bit.ly/2z6VtC2).
 
 ## Check if Mobile Center Push is enabled
 You can also check if Mobile Center Push is enabled or not:
 ```csharp
 Push.isEnabled();
 ```
-This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](https://docs.microsoft.com/en-us/mobile-center/sdk/android-async).
+This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](http://bit.ly/2z6VtC2).
