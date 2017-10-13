@@ -130,7 +130,9 @@ After a build has been triggered, it can be in the following states:
 The build step specific logs (located in the ```build/``` directory of the archive) are helpful for troubleshooting and understanding in what step and why the build failed.
 
 #### 4.2. The app (.ipa or .app)
- * The .ipa is an iPhone application archive file which stores the iOS app. If the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. There are more [details about code signing and distribution with Mobile Center.](https://docs.microsoft.com/en-us/mobile-center/build/ios/code-signing/index) <br>
+ * The .ipa is an iPhone application archive file which stores the iOS app. If the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. There are more [details about code signing and distribution with Mobile Center.](http://bit.ly/2yJfJxj) 
+ <br>
+ <br>
 If this is a simulator build, you can run the .app file on a simulator, but you cannot use it on a real device.
 
 #### 4.3. The symbol files (.dsym)
