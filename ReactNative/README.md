@@ -15,8 +15,6 @@ Before you begin, please make sure that the following prerequisites are met:
 
 ## 2. Create your app in the Mobile Center Portal to obtain the App Secret
 If you have already created your app in the Mobile Center portal, you can skip this step.
-<br>
-<br>
   1) Head over to [mobile.azure.com](https://mobile.azure.com).
   2) Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
   3) Enter a name and an optional desciption for your app.
