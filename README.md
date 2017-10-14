@@ -16,4 +16,4 @@ Sentiment was created by [June Cho](https://github.com/jCho23), [Brandon Minnick
 Special thanks to [Sweekriti Satpathy](https://github.com/Sweekriti91) for creating UITests in the projects and [Robin-Manuel Thiel](https://github.com/robinmanuelthiel) for hooking up the apps into Mobile Center
 
 # License 
-Licensed under the MIT License (MIT). See LICENSE for details.
+Licensed under the MIT License (MIT). See [LICENSE](https://github.com/jCho23/MobileAzureDevDays/blob/master/LICENSE) for details.
