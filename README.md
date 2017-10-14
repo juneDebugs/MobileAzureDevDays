@@ -1,7 +1,7 @@
 ![Header](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/Header.gif)
 
 # Mobile Azure DevDays
-Mobile Azure DevDays are hands-on learning experiences geared towards all Mobile Developers to help build, test, and connect native iOS, Android, React Native, and Xamarin apps.
+Mobile Azure DevDays are hands-on learning experiences geared towards all Mobile Developers to help build, test, and connect Swift, Java, UWP, React Native, and Xamarin apps.
 <br>
 <br>
 Explore mobile development with free training courses from Mobile experts and local community members. 
