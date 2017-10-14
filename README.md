@@ -10,7 +10,7 @@ Then, after lunch, we will learn innotvative tools within Azure to accelerate yo
 <br>
 Inside this repo you will find all of the presentations, demos, and hands-on labs that you will experience at Azure Mobile DevDays!
 
-# About
+# Authors
 Sentiment was created by [June Cho](http://bit.ly/2zoIg8f), [Brandon Minnick](http://bit.ly/2gkdXee), [Colby Williams](http://bit.ly/2z9q55A), [Mahdi Alirezaie](http://bit.ly/2yq3vJ5), and [Michael Williams](http://bit.ly/2wWT7Fb).
 
 #### Special thanks to:
