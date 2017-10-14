@@ -1,4 +1,4 @@
-![Header](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/Header.gif)
+![Header](http://bit.ly/2yld7mf)
 
 # Mobile Azure DevDays
 Mobile Azure DevDays are hands-on learning experiences geared towards all Mobile Developers to help build, test, and connect native iOS, Android, React Native, and Xamarin apps.
@@ -11,9 +11,9 @@ Then, after lunch, we will learn innotvative tools within Azure to accelerate yo
 Inside this repo you will find all of the presentations, demos, and hands-on labs that you will experience at Azure Mobile DevDays!
 
 # About
-Sentiment was created by [June Cho](https://github.com/jCho23), [Brandon Minnick](https://github.com/brminnick), [Colby Williams](https://github.com/colbylwilliams), [Mahdi Alirezaie](https://github.com/malirezai), and [Michael Williams](https://github.com/flusharcade).
+Sentiment was created by [June Cho](http://bit.ly/2zoIg8f), [Brandon Minnick](http://bit.ly/2gkdXee), [Colby Williams](http://bit.ly/2z9q55A), [Mahdi Alirezaie](http://bit.ly/2yq3vJ5), and [Michael Williams](http://bit.ly/2wWT7Fb).
 
-Special thanks to [Sweekriti Satpathy](https://github.com/Sweekriti91) for creating UITests in the projects and [Robin-Manuel Thiel](https://github.com/robinmanuelthiel) for implementing Mobile Center.
+Special thanks to [Sweekriti Satpathy](http://bit.ly/2xHrUdM) for creating UITests in the projects and [Robin-Manuel Thiel](http://bit.ly/2zomd1u) for implementing Mobile Center.
 
 # License 
-Licensed under the MIT License (MIT). See [LICENSE](https://github.com/jCho23/MobileAzureDevDays/blob/master/LICENSE) for details.
+Licensed under the MIT License (MIT). See [LICENSE](http://bit.ly/2yLz5ly) for details.
