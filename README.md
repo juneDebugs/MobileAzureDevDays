@@ -13,7 +13,7 @@ Inside this repo you will find all of the presentations, demos, and hands-on lab
 # About
 Sentiment was created by [June Cho](https://github.com/jCho23), [Brandon Minnick](https://github.com/brminnick), [Colby Williams](https://github.com/colbylwilliams), [Mahdi Alirezaie](https://github.com/malirezai), and [Michael Williams](https://github.com/flusharcade).
 
-Special thanks to [Sweekriti Satpathy](https://github.com/Sweekriti91) for creating UITests in the projects and Robin-Manuel Thiel[https://github.com/robinmanuelthiel) for hooking up the apps into Mobile Center
+Special thanks to [Sweekriti Satpathy](https://github.com/Sweekriti91) for creating UITests in the projects and [Robin-Manuel Thiel](https://github.com/robinmanuelthiel) for hooking up the apps into Mobile Center
 
 # License 
 Licensed under the MIT License (MIT). See LICENSE for details.
