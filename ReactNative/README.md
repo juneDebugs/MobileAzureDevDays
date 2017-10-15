@@ -930,6 +930,37 @@ Mobile Center uses swizzling to automatically forward your application delegate'
    2) Add ```MobileCenterAppDelegateForwarderEnabled``` key and set the value to ```0```. This will disable application delegate forwarding for all Mobile Center services.
    3) Implement the callbacks to register push notifications
 Implement the ```application:didRegisterForRemoteNotificationsWithDeviceToken```: callback and the ```application:didFailToRegisterForRemoteNotificationsWithError```: callback in your ```AppDelegate``` to register for Push notifications. 
+```swift
+- (void)application:(UIApplication *)application
+    didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+
+  // Pass the device token to MSPush.
+  [MSPush didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application
+    didFailToRegisterForRemoteNotificationsWithError:(nonnull NSError *)error {
+
+  // Pass the error to MSPush.
+  [MSPush didFailToRegisterForRemoteNotificationsWithError:error];
+}
+```
+   4) Implement the callback to receive push notifications
+   Implement the ```application:didReceiveRemoteNotification:fetchCompletionHandler``` callback to add the logic for receiving a Push notification.
+   ```swift
+   - (void)application:(UIApplication *)application
+   didReceiveRemoteNotification:(NSDictionary *)userInfo
+         fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+  NSDictionary *dictionary = [[userInfo objectForKey:@"aps"] objectForKey:@"alert"];
+  UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[dictionary valueForKey:@"title"]
+                                                  message:[dictionary valueForKey:@"body"]
+                                                 delegate:self
+                                        cancelButtonTitle:@"OK"
+                                        otherButtonTitles:nil];
+  [alert show];
+}
+```
+
 
 
 
