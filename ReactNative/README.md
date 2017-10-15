@@ -332,6 +332,29 @@ Distributing with Mobile Center is easy, and only requires a few steps. No need 
 
 ## Creating and managing apps
 
+### Creating an app
+To create an app, log in and click the **Add new** dropdown and choose **Add new app**.
+
+### Accessing apps
+All apps you belong to can be found in **My Apps**. When looking for apps owned by organizations you belong to, click on the organization in the left navigation.
+
+### App roles
+On each app there are three roles:
+* **Managers** can manage app settings, collaborators, and integrations.
+* **Developers** can manage app services (e.g. create builds, run tests).
+* **Viewers** can view and download all data but cannot make changes.
+
+To change the permission of a collaborator, select an app, click **Manage app** and use the dropdown to re-assign the role. Only 'Managers' can change collaborator permission
+
+### Adding collaborators to apps
+To share your app with others, select an app and then click **Manage app** to add collaborators by typing in the user's email address.
+
+## Manage Distribution Groups
+
+
+
+
+
 
 
 
