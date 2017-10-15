@@ -107,7 +107,7 @@ Mobile Center helps you build the mobile apps you and your team is working on, u
 <br>
 Currently, you can build apps hosted on Git repositories in GitHub, Bitbucket and Visual Studio Team Services (VSTS).
 
-## iOS Build 
+## React Native iOS Build 
 Mobile Center can build React Native apps written in **React Native version 0.34 or newer**.
 <br>
 <br>
@@ -209,6 +209,54 @@ Mobile Center will have a [dedicated feature](https://docs.microsoft.com/en-us/m
   },
   ```
 Postinstall scripts run right after all the ```package.json``` packages are installed, so you use those packages in your script.
+
+## React Native Android Build
+Mobile Center can build React Native apps written in React Native version 0.34 or newer.
+<br>
+<br>
+To start building a React Native iOS app, first of all, you need to connect to your repository service (GitHub, Bitbucket, VSTS) account, select a repository and a branch where your app lives and then you can set up your first build. Choose the project's ```package.json``` that you want to build; for the app to run on a real device, the build needs to be code signed with a valid certificate.
+
+### 1. Linking your repository
+If you haven't done it previously already, first of all, you have to connect your repository service (GitHub, Bitbucket, VSTS) account. Once your account is connected, select the repository where your Android project is located. In order to setup a build for a repository, you need admin and pull rights for it.
+
+### 2. Selecting a branch
+Next step once you have selected a repository is to select the branch you want to build. By default all the active branches will be listed. Upon selecting the branch you want to get started with, it is time to setup your first build!
+
+### 3. Setting up your first build
+To kick off the first build, configure how the Android project should get built.
+
+#### 3.1. Project
+
+Select your project’s ```package.json```. Mobile Center will automatically extract information from its associated ```build.gradle``` file, including including dependencies, build tools version, build types, and product flavors.
+
+#### 3.2. Build variant
+
+The available build variants will populate from the Build Types and Product Flavors specified in the build.gradle file. Select which build variant should be built.
+
+#### 3.3. Build triggers
+
+By default a new build is triggered on every push a developer does to the configured branch. This is often referred to as “Continuous Integration”. If you prefer to manually trigger a new build, you can change this setting in the configuration pane.
+
+#### 3.4. Increment version number
+
+When enabled, the version code in the AndroidManifest.xml of your app automatically increments for each build. The change happens during the actual build and won't be committed to your repository.
+
+#### 3.5. Launch your successful build on a real device
+
+Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. Read more about it here
+
+#### 3.6. Code signing
+
+A successful build will produce an APK file. In order to release the build to the Play Store, it needs to be signed with a valid certificate stored in a keystore. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your keystore to your repository, and provide the relevant values in the configuration pane. You can read more about code signing here.
+
+#### 3.7. Distribution to a distribution group
+
+You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
+Once you save the configuration, a new build will be kicked off automatically.
+
+
+
+
 
 
 
