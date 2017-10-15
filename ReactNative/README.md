@@ -280,7 +280,29 @@ You can also check if Mobile Center Crashes is enabled or not:
 ```js
 const enabled = await Crashes.isEnabled();
 ```
- 
+
+# Push Notifications
+In order to set up Push Notifications, you will have to set up the Push Mobile Center SDK, as well as the platform specific push services (Firebase Cloud Messaging (FCM), Apple Notifications Service (APNs), Windows Notifications Services (WNS). These instructions can be found in the Mobile Center Push portal, as well as in the Mobile Center SDK docs. You can follow the instructions provided in the Mobile Center portal, along with our detailed instructions found in the following links:
+
+## React Native Android Push
+Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal. Mobile Center portal and the Push SDK is integrated with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
+<br>
+<br>
+Note that only devices having the [Google Play](https://play.google.com/store) store application or emulators with **Google APIs** images can receive the notifications.
+
+**Firebase displays a notification in the system notification center only if the application is in background at the moment the Push is received.**
+
+## Prerequisite - Add Firebase to your app
+Before using Mobile Center Push service, you need to add Firebase to your application. You can either choose a manual integration or Firebase Assistant.
+
+### 1. Prerequisites
+Please learn about [Prerequisites](https://firebase.google.com/docs/android/setup#prerequisites), in particular please make sure to keep Google Repository up-to-date in the [Android SDK Manager](https://developer.android.com/studio/intro/update.html#sdk-manager).
+
+### 2. Manual integration
+  1) Follow the instructions listed in [Manually add Firebase](https://firebase.google.com/docs/android/setup#manually_add_firebase) section.
+  2) Make sure to continue following instructions in **Add the SDK** sub section right after but do not add ```compile "com.google.firebase:firebase-core:${version}"``` as the SDK manages this step for you can it could trigger incompatibilities if versions mismatch.
+  
+
 
 
 
