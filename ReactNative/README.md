@@ -97,7 +97,7 @@ Now drag and drop ```MobileCenter.framework```, ```MobileCenterAnalytics.framewo
 A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 ## 4. Start the SDK
-Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. There is no additional setup required. Look at [Analytics](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-analytics) and Crashes section for APIs guides and walkthroughs to learn what Mobile Center can do.
+Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. There is no additional setup required. Look at [Analytics](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-analytics) and [Crashes](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-crashes) section for APIs guides and walkthroughs to learn what Mobile Center can do.
 
 # Mobile Center Analytics
 Mobile Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the Mobile Center portal for you to analyze the data.
@@ -196,6 +196,60 @@ const crashReport = await Crashes.lastSessionCrashReport();
 ```
 
 ## Customize your usage of Mobile Center Crashes
+Mobile Center Crashes provides callbacks for developers to perform additional actions before and when sending crash logs to Mobile Center.
+
+### Processing crashes in JavaScript
+During ```react-native link```, the SDK will ask whether or not to send crash reports automatically or process crashes in JavaScript. Opting to process crashes first means more work for the developer, but greater control over user privacy and allows you to attach a message with a crash report.
+<br>
+<br>
+Processing a crash in JavaScript requires you to use the ```process``` method from Mobile Center Crashes.
+```js
+// import the Crashes library at the top of the file
+import Crashes from "mobile-center-crashes";
+```
+Then, you can send all crashes that have been queued up since the last call to ```process``` or discard them.
+<br>
+<br>
+The following example shows how to handle a user confirmation dialog:
+```js
+Crashes.process((reports, send) => {
+      if (reports.length > 0) {
+        Alert.alert(
+          `Send ${reports.length} crash(es)?`,
+          '',
+          [
+            { text: 'Send', onPress: () => send(true) },
+            { text: 'Ignore', onPress: () => send(false), style: 'cancel' },
+          ],
+          { cancelable: false }
+        );
+      }
+    });
+```
+### Get information about the sending status for a crash log
+At times, you would like to know the status of your app crash. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. Mobile Center Crashes has three different callbacks that you can use in your app to be notified of what is going on.
+<br>
+<br>
+To do that you have to define an event listener in your code as in the following example:
+```js
+Crashes.setEventListener({
+        willSendCrash: function (report) {
+            // called after Crashes.process and before sending the crash.
+        },
+        didSendCrash: function (report) {
+            // called when crash report sent successfully.
+        },
+        failedSendingCrash: function (report) {
+            // called when crash report could not be sent.
+        }
+      });
+ ```
+ All callbacks are optional. You don't have to provide all 3 methods in the event listener object, for example you can implement only ```willSendCrash```.
+ <br>
+ <br>
+ To use that feature you need to have answered **Processed in JavaScript by user** when executing ```react-native link``` for the Crash service configuration. This feature is thus dependent on [Processing crashes in JavaScript](.
+
+
 
 
 
