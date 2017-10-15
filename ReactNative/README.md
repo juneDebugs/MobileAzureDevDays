@@ -323,12 +323,12 @@ Mobile Center Distribution is a tool to for developers to release application bi
 <br>
 <br>
 Distributing with Mobile Center is easy, and only requires a few steps. No need for an SDK. Just the application binary.
-  1) Add users to your app to grant access to all releases.
-  2) Create Distribution Groups to manage access.
-  3) Upload a new application release.
+  1) [Add users to your app](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#creating-and-managing-apps) to grant access to all releases.
+  2) Create [Distribution Groups](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#manage-distribution-groups) to manage access.
+  3) [Upload](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#release-a-build) a new application release.
       * At the completion of the upload an email will be sent to all users of the app to notify them of the new release.
-  4) Install the release onto your device by clicking on the link in the email.
-  5) Enable In-App Updates to help your users stay always on the latest release.
+  4) [Install](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#release-a-build) the release onto your device by clicking on the link in the email.
+  5) [Enable In-App Updates](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#in-app-updates) to help your users stay always on the latest release.
 
 ## Creating and managing apps
 
