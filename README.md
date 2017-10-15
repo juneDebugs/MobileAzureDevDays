@@ -1,3 +1,4 @@
+![Title](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/MobileAzureDevDaysLogo.png)
 ![Header](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/Header.gif)
 
 # Mobile Azure DevDays
