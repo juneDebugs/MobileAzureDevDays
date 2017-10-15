@@ -14,7 +14,7 @@ This simple app has a Text Entry Box and a button that triggers the text to hit 
     * [Customize your usage of Mobile Center Crashes](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#customize-your-usage-of-mobile-center-crashes)
 * [Push Notifications](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#push-notifications)
     * [React Native Android Push](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#react-native-android-push)
-    *
+    * [React Native iOS Push](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#react-native-ios-push)
     
 
 # Get Started with React Native
@@ -332,8 +332,8 @@ Postinstall scripts run right after all the ```package.json``` packages are inst
 
 # Mobile Center Distribute
 Mobile Center Distribution is a tool to for developers to release application binaries to their end user devices. The speed and integration capabilities make this tool perform admirably for release of pre-production or beta software to testing devices. Mobile Center Distribution supports the distribution of application packages for both iOS and Android.
-<br>
-<br>
+
+## Getting Started with Distribute
 Distributing with Mobile Center is easy, and only requires a few steps. No need for an SDK. Just the application binary.
   1) [Add users to your app](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#creating-and-managing-apps) to grant access to all releases.
   2) Create [Distribution Groups](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#manage-distribution-groups) to manage access.
