@@ -98,7 +98,7 @@ For the iOS app, should crashes be sent automatically or processed in JavaScript
  ```
  
  ### 3.2 [iOS only] Integrate the iOS SDK manually
- We **strongly** recommend integrating the SDK via Cocoapods as described above. Nonetheless, it's also possible to integrate the iOS native SDK manually.
+ We **strongly** recommend integrating the SDK via Cocoapodse as described above. Nonetheless, it's also possible to integrate the iOS native SDK manually.
  
   1) Download the [Mobile Center SDK for React Native frameworks](https://github.com/Microsoft/mobile-center-sdk-react-native/releases/tag/0.10.0) provided as a zip file.
   2) From the release notes on Github, please also download the corresponding frameworks of the Mobile Center SDK for iOS.
@@ -780,7 +780,7 @@ const pushEnabled = await Push.isEnabled();
 ## React Native iOS Push
 Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
 
-### Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
+### Prerequisite - Enable Apple Push Notifications service (APNs) for your app
 Configure Apple Push Notifications service (APNs) for your app from your Apple developer account and Mobile Center portal before adding Mobile Center Push to your app.
 
 #### Enable push notifications on your application
@@ -795,20 +795,144 @@ On the bottom of the page, select Sandbox for initial development or Production 
 <br>
 <br>
 Collect the following information:
-   1) **Prefix and ID**
-               * Go to your Apple developer account and select your application from the App ID list in Identifiers.
-               * Copy the Prefix value from this window and paste it to the Mobile Center push settings.
-               * Do the same with the ID value.
-   2) **Key ID**
-                     * In your Apple developer account create a new key in Certificates, Identifiers & Profiles/Keys.
-                     * Make sure to check the APNs checkbox.
-                     * Fill in the key name
-                     * Press Continue then Confirm.
-                     * On the next screen, copy the Key ID value and paste it to the Mobile Center push settings.
-                     * Download the key file.
-  3) Push Token
-Open your key file with a text editor and copy the authentication token it contains.
+   **1) Prefix and ID**
+* Go to your Apple developer account and select your application from the App ID list in Identifie               
+* Copy the Prefix value from this window and paste it to the Mobile Center push settings.
+* Do the same with the ID value.
+   
+   **2) Key ID**
+* In your Apple developer account create a new key in Certificates, Identifiers & Profiles/Keys.
+* Make sure to check the APNs checkbox.
+* Fill in the key name
+* Press Continue then Confirm.
+* On the next screen, copy the Key ID value and paste it to the Mobile Center push settings.
+* Download the key file.
+
+  **3) Push Token**
+* Open your key file with a text editor and copy the authentication token it contains.
+* On the Mobile Center push settings, paste this token to the **Push Token** field then click **Done** to complete this configuration. For more information, refer to the [Apple documentation](http://help.apple.com/xcode/mac/current/#/dev11b059073).
+
+#### [Optional] Enable silent notifications
+Silent notifications give you a way to wake up your app so that it can refresh its data in the background (see [Apple documentation](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW8)). To enable silent notifications open Xcode's project editor, choose your target and click **Capabilities**. Turn on **Background Modes** and check the **Remote notifications** checkbox.
  
+## Add Mobile Center Push to your app
+
+### 1) Add the Mobile Center Push module
+
+Please follow the [Get started section](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#get-started-with-react-native) if you haven't set up the SDK in your application yet.
+<br>
+<br>
+The Mobile Center SDK is designed with a **modular approach** – you only need to integrate the services that you're interested in.
+
+#### Integrate the SDK automatically
+The default integration of the SDK uses Cocoapods for iOS.
+   1) Open a Terminal and navigate to the root of your React Native project, then enter the following to add Mobile Center Push to the app:
+   ```js
+   npm install mobile-center-push --save
+   ```
+   2) Link the plugin to the React Native app by using the ```react-native link``` command.
+   ```js
+   react-native link mobile-center-push
+   ```
+#### Integrate the iOS SDK manually
+If you wish to manually integrate the module, follow the manual integration steps at [documentation link](https://docs.microsoft.com/en-us/mobile-center/sdk/getting-started/react-native#32-ios-only-integrate-the-ios-sdk-manually).
+
+### 2.Start Mobile Center Push
+
+#### 2.1 Register for notifications
+Mobile Center Push is started by this call:
+```swift
+#import <RNPush/RNPush.h>
+
+...
+
+[RNPush register];
+```
+That call is added automatically to **AppDelegate.m** by the automatic instructions above. Otherwise, you need to add it manually.
+<br>
+<br>
+Note that when the app calls ```register``` for the first time after being installed, iOS will prompt the user for permission to receive push notifications. If you wish to delay when that permission prompt appears to the user, say until after an app first time use wizard finishes, delay making the ```register``` call.
+
+#### 2.2 [Optional] Receive push notifications if you have already implemented ```application:didReceiveRemoteNotification:fetchCompletionHandler``` method
+
+If you or one of your third party libraries already implements application:didReceiveRemoteNotification:fetchCompletionHandler method, then follow step 4 to implement a callback to receive push notifications.
+
+## Intercept push notifications
+You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The listener may also be woken up when a notification is received in background if you have enable silent notifications and if the payload of the notification contains the [content-available](https://docs.microsoft.com/en-us/mobile-center/push/index#custom-data-in-your-notifications) flag set to true.
+<br>
+<br>
+If silent notifications are enabled and you push a notification with ```content-available```: 1, then the listener may be triggered twice for the same notification: when the notification is received in background and when it is tapped.
+By default, iOS does not generate notifications when the push is received in foreground, you can use the listener to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
+<br>
+<br>
+You need to register the listener when your app starts. A convenient place to do that is at the outer level in the .js file for your root component:
+```js
+import Push from 'mobile-center-push';
+import { AppState, Alert } from 'react-native';
+
+class MyApp extends Component {
+}
+
+Push.setEventListener({
+  pushNotificationReceived: function (pushNotification) {
+    let message = pushNotification.message;
+    let title = pushNotification.title;
+
+    if (message === null || message === undefined) {
+      // Android messages received in the background don't include a message. On Android, that fact can be used to
+      // check if the message was received in the background or foreground. For iOS the message is always present.
+      title = "Android background";
+      message = "<empty>";
+    }
+
+    // Custom name/value pairs set in the Mobile Center web portal are in customProperties
+    if (pushNotification.customProperties && Object.keys(pushNotification.customProperties).length > 0) {
+      message += '\nCustom properties:\n' + JSON.stringify(pushNotification.customProperties);
+    }
+
+    if (AppState.currentState === 'active') {
+      Alert.alert(title, message);
+    }
+    else {
+      // Sometimes the push callback is received shortly before the app is fully active in the foreground.
+      // In this case you'll want to save off the notification info and wait until the app is fully shown
+      // in the foreground before displaying any UI. You could use AppState.addEventListener to be notified
+      // when the app is fully in the foreground.
+    }
+  }
+});
+```
+
+## Enable or disable Mobile Center Push at runtime
+You can enable and disable Mobile Center Push at runtime. If you disable it, the SDK will stop updating the device token used to push but the existing one will continue working. In other words, disabling the Mobile Center Push in the SDK will **NOT** stop your application from receiving push notifications.
+```js
+import Push from 'mobile-center-push';
+
+...
+
+await Push.setEnabled(false);      // Disable push
+await Push.setEnabled(true);       // Re-enable it
+```
+
+## Check if Mobile Center Push is enabled
+You can also check if Mobile Center Push is enabled or not:
+```js
+import Push from 'mobile-center-push';
+
+...
+
+const pushEnabled = await Push.isEnabled();
+```
+
+## Disable automatic forwarding of application delegate's methods to Mobile Center services
+Mobile Center uses swizzling to automatically forward your application delegate's methods to Mobile Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the Mobile Center application delegate forwarding for all Mobile Center services by following the steps below:
+   1) Open your ```Info.plist``` file.
+   2) Add ```MobileCenterAppDelegateForwarderEnabled``` key and set the value to ```0```. This will disable application delegate forwarding for all Mobile Center services.
+   3) Implement the callbacks to register push notifications
+Implement the ```application:didRegisterForRemoteNotificationsWithDeviceToken```: callback and the ```application:didFailToRegisterForRemoteNotificationsWithError```: callback in your ```AppDelegate``` to register for Push notifications. 
+
+
+
 
 
 
