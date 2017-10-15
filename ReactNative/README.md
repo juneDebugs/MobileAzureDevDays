@@ -247,7 +247,40 @@ Crashes.setEventListener({
  All callbacks are optional. You don't have to provide all 3 methods in the event listener object, for example you can implement only ```willSendCrash```.
  <br>
  <br>
- To use that feature you need to have answered **Processed in JavaScript by user** when executing ```react-native link``` for the Crash service configuration. This feature is thus dependent on [Processing crashes in JavaScript](.
+ To use that feature you need to have answered **Processed in JavaScript by user** when executing ```react-native link``` for the Crash service configuration. This feature is thus dependent on [Processing crashes in JavaScript](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#processing-crashes-in-javascript).
+ 
+ If you configure crashes to be sent automatically, you will likely register the listener too late and thus the crashes would already be sent before Javascript loads your custom code.
+ <br>
+ <br>
+Thus you should configure crashes to be processed in Javascript and set up the event listener before calling ```Crashes.process```.
+ 
+ ### Add attachments to a crash report
+ You can add one binary and one text attachment to a crash report. The SDK will send it along with the crash so that you can see it in Mobile Center portal.
+ ```js
+ Crashes.process(function (reports, send) {
+      for (const report of reports) {
+        report.addTextAttachment("Hello text attachment!", "hello.txt");
+        report.addBinaryAttachment(`${imageAsBase64string}`, "logo.png", "image/png");
+      }
+      send(true);
+    });
+    ```
+## Enable or disable Mobile Center Crashes at runtime
+You can enable and disable Mobile Center Crashes at runtime. If you disable it, the SDK will not do any crash reporting for the app.
+```js
+await Crashes.setEnabled(false);
+```
+To enable Mobile Center Crashes again, use the same API but pass ```true``` as a parameter.
+```js
+await Crashes.setEnabled(true);
+```
+
+## Check if Mobile Center Crashes is enabled
+You can also check if Mobile Center Crashes is enabled or not:
+```js
+const enabled = await Crashes.isEnabled();
+```
+ 
 
 
 
