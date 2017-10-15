@@ -835,7 +835,7 @@ The default integration of the SDK uses Cocoapods for iOS.
    react-native link mobile-center-push
    ```
 #### Integrate the iOS SDK manually
-If you wish to manually integrate the module, follow the manual integration steps at [documentation link](https://docs.microsoft.com/en-us/mobile-center/sdk/getting-started/react-native#32-ios-only-integrate-the-ios-sdk-manually).
+If you wish to manually integrate the module, follow the manual integration steps at [documentation link](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#32-ios-only-integrate-the-ios-sdk-manually).
 
 ### 2.Start Mobile Center Push
 
@@ -844,7 +844,7 @@ Mobile Center Push is started by this call:
 ```swift
 #import <RNPush/RNPush.h>
 
-...
+...q
 
 [RNPush register];
 ```
@@ -858,7 +858,7 @@ Note that when the app calls ```register``` for the first time after being insta
 If you or one of your third party libraries already implements application:didReceiveRemoteNotification:fetchCompletionHandler method, then follow step 4 to implement a callback to receive push notifications.
 
 ## Intercept push notifications
-You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The listener may also be woken up when a notification is received in background if you have enable silent notifications and if the payload of the notification contains the [content-available](https://docs.microsoft.com/en-us/mobile-center/push/index#custom-data-in-your-notifications) flag set to true.
+You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The listener may also be woken up when a notification is received in background if you have enable [silent notifications](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#22-optional-receive-push-notifications-if-you-have-already-implemented-applicationdidreceiveremotenotificationfetchcompletionhandler-method) and if the payload of the notification contains the [content-available](https://docs.microsoft.com/en-us/mobile-center/push/index#custom-data-in-your-notifications) flag set to true.
 <br>
 <br>
 If silent notifications are enabled and you push a notification with ```content-available```: 1, then the listener may be triggered twice for the same notification: when the notification is received in background and when it is tapped.
