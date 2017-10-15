@@ -1,7 +1,7 @@
 # Abstract
 This simple app has a Text Entry Box and a button that triggers the text to hit the [Azure Sentiment Analysis API](http://bit.ly/2i9jc13) and returns a corresponding Emoji and changes the background color appropriately. 
 
-# Table of Contents
+# Index
  * [Mobile Center Build](http://bit.ly/2i84mb9)
      *  [Xamarin.iOS Build](http://bit.ly/2zmxiQY)
      *  [Xamarin.Android Build](http://bit.ly/2xE7YbQ)
