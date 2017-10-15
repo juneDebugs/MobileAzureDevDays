@@ -265,7 +265,7 @@ properties.put("FileName", "favorite.avi");
 Analytics.trackEvent("Video clicked", properties);
 ```
 Properties for events are entirely optional – if you just want to track an event, use this sample instead:
-```csharp
+```java
 Analytics.trackEvent("Video clicked");
 ```
 
@@ -302,7 +302,7 @@ Mobile Center Crashes has two APIs that give you more information in case your a
 
 ### Did the app crash in the previous session?
 At any time after starting the SDK, you can check if the app crashed in the previous launch:
-```csharp
+```java
 Crashes.hasCrashedInLastSession();
 ```
 This API is asynchronous, you can read more about that in our [Mobile Center Asynchronous APIs guide](http://bit.ly/2z6VtC2).
