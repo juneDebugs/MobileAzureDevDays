@@ -1,6 +1,10 @@
 # Abstract
 This simple app has a Text Entry Box and a button that triggers the text to hit the [Azure Sentiment Analysis API](https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-sentiment-analysis) and returns a corresponding Emoji and changes the background color appropriately.
 
+# Index
+
+
+
 # Get Started with React Native
 The Mobile Center SDK uses a modular architecture so you can use any or all of the services.
 <br>
@@ -306,6 +310,42 @@ For React Native on Android, universal APK generation is disabled by default. If
 <br>
 <br>
 Postinstall scripts run right after all the ```package.json``` packages are installed, so you use those packages in your script.
+
+
+
+
+
+
+
+
+# Mobile Center Distribute
+Mobile Center Distribution is a tool to for developers to release application binaries to their end user devices. The speed and integration capabilities make this tool perform admirably for release of pre-production or beta software to testing devices. Mobile Center Distribution supports the distribution of application packages for both iOS and Android.
+<br>
+<br>
+Distributing with Mobile Center is easy, and only requires a few steps. No need for an SDK. Just the application binary.
+  1) Add users to your app to grant access to all releases.
+  2) Create Distribution Groups to manage access.
+  3) Upload a new application release.
+  4) At the completion of the upload an email will be sent to all users of the app to notify them of the new release.
+  5) Install the release onto your device by clicking on the link in the email.
+  6) Enable In-App Updates to help your users stay always on the latest release.
+
+## Creating and managing apps
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # Mobile Center Analytics
 Mobile Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the Mobile Center portal for you to analyze the data.
