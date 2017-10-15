@@ -438,6 +438,8 @@ You can install a test signed app by first installing the test certificate (whic
 
 
 
+## In-App Updates
+Enable your tester to easily stay up to date with the latest releases. Integrate the Mobile Center SDK (and the Distribution Module) for [iOS](https://docs.microsoft.com/en-us/mobile-center/sdk/distribute/ios) and [Android](https://docs.microsoft.com/en-us/mobile-center/sdk/distribute/android) to automatically enable in-app notification of new releases. Once completed all future releases through Mobile Center will trigger an in-app notification for each user allowing a quick upgrade to the latest version.
 
 
 
