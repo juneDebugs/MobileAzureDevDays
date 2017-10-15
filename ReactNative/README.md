@@ -97,7 +97,7 @@ Now drag and drop ```MobileCenter.framework```, ```MobileCenterAnalytics.framewo
 A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 ## 4. Start the SDK
-Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. There is no additional setup required. Look at Analytics and Crashes section for APIs guides and walkthroughs to learn what Mobile Center can do.
+Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. There is no additional setup required. Look at [Analytics](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-analytics) and Crashes section for APIs guides and walkthroughs to learn what Mobile Center can do.
 
 # Mobile Center Analytics
 Mobile Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the Mobile Center portal for you to analyze the data.
@@ -154,6 +154,51 @@ This means that for any information to be sent to Mobile Center (even basic sess
 ```js
 await Analytics.setEnabled(true);
 ```
+
+# Mobile Center Crashes
+Mobile Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to Mobile Center. Collecting crashes works for both beta and live apps, i.e. those submitted to Google Play. Crash logs contain valuable information for you to help fix the crash.
+<br>
+<br>
+Please follow the [Get started section](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#get-started-with-react-native) if you haven't set up the SDK in your application yet.
+<br>
+<br>
+Wherever you are using Mobile Center Crashes, add the following import at the top of the file.
+```js
+// Import Mobile Center Crashes at the top of the file.
+import Crashes from "mobile-center-crashes";
+```
+
+## Generate a test crash
+Mobile Center Crashes provides you with an API to generate a test crash for easy testing of the SDK. This API can only be used in test/beta apps and won't do anything in production apps.
+```js
+Crashes.generateTestCrash();
+```
+It's also easy to generate a JavaScript crash. Add the following line to your code, which throws a JavaScript error and causes a crash.
+```js
+throw new Error("This is a test javascript crash!");
+```
+**Your React Native app needs to be compiled in release mode for this crash to be sent to Mobile Center.**
+
+## Get more information about a previous crash
+Mobile Center Crashes has two APIs that give you more information in case your app has crashed.
+
+### Did the app crash in the previous session?
+At any time after starting the SDK, you can check if the app crashed in the previous launch:
+```js
+const didCrash = await Crashes.hasCrashedInLastSession();
+```
+This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occured. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occured.
+
+#### Details about the last crash
+If your app crashed previously, you can get details about the last crash.
+```js
+const crashReport = await Crashes.lastSessionCrashReport();
+```
+
+## Customize your usage of Mobile Center Crashes
+
+
+
 
 
 
