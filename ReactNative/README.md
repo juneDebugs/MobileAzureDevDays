@@ -326,9 +326,9 @@ Distributing with Mobile Center is easy, and only requires a few steps. No need 
   1) Add users to your app to grant access to all releases.
   2) Create Distribution Groups to manage access.
   3) Upload a new application release.
-  4) At the completion of the upload an email will be sent to all users of the app to notify them of the new release.
-  5) Install the release onto your device by clicking on the link in the email.
-  6) Enable In-App Updates to help your users stay always on the latest release.
+      * At the completion of the upload an email will be sent to all users of the app to notify them of the new release.
+  4) Install the release onto your device by clicking on the link in the email.
+  5) Enable In-App Updates to help your users stay always on the latest release.
 
 ## Creating and managing apps
 
@@ -350,6 +350,16 @@ To change the permission of a collaborator, select an app, click **Manage app** 
 To share your app with others, select an app and then click **Manage app** to add collaborators by typing in the user's email address.
 
 ## Manage Distribution Groups
+Distribution Groups are used to control access to releases. A Distribution Group represents a set of users that can be managed jointly and can have common access to releases. Example of Distribution Groups can be teams of users, like the QA Team or External Beta Testers or can represent stages or rings of releases, such as Staging.
+
+### Creating a Distribution Group
+To create a new Distribution Group select the "New Group" group button from the top of the screen. Provide a name for the Distribution Group. You can then add users to this group by email. You can also add additional users after the group has been created.
+
+### Managing Users in a Distribution Group
+Clicking on a Distribution Group will allow for management of the group. You can use the invitation box to add additional users. Or select users from the table to remove them from the group. From this page you can also see the full release history for this Distribution Group by clicking on the releases tab.
+
+### Releasing a Build to a Distribution Group
+To [release a new build](https://docs.microsoft.com/en-us/mobile-center/distribution/uploading) to a Distribution Group. Make use of the "Distribute new Release" button at the top of the screen and choose the Distribution Group from the list during the steps.
 
 
 
