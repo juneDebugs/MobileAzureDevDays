@@ -2,8 +2,20 @@
 This simple app has a Text Entry Box and a button that triggers the text to hit the [Azure Sentiment Analysis API](https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-sentiment-analysis) and returns a corresponding Emoji and changes the background color appropriately.
 
 # Index
-
-
+* [Get Started with React Native](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#get-started-with-react-native)
+    * [Prerequisites](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#1-prerequisites)
+* [Mobile Center Build](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-build)
+    * [React Native iOS Build](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#react-native-ios-build)
+    * [React Native Android Build](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#react-native-android-build)
+* [Mobile Center Distribute](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-distribute)
+* [Mobile Center Analytics](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-analytics)
+    * [Custom Events](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#custom-events)
+* [Mobile Center Crash](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-crashes)
+    * [Customize your usage of Mobile Center Crashes](Customize your usage of Mobile Center Crashes)
+* [Push Notifications](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#push-notifications)
+    * [React Native Android Push](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#react-native-android-push)
+    *
+    
 
 # Get Started with React Native
 The Mobile Center SDK uses a modular architecture so you can use any or all of the services.
