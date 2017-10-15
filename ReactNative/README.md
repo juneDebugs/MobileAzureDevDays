@@ -302,6 +302,23 @@ Please learn about [Prerequisites](https://firebase.google.com/docs/android/setu
   1) Follow the instructions listed in [Manually add Firebase](https://firebase.google.com/docs/android/setup#manually_add_firebase) section.
   2) Make sure to continue following instructions in **Add the SDK** sub section right after but do not add ```compile "com.google.firebase:firebase-core:${version}"``` as the SDK manages this step for you can it could trigger incompatibilities if versions mismatch.
   
+### Using Firebase Assistant
+  1) Follow [these instructions](https://developer.android.com/studio/write/firebase.html) if you don't see ```Firebase``` in the ```Tools``` menu.
+  2) Click on Tools > Firebase and follow **only** the first two following steps:
+        * Connect your app to Firebase
+        * Add FCM to your app
+Step 3 is managed by Mobile Center SDK automatically, so you can stop after step 2.
+```js
+
+Please remove this if added automatically as the SDK manages this for you can it can trigger build errors if versions mismatch:
+```
+
+### 4. Obtain your Android API Key
+Go to Project Settings and under Cloud Messaging, copy your Server Key. This will be the Android API Key that you will need to set in the Mobile Center Push portal.
+
+## Add Mobile Center Push to your app
+
+  
 
 
 
