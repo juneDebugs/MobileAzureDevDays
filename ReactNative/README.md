@@ -317,8 +317,97 @@ Please remove this if added automatically as the SDK manages this for you can it
 Go to Project Settings and under Cloud Messaging, copy your Server Key. This will be the Android API Key that you will need to set in the Mobile Center Push portal.
 
 ## Add Mobile Center Push to your app
-
+Please follow the [Get started section](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#get-started-with-react-native) if you haven't set up the SDK in your application yet.
+<br>
+<br>
+The Mobile Center SDK is designed with a **modular approach** – you only need to integrate the services that you're interested in.
+  1) Open a Terminal and navigate to the root of your React Native project, then enter the following to add Mobile Center Push to the app:
+  ```js
+  npm install mobile-center-push --save
+  ```
+  2) Link the plugin to the React Native app by using the react-native link command.
+  ```js
+  react-native link mobile-center-push
+  ```
+  Those steps modify your ```MainApplication.java``` file, adding ```RNPushPackage``` there.
   
+
+## Intercept push notifications
+
+You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been clicked by the user. Firebase does not generate notifications when the push is received in foreground.
+If the push is received in background, the event is **NOT** triggered at receive time. The event is triggered when you click on the notification.
+<br>
+<br>
+You need to register the listener when your app starts. A convenient place to do that is at the outer level in the .js file for your root component:
+```js
+import Push from 'mobile-center-push';
+import { AppState, Alert } from 'react-native';
+
+class MyApp extends Component {
+}
+
+Push.setEventListener({
+  pushNotificationReceived: function (pushNotification) {
+    let message = pushNotification.message;
+    let title = pushNotification.title;
+
+    if (message === null || message === undefined) {
+      // Android messages received in the background don't include a message. On Android, that fact can be used to
+      // check if the message was received in the background or foreground. For iOS the message is always present.
+      title = "Android background";
+      message = "<empty>";
+    }
+
+    // Custom name/value pairs set in the Mobile Center web portal are in customProperties
+    if (pushNotification.customProperties && Object.keys(pushNotification.customProperties).length > 0) {
+      message += '\nCustom properties:\n' + JSON.stringify(pushNotification.customProperties);
+    }
+
+    if (AppState.currentState === 'active') {
+      Alert.alert(title, message);
+    }
+    else {
+      // Sometimes the push callback is received shortly before the app is fully active in the foreground.
+      // In this case you'll want to save off the notification info and wait until the app is fully shown
+      // in the foreground before displaying any UI. You could use AppState.addEventListener to be notified
+      // when the app is fully in the foreground.
+    }
+  }
+});
+```
+## Existing Firebase Analytics users
+Mobile Center Push has a dependency on Firebase. Firebase Analytics is included in the core Firebase module and therefore, it's a dependency for Firebase messaging. Mobile Center Push SDK automatically disables Firebase Analytics to prevent unwanted data collection by Firebase.
+<br>
+<br>
+If you are a Firebase customer and want to keep reporting analytics data to Firebase, you need to call the following method before ```RNPushPackage``` is instantiated, like from ```MainApplication.onCreate```:
+```js
+import com.microsoft.azure.mobile.push.Push;
+
+...
+
+Push.enableFirebaseAnalytics(getApplication());
+```
+
+## Enable or disable Mobile Center Push at runtime
+You can enable and disable Mobile Center Push at runtime. If you disable it, the SDK will stop updating the Google registration identifier used to push but the existing one will continue working. In other words, disabling the Mobile Center Push in the SDK will **NOT** stop your application from receiving push notifications.
+```js
+import Push from 'mobile-center-push';
+
+...
+
+await Push.setEnabled(false);      // Disable push
+await Push.setEnabled(true);       // Re-enable it
+```
+
+## Check if Mobile Center Push is enabled
+You can also check if Mobile Center Push is enabled or not:
+```
+import Push from 'mobile-center-push';
+
+...
+
+const pushEnabled = await Push.isEnabled();
+```
 
 
 
