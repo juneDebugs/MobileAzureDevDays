@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "776696945835",
+    "firebase_url": "https://sentiment-86029.firebaseio.com",
+    "project_id": "sentiment-86029",
+    "storage_bucket": "sentiment-86029.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:776696945835:android:638f5a31405ec95d",
+        "android_client_info": {
+          "package_name": "com.sentiment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "776696945835-mrmhvg0gealfp2q16l70ac2mhhc183m5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJaFkTqCtQY2rlGdXiJqwPC19B3Kg5tiA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

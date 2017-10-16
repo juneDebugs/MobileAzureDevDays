@@ -1,16 +1,27 @@
+
 import { Container, Header, Content, Footer, Title, Button, Spinner } from 'native-base';
 import React, { Component } from 'react';
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 import config from './config';
+import Prompt from 'react-native-prompt';
+
+import Analytics from "mobile-center-analytics";
+import Crashes from "mobile-center-crashes";
 
 export default class SentimentApp extends Component {
   constructor(props) {
     super(props);
+
+    // add in to test crash reports with mobile centre
+    //Crashes.generateTestCrash();
+    
     this.state = { text: '', emoji: '' };
     this.onPressLearnMore = this.onPressLearnMore.bind(this);
   }
 
   componentWillMount() {
+    Analytics.trackEvent("app.js - componentWillMount", {});
+
     this.setState({
       text: '',
       bgColor: '#FF6F69',
@@ -20,6 +31,8 @@ export default class SentimentApp extends Component {
   }
 
   onPressLearnMore() {
+    Analytics.trackEvent("app.js - onPressLearnMore", {});
+
     this.setState({busy: true});
 
     var data = {
@@ -55,6 +68,8 @@ export default class SentimentApp extends Component {
   }
 
   getEmoji(score) {
+    Analytics.trackEvent("app.js - getEmoji", { Score: score });
+
     if (score < 0.4) {
       return '🙁';
     } else if (score <= 0.6) {
@@ -65,6 +80,8 @@ export default class SentimentApp extends Component {
   }
 
   getBackgroundColor(score) {
+    Analytics.trackEvent("app.js - getBackgroundColor", { Score: score });
+
     if (score < 0.2) {
       return '#7F1437';
     } else if (score < 0.3) {
@@ -85,6 +102,8 @@ export default class SentimentApp extends Component {
   }
 
   render() {
+    Analytics.trackEvent("app.js - render", {});
+
     let emojiOrLoading;
     if (!this.state.busy) {
       emojiOrLoading = (
@@ -119,6 +138,7 @@ export default class SentimentApp extends Component {
               onChangeText={(text) => this.setState({ text })}
             />
           </View>
+          
           <Button bordered light
             onPress={this.onPressLearnMore}
             style={styles.submit}
@@ -129,6 +149,14 @@ export default class SentimentApp extends Component {
           {emojiOrLoading}
         </Content>
 
+        <Prompt
+          title="Enter analytics subscription key."
+          placeholder="key"
+          visible={true}
+          onCancel={() => this.setState({ promptVisible: false, message: "You cancelled" })}
+          onSubmit={(value) => { 
+            config.key = value; 
+          }}/>
       </Container>
     );
   }
