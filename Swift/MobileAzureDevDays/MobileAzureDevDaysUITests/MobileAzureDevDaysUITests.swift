@@ -32,8 +32,11 @@ class MobileAzureDevDaysUITests: XCTestCase {
         textView.typeText("Happy")
         MCLabel.labelStep("Text Happy Entered")
         app.buttons["Submit"].tap()
+        
         let result = app.staticTexts["😃"]
-        XCTAssertTrue((result.exists))
+        XCTAssertTrue((result.waitForExistence(timeout: 10)))
+        
+        
         MCLabel.labelStep("Result Present")
     }
     

@@ -38,7 +38,7 @@ public class EmojiTestRecord {
     public ReportHelper reportHelper = Factory.getReportHelper();
 
     @Test
-    public void emojiTestRecord() {
+    public void emojiTestRecord()  {
         ViewInteraction appCompatEditText = onView(
                 allOf(ViewMatchers.withId(R.id.sentimentText),
                         withParent(withId(R.id.backGroundLayout)),
@@ -60,8 +60,14 @@ public class EmojiTestRecord {
                         isDisplayed()));
         appCompatButton.perform(click());
 
-        ViewInteraction resultEmoji = onView(allOf(withId(R.id.emojiView), isDisplayed()));
-        resultEmoji.check(matches(isDisplayed()));
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        onView(withId(R.id.emojiView)).check(matches(isDisplayed()));
+
         reportHelper.label("Result Emoji Loaded");
 
     }
