@@ -168,9 +168,42 @@ MSAnalytics.isEnabled()
 
 
 # Mobile Center Crashes
-  
-  
-  
+Mobile Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to Mobile Center. Collecting crashes works for both beta and live apps, i.e. those submitted to the App Store. Crash logs contain valuable information for you to help fix the crash
+
+Please follow the Getting Started section if you haven't set up the SDK in your application yet.
+
+Also note that Crash logs on iOS require Symbolication, please check out the Mobile Center Crashes documentation that explains how to provide symbols for your app.
+
+
+## Generate a test crash
+Mobile Center Crashes provides you with an API to generate a test crash for easy testing of the SDK. This API can only be used in test/beta apps and won't do anything in production apps.
+```swift
+MSCrashes.generateTestCrash()
+```
+
+## Get more information about a previous crash
+Mobile Center Crashes has two APIs that give you more information in case your app has crashed.
+
+### Did the app crash in the previous session?
+At any time after starting the SDK, you can check if the app crashed in the previous launch:
+```swift
+MSCrashes.hasCrashedInLastSession()
+```
+This comes in handy in case you want to adjust the behavior or UI of your app after a crash has occured. Some developers chose to show additional UI to apologize to their users, or want way to get in touch after a crash has occured.
+
+### Details about the last crash
+If your app crashed previously, you can get details about the last crash.
+```swift
+var crashReport = MSCrashes.lastSessionCrashReport()
+```
+There are numerous use cases fpr this API, the most common one is people who call this API and implement their custom [MSCrashesDelegate](https://docs.microsoft.com/en-us/mobile-center/sdk/crashes/ios#customize-your-usage-of-mobile-center-crashes).
+
+## Customize your usage of Mobile Center Crashes
+Mobile Center Crashes provides callbacks for developers to perform additional actions before and when sending crash logs to Mobile Center.
+
+To add your custom behavior, you need to adopt the ```MSCrashesDelegate-protocol```, all of it's methods are optional.
+
+
   
   
   
