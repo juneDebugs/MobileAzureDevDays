@@ -465,5 +465,18 @@ func application(_ application: UIApplication, open url: URL, sourceApplication:
 }
 ```
 
-## Mobile Center Push
+# Mobile Center Push
 Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
+
+## Prerequisite - Enable Apple Push Notifications service (APNs) for your app
+Configure Apple Push Notifications service (APNs) for your app from your Apple developer account and Mobile Center portal before adding Mobile Center Push to your app.
+
+### Enable push notifications on your application
+
+In Xcode's project editor, choose your target and click **Capabilities**. In the **Push Notifications** section, click the switch to turn it from OFF to ON.
+
+### Set up APNs
+
+* Log in to the Mobile Center portal, select your application, click on the **Push** button from the left menu then click **Next** to reveal the push notification settings UI.
+* On the bottom of the page, select Sandbox for initial development or Production for production version of your application.
+* Collect the following information:
