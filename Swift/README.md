@@ -256,6 +256,31 @@ func crashes(_ crashes: MSCrashes!, willSend errorReport: MSErrorReport!) {
    // Your code, e.g. to present a custom UI.
 }
 ```
+
+#### The following callback will be invoked after the SDK sent a crash log successfully
+```swift
+func crashes(_ crashes: MSCrashes!, didSucceedSending errorReport: MSErrorReport!) {
+    // Your code goes here.
+}
+```
+
+#### The following callback will be invoked if the SDK failed to send a crash log
+```swift
+func crashes(_ crashes: MSCrashes!, didSucceedSending errorReport: MSErrorReport!) {
+    // Your code goes here.
+}
+```
+
+### Add attachments to a crash report
+
+You can add **one binary** and **one text** attachment to a crash report. The SDK will send it along with the crash so that you can see it in Mobile Center portal. The following callback will be invoked if you want to add attachments to a crash report:
+```swift
+func attachments(with crashes: MSCrashes, for errorReport: MSErrorReport) -> [MSErrorAttachmentLog] {
+    let attachment1 = MSErrorAttachmentLog.attachment(withText: "Hello world!", filename: "hello.txt")
+    let attachment2 = MSErrorAttachmentLog.attachment(withBinary: "Fake image".data(using: String.Encoding.utf8), filename: nil, contentType: "image/jpeg")
+    return [attachment1!, attachment2!]
+}
+```
   
   
   
