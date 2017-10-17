@@ -93,6 +93,7 @@ Insert the following line to start the SDK in your app's ```AppDelegate.m class`
 ```
 
 **Swift**
+
 Insert the following line to start the SDK in your app's ```AppDelegate.swift``` class in the ```didFinishLaunchingWithOptions``` method.
 ```swift
 MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
