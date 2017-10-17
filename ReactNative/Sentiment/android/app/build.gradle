@@ -98,7 +98,7 @@ android {
     buildToolsVersion "23.0.1"
 
     defaultConfig {
-        applicationId "com.sentiment"
+        applicationId "microsoft.mobileazuredevdays.react"
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1
