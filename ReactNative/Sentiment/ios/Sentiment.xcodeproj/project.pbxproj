@@ -1052,6 +1052,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microsoft.mobileazuredevdays-react";
 				PRODUCT_NAME = Sentiment;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1069,6 +1070,7 @@
 					"-ObjC",
 					"-lc++",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.microsoft.mobileazuredevdays-react";
 				PRODUCT_NAME = Sentiment;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
