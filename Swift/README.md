@@ -438,3 +438,11 @@ The in-app updates feature works as follows:
               * a higher value of ```CFBundleShortVersionString``` or
               * an equal value of ```CFBundleShortVersionString``` but a higher value of ```CFBundleVersion```.
   7) If you upload the same ipa a second time, the dialog will **NOT** appear as the binaries are identical. If you upload a **new** build with the same version properties, it will show the update dialog. The reason for this is that it is a **different** binary.
+
+## How do I test in-app updates?
+You need to upload release builds (that use the Distribute module of the Mobile Center SDK) to the Mobile Center Portal to test in-app updates, increasing version numbers every time.
+  1) Create your app in the Mobile Center Portal if you have not done that already.
+  2) Create a new distribution group and name it so you can recognize that this is just meant for testing the in-app update feature.
+  3) Add yourself (or all people who you want to include on your test of the in-app update feature). Use a new or throw-away email address for this, that was not used for that app on Mobile Center. This ensures that you have an experience that's close to the experience of your real testers.
+  4) Create a new build of your app that includes **Mobile Center Distribute** and contains the setup logic as described below.
+  5) Click on the **Distribute new release** button in the portal and upload your build of the app
