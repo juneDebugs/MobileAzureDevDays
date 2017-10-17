@@ -407,3 +407,19 @@ To enable Mobile Center Distribute again, use the same API but pass ```YES/true`
 ```swift
 MSDistribute.setEnabled(true)
 ```
+
+## Check if Mobile Center Distribute is enabled
+You can also check if Mobile Center Distribute is enabled or not:
+```swift
+var enabled = MSDistribute.isEnabled()
+```
+
+## Don't initialize Mobile Center Distribute during development
+Mobile Center Distribute will pop up it's UI/browser at application start. While this is an expected behavior for your end users, it could be disruptive for you during the development stage of your application. We do not recommend to initialize ```MSDistribute``` for your ```DEBUG``` configuration.
+```swift
+#if DEBUG
+   MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
+#else
+   MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self, MSDistribute.self])
+#endif
+```
