@@ -451,3 +451,16 @@ You need to upload release builds (that use the Distribute module of the Mobile 
   8) People in that group will receive an invite to be testers of the app. Once they need to accept the invite, they can download the app from the Mobile Center Portal from their mobile device. Once they have in-app updates installed, you're ready to test in-app updates.
   9) Bump the version name (```CFBundleShortVersionString```) of your app.
   10) Build the release version of your app and upload a new build of your app just like you did in the previous step and distribute this to the Distribution Group you created earlier. Members of the **Distribution Group** will be prompted for a new version the next time the app enters the foreground.
+
+## Disable automatic forwarding of application delegate's methods to Mobile Center services
+Mobile Center uses swizzling to automatically forward your application delegate's methods to Mobile Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the Mobile Center application delegate forwarding for all Mobile Center services by following the steps below:
+  1) Open your ```Info.plist``` file.
+  2) Add ```MobileCenterAppDelegateForwarderEnabled``` key and set the value to ```0```. This will disable application delegate forwarding for all Mobile Center services.
+  3) Add ```openURL``` callback in your ```AppDelegate``` file.
+```swift
+func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+
+  // Pass the URL to MSDistribute.
+  return MSDistribute.open(url as URL!)
+}
+```
