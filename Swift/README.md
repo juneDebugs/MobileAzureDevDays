@@ -464,3 +464,6 @@ func application(_ application: UIApplication, open url: URL, sourceApplication:
   return MSDistribute.open(url as URL!)
 }
 ```
+
+## Mobile Center Push
+Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
