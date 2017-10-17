@@ -1,36 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
-  </PropertyGroup>
-
-  <ItemGroup>
-    <Folder Include="Constants\" />
-    <Folder Include="Pages\" />
-    <Folder Include="Services\" />
-    <Folder Include="ViewModels\" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="2.4.0.282" />
-    <PackageReference Include="Microsoft.ProjectOxford.Text" Version="1.1.7" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Pages\HomePage_old.xaml.cs">
-      <DependentUpon>*.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Pages\HomePage.xaml.cs">
-      <DependentUpon>HomePage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="App.xaml.cs">
-      <DependentUpon>App.xaml</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Pages\HomePage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="App.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-  </ItemGroup>
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+    <ItemGroup>
+        <Folder Include="Constants\" />
+        <Folder Include="Pages\" />
+        <Folder Include="Services\" />
+        <Folder Include="ViewModels\" />
+        <Folder Include="Controls\" />
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Xamarin.Forms" Version="2.4.0.282" />
+        <PackageReference Include="Microsoft.ProjectOxford.Text" Version="1.1.7" />
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Pages\HomePage_old.xaml.cs">
+            <DependentUpon>*.xaml</DependentUpon>
+        </Compile>
+        <Compile Update="Pages\HomePage.xaml.cs">
+            <DependentUpon>*.xaml</DependentUpon>
+        </Compile>
+        <Compile Update="App.xaml.cs">
+            <DependentUpon>*.xaml</DependentUpon>
+        </Compile>
+        <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.cs">
+            <DependentUpon>*.xaml</DependentUpon>
+        </Compile>
+    </ItemGroup>
 </Project>

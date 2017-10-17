@@ -1,28 +1,28 @@
 # Abstract
-This simple app has a Text Entry Box and a button that triggers the text to hit the [Azure Sentiment Analysis API](https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-sentiment-analysis) and returns a corresponding Emoji and changes the background color appropriately. 
+This simple app has a Text Entry Box and a button that triggers the text to hit the [Azure Sentiment Analysis API](http://bit.ly/2i9jc13) and returns a corresponding Emoji and changes the background color appropriately. 
 
-# Table of Contents
- * [Mobile Center Build](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#mobile-center-build)
-     *  [Xamarin.iOS Build](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#xamarinios-build)
-     *  [Xamarin.Android Build](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#xamarinandroid-build)
- * [Mobile Center Test](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#mobile-center-test)
-     * [Preparing Xamarin.UITests for Upload](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#preparing-xamarinuitests-for-upload)
-     * [Preparing Xamarin.Android Apps](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#preparing-xamarinandroid-apps)
-     * [Preparing Xamarin.iOS Apps](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#preparing-xamarinios-apps)
-  * [Distribution with Mobile Center](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#distribution-with-mobile-center)
-     * [Xamarin Distribution Setup](https://github.com/jCho23/MobileAzureDevDays/tree/master/Xamarin#xamarin-distribution-setup)
-     * [Customize or localize the in-app update dialog](https://github.com/jCho23/MobileAzureDevDays/tree/master/Xamarin#customize-or-localize-the-in-app-update-dialog)
-     * [Release a Build iOS](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#ios)
-     * [Release a Build Android](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#android)
- * [Mobile Center Crash](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#mobile-center-crash)
-     * [iOS Crashes](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#ios-crashes)
-     * [Android Crashes](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#android-crashes)
- * [Mobile Center Analytics](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#mobile-center-analytics)
-     * [Prerequisites](https://github.com/jCho23/MobileAzureDevDays/tree/master/Xamarin#1-prerequisites)
-     * [Custom events](https://github.com/jCho23/MobileAzureDevDays/tree/master/Xamarin#custom-events)
- * [Mobile Center Push](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#xamarinforms-mobile-center-push)
-     * [iOS additional steps](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#ios-additional-steps)
-     * [Android additional steps](https://github.com/jCho23/MobileAzureDevDays/blob/master/Xamarin/README.md#android-additional-steps)
+# Index
+ * [Mobile Center Build](http://bit.ly/2i84mb9)
+     *  [Xamarin.iOS Build](http://bit.ly/2zmxiQY)
+     *  [Xamarin.Android Build](http://bit.ly/2xE7YbQ)
+ * [Mobile Center Test](http://bit.ly/2wTFne5)
+     * [Preparing Xamarin.UITests for Upload](http://bit.ly/2xDLYZJ)
+     * [Preparing Xamarin.Android Apps](http://bit.ly/2xDElCF)
+     * [Preparing Xamarin.iOS Apps](http://bit.ly/2yk45Gg)
+  * [Distribution with Mobile Center](http://bit.ly/2kN1v8h)
+     * [Xamarin Distribution Setup](http://bit.ly/2z63VkI)
+     * [Customize or localize the in-app update dialog](http://bit.ly/2ggBdtB)
+     * [Release a Build iOS](http://bit.ly/2kM2qpD)
+     * [Release a Build Android](http://bit.ly/2wSMHqg)
+ * [Mobile Center Crash](http://bit.ly/2ym1BZF)
+     * [iOS Crashes](http://bit.ly/2iagEQq)
+     * [Android Crashes](http://bit.ly/2kMKQC1)
+ * [Mobile Center Analytics](http://bit.ly/2ibaUpf)
+     * [Prerequisites](http://bit.ly/2hG7BT5)
+     * [Custom events](http://bit.ly/2hEpL7K)
+ * [Mobile Center Push](http://bit.ly/2yfRN3Y)
+     * [iOS additional steps](http://bit.ly/2gCEVek)
+     * [Android additional steps](http://bit.ly/2ykqrY8)
 
 
 # Mobile Center Build 
@@ -79,14 +79,14 @@ default settings for Debug and Release only.
   * When enabled, the ```CFBundleVersion``` in the Info.plist of your app automatically increments for each build. The change happens pre build and won't be committed to your repository.
 
 #### 3.8. Code signing
-  * A successful device build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](https://docs.microsoft.com/en-us/mobile-center/build/ios/code-signing/uploading-files), along with the password for the certificate. You can read more about code signing and device provisioning of Xamarin iOS apps in the [Xamarin official documentation](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning/).
+  * A successful device build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload [a provisioning profile (.mobileprovision) and a valid certificate (.p12)](http://bit.ly/2g8RjSF), along with the password for the certificate. You can read more about code signing and device provisioning of Xamarin iOS apps in the [Xamarin official documentation](http://bit.ly/2yn5WvR).
 
 #### 3.9. Launch your successful build on a real device
-  * Use your newly produced IPA file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. You may want to check more [comprehensive guide about testing your builds](https://docs.microsoft.com/en-us/mobile-center/build/build-test-integration).
+  * Use your newly produced IPA file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. You may want to check more [comprehensive guide about testing your builds](http://bit.ly/2yk8SaG).
 
 #### 3.10. NuGet restore
   * If the NuGet.config file is checked-in into the repository and sitting next to the .sln or at the root, Mobile Center will auto-restore the NuGet feed. To restore private NuGet feeds, make sure you include the credentials in the NuGet.config file:
-```
+```csharp
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <packageSources>
@@ -119,7 +119,7 @@ After a build has been triggered, it can be in the following states:
 
 #### 4.1. Build logs
  * For a completed build (succeeded or failed), download the logs to understand more about how the build went. Mobile Center provides an archive with the following files:
- ```
+ ```csharp
     |-- 1_build.txt (this is the general build log)
     |-- build (this folder contains a separate log file for each build step)
        |-- <build-step-1> (e.g. 2_Get Sources.txt)
@@ -130,7 +130,9 @@ After a build has been triggered, it can be in the following states:
 The build step specific logs (located in the ```build/``` directory of the archive) are helpful for troubleshooting and understanding in what step and why the build failed.
 
 #### 4.2. The app (.ipa or .app)
- * The .ipa is an iPhone application archive file which stores the iOS app. If the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. There are more [details about code signing and distribution with Mobile Center.](https://docs.microsoft.com/en-us/mobile-center/build/ios/code-signing/index) <br>
+ * The .ipa is an iPhone application archive file which stores the iOS app. If the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. There are more [details about code signing and distribution with Mobile Center.](http://bit.ly/2yJfJxj) 
+ <br>
+ <br>
 If this is a simulator build, you can run the .app file on a simulator, but you cannot use it on a real device.
 
 #### 4.3. The symbol files (.dsym)
@@ -172,7 +174,7 @@ To kick off the first build, configure how the Android project should get built.
  
 ### 3.7. NuGet restore
  * If the **NuGet.config file** is checked-in into the repository and sitting next to the ```.sln``` or at the root, Mobile Center will auto-restore the NuGet feed. To restore private NuGet feeds, make sure you include the credentials in the **NuGet.config file**:
- ```
+ ```csharp
  <?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <packageSources>
@@ -205,7 +207,7 @@ After a build has been triggered, it can be in the following states: <br>
  
 ### 4.1. Build logs
  * For a completed build (succeeded or failed), download the logs to understand more about how the build went. Mobile Center provides an archive with the following files:
- ```
+ ```csharp
 |-- 1_build.txt (this is the general build log)
 |-- build (this folder contains a separate log file for each build step)
     |-- <build-step-1>
@@ -240,11 +242,11 @@ Before submitting a test, it is necessary to [create an app](https://docs.micros
 When the Test Run Wizard is finished, it will provide a sample command line that can be used to submit the app and UITests to Mobile Center for Test. These two snippets are examples of a command line generated by the Test Run wizard:<br>
 
 For a Xamarin.Android application, the Test Run wizard will create a command line similar to this snippet:
-```
+```csharp
 mobile-center test run uitest --app "<APP NAME>" --devices "<DEVICE SET NAME>" --app-path <PATH_TO_APK> --test-series "<TEST SERIES>" --locale "en_US" --build-dir <PATH TO UITEST BUILD DIRECTORY>
 ```
 For Xamarin.iOS, the Test Run wizard will create a command line that resembles the following snippet:
-```
+```csharp
 mobile-center test run uitest --app "<APP NAME>" --devices <DEVICE SET ID> --app-path <PATH TO IPA> --test-series "<TEST SERIES>" --locale "en_US" --build-dir <PATH TO UITEST BUILD DIRECTORY>
 ```
 The command line parameters include the following pieces of information that is specific to the rest run that was created:<br>
@@ -283,7 +285,7 @@ Select the test framework, set the device locale, and select a test series. Devi
 
 ### The generated command
 Each selection from the previous steps will be used to generate a command which is used with the Mobile Center CLI to initiate a test run. For example, a command generated for an Android app with Espresso tests might look like:
-```
+```csharp
 mobile-center test run espresso --app "mobile-center-username/app-name" --devices a32b320b --app-path pathToFile.apk  --test-series "master" --locale "en_US" --build-dir pathToEspressoBuildFolder
 ```
 
@@ -332,7 +334,7 @@ The Mobile Center SDK is designed with a modular approach – a developer only n
 
 #### Package Manager Console
    * Make sure the Package Manager Console is opened in either Xamarin Studio or Visual Studio. You will have to install an add-in for Xamarin Studio. Type the following command:
-   ```
+```csharp
    PM> Install-Package Microsoft.Azure.Mobile.Distribute
 ```
 **If you use the Mobile Center SDK in a portable project (such as Xamarin.Forms), you need to install the packages in each of the projects: the portable, Android and iOS ones**
@@ -345,7 +347,7 @@ Add the appropriate namespaces before you get started with using our APIs.
    * Xamarin.iOS - Open your ```AppDelegate.cs``` and add the lines below the existing using statements
    * Xamarin.Android - Open your ```MainActivity.cs``` and add the lines below the existing using statements
    * Xamarin.Forms - Open your ```App.xaml.cs``` in your shared project and add the following using statements
-```
+```csharp
 using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Distribute;
 ```
@@ -362,18 +364,18 @@ MobileCenter.Start("{Your Xamarin iOS App Secret}", typeof(Distribute));
 
 ##### Xamarin.Android
 Open ```MainActivity.cs``` and add the ```Start()``` call inside the ```OnCreate()``` method
-```
+```csharp
 MobileCenter.Start("{Your Xamarin Android App Secret}", typeof(Distribute));
 ```
 
 ##### Xamarin.Forms
 For creating a Xamarin.Forms application targeting both iOS and Android platforms, you need to create two applications in the Mobile Center portal - one for each platform. Creating two apps will give you two App secrets - one for iOS and another one for Android. Open your ```App.xaml.cs``` (or your class that inherits from ```Xamarin.Forms.Application```) in your shared or portable project and add the method below in the ```OnStart()``` override method.
 
-```
+```csharp
 MobileCenter.Start("ios={Your Xamarin iOS App Secret};android={Your Xamarin Android App secret}", typeof(Distribute);
 ```
 For your iOS application, open the ```AppDelegate.cs``` and add the following line before the call to ```LoadApplicaton```:
-```
+```csharp
 Distribute.DontCheckForUpdatesInDebug();
 ```
 This step is **not necessary** on Android where the debug configuration is detected automatically at runtime.
@@ -383,7 +385,7 @@ This step is **not necessary** on Android where the debug configuration is detec
    2) Change the key of the first child item to ```URL Schemes``` or ```CFBundleURLSchemes```.
    3) Enter ```mobilecenter-${APP_SECRET}``` as the URL scheme and replace ```${APP_SECRET}``` with the App Secret of your app.
    4) If you want to verify that you modified the ```Info.plist``` correctly, open it as source code. It should contain the following entry with your App Secret instead of ```${APP_SECRET}```:
-```
+```csharp
 <key>CFBundleURLTypes</key>
   <array>
       <dict>
@@ -404,14 +406,14 @@ You can easily provide your own resource strings if you'd like to localize the t
 ### 2. Customize the update dialog
 
 You can customize the default update dialog's appearance by implementing the ```ReleaseAvailable``` callback. You need to register the callback before calling ```MobileCenter.Start``` as shown in the following example:
-```
+```csharp
 // In this example OnReleaseAvailable is a method name in same class
 Distribute.ReleaseAvailable = OnReleaseAvailable;
 MobileCenter.Start(...);
 ```
 
 Here is an example on **Xamarin.Forms** of the callback implementation that replaces the SDK dialog with a custom one:
-```
+```csharp
 bool OnReleaseAvailable(ReleaseDetails releaseDetails)
 {
     // Look at releaseDetails public properties to get version information, release notes text or release notes URL
@@ -471,18 +473,18 @@ In that case, the activity hosting the dialog might be replaced without user int
 
 ## Enable or disable Mobile Center Distribute at runtime
 You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality but you can still use Distribute service in Mobile Center portal.
-```
+```csharp
 Distribute.SetEnabledAsync(false);
 ```
 To enable Mobile Center Distribute again, use the same API but pass ```true``` as a parameter.
-```
+```csharp
 Distribute.SetEnabledAsync(true);
 ```
 You don't need to await this call to make other API calls (such as ```IsEnabledAsync```) consistent
 
 ## Check if Mobile Center Distribute is enabled
 You can also check if Mobile Center Distribute is enabled or not:
-```
+```csharp
 bool enabled = await Distribute.IsEnabledAsync();
 ```
 
@@ -524,7 +526,7 @@ Mobile Center uses swizzling to automatically forward your application delegate'
 1) Open your **Info.plist** file.
 2) Add ```MobileCenterAppDelegateForwarderEnabled``` key and set the value to ```0```. This will disable application delegate forwarding for all Mobile Center services.
 3) Add ```OpenUrl``` callback in your ```AppDelegate.cs``` file.
-```
+```csharp
 public override bool OpenUrl(UIApplication application, NSUrl url, string sourceApplication, NSObject annotation)
 {
     Distribute.OpenUrl(url);
@@ -561,24 +563,24 @@ To upload a package to Mobile Center, use the navigation bar on the left to navi
  1) Pre-req: [Obtain an API token.](https://docs.microsoft.com/en-us/mobile-center/api-docs/) API Token is used for authentication for all Mobile Center API calls.
  2) Upload a new release. This is 3 or more API calls.
     a. Create an upload resource and get an ```upload_url``` (good for 24 hours) — [POST /createReleaseUpload](https://docs.mobile.azure.com/api/#!/distribute/createReleaseUpload)
-    ```
+    ```csharp
     curl -X POST --header 'Content-Type: application/json' --header 'Accept:
     application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
     'https://api.mobile.azure.com/v0.1/apps/JoshuaWeber/APIExample/release_uploads'
     ```
     b. Upload to upload_url (will be a rink.hockeyapp.net URL). Use ```multipart/form-data``` where the ```key``` is ipa (key is always ipa even when uploading APKs)
-    ```
+    ```csharp
     curl -F "ipa=@Versions_1_1_0_12.ipa" https://rink.hockeyapp.net/api/sonoma/apps/cacf9867-87f7-4649-
     a400-632a775dde2d/app_versions/upload\?upload_id\=c18df340-069f-0135-3290-22000b559634
     ```
     c. After upload has finished, update upload resource's status to committed and get a ```release_url``` — [PATCH /updateReleaseUpload](https://docs.mobile.azure.com/api/#/distribute/updateReleaseUpload)
-    ```
+    ```csharp
     curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header 
     'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "status": "committed" }'
     'https://api.mobile.azure.com/v0.1/apps/JoshuaWeber/APITesting/release_uploads/c18df340-069f-0135-3290-22000b559634'
     ```
  3) Distribute the uploaded release to a distribution group — [PATCH /updateRelease](https://docs.mobile.azure.com/api/#!/distribute/updateRelease)
- ```
+ ```csharp
  curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header
  'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d 
  '{ "destination_name": "QA Testers", "release_notes": "Example new release via the APIs" } 'https://api.mobile.azure.com/v0.1/apps/JoshuaWeber/APITesting/releases/2'
@@ -695,7 +697,7 @@ Search for **Mobile Center**, then install ```Microsoft.Azure.Mobile.Analytics``
 ### Package Manager Console
 Make sure the Package Manager Console is opened in either Xamarin Studio or Visual Studio. You will have to install an add-in for Xamarin Studio.
 Type the following commands:
-```
+```csharp
 PM> Install-Package Microsoft.Azure.Mobile.Analytics PM> Install-Package Microsoft.Azure.Mobile.Crashes 
 ```
 Now that you've integrated the SDK in your application, it's time to start the SDK and make use of the Mobile Center services
@@ -708,7 +710,7 @@ Add the appropriate namespaces before you get started with using our APIs.
  * Xamarin.Android - Open your ```MainActivity.cs``` and add the following lines below the existing ```using``` statements.
  * Xamarin.iOS - Open you ```AppDelegate.cs``` and add the following lines below the existing ```using``` statements.
  * Xamarin.Forms - Open your ```App.xaml.cs``` in your shared project and add the following lines below the existing ```using``` statements:
- ```
+ ```csharp
 using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Analytics;
 using Microsoft.Azure.Mobile.Crashes;
@@ -718,17 +720,17 @@ using Microsoft.Azure.Mobile.Crashes;
 
 #### 4.2.1 Xamarin.Android
 Open ```MainActivity.cs``` and add the ```Start()``` call inside the ```OnCreate()``` method
-```
+```csharp
 MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes)); 
 ```
 #### 4.2.2 Xamarin.iOS
 Open your ```AppDelegate.cs``` and add the ```Start()`` call inside the ```FinishedLaunching()``` method
-```
+```csharp
 MobileCenter.Start("{Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
 #### 4.2.3 Xamarin.Forms
 To use a Xamarin.Forms application targeting iOS, Android and UWP platforms, you need to create three applications in the Mobile Center portal - one for each platform. Creating three apps will give you three App secrets - one for each. Open your ```App.xaml.cs``` (or your class that inherits from ```Xamarin.Forms.Application```) in your shared or portable project and add the method below in the ```OnStart()``` override method.
-```
+```csharp
 MobileCenter.Start("ios={Your App Secret};android={Your App Secret};uwp={Your App Secret}", typeof(Analytics), typeof(Crashes));
 ```
 ### 4.3 Replace the placeholder with your App Secret
@@ -748,12 +750,12 @@ Note that, unless you explicitly specify each module as parameters in the start 
 For example - If you just want to onboard to Mobile Center Analytics, you should modify the ```Start()``` call as follows:
 
 #### 4.3.1 Xamarin.Android and Xamarin.iOS
-```
+```csharp
 MobileCenter.Start("{Your App Secret}", typeof(Analytics));
 ```
 
 #### 4.3.2 Xamarin.Forms
-```
+```csharp
 MobileCenter.Start("ios={Your App Secret};android={Your App secret};uwp={Your App secret}", typeof(Analytics));
 ```
 
@@ -773,30 +775,30 @@ You can track your own custom events with up to **five properties** to know what
 <br>
 <br>
 Once you have started the SDK, use the ```TrackEvent()``` method to track your events with properties. You can send **up to 200 distinct event names**. Also, there is a maximum limit of 256 characters per event name and 64 characters per event property name and event property value.
-```
+```csharp
 Analytics.TrackEvent("Video clicked", new Dictionary<string, string> {
     { "Category", "Music" },
     { "FileName", "favorite.avi"}
 });
 ```
 Properties for events are entirely optional – if you just want to track an event, use this sample instead:
-```
+```csharp
 Analytics.TrackEvent("Video clicked");
 ```
 ## Enable or disable Mobile Center Analytics at runtime
 You can enable and disable Mobile Center Analytics at runtime. If you disable it, the SDK will not collect any more analytics information for the app.
-```
+```csharp
 Analytics.SetEnabledAsync(false);
 ```
 To enable Mobile Center Analytics again, use the same API but pass ```true``` as a parameter.
-```
+```csharp
 Analytics.SetEnabledAsync(true);
 ```
 You don't need to await this call to make other API calls (such as ```IsEnabledAsync```) consistent.
 
 ## Check if Mobile Center Analytics is enabled
 You can also check if Mobile Center Analytics is enabled or not.
-```
+```csharp
 bool isEnabled = await Analytics.IsEnabledAsync();
 ```
 
@@ -820,7 +822,7 @@ Please follow the [Get started section](https://docs.microsoft.com/en-us/mobile-
  
 #### Package Manager Console
 Type the following command in Package Manager Console:
-```
+```csharp
 PM> Install-Package Microsoft.Azure.Mobile.Push
 ```
 
@@ -839,7 +841,7 @@ PM> Install-Package Microsoft.Azure.Mobile.Push
    * After the change, you need to update your ```packages.config``` and update all ```targetFramework``` attributes to match the version. For example if in build settings the version is **7.1**, then you need all the lines in ```packages.config``` to match this: ```targetFramework="monoandroid71"```.
    
    3) If you see the following error message in the logs:
-   ```
+   ```csharp
 java.lang.IllegalStateException: Default FirebaseApp is not initialized in this process {your_package_name}. 
 Make sure to call FirebaseApp.initializeApp(Context) first
 ```
@@ -851,7 +853,7 @@ In order to use Mobile Center, you need to opt in to the module(s) that you want
 <br>
 <br>
 Add the following using statement to the top of the file you are referencing ```Push``` from:
-```
+```csharp
 using Microsoft.Azure.Mobile.Push
 ```
 Next, add ```typeof(Push)``` to your ```MobileCenter.Start()``` method to start Mobile Center Push service.
@@ -867,7 +869,7 @@ Mobile Center Push makes it possible to intercept push notifications but there i
 **You only need this step if you disabled method swizzling while setting up** [Xamarin.iOS](https://docs.microsoft.com/en-us/mobile-center/sdk/push/xamarin-ios).
 
 To enable the push event feature, implement ```DidReceiveRemoteNotification``` in your ```AppDelegate``` class as follows:
-```
+```csharp
 public override void DidReceiveRemoteNotification(UIApplication application, NSDictionary userInfo, System.Action<UIBackgroundFetchResult> completionHandler)
 {
     var result = Push.DidReceiveRemoteNotification(userInfo);
@@ -883,7 +885,7 @@ public override void DidReceiveRemoteNotification(UIApplication application, NSD
 ```
 ### Android additional steps
 If your launcher activity uses a ```launchMode``` of ```singleTop```, ```singleInstance``` or ```singleTask```, you need add this in the activity ```OnNewIntent``` method:
-```
+```csharp
 protected override void OnNewIntent(Android.Content.Intent intent)
         {
             base.OnNewIntent(intent);
@@ -893,7 +895,7 @@ protected override void OnNewIntent(Android.Content.Intent intent)
 
 ### UWP additional steps
 To enable the push event feature, modify your UWP application's ```OnLaunched``` method to include ```Push.CheckLaunchedFromNotification(e)```; at the end as follows:
-```
+```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs e)
 {
     // ... not showing entire long method ...
@@ -916,7 +918,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 
 ### Subscribe to the push event
 You can subscribe to the event ```Push.PushNotificationReceived``` to be notified whenever a push notification is received in the foreground or a background push notification has been clicked by the user. The following example demonstrates how to use the event and get the push data.
-```
+```csharp
 // This should come before MobileCenter.Start() is called
 Push.PushNotificationReceived += (sender, e) => {
 
@@ -943,18 +945,18 @@ Push.PushNotificationReceived += (sender, e) => {
 
 ## Enable or disable Push at runtime
 You can enable and disable Mobile Center Push at runtime. If you disable it, the SDK will stop updating the WNS registration identifier that is used to push notifications, but the existing one will continue to work. In other words, disabling the Mobile Center Push in the SDK will **NOT** stop your application from receiving push notifications.
-```
+```csharp
 Push.SetEnabledAsync(false);
 ```
 To enable Mobile Center Push again, use the same API but pass ```true``` as a parameter.
-```
+```csharp
 Push.SetEnabledAsync(true);
 ```
 You don't need to await this call to make other API calls (such as ```IsEnabledAsync```) consistent.
 
 ## Check if Mobile Center Push is enabled
 You can also check if Mobile Center Push is enabled or not:
-```
+```csharp
 bool isEnabled = await Push.IsEnabledAsync();
 ```
 
