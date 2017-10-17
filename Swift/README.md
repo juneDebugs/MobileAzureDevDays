@@ -487,7 +487,13 @@ In Xcode's project editor, choose your target and click **Capabilities**. In the
 3) Do the same with the **ID** value.
   
 #### Key ID
-In your Apple developer account create a new key in Certificates, Identifiers & Profiles/Keys.
-Make sure to check the APNs checkbox.
-Fill in the key name
-Press Continue then Confirm.
+  1) In your Apple developer account [create a new key](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&path=%2Faccount%2Fios%2Fauthkey%2Fcreate&rv=1) in **Certificates, Identifiers & Profiles/Keys**.
+  2) Make sure to check the APNs checkbox.
+  3) Fill in the key name
+  4) Press **Continue** then **Confirm**.
+
+#### Push Token
+  1) Open your key file with a text editor and copy the authentication token it contains.
+  2) On the Mobile Center push settings, paste this token to the **Push Token** field then click **Done** to complete this configuration. For more information, refer to the [Apple documentation](http://help.apple.com/xcode/mac/current/#/dev11b059073).
+  5) On the next screen, copy the **Key ID** value and paste it to the Mobile Center push settings.
+  6) Download the key file.
