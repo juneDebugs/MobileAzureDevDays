@@ -172,7 +172,7 @@ Mobile Center Crashes will automatically generate a crash log every time your ap
 
 Please follow the Getting Started section if you haven't set up the SDK in your application yet.
 
-Also note that Crash logs on iOS require Symbolication, please check out the Mobile Center Crashes documentation that explains how to provide symbols for your app.
+Also note that Crash logs on iOS require Symbolication, please check out the [Mobile Center Crashes Symbols documentation](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#uploading-symbols) that explains how to provide symbols for your app.
 
 ## Uploading symbols
   1) Create a ZIP file for the dSYM package on your Mac.
