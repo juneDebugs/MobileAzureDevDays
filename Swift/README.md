@@ -480,3 +480,8 @@ In Xcode's project editor, choose your target and click **Capabilities**. In the
 * Log in to the Mobile Center portal, select your application, click on the **Push** button from the left menu then click **Next** to reveal the push notification settings UI.
 * On the bottom of the page, select Sandbox for initial development or Production for production version of your application.
 * Collect the following information:
+
+  1) Prefix and ID
+        * Go to your Apple developer account and select your application from the App ID list in Identifiers.
+        * Copy the Prefix value from this window and paste it to the Mobile Center push settings.
+        * Do the same with the ID value.
