@@ -51,11 +51,9 @@ Below are the steps on how to integrate the compiled binaries in your Xcode proj
 * Create a group called Vendor inside your Xcode project to mimic your file structure on disk.
   4) Open Finder and copy the previously unzipped MobileCenter-SDK-Apple/iOS folder into your project's folder at the location where you want it to reside.
   5) Add the SDK frameworks to the project in Xcode:
-          * Make sure the Project Navigator is visible (⌘+1).
-          * Now drag and drop MobileCenter.framework, MobileCenterAnalytics.framework and MobileCenterCrashes.framework from              the Finder (in the location from the previous step) into Xcode's Project Navigator. Note that           
-           MobileCenter.framework is required to start the SDK, make sure it is added to your project, otherwise the other    
-           modules won't work and your app won't compile.
-          * A dialog will appear, make sure your app target is checked. Then click Finish.
+* Make sure the Project Navigator is visible (⌘+1).
+* Now drag and drop MobileCenter.framework, MobileCenterAnalytics.framework and MobileCenterCrashes.framework from              the Finder (in the location from the previous step) into Xcode's Project Navigator. Note that MobileCenter.framework is required to start the SDK, make sure it is added to your project, otherwise the other modules won't work and your app won't compile.
+* A dialog will appear, make sure your app target is checked. Then click Finish.
   
   
   
