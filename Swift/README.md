@@ -331,3 +331,41 @@ pod 'MobileCenter/Distribute'
 #### Integration by copying the binaries into your project
 If you wish to manually integrate the module, follow this [documentation link](https://docs.microsoft.com/en-us/mobile-center/sdk/distribute/ios-manual-integration).
 
+### 2. Start Mobile Center Distribute
+In order to use Mobile Center, you need to opt in to the service(s) that you want to use, meaning by default no services are started and you will have to explicitly call each of them when starting the SDK.
+
+#### 2.1 Add the import for Mobile Center Distribute
+Open your AppDelegate.m file in Objective-C or AppDelegate.swift file in Swift and add the following import statements:
+```swift
+import MobileCenter
+import MobileCenterDistribute
+```
+
+#### 2.2 Add the ```start:withServices```: method
+Add ```MSDistribute``` to your ```start:withServices```: method to start Mobile Center Distribute service.
+
+Insert the following line to start the SDK in your app's **AppDelegate.m** class for Objective-C or ```AppDelegate.swift``` class for Swift in the d```idFinishLaunchingWithOptions``` method.
+```swift
+MSMobileCenter.start("{Your App Secret}", withServices: [MSDistribute.self])
+```
+Make sure you have replaced ```{Your App Secret}``` in the code sample above with your App Secret. Please also check out the [Get started](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#get-started-with-ios) section if you haven't configured the SDK in your application.
+
+#### 2.3 Modify your Info.plist
+  1) Add a new key for ```URL types``` or ```CFBundleURLTypes``` in your ```Info.plist``` file (in case Xcode displays your Info.plist as source code).
+  2) Change the key of the first child item to ```URL Schemes``` or ```CFBundleURLSchemes```.
+  3) Enter ```mobilecenter-${APP_SECRET}``` as the URL scheme and replace ```${APP_SECRET}``` with the App Secret of your app.
+  4) If you want to verify that you modified the Info.plist correctly, open it as source code. It should contain the following entry with your App Secret instead of ```${APP_SECRET}```:
+  ```swift
+  <key>CFBundleURLTypes</key>
+  <array>
+      <dict>
+          <key>CFBundleURLSchemes</key>
+          <array>
+              <string>mobilecenter-${APP_SECRET}</string>
+          </array>
+      </dict>
+  </array>
+  ```
+  
+  ## Customize or localize the in-app update dialog
+  
