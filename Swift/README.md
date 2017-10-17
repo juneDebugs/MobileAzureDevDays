@@ -209,7 +209,35 @@ Mobile Center Crashes provides callbacks for developers to perform additional ac
 
 To add your custom behavior, you need to adopt the ```MSCrashesDelegate-protocol```, all of it's methods are optional.
 
+### Register as a delegate
+```swift
+MSCrashes.setDelegate(self)
+```
 
+### Should the crash be processed?
+Implement the ```crashes:shouldProcessErrorReport```:-method in the class that adopts the ```MSCrashesDelegate-protocol``` if you'd like to decide if a particular crash needs to be processed or not. For example, there could be a system level crash that you'd want to ignore and that you don't want to send to Mobile Center.
+```swift
+func crashes(_ crashes: MSCrashes!, shouldProcessErrorReport errorReport: MSErrorReport!) -> Bool {
+    return true; // return true if the crash report should be processed, otherwise false.
+}
+```
+### Ask for the users' consent to send a crash log
+If user privacy is important to you, you might want to get your users' confirmation before sending a crash report to Mobile Center. The SDK exposes a callback that tells Mobile Center Crashes to await your users' confirmation before sending any crash reports.
+
+
+If you chose to do so, you are responsible for obtaining the user's confirmation, e.g. through a dialog prompt with one of the following options: **Always Send**, **Send**, and **Don't send**. Based on the input, you will tell the Mobile Center Crashes what to do and the crash will then be handled accordingly.
+
+
+The following method shows how to set up a user confirmation handler:
+```swift
+MSCrashes.setUserConfirmationHandler({ (errorReports: [MSErrorReport]) in
+
+    // Your code to present your UI to the user, e.g. an UIAlertView.
+   UIAlertView.init(title: "Sorry we crashed!", message: "Do you want to send a Crash Report?", delegate: self, cancelButtonTitle: "No", otherButtonTitles:"Always send", "Send").show()
+
+   return true // Return true if the SDK should await user confirmation, otherwise return false.
+})
+```
   
   
   
