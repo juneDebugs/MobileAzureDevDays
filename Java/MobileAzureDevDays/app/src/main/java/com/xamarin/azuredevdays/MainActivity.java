@@ -2,6 +2,8 @@ package com.xamarin.azuredevdays;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -42,6 +44,26 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         sentimentClient = new SentimentClient();
+        try {
+            sentimentClient.GetKey(
+                    new Callback() {
+                        @Override
+                        public void onFailure(Call call, IOException e) {
+                            System.out.println("Error getting key!");
+                        }
+                        @Override
+                        public void onResponse(Call call, Response response) throws IOException {
+                            if (response.isSuccessful()) {
+                                Models.KeyResponse keyResponse = gson.fromJson(response.body().string(),Models.KeyResponse.class);
+                                sentimentClient.sentimentAPIRegion = keyResponse.region;
+                                sentimentClient.sentimentAPIKey = keyResponse.key;
+                            }
+                        }
+                    }
+            );
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         int defaultBkgColor = Color.parseColor(Constants.Colors.defaultBackgroundColor);
 

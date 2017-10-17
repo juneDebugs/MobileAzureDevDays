@@ -314,3 +314,20 @@ Mobile Center Distribute will let your users install a new version of the app wh
 
 
 This feature will NOT work if your app is deployed to the app store.
+
+## Add in-app updates to your app
+Please follow the Get started section if you haven't configured the SDK in your application.
+
+### 1. Add the Mobile Center Distribute module
+
+The Mobile Center SDK is designed with a modular approach – you only need to integrate the modules of the services that you're interested in.
+
+#### Integration via Cocoapods
+If you are integrating Mobile Center into your app via Cocoapods, add the following dependency to your podfile and run ```pod install```.
+```ruby
+pod 'MobileCenter/Distribute'
+```
+
+#### Integration by copying the binaries into your project
+If you wish to manually integrate the module, follow this [documentation link](https://docs.microsoft.com/en-us/mobile-center/sdk/distribute/ios-manual-integration).
+
