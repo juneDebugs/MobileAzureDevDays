@@ -481,7 +481,13 @@ In Xcode's project editor, choose your target and click **Capabilities**. In the
 * On the bottom of the page, select Sandbox for initial development or Production for production version of your application.
 * Collect the following information:
 
-  1) Prefix and ID
-  * Go to your Apple developer account and select your application from the App ID list in Identifiers.
-  * Copy the Prefix value from this window and paste it to the Mobile Center push settings.
-  * Do the same with the ID value.
+#### Prefix and ID
+1) Go to your Apple developer account and select your application from the [App ID](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&path=%2Faccount%2Fios%2Fidentifier%2Fbundle&rv=1) list in **Identifiers**.
+2) Copy the **Prefix** value from this window and paste it to the Mobile Center push settings.
+3) Do the same with the **ID** value.
+  
+#### Key ID
+In your Apple developer account create a new key in Certificates, Identifiers & Profiles/Keys.
+Make sure to check the APNs checkbox.
+Fill in the key name
+Press Continue then Confirm.
