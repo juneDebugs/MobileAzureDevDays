@@ -481,7 +481,7 @@ In Xcode's project editor, choose your target and click **Capabilities**. In the
 * On the bottom of the page, select Sandbox for initial development or Production for production version of your application.
 * Collect the following information:
 
-1) Prefix and ID
-        * Go to your Apple developer account and select your application from the App ID list in Identifiers.
-        * Copy the Prefix value from this window and paste it to the Mobile Center push settings.
-        * Do the same with the ID value.
+  1) Prefix and ID
+  * Go to your Apple developer account and select your application from the App ID list in Identifiers.
+  * Copy the Prefix value from this window and paste it to the Mobile Center push settings.
+  * Do the same with the ID value.
