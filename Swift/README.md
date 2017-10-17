@@ -83,6 +83,21 @@ import MobileCenterAnalytics
 import MobileCenterCrashes
 ```
 
+### 4.2 Add the start:withServices: method
+**Objective-C**
+<br>
+<br>
+Insert the following line to start the SDK in your app's ```AppDelegate.m class``` in the ```didFinishLaunchingWithOptions``` method.
+```obj-c
+[MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
+```
+
+**Swift**
+Insert the following line to start the SDK in your app's ```AppDelegate.swift``` class in the ```didFinishLaunchingWithOptions``` method.
+```swift
+MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
+```
+
 
   
   
