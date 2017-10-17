@@ -174,6 +174,12 @@ Please follow the Getting Started section if you haven't set up the SDK in your 
 
 Also note that Crash logs on iOS require Symbolication, please check out the Mobile Center Crashes documentation that explains how to provide symbols for your app.
 
+## Uploading symbols
+  1) Create a ZIP file for the dSYM package on your Mac.
+  2) Open the Incoming page under Crash Reporting on Mobile Center of the app.
+  3) Upload the zip file.
+  4) After the zip file is indexed by Mobile Center new incoming crashes will be symbolicated.
+
 
 ## Generate a test crash
 Mobile Center Crashes provides you with an API to generate a test crash for easy testing of the SDK. This API can only be used in test/beta apps and won't do anything in production apps.
