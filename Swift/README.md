@@ -65,8 +65,7 @@ In order to use Mobile Center, you need to opt in to the service(s) that you wan
 ### 4.1 Add the import statements
 
 **Objective-C**
-<br>
-<br>
+
 Open your ```AppDelegate.m``` file and add the following import statements:
 ```obj-c
 @import MobileCenter;
@@ -74,8 +73,7 @@ Open your ```AppDelegate.m``` file and add the following import statements:
 @import MobileCenterCrashes;
 ```
 **Swift**
-<br>
-<br>
+
 Open your ```AppDelegate.swift``` file and add the following import statements:
 ```swift
 import MobileCenter
@@ -85,8 +83,7 @@ import MobileCenterCrashes
 
 ### 4.2 Add the start:withServices: method
 **Objective-C**
-<br>
-<br>
+
 Insert the following line to start the SDK in your app's ```AppDelegate.m class``` in the ```didFinishLaunchingWithOptions``` method.
 ```obj-c
 [MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class], [MSCrashes class]]];
