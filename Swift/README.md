@@ -120,7 +120,8 @@ MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self])
 ```
 Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
   
-  
+
+# Mobile Center Analytics
   
   
   
