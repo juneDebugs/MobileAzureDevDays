@@ -238,7 +238,24 @@ MSCrashes.setUserConfirmationHandler({ (errorReports: [MSErrorReport]) in
    return true // Return true if the SDK should await user confirmation, otherwise return false.
 })
 ```
-  
+In case you return ```YES/true``` in the handler block above, your app should obtain user permission and message the SDK with the result using the following API. If you are using an alert for this, as we do in the sample above, you would call it from within your implementation of the ```alertView:clickedButtonAtIndex:```-callback. 
+```swift
+// Depending on the user's choice, call notify(with:) with the right value.
+MSCrashes.notify(with: MSUserConfirmation.dontSend)
+MSCrashes.notify(with: MSUserConfirmation.send)
+MSCrashes.notify(with: MSUserConfirmation.always)
+```
+
+### Get information about the sending status for a crash log
+
+At times, you would like to know the status of your app crash. A common use case is that you might want to show UI that tells the users that your app is submitting a crash report, or, in case your app is crashing very quickly after the launch, you want to adjust the behavior of the app to make sure the crash logs can be submitted. The ```MSCrashesDelegate```-protocol defines three different callbacks that you can use in your app to be notified of what is going on:
+
+#### The following callback will be invoked before the SDK sends a crash log
+```swift
+func crashes(_ crashes: MSCrashes!, willSend errorReport: MSErrorReport!) {
+   // Your code, e.g. to present a custom UI.
+}
+```
   
   
   
