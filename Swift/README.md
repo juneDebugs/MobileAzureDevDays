@@ -398,3 +398,12 @@ MSDistribute.notify(MSUpdateAction.postpone);
 ```
 If you don't call the above method, the ```releaseAvailableWithDetails:```-method will repeat whenever your app is entering to the foreground.
   
+## Enable or disable Mobile Center Distribute at runtime
+You can enable and disable Mobile Center Distribute at runtime. If you disable it, the SDK will not provide any in-app update functionality but you can still use Distribute service in Mobile Center portal.
+```swift
+MSDistribute.setEnabled(false)
+```
+To enable Mobile Center Distribute again, use the same API but pass ```YES/true``` as a parameter.
+```swift
+MSDistribute.setEnabled(true)
+```
