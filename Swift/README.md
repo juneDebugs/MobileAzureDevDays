@@ -292,7 +292,16 @@ MSCrashes.disableMachExceptionHandler()
 MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCrashes.self])
 ```
   
-  
-  
+## Enable or disable Mobile Center Crashes at runtime  
+You can enable and disable Mobile Center Crashes at runtime. If you disable it, the SDK will not do any crash reporting for the app.
+```swift
+MSCrashes.setEnabled(false)
+```
+
+To enable Mobile Center Crashes again, use the same API but pass ```YES/true``` as a parameter.
+```swift
+MSCrashes.setEnabled(true)
+```
+
   
   
