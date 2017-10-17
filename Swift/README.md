@@ -367,5 +367,34 @@ Make sure you have replaced ```{Your App Secret}``` in the code sample above wit
   </array>
   ```
   
-  ## Customize or localize the in-app update dialog
+## Customize or localize the in-app update dialog
+
+### 1. Customize or localize text
+
+You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at this [strings file](https://github.com/Microsoft/mobile-center-sdk-ios/blob/develop/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app strings files.
+
+### 2. Customize the update dialog
+
+You can customize the default update dialog's appearance by implementing the ```MSDistributeDelegate``` protocol. You need to register the delegate before starting the SDK as shown in the following example:
+```swift
+MSDistribute.setDelegate(self);
+```
+
+Here is an example of the delegate implementation that replaces the SDK dialog with a custom one:
+```swift
+func distribute(_ distribute: MSDistribute!, releaseAvailableWith details: MSReleaseDetails!) -> Bool {
+
+  // Your code to present your UI to the user, e.g. an UIAlertView.
+  UIAlertView.init(title: "Update available", message: "Do you want to update?", delegate: self, cancelButtonTitle: "Postpone", otherButtonTitles: "Update").show()
+  return true;
+}
+```
+
+In case you return ```YES/true``` in the above method, your app should obtain user's choice and message the SDK with the result using the following API.
+```swift
+// Depending on the user's choice, call notify() with the right value.
+MSDistribute.notify(MSUpdateAction.update);
+MSDistribute.notify(MSUpdateAction.postpone);
+```
+If you don't call the above method, the ```releaseAvailableWithDetails:```-method will repeat whenever your app is entering to the foreground.
   
