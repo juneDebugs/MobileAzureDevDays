@@ -303,5 +303,9 @@ To enable Mobile Center Crashes again, use the same API but pass ```YES/true``` 
 MSCrashes.setEnabled(true)
 ```
 
-  
+## Check if Mobile Center Crashes is enabled
+You can also check if Mobile Center Crashes is enabled or not:
+```swift
+var enabled = MSCrashes.isEnabled()
+```
   
