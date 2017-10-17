@@ -308,4 +308,9 @@ You can also check if Mobile Center Crashes is enabled or not:
 ```swift
 var enabled = MSCrashes.isEnabled()
 ```
-  
+
+# Mobile Center Distribute
+Mobile Center Distribute will let your users install a new version of the app when you distribute it via Mobile Center. With a new version of the app available, the SDK will present an update dialog to the users to either download or postpone the new version. Once they choose to update, the SDK will start to update your application. 
+
+
+This feature will NOT work if your app is deployed to the app store.
