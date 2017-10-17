@@ -28,6 +28,10 @@ public class Models {
             text = _text;
         }
     }
+    public static class KeyResponse{
+        public String region;
+        public String key;
+    }
 
     public static class DocumentError{
         public String id;
