@@ -99,18 +99,28 @@ MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self, MSCra
 ```
 
 ### Replace the placeholder with your App Secret
-Make sure to replace {Your App Secret} text with the actual value for your application. The App Secret can be found on the Getting Started page on the Mobile Center portal or through the Manage App button.
+Make sure to replace ```{Your App Secret}``` text with the actual value for your application. The App Secret can be found on the **Getting Started** page on the Mobile Center portal or through the **Manage App** button.
 
 
 The Getting Started page contains the above code sample with your App Secret in it, you can just copy-paste the whole sample.
 
-The example above shows how to use the start:withServices method and include both Mobile Center Analytics and Mobile Center Crashes.
+The example above shows how to use the ```start:withServices``` method and include both Mobile Center Analytics and Mobile Center Crashes.
 
 If you do not want to use one of the two services, remove the corresponding parameter from the method call above.
-Note that, unless you explicitly specify each module as parameters in the start method, you can't use that Mobile Center service. In addition, the start:withServices API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
+Note that, unless you explicitly specify each module as parameters in the start method, you can't use that Mobile Center service. In addition, the ```start:withServices``` API can be used only once in the lifecycle of your app – all other calls will log a warning to the console and only the modules included in the first call will be available.
 
-For example - If you just want to onboard to Mobile Center Analytics, you should modify the start:withServices API call as follows:
+For example - If you just want to onboard to Mobile Center Analytics, you should modify the ```start:withServices``` API call as follows:
 
+**Objective-C**
+```obj-c
+[MSMobileCenter start:@"{Your App Secret}" withServices:@[[MSAnalytics class]]];
+```
+
+**Swift**
+```swift
+MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self])
+```
+Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
   
   
   
