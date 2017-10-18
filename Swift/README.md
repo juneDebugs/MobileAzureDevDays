@@ -6,7 +6,8 @@ This simple app has a Text Entry Box and a button that triggers the text to hit 
      * [Prerequisites](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#1-prerequisites)
 * [Build](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#mobile-center-build)
      * [Building Xcode iOS apps](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#building-xcode-ios-apps)
-* [Test]
+* [Test](https://github.com/jCho23/MobileAzureDevDays/blob/master/Swift/README.md#mobile-center-test)
+     * [Getting Started with Test Cloud](https://github.com/jCho23/MobileAzureDevDays/blob/master/Swift/README.md#getting-started-with-test-cloud)
 
 * [Analytics](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#mobile-center-analytics)
      * [Custom events](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#custom-events)
