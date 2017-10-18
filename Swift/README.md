@@ -613,6 +613,17 @@ func application(_ application: UIApplication, didFailToRegisterForRemoteNotific
 ```
   4) Implement the callback to receive push notifications
 Implement the ```application:didReceiveRemoteNotification:fetchCompletionHandler``` callback to forward push notifications to the Push service.
+```swift
+func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+  let result: Bool = MSPush.didReceiveRemoteNotification(userInfo)
+  if result {
+    completionHandler(.newData)
+  }
+  else {
+    completionHandler(.noData)
+  }
+}
+```
 
 
 
