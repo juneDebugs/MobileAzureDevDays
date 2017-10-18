@@ -1,6 +1,13 @@
 # Abstract
 This simple app has a Text Entry Box and a button that triggers the text to hit the [Azure Sentiment Analysis API](https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-sentiment-analysis) and returns a corresponding Emoji and changes the background color appropriately.
 
+# Index
+* [Get Started with iOS](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#get-started-with-ios)
+      * [Prerequisites](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#1-prerequisites)
+* [Build](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#mobile-center-build)
+      * [Building Xcode iOS apps](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#building-xcode-ios-apps)
+
+
 # Get Started with iOS
 The Mobile Center SDK uses a modular architecture so you can use any or all of the services.
 <br>
