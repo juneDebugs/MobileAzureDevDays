@@ -509,6 +509,33 @@ The Mobile Center SDK is designed with a modular approach – you only need to i
 
 ### Integration via Cocoapods
 If you are integrating Mobile Center into your app via Cocoapods, add the following dependency to your podfile and run ```pod install```.
+```swift
+pod 'MobileCenter/Push'
+```
+### Integration by copying the binaries into your project
+If you wish to manually integrate the module, follow this [documentation link](https://docs.microsoft.com/en-us/mobile-center/sdk/push/ios-manual-integration).
+
+## 2.Start Mobile Center Push
+
+In order to use Mobile Center, you need to opt in to the service(s) that you want to use, meaning by default no services are started and you will have to explicitly call each of them when starting the SDK.
+
+### 2.1 Add the import for Mobile Center Push
+Open your AppDelegate.m file in Objective-C or AppDelegate.swift file in Swift and add the following import statements:
+```swift
+import MobileCenter
+import MobileCenterPush
+```
+
+### 2.2 Add the ```start:withServices:``` method
+Add ```MSPush``` to your ```start:withServices:``` method to start Mobile Center Distribute together with the other services that you want to use in your app.
+
+Insert the following line to start the SDK in your app's ```AppDelegate.m``` class in Objective-C or ```AppDelegate.swift``` class in Swift in the ```didFinishLaunchingWithOptions``` method.
+```swift
+MSMobileCenter.start("{Your App Secret}", withServices: [MSPush.self])
+```
+
+Make sure you have replaced ```{Your App Secret}``` in the code sample above with your App Secret. Please also check out the Get started section if you haven't configured the SDK in your application.
+```
 
 
 
