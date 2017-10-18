@@ -577,6 +577,21 @@ func push(_ push: MSPush!, didReceive pushNotification: MSPushNotification!) {
 
 ## Enable or disable Mobile Center Push at runtime
 You can enable and disable Mobile Center Push at runtime. If you disable it, the SDK will stop updating the device token used to push but the existing one will continue working. In other words, disabling the Mobile Center Push in the SDK will NOT stop your application from receiving push notifications.
+```swift
+MSPush.setEnabled(false)
+```
+
+To enable Mobile Center Push again, use the same API but pass ```YES/true``` as a parameter.
+```swift
+MSPush.setEnabled(true)
+```
+
+## Check if Mobile Center Push is enabled
+You can also check if Mobile Center Push is enabled or not:
+```swift
+var enabled = MSPush.isEnabled()
+```
+
 
 
 
