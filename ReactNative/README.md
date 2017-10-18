@@ -7,6 +7,8 @@ This simple app has a Text Entry Box and a button that triggers the text to hit 
 * [Build](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-build)
     * [React Native iOS Build](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#react-native-ios-build)
     * [React Native Android Build](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#react-native-android-build)
+* [Test](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-test)
+    * [Getting Started with Test Cloud](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#getting-started-with-test-cloud)
 * [Distribute](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-distribute)
     * [Getting Started with Distribute](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#getting-started-with-distribute)
 * [Analytics](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-analytics)
