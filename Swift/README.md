@@ -491,9 +491,11 @@ In Xcode's project editor, choose your target and click **Capabilities**. In the
   2) Make sure to check the APNs checkbox.
   3) Fill in the key name
   4) Press **Continue** then **Confirm**.
+  5) On the next screen, copy the **Key ID** value and paste it to the Mobile Center push settings.
+  6) Download the key file.
 
 #### Push Token
   1) Open your key file with a text editor and copy the authentication token it contains.
   2) On the Mobile Center push settings, paste this token to the **Push Token** field then click **Done** to complete this configuration. For more information, refer to the [Apple documentation](http://help.apple.com/xcode/mac/current/#/dev11b059073).
-  5) On the next screen, copy the **Key ID** value and paste it to the Mobile Center push settings.
-  6) Download the key file.
+  
+#### [Optional] Enable silent notifications  
