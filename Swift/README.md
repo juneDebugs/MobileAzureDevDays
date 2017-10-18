@@ -138,7 +138,47 @@ If you haven't previously connected to your repository service (GitHub, Bitbucke
 ### 2. Selecting a branch
 The next step once you have selected a repository is to select the branch you want to build. By default all the active branches will be listed. Upon selecting the branch you want to get started with, it is time to setup your first build!
 
+### 3. Setting up your first build
+To kick off the first build, configure how the iOS project should get built.
 
+#### 3.1. Project/workspace and scheme
+
+For a build configuration, an Xcode project or an Xcode workspace and a shared scheme are required. Mobile Center automatically detects the projects, workspaces and shared schemes in your branch. Select the project or the workspace you want to build and the corresponding scheme. If no scheme can be found, make sure that the scheme you want to build with is shared and that the container for the scheme is the project or the workspace you have selected and that these changes are checked into the branch you are setting up the build for.
+
+#### 3.2. Xcode version
+
+Select the Xcode version to run the build on.
+
+#### 3.3. Build triggers
+
+By default a new build is triggered on every push a developer does to the configured branch. This is often referred to as "Continuous Integration". If you prefer to trigger a new build manually, you can change this setting in the configuration pane.
+
+#### 3.4. Increment build number
+
+When enabled, the ```CFBundleVersion``` in the Info.plist of your app automatically increments for each build. The change happens pre build and won't be committed to your repository.
+
+#### 3.5. Tests
+
+If the selected scheme has a test action with a test target selected, you can configure to run the tests as part of each build. Mobile Center can currently run XCTest unit tests.
+
+
+#### 3.6. Code signing
+
+A successful build will produce a .ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and [upload a provisioning profile (.mobileprovision) and a valid certificate (.p12)](https://docs.microsoft.com/en-us/mobile-center/build/ios/code-signing/uploading-files), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. You can read more about [code signing here](https://docs.microsoft.com/en-us/mobile-center/build/ios/code-signing/index) and in the [official Apple Developer documentation](https://developer.apple.com/support/code-signing/).
+
+#### 3.7. Launch your successful build on a real device
+
+Use your newly produced IPA file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. [Read more about it here](https://docs.microsoft.com/en-us/mobile-center/build/build-test-integration).
+
+#### 3.8. CocoaPods
+
+Mobile Center scans the selected branch and if it finds a Podfile, it will automatically do a pod install step at the beginning of every build. This will ensure that all dependencies are installed. If the repository already contains a /Pods folder, Mobile Center assumes you have checked in the pods in your repository and will no longer perform ```pod install```.
+
+#### 3.9. Distribution to a distribution group**
+
+You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
+
+Once you save the configuration, a new build will be kicked off automatically.
   
   
   
