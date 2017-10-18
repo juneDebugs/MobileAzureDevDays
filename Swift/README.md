@@ -534,8 +534,12 @@ Insert the following line to start the SDK in your app's ```AppDelegate.m``` cla
 MSMobileCenter.start("{Your App Secret}", withServices: [MSPush.self])
 ```
 
-Make sure you have replaced ```{Your App Secret}``` in the code sample above with your App Secret. Please also check out the Get started section if you haven't configured the SDK in your application.
-```
+Make sure you have replaced ```{Your App Secret}``` in the code sample above with your App Secret. Please also check out the [Get started section](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#get-started-with-ios) if you haven't configured the SDK in your application.
+
+### 2.3 [Optional] 
+Receive push notifications if you have already implemented ```application:didReceiveRemoteNotification:fetchCompletionHandler``` method
+
+If you or one of your third party libraries already implements ```application:didReceiveRemoteNotification:fetchCompletionHandler``` method, then follow step 4 to implement a callback to receive push notifications.
 
 
 
