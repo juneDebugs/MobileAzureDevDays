@@ -597,8 +597,22 @@ Mobile Center uses swizzling to automatically forward your application delegate'
 
   1) Open your ```Info.plist``` file.
   2) Add ```MobileCenterAppDelegateForwarderEnabled``` key and set the value to ```0```. This will disable application delegate forwarding for all Mobile Center services.
-  3) Implement the callbacks to register push notifications. 
-                * Implement ```application:didRegisterForRemoteNotificationsWithDeviceToken:``` callback and the                                 ```application:didFailToRegisterForRemoteNotificationsWithError:``` callback in your ```AppDelegate``` to register for Push notifications.
+  3) Implement the callbacks to register push notifications. Implement ```application:didRegisterForRemoteNotificationsWithDeviceToken:``` callback and the                                 ```application:didFailToRegisterForRemoteNotificationsWithError:``` callback in your ```AppDelegate``` to register for Push notifications.
+```swift
+func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+
+  // Pass the device token to MSPush.
+  MSPush.didRegisterForRemoteNotifications(withDeviceToken: deviceToken)
+}
+
+func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+
+  // Pass the error to MSPush.
+  MSPush.didFailToRegisterForRemoteNotificationsWithError(error)
+}
+```
+  4) Implement the callback to receive push notifications
+Implement the ```application:didReceiveRemoteNotification:fetchCompletionHandler``` callback to forward push notifications to the Push service.
 
 
 
