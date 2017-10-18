@@ -3,9 +3,9 @@ This simple app has a Text Entry Box and a button that triggers the text to hit 
 
 # Index
 * [Get Started with iOS](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#get-started-with-ios)
-      * [Prerequisites](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#1-prerequisites)
+     * [Prerequisites](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#1-prerequisites)
 * [Build](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#mobile-center-build)
-      * [Building Xcode iOS apps](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#building-xcode-ios-apps)
+     * [Building Xcode iOS apps](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#building-xcode-ios-apps)
 
 
 # Get Started with iOS
