@@ -547,6 +547,30 @@ You can set up a delegate to be notified whenever a push notification is receive
 By default, iOS does not generate notifications when the push is received in foreground, you can use the delegate to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
 
 You need to register the delegate before starting MobileCenter as shown in the following example:
+```swift
+MSPush.setDelegate(self)
+MSMobileCenter.start("{Your App Secret}", withServices: [MSPush.self])
+```
+Here is an example of the delegate implementation that displays an alert dialog when the message is received in foreground or a background push notification has been clicked:
+```swift
+func push(_ push: MSPush!, didReceive pushNotification: MSPushNotification!) {
+  let title: String? = pushNotification.title
+  var message: String = pushNotification.message ?? ""
+  var customData: String = ""
+  for item in pushNotification.customData {
+    customData =  ((customData.isEmpty) ? "" : "\(customData), ") + "\(item.key): \(item.value)"
+  }
+  if (UIApplication.shared.applicationState == .background) {
+    NSLog("Notification received in background, title: \"\(title ?? "")\", message: \"\(message)\", custom data: \"\(customData)\"");
+  } else {
+    message =  message + ((customData.isEmpty) ? "" : "\n\(customData)")
+    let alert = UIAlertView(title: title, message: message, delegate: self, cancelButtonTitle: "OK")
+    alert.show()
+  }
+}
+```
+
+
 
 
 
