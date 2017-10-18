@@ -499,3 +499,27 @@ In Xcode's project editor, choose your target and click **Capabilities**. In the
   2) On the Mobile Center push settings, paste this token to the **Push Token** field then click **Done** to complete this configuration. For more information, refer to the [Apple documentation](http://help.apple.com/xcode/mac/current/#/dev11b059073).
   
 #### [Optional] Enable silent notifications  
+Silent notifications give you a way to wake up your app so that it can refresh its data in the background (see [Apple documentation](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW8). To enable silent notifications open Xcode's project editor, choose your target and click **Capabilities**. Turn on **Background Modes** and check the **Remote notifications** checkbox.
+
+# Add Mobile Center Push to your app
+
+## 1. Add the Mobile Center Push module
+
+The Mobile Center SDK is designed with a modular approach – you only need to integrate the services that you're interested in.
+
+### Integration via Cocoapods
+If you are integrating Mobile Center into your app via Cocoapods, add the following dependency to your podfile and run ```pod install```.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
