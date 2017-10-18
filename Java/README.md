@@ -14,7 +14,7 @@ This simple app has a Text Entry Box and a button that triggers the text to hit 
     * [Customize Mobile Center Crashes](http://bit.ly/2xDfjIB)
 * [Distribute](http://bit.ly/2xE16Lu)
     * [Customize the in-app update dialog](http://bit.ly/2ggVRKu)
-* [Push](http://bit.ly/2wT151Z)
+* [Push Notifications](http://bit.ly/2wT151Z)
     * [Prerequisites](http://bit.ly/2wTR2tw)
 
 
