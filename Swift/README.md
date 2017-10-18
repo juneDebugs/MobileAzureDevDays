@@ -541,6 +541,13 @@ Receive push notifications if you have already implemented ```application:didRec
 
 If you or one of your third party libraries already implements ```application:didReceiveRemoteNotification:fetchCompletionHandler``` method, then follow step 4 to implement a callback to receive push notifications.
 
+# Intercept push notifications
+You can set up a delegate to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The delegate may also be woken up when a notification is received in background if you have enable [silent notifications](https://docs.microsoft.com/en-us/mobile-center/sdk/push/ios#optional-enable-silent-notifications) and if the payload of the notification contains the [content-available](https://docs.microsoft.com/en-us/mobile-center/push/index#custom-data-in-your-notifications) flag set to true.
+
+By default, iOS does not generate notifications when the push is received in foreground, you can use the delegate to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
+
+You need to register the delegate before starting MobileCenter as shown in the following example:
+
 
 
 
