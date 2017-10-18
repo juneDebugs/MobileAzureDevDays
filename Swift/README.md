@@ -179,6 +179,15 @@ Mobile Center scans the selected branch and if it finds a Podfile, it will autom
 You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
 
 Once you save the configuration, a new build will be kicked off automatically.
+
+### 4. Build results
+
+After a build has been triggered, it can be in the following states:
+          * queued - the build is in a queue waiting for resources to be freed up
+          * building - the build is running and performing the predefined tasks
+          * succeeded - the build is completed and it has succeeded
+          * failed - the build has completed but it has failed; you can troubleshoot what went wrong by downloading and inspecting the build log
+          * canceled - the build has been canceled by a user action or it has timed out
   
   
   
