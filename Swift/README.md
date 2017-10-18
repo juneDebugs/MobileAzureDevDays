@@ -592,7 +592,14 @@ You can also check if Mobile Center Push is enabled or not:
 var enabled = MSPush.isEnabled()
 ```
 
+## Disable automatic forwarding of application delegate's methods to Mobile Center services
+Mobile Center uses swizzling to automatically forward your application delegate's methods to Mobile Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the Mobile Center application delegate forwarding for all Mobile Center services by following the steps below:
 
+  1) Open your ```Info.plist``` file.
+  2) Add ```MobileCenterAppDelegateForwarderEnabled``` key and set the value to ```0```. This will disable application delegate forwarding for all Mobile Center services.
+  3) Implement the callbacks to register push notifications
+  
+Implement the ```application:didRegisterForRemoteNotificationsWithDeviceToken:``` callback and the ```application:didFailToRegisterForRemoteNotificationsWithError:``` callback in your ```AppDelegate``` to register for Push notifications.
 
 
 
