@@ -465,6 +465,11 @@ func application(_ application: UIApplication, open url: URL, sourceApplication:
 }
 ```
 
+
+
+
+
+
 # Mobile Center Push
 Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
 
@@ -501,32 +506,32 @@ In Xcode's project editor, choose your target and click **Capabilities**. In the
 #### [Optional] Enable silent notifications  
 Silent notifications give you a way to wake up your app so that it can refresh its data in the background (see [Apple documentation](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW8). To enable silent notifications open Xcode's project editor, choose your target and click **Capabilities**. Turn on **Background Modes** and check the **Remote notifications** checkbox.
 
-# Add Mobile Center Push to your app
+## Add Mobile Center Push to your app
 
-## 1. Add the Mobile Center Push module
+### 1. Add the Mobile Center Push module
 
 The Mobile Center SDK is designed with a modular approach – you only need to integrate the services that you're interested in.
 
-### Integration via Cocoapods
+#### Integration via Cocoapods
 If you are integrating Mobile Center into your app via Cocoapods, add the following dependency to your podfile and run ```pod install```.
 ```swift
 pod 'MobileCenter/Push'
 ```
-### Integration by copying the binaries into your project
+#### Integration by copying the binaries into your project
 If you wish to manually integrate the module, follow this [documentation link](https://docs.microsoft.com/en-us/mobile-center/sdk/push/ios-manual-integration).
 
-## 2.Start Mobile Center Push
+### 2.Start Mobile Center Push
 
 In order to use Mobile Center, you need to opt in to the service(s) that you want to use, meaning by default no services are started and you will have to explicitly call each of them when starting the SDK.
 
-### 2.1 Add the import for Mobile Center Push
+#### 2.1 Add the import for Mobile Center Push
 Open your AppDelegate.m file in Objective-C or AppDelegate.swift file in Swift and add the following import statements:
 ```swift
 import MobileCenter
 import MobileCenterPush
 ```
 
-### 2.2 Add the ```start:withServices:``` method
+#### 2.2 Add the ```start:withServices:``` method
 Add ```MSPush``` to your ```start:withServices:``` method to start Mobile Center Distribute together with the other services that you want to use in your app.
 
 Insert the following line to start the SDK in your app's ```AppDelegate.m``` class in Objective-C or ```AppDelegate.swift``` class in Swift in the ```didFinishLaunchingWithOptions``` method.
@@ -536,12 +541,12 @@ MSMobileCenter.start("{Your App Secret}", withServices: [MSPush.self])
 
 Make sure you have replaced ```{Your App Secret}``` in the code sample above with your App Secret. Please also check out the [Get started section](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#get-started-with-ios) if you haven't configured the SDK in your application.
 
-### 2.3 [Optional] 
+#### 2.3 [Optional] 
 Receive push notifications if you have already implemented ```application:didReceiveRemoteNotification:fetchCompletionHandler``` method
 
 If you or one of your third party libraries already implements ```application:didReceiveRemoteNotification:fetchCompletionHandler``` method, then follow step 4 to implement a callback to receive push notifications.
 
-# Intercept push notifications
+## Intercept push notifications
 You can set up a delegate to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The delegate may also be woken up when a notification is received in background if you have enable [silent notifications](https://docs.microsoft.com/en-us/mobile-center/sdk/push/ios#optional-enable-silent-notifications) and if the payload of the notification contains the [content-available](https://docs.microsoft.com/en-us/mobile-center/push/index#custom-data-in-your-notifications) flag set to true.
 
 By default, iOS does not generate notifications when the push is received in foreground, you can use the delegate to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
@@ -569,6 +574,9 @@ func push(_ push: MSPush!, didReceive pushNotification: MSPushNotification!) {
   }
 }
 ```
+
+## Enable or disable Mobile Center Push at runtime
+You can enable and disable Mobile Center Push at runtime. If you disable it, the SDK will stop updating the device token used to push but the existing one will continue working. In other words, disabling the Mobile Center Push in the SDK will NOT stop your application from receiving push notifications.
 
 
 
