@@ -12,7 +12,7 @@ This simple app has a Text Entry Box and a button that triggers the text to hit 
      * [Customize your usage of Mobile Center Crashes](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#customize-your-usage-of-mobile-center-crashes) 
 * [Distribute](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#mobile-center-distribute)
      * [Add in-app updates to your app](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#add-in-app-updates-to-your-app) 
-* [Push](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#mobile-center-push)
+* [Push Notifications](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#mobile-center-push)
      * [Enable Apple Push Notifications service (APNs) for your app](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#prerequisite---enable-apple-push-notifications-service-apns-for-your-app)
 
 
