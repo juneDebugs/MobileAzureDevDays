@@ -29,6 +29,16 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "9010155B1F8E8AFF00A5274E"
+               BuildableName = "MobileAzureDevDaysUITests.xctest"
+               BlueprintName = "MobileAzureDevDaysUITests"
+               ReferencedContainer = "container:MobileAzureDevDays.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

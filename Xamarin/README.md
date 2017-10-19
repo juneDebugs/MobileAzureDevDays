@@ -2,27 +2,89 @@
 This simple app has a Text Entry Box and a button that triggers the text to hit the [Azure Sentiment Analysis API](http://bit.ly/2i9jc13) and returns a corresponding Emoji and changes the background color appropriately. 
 
 # Index
- * [Mobile Center Build](http://bit.ly/2i84mb9)
+ * [Build](http://bit.ly/2i84mb9)
      *  [Xamarin.iOS Build](http://bit.ly/2zmxiQY)
      *  [Xamarin.Android Build](http://bit.ly/2xE7YbQ)
- * [Mobile Center Test](http://bit.ly/2wTFne5)
+ * [Test](http://bit.ly/2wTFne5)
      * [Preparing Xamarin.UITests for Upload](http://bit.ly/2xDLYZJ)
      * [Preparing Xamarin.Android Apps](http://bit.ly/2xDElCF)
      * [Preparing Xamarin.iOS Apps](http://bit.ly/2yk45Gg)
-  * [Distribution with Mobile Center](http://bit.ly/2kN1v8h)
+  * [Distribution](http://bit.ly/2kN1v8h)
      * [Xamarin Distribution Setup](http://bit.ly/2z63VkI)
-     * [Customize or localize the in-app update dialog](http://bit.ly/2ggBdtB)
      * [Release a Build iOS](http://bit.ly/2kM2qpD)
      * [Release a Build Android](http://bit.ly/2wSMHqg)
- * [Mobile Center Crash](http://bit.ly/2ym1BZF)
+ * [Crashes](http://bit.ly/2ym1BZF)
      * [iOS Crashes](http://bit.ly/2iagEQq)
      * [Android Crashes](http://bit.ly/2kMKQC1)
- * [Mobile Center Analytics](http://bit.ly/2ibaUpf)
+ * [Analytics](http://bit.ly/2ibaUpf)
      * [Prerequisites](http://bit.ly/2hG7BT5)
      * [Custom events](http://bit.ly/2hEpL7K)
- * [Mobile Center Push](http://bit.ly/2yfRN3Y)
+ * [Push Notifications](http://bit.ly/2yfRN3Y)
      * [iOS additional steps](http://bit.ly/2gCEVek)
      * [Android additional steps](http://bit.ly/2ykqrY8)
+
+
+
+
+
+
+# Get Started with Xamarin
+The Mobile Center SDK uses a modular architecture so you can use any or all of the services.
+
+Let's get started with setting up Mobile Center Xamarin SDK in your app to use Mobile Center Analytics and Mobile Center Crashes.
+
+## 1. Prerequisites
+Before you begin, please make sure that the following prerequisites are met:
+* Your project is set up in Xamarin Studio or Xamarin for Visual Studio.
+* You are targeting devices running iOS 8.0 or later or Android 4.0.3 (API level 15) or later
+* You are not using any other SDK that provides Crash Reporting functionality.
+
+The Mobile Center SDK for Xamarin supports the following platforms:
+* Xamarin.Android
+* Xamarin.iOS
+* Xamarin.Forms (iOS, Android and UWP)
+
+### 1.1 About Xamarin.Android
+
+Choose this option if you target no other platform but Android. You need to create one app in the Mobile Center portal with the **Android** as the **OS** and Xamarin as the platform.
+
+### 1.2 About Xamarin.iOS
+
+Choose this option if you target no other platform but iOS. You need to create one app in the Mobile Center portal with **iOS** as the OS and **Xamarin** as the platform.
+
+### 1.3 About Xamarin.Forms (iOS, Android and UWP)
+
+Choose this option if you want to create a cross platform app for iOS, Android and UWP devices. You need to create 3 apps in Mobile Center – one for each OS.
+
+You need to select Xamarin as the platform for Android and iOS applications (UWP does not have a Xamarin option).
+
+## 2. Create your app in the Mobile Center Portal to obtain the App Secret
+If you have already created your app in the Mobile Center portal, you can skip this step.
+ 1) Head over to [mobile.azure.com](https://mobile.azure.com/).
+ 2) Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
+ 3) Enter a name and an optional desciption for your app.
+ 4) Select the appropriate OS and platform depending on your project as described above.
+ 5) Hit the button at the bottom right that says **Add new app**.
+    
+Once you have created an app, you can obtain its **App Secret** on the **Getting Started** or **Manage App** sections of the Mobile Center Portal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # Mobile Center Build 

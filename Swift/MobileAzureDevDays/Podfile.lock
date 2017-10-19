@@ -1,0 +1,12 @@
+PODS:
+  - VSMobileCenterExtensions (0.9.0)
+
+DEPENDENCIES:
+  - VSMobileCenterExtensions
+
+SPEC CHECKSUMS:
+  VSMobileCenterExtensions: dd7b96bd7b1495f7af8d3af1bfe286f56757a6af
+
+PODFILE CHECKSUM: 456191d6c66afe84b4374d18aa1bfce7225d7d32
+
+COCOAPODS: 1.3.1

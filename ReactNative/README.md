@@ -4,14 +4,16 @@ This simple app has a Text Entry Box and a button that triggers the text to hit 
 # Index
 * [Get Started with React Native](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#get-started-with-react-native)
     * [Prerequisites](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#1-prerequisites)
-* [Mobile Center Build](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-build)
+* [Build](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-build)
     * [React Native iOS Build](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#react-native-ios-build)
     * [React Native Android Build](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#react-native-android-build)
-* [Mobile Center Distribute](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-distribute)
+* [Test](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-test)
+    * [Getting Started with Test Cloud](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#getting-started-with-test-cloud)
+* [Distribute](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-distribute)
     * [Getting Started with Distribute](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#getting-started-with-distribute)
-* [Mobile Center Analytics](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-analytics)
+* [Analytics](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-analytics)
     * [Custom Events](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#custom-events)
-* [Mobile Center Crash](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-crashes)
+* [Crashes](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-crashes)
     * [Customize your usage of Mobile Center Crashes](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#customize-your-usage-of-mobile-center-crashes)
 * [Push Notifications](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#push-notifications)
     * [React Native Android Push](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#react-native-android-push)
@@ -323,6 +325,64 @@ For React Native on Android, universal APK generation is disabled by default. If
 <br>
 <br>
 Postinstall scripts run right after all the ```package.json``` packages are installed, so you use those packages in your script.
+
+
+# Mobile Center Test
+
+## Getting Started with Test Cloud
+The prerequisite steps below must be completed before a project can be used with Mobile Center Test Cloud.
+  1. Create a Mobile Center account
+Create a Mobile Center account at [mobile.azure.com](https://mobile.azure.com/login?original_url=%2F) to gain access to Test Cloud.
+  2. Install the Mobile Center CLI
+Test runs are executed using the Mobile Center CLI. If not already installed, follow [these instructions](https://docs.microsoft.com/en-us/mobile-center/cli/index) to install. After installation, run mobile-center login to link a Mobile Center account with the tool.
+  3. Create an app in Mobile Center
+All test assets and operations are within the context of an app. Create the app project to be tested.
+  4. Review the core concepts
+Understanding the core concepts of the Test Cloud experience improve ease of use, navigation, and communications with support. It is recommended to become familiar with [these concepts](https://docs.microsoft.com/en-us/mobile-center/test-cloud/core-concepts) before running your first tests.
+  5. Prepare the project for upload
+Each test framework has different requirements for uploading to Test Cloud. Follow the appropriate test framework branch from [this page.](https://docs.microsoft.com/en-us/mobile-center/test-cloud/preparing-for-upload/index)
+
+## Starting a Test Run
+This section provides instructions for initiating a test run with test suites that have been prepared for upload. To learn how to prepare a test suite for upload to Test Cloud, see [preparing tests for upload.](https://docs.microsoft.com/en-us/mobile-center/test-cloud/preparing-for-upload/index) <br>
+
+Initiating a test run in Test Cloud requires the [Mobile Center CLI tool.](https://docs.microsoft.com/en-us/mobile-center/cli/index) <br>
+
+With the Mobile Center CLI tool installed and upload preparation complete, initiating a test run is very straightforward as the UI will guide you through the necessary steps. Begin by navigating to the Test Cloud section within the desired app. Clicking the ```new test run``` button will launch a dialog which will lead you through the 3 steps of preparing a test run.
+
+### Device selection
+Select the devices against which this test run should execute. This collection of devices can optionally be saved as a set for future use. To save the set, follow the on-screen prompts.
+
+### Test run configuration
+Select the test framework, set the device locale, and select a test series. Device locale will determine the system-level device settings, such as language. For more on test series, [see this section.](https://docs.microsoft.com/en-us/mobile-center/test-cloud/core-concepts)
+
+### The generated command
+Each selection from the previous steps will be used to generate a command which is used with the Mobile Center CLI to initiate a test run. For example, a command generated for an Android app with Espresso tests might look like:
+```csharp
+mobile-center test run espresso --app "mobile-center-username/app-name" --devices a32b320b --app-path pathToFile.apk  --test-series "master" --locale "en_US" --build-dir pathToEspressoBuildFolder
+```
+
+## Limitations
+Please be aware that Mobile Center for Test cannot control any of the following:
+ * Network throttling
+ * Started the app in specific device orientation
+ * VPN into corporate network instead of opening up ports to the firewall
+ * Integration with other apps installed on the device
+
+Mobile Centre for Test does not support the following hardware features:
+ * Bluetooth
+ * Throttling WiFi
+ * Camera
+ * Physically rotating the device
+ * Simulating different battery conditions
+
+## Test Cloud Security
+Devices in Test Cloud are part of a shared public cloud, meaning that many users will install their app and run their tests on the same physical devices. While Test Cloud prohibits uploading personally identifiable information (PII), measures are taken to ensure security across test runs by different users. <br>
+ * Any apps installed during a test run are uninstalled
+ * All local storage is cleared from the device
+ * Devices are restored to their default settings
+
+
+
 
 
 

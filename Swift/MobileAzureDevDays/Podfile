@@ -1,0 +1,3 @@
+use_frameworks! # required for projects with Swift sources
+
+target 'MobileAzureDevDaysUITests' do pod 'VSMobileCenterExtensions' end

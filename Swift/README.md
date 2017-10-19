@@ -1,6 +1,24 @@
 # Abstract
 This simple app has a Text Entry Box and a button that triggers the text to hit the [Azure Sentiment Analysis API](https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-sentiment-analysis) and returns a corresponding Emoji and changes the background color appropriately.
 
+# Index
+* [Get Started with iOS](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#get-started-with-ios)
+     * [Prerequisites](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#1-prerequisites)
+* [Build](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#mobile-center-build)
+     * [Building Xcode iOS apps](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#building-xcode-ios-apps)
+* [Test](https://github.com/jCho23/MobileAzureDevDays/blob/master/Swift/README.md#mobile-center-test)
+     * [Getting Started with Test Cloud](https://github.com/jCho23/MobileAzureDevDays/blob/master/Swift/README.md#getting-started-with-test-cloud)
+* [Analytics](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#mobile-center-analytics)
+     * [Custom events](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#custom-events)
+* [Crashes](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#mobile-center-crashes)
+     * [Customize your usage of Mobile Center Crashes](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#customize-your-usage-of-mobile-center-crashes) 
+* [Distribute](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#mobile-center-distribute)
+     * [Add in-app updates to your app](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#add-in-app-updates-to-your-app) 
+* [Push Notifications](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#mobile-center-push)
+     * [Enable Apple Push Notifications service (APNs) for your app](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#prerequisite---enable-apple-push-notifications-service-apns-for-your-app)
+
+
+
 # Get Started with iOS
 The Mobile Center SDK uses a modular architecture so you can use any or all of the services.
 <br>
@@ -119,6 +137,181 @@ For example - If you just want to onboard to Mobile Center Analytics, you should
 MSMobileCenter.start("{Your App Secret}", withServices: [MSAnalytics.self])
 ```
 Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically.
+  
+  
+  
+  
+  
+  
+  
+# Mobile Center Build  
+Mobile Center helps you build the mobile apps you and your team is working on, using a secure infrastructure. You can forget about configuring build servers locally, complicated configurations and code that is working on a co-worker's machine, but not working on yours.
+
+## Building Xcode iOS apps
+To start building a native iOS app, you will firstly need to connect to your repository service account (GitHub, Bitbucket, VSTS), select a repository and a branch where your app lives and then you can set up your first build. Choose the Xcode project or workspace and the scheme that you would like to build; for the app to run on a real device, the build needs to be code signed with a valid provisioning profile and a certificate.
+
+### 1. Linking your repository
+If you haven't previously connected to your repository service (GitHub, Bitbucket, VSTS) account, you will firstly need to do this. Once your account is connected, select the repository where your iOS project is located. In order to setup a build for a repository, you need admin and pull rights for it.
+
+### 2. Selecting a branch
+The next step once you have selected a repository is to select the branch you want to build. By default all the active branches will be listed. Upon selecting the branch you want to get started with, it is time to setup your first build!
+
+### 3. Setting up your first build
+To kick off the first build, configure how the iOS project should get built.
+
+#### 3.1. Project/workspace and scheme
+
+For a build configuration, an Xcode project or an Xcode workspace and a shared scheme are required. Mobile Center automatically detects the projects, workspaces and shared schemes in your branch. Select the project or the workspace you want to build and the corresponding scheme. If no scheme can be found, make sure that the scheme you want to build with is shared and that the container for the scheme is the project or the workspace you have selected and that these changes are checked into the branch you are setting up the build for.
+
+#### 3.2. Xcode version
+
+Select the Xcode version to run the build on.
+
+#### 3.3. Build triggers
+
+By default a new build is triggered on every push a developer does to the configured branch. This is often referred to as "Continuous Integration". If you prefer to trigger a new build manually, you can change this setting in the configuration pane.
+
+#### 3.4. Increment build number
+
+When enabled, the ```CFBundleVersion``` in the Info.plist of your app automatically increments for each build. The change happens pre build and won't be committed to your repository.
+
+#### 3.5. Tests
+
+If the selected scheme has a test action with a test target selected, you can configure to run the tests as part of each build. Mobile Center can currently run XCTest unit tests.
+
+
+#### 3.6. Code signing
+
+A successful build will produce a .ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and [upload a provisioning profile (.mobileprovision) and a valid certificate (.p12)](https://docs.microsoft.com/en-us/mobile-center/build/ios/code-signing/uploading-files), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. You can read more about [code signing here](https://docs.microsoft.com/en-us/mobile-center/build/ios/code-signing/index) and in the [official Apple Developer documentation](https://developer.apple.com/support/code-signing/).
+
+#### 3.7. Launch your successful build on a real device
+
+Use your newly produced IPA file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. [Read more about it here](https://docs.microsoft.com/en-us/mobile-center/build/build-test-integration).
+
+#### 3.8. CocoaPods
+
+Mobile Center scans the selected branch and if it finds a Podfile, it will automatically do a pod install step at the beginning of every build. This will ensure that all dependencies are installed. If the repository already contains a /Pods folder, Mobile Center assumes you have checked in the pods in your repository and will no longer perform ```pod install```.
+
+#### 3.9. Distribution to a distribution group**
+
+You can configure each successful build from a branch to be distributed to a previously created distribution group. You can add a new distribution group from within the Distribute section. There is always a default distribution group called "Collaborators" that includes all the users who have access to the app.
+
+Once you save the configuration, a new build will be kicked off automatically.
+
+### 4. Build results
+
+After a build has been triggered, it can be in the following states:
+* **queued** - the build is in a queue waiting for resources to be freed up
+* **building** - the build is running and performing the predefined tasks
+* **succeeded** - the build is completed and it has succeeded
+* **failed** - the build has completed but it has failed; you can troubleshoot what went wrong by downloading and inspecting the build log
+* **canceled** - the build has been canceled by a user action or it has timed out
+
+#### 4.1. Build logs
+
+For a completed build (succeeded or failed), download the logs to understand more about how the build went. Mobile Center provides an archive with the following files:
+```swift
+|-- 1_build.txt (this is the general build log)
+|-- build (this folder contains a separate log file for each build step)
+    |-- <build-step-1> (e.g. 2_Get Sources.txt)
+    |-- <build-step-2> (e.g. 3_Pod install.txt)
+    |--
+    |-- <build-step-n> (e.g. n_Post Job Cleanup.txt)
+```    
+The build step specific logs (located in the ```build/``` directory of the archive) are helpful for troubleshooting and understanding in what step and why the build failed.
+
+#### 4.2. The app (.ipa)
+
+The .ipa is an iPhone application archive file which contains the iOS app.
+
+* If the build has been signed correctly, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. More details about code signing and distribution with Mobile Center [can be found here](https://docs.microsoft.com/en-us/mobile-center/build/ios/code-signing/index).
+* If the build has not been signed, the .ipa can be signed by the developer (e.g. locally using codesign) or used for other purposes (e.g. upload to Test service for UI testing on real devices or run in the simulator)
+* All builds kicked off after May 17th are generated by [xcodebuild](https://docs.microsoft.com/en-us/mobile-center/build/ios/xcodebuild). Unsigned builds will not produce an. ipa file. The artifact of an unsigned build is the .xcarchive file which can be used to generate an .ipa file with the Xcode Archives organizer.
+
+#### 4.3. The symbols file (.dsym)
+
+The .dsym files contain the debug symbols for the app.
+* If you have previously integrated the Mobile Center SDK in your app with the crash reporting module enabled, the crash reporting service requires this .dsym file for a build in order to display human readable (symbolicated) crash reports
+* If you have previously integrated another SDK for crash reporting purposes in your app (e.g. HockeyApp SDK), the corresponding service requires the .dsym file in order to display human readable (symbolicated) crash reports.
+
+Keep in mind that the .dsym files do not change upon code signing the .ipa. If you decide to code sign the build later, the .dsym generated before code signing is still valid.
+
+## Supported versions and requirements
+The following versions of Xcode are currently supported on our VMs:
+* Xcode 8.3.3
+* Xcode 8.3.2
+* Xcode 8.3.1
+* Xcode 8.2.1
+* Xcode 8.2
+* Xcode 8.1
+* Xcode 8.0
+
+The build machines are running OS X 10.11.6 (15G1004). We keep an eye on the latest versions released by Apple and include them as soon as possible on the VMs used to run the builds.
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+# Mobile Center Test
+
+## Getting Started with Test Cloud
+The prerequisite steps below must be completed before a project can be used with Mobile Center Test Cloud.
+  1. Create a Mobile Center account
+Create a Mobile Center account at [mobile.azure.com](https://mobile.azure.com/login?original_url=%2F) to gain access to Test Cloud.
+  2. Install the Mobile Center CLI
+Test runs are executed using the Mobile Center CLI. If not already installed, follow [these instructions](https://docs.microsoft.com/en-us/mobile-center/cli/index) to install. After installation, run mobile-center login to link a Mobile Center account with the tool.
+  3. Create an app in Mobile Center
+All test assets and operations are within the context of an app. Create the app project to be tested.
+  4. Review the core concepts
+Understanding the core concepts of the Test Cloud experience improve ease of use, navigation, and communications with support. It is recommended to become familiar with [these concepts](https://docs.microsoft.com/en-us/mobile-center/test-cloud/core-concepts) before running your first tests.
+  5. Prepare the project for upload
+Each test framework has different requirements for uploading to Test Cloud. Follow the appropriate test framework branch from [this page.](https://docs.microsoft.com/en-us/mobile-center/test-cloud/preparing-for-upload/index)
+  
+## Starting a Test Run
+This section provides instructions for initiating a test run with test suites that have been prepared for upload. To learn how to prepare a test suite for upload to Test Cloud, see [preparing tests for upload.](https://docs.microsoft.com/en-us/mobile-center/test-cloud/preparing-for-upload/index) <br>
+
+Initiating a test run in Test Cloud requires the [Mobile Center CLI tool.](https://docs.microsoft.com/en-us/mobile-center/cli/index) <br>
+
+With the Mobile Center CLI tool installed and upload preparation complete, initiating a test run is very straightforward as the UI will guide you through the necessary steps. Begin by navigating to the Test Cloud section within the desired app. Clicking the ```new test run``` button will launch a dialog which will lead you through the 3 steps of preparing a test run.
+
+### Device selection
+Select the devices against which this test run should execute. This collection of devices can optionally be saved as a set for future use. To save the set, follow the on-screen prompts.
+
+### Test run configuration
+Select the test framework, set the device locale, and select a test series. Device locale will determine the system-level device settings, such as language. For more on test series, [see this section.](https://docs.microsoft.com/en-us/mobile-center/test-cloud/core-concepts)
+
+### The generated command
+Each selection from the previous steps will be used to generate a command which is used with the Mobile Center CLI to initiate a test run. For example, a command generated for an Android app with Espresso tests might look like:
+```csharp
+mobile-center test run espresso --app "mobile-center-username/app-name" --devices a32b320b --app-path pathToFile.apk  --test-series "master" --locale "en_US" --build-dir pathToEspressoBuildFolder
+```
+
+## Limitations
+Please be aware that Mobile Center for Test cannot control any of the following:
+ * Network throttling
+ * Started the app in specific device orientation
+ * VPN into corporate network instead of opening up ports to the firewall
+ * Integration with other apps installed on the device
+
+Mobile Centre for Test does not support the following hardware features:
+ * Bluetooth
+ * Throttling WiFi
+ * Camera
+ * Physically rotating the device
+ * Simulating different battery conditions
+
+## Test Cloud Security
+Devices in Test Cloud are part of a shared public cloud, meaning that many users will install their app and run their tests on the same physical devices. While Test Cloud prohibits uploading personally identifiable information (PII), measures are taken to ensure security across test runs by different users. <br>
+ * Any apps installed during a test run are uninstalled
+ * All local storage is cleared from the device
+ * Devices are restored to their default settings
+  
   
   
   
@@ -465,6 +658,11 @@ func application(_ application: UIApplication, open url: URL, sourceApplication:
 }
 ```
 
+
+
+
+
+
 # Mobile Center Push
 Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal.
 
@@ -491,9 +689,146 @@ In Xcode's project editor, choose your target and click **Capabilities**. In the
   2) Make sure to check the APNs checkbox.
   3) Fill in the key name
   4) Press **Continue** then **Confirm**.
+  5) On the next screen, copy the **Key ID** value and paste it to the Mobile Center push settings.
+  6) Download the key file.
 
 #### Push Token
   1) Open your key file with a text editor and copy the authentication token it contains.
   2) On the Mobile Center push settings, paste this token to the **Push Token** field then click **Done** to complete this configuration. For more information, refer to the [Apple documentation](http://help.apple.com/xcode/mac/current/#/dev11b059073).
-  5) On the next screen, copy the **Key ID** value and paste it to the Mobile Center push settings.
-  6) Download the key file.
+  
+#### [Optional] Enable silent notifications  
+Silent notifications give you a way to wake up your app so that it can refresh its data in the background (see [Apple documentation](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW8). To enable silent notifications open Xcode's project editor, choose your target and click **Capabilities**. Turn on **Background Modes** and check the **Remote notifications** checkbox.
+
+## Add Mobile Center Push to your app
+
+### 1. Add the Mobile Center Push module
+
+The Mobile Center SDK is designed with a modular approach – you only need to integrate the services that you're interested in.
+
+#### Integration via Cocoapods
+If you are integrating Mobile Center into your app via Cocoapods, add the following dependency to your podfile and run ```pod install```.
+```swift
+pod 'MobileCenter/Push'
+```
+#### Integration by copying the binaries into your project
+If you wish to manually integrate the module, follow this [documentation link](https://docs.microsoft.com/en-us/mobile-center/sdk/push/ios-manual-integration).
+
+### 2.Start Mobile Center Push
+
+In order to use Mobile Center, you need to opt in to the service(s) that you want to use, meaning by default no services are started and you will have to explicitly call each of them when starting the SDK.
+
+#### 2.1 Add the import for Mobile Center Push
+Open your AppDelegate.m file in Objective-C or AppDelegate.swift file in Swift and add the following import statements:
+```swift
+import MobileCenter
+import MobileCenterPush
+```
+
+#### 2.2 Add the ```start:withServices:``` method
+Add ```MSPush``` to your ```start:withServices:``` method to start Mobile Center Distribute together with the other services that you want to use in your app.
+
+Insert the following line to start the SDK in your app's ```AppDelegate.m``` class in Objective-C or ```AppDelegate.swift``` class in Swift in the ```didFinishLaunchingWithOptions``` method.
+```swift
+MSMobileCenter.start("{Your App Secret}", withServices: [MSPush.self])
+```
+
+Make sure you have replaced ```{Your App Secret}``` in the code sample above with your App Secret. Please also check out the [Get started section](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#get-started-with-ios) if you haven't configured the SDK in your application.
+
+#### 2.3 [Optional] 
+Receive push notifications if you have already implemented ```application:didReceiveRemoteNotification:fetchCompletionHandler``` method
+
+If you or one of your third party libraries already implements ```application:didReceiveRemoteNotification:fetchCompletionHandler``` method, then follow step 4 to implement a callback to receive push notifications.
+
+## Intercept push notifications
+You can set up a delegate to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The delegate may also be woken up when a notification is received in background if you have enable [silent notifications](https://docs.microsoft.com/en-us/mobile-center/sdk/push/ios#optional-enable-silent-notifications) and if the payload of the notification contains the [content-available](https://docs.microsoft.com/en-us/mobile-center/push/index#custom-data-in-your-notifications) flag set to true.
+
+By default, iOS does not generate notifications when the push is received in foreground, you can use the delegate to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
+
+You need to register the delegate before starting MobileCenter as shown in the following example:
+```swift
+MSPush.setDelegate(self)
+MSMobileCenter.start("{Your App Secret}", withServices: [MSPush.self])
+```
+Here is an example of the delegate implementation that displays an alert dialog when the message is received in foreground or a background push notification has been clicked:
+```swift
+func push(_ push: MSPush!, didReceive pushNotification: MSPushNotification!) {
+  let title: String? = pushNotification.title
+  var message: String = pushNotification.message ?? ""
+  var customData: String = ""
+  for item in pushNotification.customData {
+    customData =  ((customData.isEmpty) ? "" : "\(customData), ") + "\(item.key): \(item.value)"
+  }
+  if (UIApplication.shared.applicationState == .background) {
+    NSLog("Notification received in background, title: \"\(title ?? "")\", message: \"\(message)\", custom data: \"\(customData)\"");
+  } else {
+    message =  message + ((customData.isEmpty) ? "" : "\n\(customData)")
+    let alert = UIAlertView(title: title, message: message, delegate: self, cancelButtonTitle: "OK")
+    alert.show()
+  }
+}
+```
+
+## Enable or disable Mobile Center Push at runtime
+You can enable and disable Mobile Center Push at runtime. If you disable it, the SDK will stop updating the device token used to push but the existing one will continue working. In other words, disabling the Mobile Center Push in the SDK will NOT stop your application from receiving push notifications.
+```swift
+MSPush.setEnabled(false)
+```
+
+To enable Mobile Center Push again, use the same API but pass ```YES/true``` as a parameter.
+```swift
+MSPush.setEnabled(true)
+```
+
+## Check if Mobile Center Push is enabled
+You can also check if Mobile Center Push is enabled or not:
+```swift
+var enabled = MSPush.isEnabled()
+```
+
+## Disable automatic forwarding of application delegate's methods to Mobile Center services
+Mobile Center uses swizzling to automatically forward your application delegate's methods to Mobile Center services to improve SDK integration. There is a possibility of conflicts with other third party libraries or the application delegate itself. In this case, you might want to disable the Mobile Center application delegate forwarding for all Mobile Center services by following the steps below:
+
+  1) Open your ```Info.plist``` file.
+  2) Add ```MobileCenterAppDelegateForwarderEnabled``` key and set the value to ```0```. This will disable application delegate forwarding for all Mobile Center services.
+  3) Implement the callbacks to register push notifications. Implement ```application:didRegisterForRemoteNotificationsWithDeviceToken:``` callback and the                                 ```application:didFailToRegisterForRemoteNotificationsWithError:``` callback in your ```AppDelegate``` to register for Push notifications.
+```swift
+func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+
+  // Pass the device token to MSPush.
+  MSPush.didRegisterForRemoteNotifications(withDeviceToken: deviceToken)
+}
+
+func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+
+  // Pass the error to MSPush.
+  MSPush.didFailToRegisterForRemoteNotificationsWithError(error)
+}
+```
+  4) Implement the callback to receive push notifications
+Implement the ```application:didReceiveRemoteNotification:fetchCompletionHandler``` callback to forward push notifications to the Push service.
+```swift
+func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+  let result: Bool = MSPush.didReceiveRemoteNotification(userInfo)
+  if result {
+    completionHandler(.newData)
+  }
+  else {
+    completionHandler(.noData)
+  }
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
