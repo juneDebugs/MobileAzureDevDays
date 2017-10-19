@@ -24,6 +24,49 @@ This simple app has a Text Entry Box and a button that triggers the text to hit 
      * [Android additional steps](http://bit.ly/2ykqrY8)
 
 
+
+
+
+
+# Get Started with Xamarin
+The Mobile Center SDK uses a modular architecture so you can use any or all of the services.
+
+Let's get started with setting up Mobile Center Xamarin SDK in your app to use Mobile Center Analytics and Mobile Center Crashes.
+
+## 1. Prerequisites
+Before you begin, please make sure that the following prerequisites are met:
+* Your project is set up in Xamarin Studio or Xamarin for Visual Studio.
+* You are targeting devices running iOS 8.0 or later or Android 4.0.3 (API level 15) or later
+* You are not using any other SDK that provides Crash Reporting functionality.
+
+The Mobile Center SDK for Xamarin supports the following platforms:
+* Xamarin.Android
+* Xamarin.iOS
+* Xamarin.Forms (iOS, Android and UWP)
+
+### 1.1 About Xamarin.Android
+
+Choose this option if you target no other platform but Android. You need to create one app in the Mobile Center portal with the **Android** as the **OS** and Xamarin as the platform.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Mobile Center Build 
 
 Mobile Center helps you build the mobile apps you and your team is working on, using a secure infrastructure. You can forget about configuring build servers locally, complicated configurations and code that is working on a co-worker's machine, but not working on yours. 
