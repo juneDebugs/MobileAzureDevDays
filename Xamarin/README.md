@@ -59,6 +59,14 @@ Choose this option if you want to create a cross platform app for iOS, Android a
 You need to select Xamarin as the platform for Android and iOS applications (UWP does not have a Xamarin option).
 
 ## 2. Create your app in the Mobile Center Portal to obtain the App Secret
+If you have already created your app in the Mobile Center portal, you can skip this step.
+    1) Head over to [mobile.azure.com](https://mobile.azure.com/).
+    2) Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
+    3) Enter a name and an optional desciption for your app.
+    4) Select the appropriate OS and platform depending on your project as described above.
+    5) Hit the button at the bottom right that says **Add new app**.
+    
+Once you have created an app, you can obtain its **App Secret** on the **Getting Started** or **Manage App** sections of the Mobile Center Portal.
 
 
 
