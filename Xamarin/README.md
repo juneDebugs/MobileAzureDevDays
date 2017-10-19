@@ -48,6 +48,18 @@ The Mobile Center SDK for Xamarin supports the following platforms:
 
 Choose this option if you target no other platform but Android. You need to create one app in the Mobile Center portal with the **Android** as the **OS** and Xamarin as the platform.
 
+### 1.2 About Xamarin.iOS
+
+Choose this option if you target no other platform but iOS. You need to create one app in the Mobile Center portal with **iOS** as the OS and **Xamarin** as the platform.
+
+### 1.3 About Xamarin.Forms (iOS, Android and UWP)
+
+Choose this option if you want to create a cross platform app for iOS, Android and UWP devices. You need to create 3 apps in Mobile Center – one for each OS.
+
+You need to select Xamarin as the platform for Android and iOS applications (UWP does not have a Xamarin option).
+
+## 2. Create your app in the Mobile Center Portal to obtain the App Secret
+
 
 
 
