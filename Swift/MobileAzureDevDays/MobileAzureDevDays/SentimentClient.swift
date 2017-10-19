@@ -18,14 +18,10 @@ class SentimentClient {
 
 	let textId = "sentimentText"
 	let contentType = "application/json"
-<<<<<<< HEAD
     let endpoint = "https://%@.api.cognitive.microsoft.com/text/analytics/v2.0/sentiment"
 
     let apiKeyPreference = "\(Bundle.main.bundleIdentifier ?? "cognitive.text").apiKey"
     let regionPreference = "\(Bundle.main.bundleIdentifier ?? "cognitive.text").region"
-=======
-	let endpoint = "https://westus.api.cognitive.microsoft.com/text/analytics/v2.0/sentiment"
->>>>>>> 301078a95aac15da835b6ae48b7e6de8e83c0046
 
 	var apiKey: String? {
 		get { return UserDefaults.standard.string(forKey: apiKeyPreference) }
