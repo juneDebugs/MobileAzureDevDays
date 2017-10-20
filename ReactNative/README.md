@@ -2,9 +2,9 @@
 This simple app has a Text Entry Box and a button that triggers the text to hit the [Azure Sentiment Analysis API](https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-sentiment-analysis) and returns a corresponding Emoji and changes the background color appropriately.
 
 # Index
-* [Get Started with React Native](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#get-started-with-react-native)
-    * [Prerequisites](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#1-prerequisites)
-* [Build](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-build)
+* [Get Started with React Native](http://bit.ly/2yEab6n)
+    * [Prerequisites](http://bit.ly/2zmG00D)
+* [Build](http://bit.ly/2xSLkMY)
     * [React Native iOS Build](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#react-native-ios-build)
     * [React Native Android Build](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#react-native-android-build)
 * [Test](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-test)
