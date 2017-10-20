@@ -49,7 +49,7 @@ Open a Terminal and navigate to the root of your React Native project, then ente
 ```js
 npm install mobile-center mobile-center-analytics mobile-center-crashes --save
 ```
-  1) The Mobile Center SDK uses a modular approach, where you just add the modules for Mobile Center services that you want to use. mobile-center-analytics and mobile-center-crashes make sense to add to almost every app, as they provide value with no additional setup required. mobile-center provides general purpose [Mobile Center APIs](https://docs.microsoft.com/en-us/mobile-center/sdk/other-apis/react-native), useful for multiple services.
+  1) The Mobile Center SDK uses a modular approach, where you just add the modules for Mobile Center services that you want to use. mobile-center-analytics and mobile-center-crashes make sense to add to almost every app, as they provide value with no additional setup required. mobile-center provides general purpose [Mobile Center APIs](http://bit.ly/2gpxA0Y), useful for multiple services.
   2) Link the plugins to the React Native app by using the react-native link command.
   ```js
   react-native link
