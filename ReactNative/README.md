@@ -334,18 +334,18 @@ The prerequisite steps below must be completed before a project can be used with
   1. Create a Mobile Center account
 Create a Mobile Center account at [mobile.azure.com](http://bit.ly/2ygLNrH) to gain access to Test Cloud.
   2. Install the Mobile Center CLI
-Test runs are executed using the Mobile Center CLI. If not already installed, follow [these instructions](https://docs.microsoft.com/en-us/mobile-center/cli/index) to install. After installation, run mobile-center login to link a Mobile Center account with the tool.
+Test runs are executed using the Mobile Center CLI. If not already installed, follow [these instructions](http://bit.ly/2gClGRM) to install. After installation, run mobile-center login to link a Mobile Center account with the tool.
   3. Create an app in Mobile Center
 All test assets and operations are within the context of an app. Create the app project to be tested.
   4. Review the core concepts
-Understanding the core concepts of the Test Cloud experience improve ease of use, navigation, and communications with support. It is recommended to become familiar with [these concepts](https://docs.microsoft.com/en-us/mobile-center/test-cloud/core-concepts) before running your first tests.
+Understanding the core concepts of the Test Cloud experience improve ease of use, navigation, and communications with support. It is recommended to become familiar with [these concepts](http://bit.ly/2xDn38x) before running your first tests.
   5. Prepare the project for upload
-Each test framework has different requirements for uploading to Test Cloud. Follow the appropriate test framework branch from [this page.](https://docs.microsoft.com/en-us/mobile-center/test-cloud/preparing-for-upload/index)
+Each test framework has different requirements for uploading to Test Cloud. Follow the appropriate test framework branch from [this page.](http://bit.ly/2yhxeBC)
 
 ## Starting a Test Run
-This section provides instructions for initiating a test run with test suites that have been prepared for upload. To learn how to prepare a test suite for upload to Test Cloud, see [preparing tests for upload.](https://docs.microsoft.com/en-us/mobile-center/test-cloud/preparing-for-upload/index) <br>
+This section provides instructions for initiating a test run with test suites that have been prepared for upload. To learn how to prepare a test suite for upload to Test Cloud, see [preparing tests for upload.](http://bit.ly/2yhxeBC) <br>
 
-Initiating a test run in Test Cloud requires the [Mobile Center CLI tool.](https://docs.microsoft.com/en-us/mobile-center/cli/index) <br>
+Initiating a test run in Test Cloud requires the [Mobile Center CLI tool.](http://bit.ly/2gClGRM) <br>
 
 With the Mobile Center CLI tool installed and upload preparation complete, initiating a test run is very straightforward as the UI will guide you through the necessary steps. Begin by navigating to the Test Cloud section within the desired app. Clicking the ```new test run``` button will launch a dialog which will lead you through the 3 steps of preparing a test run.
 
@@ -353,7 +353,7 @@ With the Mobile Center CLI tool installed and upload preparation complete, initi
 Select the devices against which this test run should execute. This collection of devices can optionally be saved as a set for future use. To save the set, follow the on-screen prompts.
 
 ### Test run configuration
-Select the test framework, set the device locale, and select a test series. Device locale will determine the system-level device settings, such as language. For more on test series, [see this section.](https://docs.microsoft.com/en-us/mobile-center/test-cloud/core-concepts)
+Select the test framework, set the device locale, and select a test series. Device locale will determine the system-level device settings, such as language. For more on test series, [see this section.](http://bit.ly/2xDn38x)
 
 ### The generated command
 Each selection from the previous steps will be used to generate a command which is used with the Mobile Center CLI to initiate a test run. For example, a command generated for an Android app with Espresso tests might look like:
@@ -396,12 +396,12 @@ Mobile Center Distribution is a tool to for developers to release application bi
 
 ## Getting Started with Distribute
 Distributing with Mobile Center is easy, and only requires a few steps. No need for an SDK. Just the application binary.
-  1) [Add users to your app](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#creating-and-managing-apps) to grant access to all releases.
-  2) Create [Distribution Groups](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#manage-distribution-groups) to manage access.
-  3) [Upload](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#release-a-build) a new application release.
+  1) [Add users to your app](http://bit.ly/2l1IjE9) to grant access to all releases.
+  2) Create [Distribution Groups](http://bit.ly/2gSLKZ8) to manage access.
+  3) [Upload](http://bit.ly/2gTQ7TU) a new application release.
       * At the completion of the upload an email will be sent to all users of the app to notify them of the new release.
-  4) [Install](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#release-a-build) the release onto your device by clicking on the link in the email.
-  5) [Enable In-App Updates](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#in-app-updates) to help your users stay always on the latest release.
+  4) [Install](http://bit.ly/2gTQ7TU) the release onto your device by clicking on the link in the email.
+  5) [Enable In-App Updates](http://bit.ly/2gvXuUx) to help your users stay always on the latest release.
 
 ## Creating and managing apps
 
