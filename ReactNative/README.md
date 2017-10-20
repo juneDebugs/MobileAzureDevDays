@@ -531,7 +531,7 @@ Enable your tester to easily stay up to date with the latest releases. Integrate
 # Mobile Center Analytics
 Mobile Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the Mobile Center portal for you to analyze the data.
 
-Please follow the [Get started section](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#get-started-with-react-native) if you haven't set up the SDK in your application yet.
+Please follow the [Get started section](http://bit.ly/2yEab6n) if you haven't set up the SDK in your application yet.
 
 ## Session and device information
 Once you add Mobile Center Analytics to your app and the SDK is started, it will automatically track sessions and device properties like OS Version, model, etc. You don’t need to write any additional code.
@@ -588,7 +588,7 @@ await Analytics.setEnabled(true);
 Mobile Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to Mobile Center. Collecting crashes works for both beta and live apps, i.e. those submitted to Google Play. Crash logs contain valuable information for you to help fix the crash.
 <br>
 <br>
-Please follow the [Get started section](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#get-started-with-react-native) if you haven't set up the SDK in your application yet.
+Please follow the [Get started section](http://bit.ly/2yEab6n) if you haven't set up the SDK in your application yet.
 <br>
 <br>
 Wherever you are using Mobile Center Crashes, add the following import at the top of the file.
@@ -676,7 +676,7 @@ Crashes.setEventListener({
  All callbacks are optional. You don't have to provide all 3 methods in the event listener object, for example you can implement only ```willSendCrash```.
  <br>
  <br>
- To use that feature you need to have answered **Processed in JavaScript by user** when executing ```react-native link``` for the Crash service configuration. This feature is thus dependent on [Processing crashes in JavaScript](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#processing-crashes-in-javascript).
+ To use that feature you need to have answered **Processed in JavaScript by user** when executing ```react-native link``` for the Crash service configuration. This feature is thus dependent on [Processing crashes in JavaScript](http://bit.ly/2l3BqC8).
  
  If you configure crashes to be sent automatically, you will likely register the listener too late and thus the crashes would already be sent before Javascript loads your custom code.
  <br>
@@ -714,10 +714,10 @@ const enabled = await Crashes.isEnabled();
 In order to set up Push Notifications, you will have to set up the Push Mobile Center SDK, as well as the platform specific push services (Firebase Cloud Messaging (FCM), Apple Notifications Service (APNs), Windows Notifications Services (WNS). These instructions can be found in the Mobile Center Push portal, as well as in the Mobile Center SDK docs. You can follow the instructions provided in the Mobile Center portal, along with our detailed instructions found in the following links:
 
 ## React Native Android Push
-Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal. Mobile Center portal and the Push SDK is integrated with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
+Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal. Mobile Center portal and the Push SDK is integrated with [Firebase Cloud Messaging](http://bit.ly/2ylZCEt).
 <br>
 <br>
-Note that only devices having the [Google Play](https://play.google.com/store) store application or emulators with **Google APIs** images can receive the notifications.
+Note that only devices having the [Google Play](http://bit.ly/2kNmQ1p) store application or emulators with **Google APIs** images can receive the notifications.
 
 **Firebase displays a notification in the system notification center only if the application is in background at the moment the Push is received.**
 
@@ -725,14 +725,14 @@ Note that only devices having the [Google Play](https://play.google.com/store) s
 Before using Mobile Center Push service, you need to add Firebase to your application. You can either choose a manual integration or Firebase Assistant.
 
 ### 1. Prerequisites
-Please learn about [Prerequisites](https://firebase.google.com/docs/android/setup#prerequisites), in particular please make sure to keep Google Repository up-to-date in the [Android SDK Manager](https://developer.android.com/studio/intro/update.html#sdk-manager).
+Please learn about [Prerequisites](http://bit.ly/2z6oEov), in particular please make sure to keep Google Repository up-to-date in the [Android SDK Manager](http://bit.ly/2xDNqQI).
 
 ### 2. Manual integration
-  1) Follow the instructions listed in [Manually add Firebase](https://firebase.google.com/docs/android/setup#manually_add_firebase) section.
+  1) Follow the instructions listed in [Manually add Firebase](http://bit.ly/2ylgRGo) section.
   2) Make sure to continue following instructions in **Add the SDK** sub section right after but do not add ```compile "com.google.firebase:firebase-core:${version}"``` as the SDK manages this step for you can it could trigger incompatibilities if versions mismatch.
   
 ### Using Firebase Assistant
-  1) Follow [these instructions](https://developer.android.com/studio/write/firebase.html) if you don't see ```Firebase``` in the ```Tools``` menu.
+  1) Follow [these instructions](http://bit.ly/2gak4hQ) if you don't see ```Firebase``` in the ```Tools``` menu.
   2) Click on Tools > Firebase and follow **only** the first two following steps:
         * Connect your app to Firebase
         * Add FCM to your app
@@ -746,7 +746,7 @@ Please remove this if added automatically as the SDK manages this for you can it
 Go to Project Settings and under Cloud Messaging, copy your Server Key. This will be the Android API Key that you will need to set in the Mobile Center Push portal.
 
 ## Add Mobile Center Push to your app
-Please follow the [Get started section](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#get-started-with-react-native) if you haven't set up the SDK in your application yet.
+Please follow the [Get started section](http://bit.ly/2yEab6n) if you haven't set up the SDK in your application yet.
 <br>
 <br>
 The Mobile Center SDK is designed with a **modular approach** – you only need to integrate the services that you're interested in.
@@ -871,16 +871,16 @@ Collect the following information:
 
   **3) Push Token**
 * Open your key file with a text editor and copy the authentication token it contains.
-* On the Mobile Center push settings, paste this token to the **Push Token** field then click **Done** to complete this configuration. For more information, refer to the [Apple documentation](http://help.apple.com/xcode/mac/current/#/dev11b059073).
+* On the Mobile Center push settings, paste this token to the **Push Token** field then click **Done** to complete this configuration. For more information, refer to the [Apple documentation](http://apple.co/2yC1FVu).
 
 #### [Optional] Enable silent notifications
-Silent notifications give you a way to wake up your app so that it can refresh its data in the background (see [Apple documentation](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW8)). To enable silent notifications open Xcode's project editor, choose your target and click **Capabilities**. Turn on **Background Modes** and check the **Remote notifications** checkbox.
+Silent notifications give you a way to wake up your app so that it can refresh its data in the background (see [Apple documentation](http://apple.co/2yA1wji. To enable silent notifications open Xcode's project editor, choose your target and click **Capabilities**. Turn on **Background Modes** and check the **Remote notifications** checkbox.
  
 ## Add Mobile Center Push to your app
 
 ### 1) Add the Mobile Center Push module
 
-Please follow the [Get started section](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#get-started-with-react-native) if you haven't set up the SDK in your application yet.
+Please follow the [Get started section](http://bit.ly/2yEab6n) if you haven't set up the SDK in your application yet.
 <br>
 <br>
 The Mobile Center SDK is designed with a **modular approach** – you only need to integrate the services that you're interested in.
@@ -896,7 +896,7 @@ The default integration of the SDK uses Cocoapods for iOS.
    react-native link mobile-center-push
    ```
 #### Integrate the iOS SDK manually
-If you wish to manually integrate the module, follow the manual integration steps at [documentation link](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#32-ios-only-integrate-the-ios-sdk-manually).
+If you wish to manually integrate the module, follow the manual integration steps at [documentation link](http://bit.ly/2xRNhEu).
 
 ### 2.Start Mobile Center Push
 
@@ -919,7 +919,7 @@ Note that when the app calls ```register``` for the first time after being insta
 If you or one of your third party libraries already implements application:didReceiveRemoteNotification:fetchCompletionHandler method, then follow step 4 to implement a callback to receive push notifications.
 
 ## Intercept push notifications
-You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The listener may also be woken up when a notification is received in background if you have enable [silent notifications](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#22-optional-receive-push-notifications-if-you-have-already-implemented-applicationdidreceiveremotenotificationfetchcompletionhandler-method) and if the payload of the notification contains the [content-available](https://docs.microsoft.com/en-us/mobile-center/push/index#custom-data-in-your-notifications) flag set to true.
+You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The listener may also be woken up when a notification is received in background if you have enable [silent notifications](http://bit.ly/2yCNFuK) and if the payload of the notification contains the [content-available](http://bit.ly/2hQWlDC) flag set to true.
 <br>
 <br>
 If silent notifications are enabled and you push a notification with ```content-available```: 1, then the listener may be triggered twice for the same notification: when the notification is received in background and when it is tapped.
