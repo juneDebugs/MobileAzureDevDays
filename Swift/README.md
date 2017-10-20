@@ -33,7 +33,7 @@ Before you begin, please make sure that the following prerequisites are met:
 
 ## 2. Create your app in the Mobile Center Portal to obtain the App Secret
 If you have already created your app in the Mobile Center portal, you can skip this step.
-  1) Head over to [mobile.azure.com](https://mobile.azure.com).
+  1) Head over to [mobile.azure.com](http://bit.ly/2ygLNrH).
   2) Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
   3) Enter a name and an optional desciption for your app.
   4) Select **iOS** as the OS and **Objective-C/Swift** as a platform.
@@ -42,7 +42,7 @@ If you have already created your app in the Mobile Center portal, you can skip t
 Once you have created an app, you can obtain its **App Secret** on the **Getting Started** or **Manage App** sections of the Mobile Center Portal.
 
 ## 3. Add the Mobile Center SDK modules
-The Mobile Center SDK for iOS can be integrated into your app via [Cocoapods](https://cocoapods.org/) or by manually adding the binaries to your project.
+The Mobile Center SDK for iOS can be integrated into your app via [Cocoapods](http://bit.ly/2l0WWrb) or by manually adding the binaries to your project.
 
 ### 3.1 Integration via Cocoapods
 
@@ -62,7 +62,7 @@ pod 'MobileCenter/Crashes'
 ### 3.2 Integration by copying the binaries into your project
 
 Below are the steps on how to integrate the compiled binaries in your Xcode project to set up Mobile Center Analytics and Mobile Center Crashes for your iOS app
-  1) Download the [Mobile Center iOS SDK](https://github.com/Microsoft/mobile-center-sdk-ios/releases) frameworks provided as a zip file.
+  1) Download the [Mobile Center iOS SDK](http://bit.ly/2zmwrPb) frameworks provided as a zip file.
   2) Unzip the file and you will see a folder called ```MobileCenter-SDK-Apple/iOS``` that contains different frameworks for each Mobile Center service. The framework called ```MobileCenter``` is required in the project as it contains code that is shared between the different modules.
   3) [Optional] Create a subdirectory for 3rd-party libraries.
   
@@ -182,11 +182,11 @@ If the selected scheme has a test action with a test target selected, you can co
 
 #### 3.6. Code signing
 
-A successful build will produce a .ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and [upload a provisioning profile (.mobileprovision) and a valid certificate (.p12)](https://docs.microsoft.com/en-us/mobile-center/build/ios/code-signing/uploading-files), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. You can read more about [code signing here](https://docs.microsoft.com/en-us/mobile-center/build/ios/code-signing/index) and in the [official Apple Developer documentation](https://developer.apple.com/support/code-signing/).
+A successful build will produce a .ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and [upload a provisioning profile (.mobileprovision) and a valid certificate (.p12)](http://bit.ly/2g8RjSF), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. You can read more about [code signing here](http://bit.ly/2yJfJxj) and in the [official Apple Developer documentation](http://apple.co/2yV5Ts6).
 
 #### 3.7. Launch your successful build on a real device
 
-Use your newly produced IPA file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. [Read more about it here](https://docs.microsoft.com/en-us/mobile-center/build/build-test-integration).
+Use your newly produced IPA file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. [Read more about it here](http://bit.ly/2yk8SaG).
 
 #### 3.8. CocoaPods
 
@@ -224,9 +224,9 @@ The build step specific logs (located in the ```build/``` directory of the archi
 
 The .ipa is an iPhone application archive file which contains the iOS app.
 
-* If the build has been signed correctly, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. More details about code signing and distribution with Mobile Center [can be found here](https://docs.microsoft.com/en-us/mobile-center/build/ios/code-signing/index).
+* If the build has been signed correctly, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. More details about code signing and distribution with Mobile Center [can be found here](http://bit.ly/2yJfJxj).
 * If the build has not been signed, the .ipa can be signed by the developer (e.g. locally using codesign) or used for other purposes (e.g. upload to Test service for UI testing on real devices or run in the simulator)
-* All builds kicked off after May 17th are generated by [xcodebuild](https://docs.microsoft.com/en-us/mobile-center/build/ios/xcodebuild). Unsigned builds will not produce an. ipa file. The artifact of an unsigned build is the .xcarchive file which can be used to generate an .ipa file with the Xcode Archives organizer.
+* All builds kicked off after May 17th are generated by [xcodebuild](http://bit.ly/2yzQ9bc). Unsigned builds will not produce an. ipa file. The artifact of an unsigned build is the .xcarchive file which can be used to generate an .ipa file with the Xcode Archives organizer.
 
 #### 4.3. The symbols file (.dsym)
 
@@ -263,20 +263,20 @@ The build machines are running OS X 10.11.6 (15G1004). We keep an eye on the lat
 ## Getting Started with Test Cloud
 The prerequisite steps below must be completed before a project can be used with Mobile Center Test Cloud.
   1. Create a Mobile Center account
-Create a Mobile Center account at [mobile.azure.com](https://mobile.azure.com/login?original_url=%2F) to gain access to Test Cloud.
+Create a Mobile Center account at [mobile.azure.com](http://bit.ly/2ygLNrH) to gain access to Test Cloud.
   2. Install the Mobile Center CLI
-Test runs are executed using the Mobile Center CLI. If not already installed, follow [these instructions](https://docs.microsoft.com/en-us/mobile-center/cli/index) to install. After installation, run mobile-center login to link a Mobile Center account with the tool.
+Test runs are executed using the Mobile Center CLI. If not already installed, follow [these instructions](http://bit.ly/2gClGRM) to install. After installation, run mobile-center login to link a Mobile Center account with the tool.
   3. Create an app in Mobile Center
 All test assets and operations are within the context of an app. Create the app project to be tested.
   4. Review the core concepts
-Understanding the core concepts of the Test Cloud experience improve ease of use, navigation, and communications with support. It is recommended to become familiar with [these concepts](https://docs.microsoft.com/en-us/mobile-center/test-cloud/core-concepts) before running your first tests.
+Understanding the core concepts of the Test Cloud experience improve ease of use, navigation, and communications with support. It is recommended to become familiar with [these concepts](http://bit.ly/2xDn38x) before running your first tests.
   5. Prepare the project for upload
-Each test framework has different requirements for uploading to Test Cloud. Follow the appropriate test framework branch from [this page.](https://docs.microsoft.com/en-us/mobile-center/test-cloud/preparing-for-upload/index)
+Each test framework has different requirements for uploading to Test Cloud. Follow the appropriate test framework branch from [this page.](http://bit.ly/2yhxeBC)
   
 ## Starting a Test Run
-This section provides instructions for initiating a test run with test suites that have been prepared for upload. To learn how to prepare a test suite for upload to Test Cloud, see [preparing tests for upload.](https://docs.microsoft.com/en-us/mobile-center/test-cloud/preparing-for-upload/index) <br>
+This section provides instructions for initiating a test run with test suites that have been prepared for upload. To learn how to prepare a test suite for upload to Test Cloud, see [preparing tests for upload.](http://bit.ly/2yhxeBC) <br>
 
-Initiating a test run in Test Cloud requires the [Mobile Center CLI tool.](https://docs.microsoft.com/en-us/mobile-center/cli/index) <br>
+Initiating a test run in Test Cloud requires the [Mobile Center CLI tool.](http://bit.ly/2gClGRM) <br>
 
 With the Mobile Center CLI tool installed and upload preparation complete, initiating a test run is very straightforward as the UI will guide you through the necessary steps. Begin by navigating to the Test Cloud section within the desired app. Clicking the ```new test run``` button will launch a dialog which will lead you through the 3 steps of preparing a test run.
 
@@ -284,7 +284,7 @@ With the Mobile Center CLI tool installed and upload preparation complete, initi
 Select the devices against which this test run should execute. This collection of devices can optionally be saved as a set for future use. To save the set, follow the on-screen prompts.
 
 ### Test run configuration
-Select the test framework, set the device locale, and select a test series. Device locale will determine the system-level device settings, such as language. For more on test series, [see this section.](https://docs.microsoft.com/en-us/mobile-center/test-cloud/core-concepts)
+Select the test framework, set the device locale, and select a test series. Device locale will determine the system-level device settings, such as language. For more on test series, [see this section.](http://bit.ly/2xDn38x)
 
 ### The generated command
 Each selection from the previous steps will be used to generate a command which is used with the Mobile Center CLI to initiate a test run. For example, a command generated for an Android app with Espresso tests might look like:
@@ -365,7 +365,7 @@ Mobile Center Crashes will automatically generate a crash log every time your ap
 
 Please follow the Getting Started section if you haven't set up the SDK in your application yet.
 
-Also note that Crash logs on iOS require Symbolication, please check out the [Mobile Center Crashes Symbols documentation](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#uploading-symbols) that explains how to provide symbols for your app.
+Also note that Crash logs on iOS require Symbolication, please check out the [Mobile Center Crashes Symbols documentation](http://bit.ly/2xS1LUQ) that explains how to provide symbols for your app.
 
 ## Uploading symbols
   1) Create a ZIP file for the dSYM package on your Mac.
@@ -395,7 +395,7 @@ If your app crashed previously, you can get details about the last crash.
 ```swift
 var crashReport = MSCrashes.lastSessionCrashReport()
 ```
-There are numerous use cases fpr this API, the most common one is people who call this API and implement their custom [MSCrashesDelegate](https://docs.microsoft.com/en-us/mobile-center/sdk/crashes/ios#customize-your-usage-of-mobile-center-crashes).
+There are numerous use cases fpr this API, the most common one is people who call this API and implement their custom [MSCrashesDelegate](http://bit.ly/2go2JSo).
 
 ## Customize your usage of Mobile Center Crashes
 Mobile Center Crashes provides callbacks for developers to perform additional actions before and when sending crash logs to Mobile Center.
