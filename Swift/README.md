@@ -1,21 +1,21 @@
 # Abstract
-This simple app has a Text Entry Box and a button that triggers the text to hit the [Azure Sentiment Analysis API](https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-sentiment-analysis) and returns a corresponding Emoji and changes the background color appropriately.
+This simple app has a Text Entry Box and a button that triggers the text to hit the [Azure Sentiment Analysis API](http://bit.ly/2i9jc13) and returns a corresponding Emoji and changes the background color appropriately.
 
 # Index
-* [Get Started with iOS](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#get-started-with-ios)
-     * [Prerequisites](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#1-prerequisites)
-* [Build](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#mobile-center-build)
-     * [Building Xcode iOS apps](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#building-xcode-ios-apps)
-* [Test](https://github.com/jCho23/MobileAzureDevDays/blob/master/Swift/README.md#mobile-center-test)
-     * [Getting Started with Test Cloud](https://github.com/jCho23/MobileAzureDevDays/blob/master/Swift/README.md#getting-started-with-test-cloud)
-* [Analytics](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#mobile-center-analytics)
-     * [Custom events](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#custom-events)
-* [Crashes](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#mobile-center-crashes)
-     * [Customize your usage of Mobile Center Crashes](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#customize-your-usage-of-mobile-center-crashes) 
-* [Distribute](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#mobile-center-distribute)
-     * [Add in-app updates to your app](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#add-in-app-updates-to-your-app) 
-* [Push Notifications](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#mobile-center-push)
-     * [Enable Apple Push Notifications service (APNs) for your app](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#prerequisite---enable-apple-push-notifications-service-apns-for-your-app)
+* [Get Started with iOS](http://bit.ly/2gww4ho)
+     * [Prerequisites](http://bit.ly/2l3uHIf)
+* [Build](http://bit.ly/2xSmh7H)
+     * [Building Xcode iOS apps](http://bit.ly/2inkRAd)
+* [Test](http://bit.ly/2yCKpPU)
+     * [Getting Started with Test Cloud](http://bit.ly/2zBQiLr)
+* [Analytics](http://bit.ly/2znBOxA)
+     * [Custom events](http://bit.ly/2zo3hPT)
+* [Crashes](http://bit.ly/2hQgg5K)
+     * [Customize your usage of Mobile Center Crashes](http://bit.ly/2zm9Mml) 
+* [Distribute](http://bit.ly/2yzQEBV)
+     * [Add in-app updates to your app](http://bit.ly/2yBHO6Y) 
+* [Push Notifications](http://bit.ly/2gpkgto)
+     * [Enable Apple Push Notifications service (APNs) for your app](http://bit.ly/2gpIAvi)
 
 
 
