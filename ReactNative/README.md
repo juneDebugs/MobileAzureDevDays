@@ -432,7 +432,7 @@ To create a new Distribution Group select the "New Group" group button from the 
 Clicking on a Distribution Group will allow for management of the group. You can use the invitation box to add additional users. Or select users from the table to remove them from the group. From this page you can also see the full release history for this Distribution Group by clicking on the releases tab.
 
 ### Releasing a Build to a Distribution Group
-To [release a new build](https://docs.microsoft.com/en-us/mobile-center/distribution/uploading) to a Distribution Group. Make use of the "Distribute new Release" button at the top of the screen and choose the Distribution Group from the list during the steps.
+To [release a new build](http://bit.ly/2yBFWes) to a Distribution Group. Make use of the "Distribute new Release" button at the top of the screen and choose the Distribution Group from the list during the steps.
 
 
 
@@ -441,23 +441,23 @@ In order to distribute a release via Mobile Center, you must first upload your a
 
 ### Generating an application binary package
 #### iOS
-You will need to use the following steps to generate an IPA package for your application. For full details of this process please see the official [Apple documentation.](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/TestingYouriOSApp/TestingYouriOSApp.html#//apple_ref/doc/uid/TP40012582-CH8-SW1) <br>
- 1) [Register UDIDs](https://docs.microsoft.com/en-us/mobile-center/distribution/auto-provisioning) for all hardware devices in your provisioning profile.
+You will need to use the following steps to generate an IPA package for your application. For full details of this process please see the official [Apple documentation.](http://apple.co/2zo1VEN) <br>
+ 1) [Register UDIDs](http://bit.ly/2hR6kcd) for all hardware devices in your provisioning profile.
  2) Archive your application. In Xcode go to ```Product > Archive```
  3) Export the archive using the proper provisioning profile. Make sure to remember where the IPA file was placed on disk.
 
 #### Android
-For Android you will need to produce a properly signed apk file. For full details of this process please see the official [Google documentation.](https://developer.android.com/studio/publish/preparing.html) <br>
- 1) Ensure you have [updated the manifest](https://developer.android.com/guide/topics/manifest/manifest-intro.html) and have a [properly configured Gradle build.](https://developer.android.com/studio/build/build-variants.html)
+For Android you will need to produce a properly signed apk file. For full details of this process please see the official [Google documentation.](http://bit.ly/2yViyvh) <br>
+ 1) Ensure you have [updated the manifest](http://bit.ly/2xTx8U7) and have a [properly configured Gradle build.](http://bit.ly/2ilzPqh)
 Build the APK. From Android Studio select the build variant and then execute command ```Build > Build APK```
 
 ### Uploading the package
 To upload a package to Mobile Center, use the navigation bar on the left to navigate to Distirbution. Then select "Distribute new release" button. Drag and drop or click to open a file dialog to upload your package. Optionally fill in some release notes. Select next and select a Distribution Group. This release will only be available to the users that have been added to that specific Distribution Group. Click next and review the release, then click distribute to release. On clicking the distribute button the release will be made available via Mobile Center and an email notification of the new version will be sent to all users of this application. Congrats, you have successful distributed a release via Mobile Center.
 
 ### Uploading using the APIs
- 1) Pre-req: [Obtain an API token.](https://docs.microsoft.com/en-us/mobile-center/api-docs/) API Token is used for authentication for all Mobile Center API calls.
+ 1) Pre-req: [Obtain an API token.](http://bit.ly/2gSRUIT) API Token is used for authentication for all Mobile Center API calls.
  2) Upload a new release. This is 3 or more API calls.
-    a. Create an upload resource and get an ```upload_url``` (good for 24 hours) — [POST /createReleaseUpload](https://docs.mobile.azure.com/api/#!/distribute/createReleaseUpload)
+    a. Create an upload resource and get an ```upload_url``` (good for 24 hours) — [POST /createReleaseUpload](http://bit.ly/2gRKrd0)
     ```csharp
     curl -X POST --header 'Content-Type: application/json' --header 'Accept:
     application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
@@ -468,13 +468,13 @@ To upload a package to Mobile Center, use the navigation bar on the left to navi
     curl -F "ipa=@Versions_1_1_0_12.ipa" https://rink.hockeyapp.net/api/sonoma/apps/cacf9867-87f7-4649-
     a400-632a775dde2d/app_versions/upload\?upload_id\=c18df340-069f-0135-3290-22000b559634
     ```
-    c. After upload has finished, update upload resource's status to committed and get a ```release_url``` — [PATCH /updateReleaseUpload](https://docs.mobile.azure.com/api/#/distribute/updateReleaseUpload)
+    c. After upload has finished, update upload resource's status to committed and get a ```release_url``` — [PATCH /updateReleaseUpload](http://bit.ly/2io8Eva)
     ```csharp
     curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header 
     'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "status": "committed" }'
     'https://api.mobile.azure.com/v0.1/apps/JoshuaWeber/APITesting/release_uploads/c18df340-069f-0135-3290-22000b559634'
     ```
- 3) Distribute the uploaded release to a distribution group — [PATCH /updateRelease](https://docs.mobile.azure.com/api/#!/distribute/updateRelease)
+ 3) Distribute the uploaded release to a distribution group — [PATCH /updateRelease](http://bit.ly/2yCJQUp)
  ```csharp
  curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header
  'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d 
@@ -484,13 +484,13 @@ To upload a package to Mobile Center, use the navigation bar on the left to navi
  
  
  ## Install a Build
-Installation of an application being distributed by Mobile Center begins with an email. If you have access to the application you will receive a notification email for each new version available. Simply click on the install link in the email to begin the process. You will need to enter your credentials to login. If this is your first time accessing Mobile Center, you can instead [create a new account](https://docs.microsoft.com/en-us/mobile-center/dashboard/creating-and-managing-apps). Once logged in you can review the application information and release notes, and click the install button to trigger installation onto your device.
+Installation of an application being distributed by Mobile Center begins with an email. If you have access to the application you will receive a notification email for each new version available. Simply click on the install link in the email to begin the process. You will need to enter your credentials to login. If this is your first time accessing Mobile Center, you can instead [create a new account](http://bit.ly/2yVphFJ). Once logged in you can review the application information and release notes, and click the install button to trigger installation onto your device.
 <br>
 <br>
 On **iOS** you must open the email install link in Safari, only Safari supports the installation APIs.
 <br>
 <br>
-On **Android** you must open the email install link in Chrome. On some devices, versions 57 and 58 of Chrome will not open the downloaded files (clicking the downloaded file will say "can't open file"). As a workaround, testers that hit this issue can use Chrome Canary instead. For more information about this bug see [Google Chrome Help Forum](https://productforums.google.com/forum/#!topic/chrome/gas7OCTHZHo).
+On **Android** you must open the email install link in Chrome. On some devices, versions 57 and 58 of Chrome will not open the downloaded files (clicking the downloaded file will say "can't open file"). As a workaround, testers that hit this issue can use Chrome Canary instead. For more information about this bug see [Google Chrome Help Forum](http://bit.ly/2yuJlxZ).
 
 ### Windows and Certificates Requirements
 To install a windows package requires a trusted root certificate installed in the root certificate chain for the device you are installing too. The most common solution is for the developer to sign a application package with a purchased 3rd party provider trusted root certificate. This certificate will chain to through the third party to the Microsoft root store and so will be a trusted cert for all user devices. Developers can opt to use a self-created test certificate and sign the application package, however it will result in additional steps for testers at installation time.
@@ -512,7 +512,7 @@ You can install a test signed app by first installing the test certificate (whic
 
 
 ## In-App Updates
-Enable your tester to easily stay up to date with the latest releases. Integrate the Mobile Center SDK (and the Distribution Module) for [iOS](https://docs.microsoft.com/en-us/mobile-center/sdk/distribute/ios) and [Android](https://docs.microsoft.com/en-us/mobile-center/sdk/distribute/android) to automatically enable in-app notification of new releases. Once completed all future releases through Mobile Center will trigger an in-app notification for each user allowing a quick upgrade to the latest version.
+Enable your tester to easily stay up to date with the latest releases. Integrate the Mobile Center SDK (and the Distribution Module) for [iOS](http://bit.ly/2hQofj3) and [Android](http://bit.ly/2gCC2Kr) to automatically enable in-app notification of new releases. Once completed all future releases through Mobile Center will trigger an in-app notification for each user allowing a quick upgrade to the latest version.
 
 
 
