@@ -79,7 +79,7 @@ What is the iOS App Secret? 0000-0000-0000-0000-000000000000
 If you provided the App Secret previously, you won't be prompted again instead seeing the current value for the secret and where to change it in the source if needed.
 <br>
 <br>
-The SDK will then ask whether or not to send user events automatically. [Learn more about sending user events manually](https://docs.microsoft.com/en-us/mobile-center/sdk/analytics/react-native#wait-for-js-to-enable-mobile-center-analytics).
+The SDK will then ask whether or not to send user events automatically. [Learn more about sending user events manually](http://bit.ly/2yvd2io).
 ```js
 For the Android app, should user tracking be enabled automatically? (Use arrow keys)
     ❯ Enable Automatically
@@ -103,7 +103,7 @@ For the iOS app, should crashes be sent automatically or processed in JavaScript
  ### 3.2 [iOS only] Integrate the iOS SDK manually
  We **strongly** recommend integrating the SDK via Cocoapodse as described above. Nonetheless, it's also possible to integrate the iOS native SDK manually.
  
-  1) Download the [Mobile Center SDK for React Native frameworks](https://github.com/Microsoft/mobile-center-sdk-react-native/releases/tag/0.10.0) provided as a zip file.
+  1) Download the [Mobile Center SDK for React Native frameworks](http://bit.ly/2gSn3fy) provided as a zip file.
   2) From the release notes on Github, please also download the corresponding frameworks of the Mobile Center SDK for iOS.
   3) Unzip both archives and you will see a folder called ```MobileCenter-SDK-Apple/iOS``` that contains different frameworks for each Mobile Center service. The framework called ```MobileCenter``` is required in the project as it contains code that is shared between the different modules. You will also see a folder named ```RNMobileCenterShared``` which contains a single framework for the React Native bridge for iOS which is also required.
   4) [Optional] Create a subdirectory for 3rd-party libraries.
@@ -116,7 +116,7 @@ Now drag and drop ```MobileCenter.framework```, ```MobileCenterAnalytics.framewo
 A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 ## 4. Start the SDK
-Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. There is no additional setup required. Look at [Analytics](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-analytics) and [Crashes](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-crashes) section for APIs guides and walkthroughs to learn what Mobile Center can do.
+Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. There is no additional setup required. Look at [Analytics](http://bit.ly/2zlVp1n) and [Crashes](http://bit.ly/2gSE210) section for APIs guides and walkthroughs to learn what Mobile Center can do.
 
 
 
@@ -158,11 +158,11 @@ When enabled, the ```CFBundleVersion``` in the Info.plist of your app automatica
 
 #### 3.5. Code signing
 
-A successful build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload a [provisioning profile (.mobileprovision) and a valid certificate (.p12)](https://docs.microsoft.com/en-us/mobile-center/build/ios/code-signing/uploading-files), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. You can read more about [code signing here](https://docs.microsoft.com/en-us/mobile-center/build/ios/code-signing/index) and in the [Apple Developer official documentation](https://developer.apple.com/support/code-signing/).
+A successful build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload a [provisioning profile (.mobileprovision) and a valid certificate (.p12)](http://bit.ly/2g8RjSF), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. You can read more about [code signing here](http://bit.ly/2yJfJxj) and in the [Apple Developer official documentation](http://apple.co/2yV5Ts6).
 
 #### 3.6. Launch your successful build on a real device
 
-Use your newly produced IPA file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. [Read more about it here](https://docs.microsoft.com/en-us/mobile-center/build/build-test-integration).
+Use your newly produced IPA file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. [Read more about it here](http://bit.ly/2yk8SaG).
 
 #### 3.7. CocoaPods
 
@@ -195,9 +195,9 @@ For a completed build (succeeded or failed), download the logs to understand mor
 
 #### 4.2. The app (.ipa)
 The .ipa is an iPhone application archive file which stores the iOS app.
-* if the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. More details about code signing and distribution with Mobile Center can be [found here](https://docs.microsoft.com/en-us/mobile-center/build/ios/code-signing/index).
+* if the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. More details about code signing and distribution with Mobile Center can be [found here](http://bit.ly/2yJfJxj).
 * if the build has not been signed, the .ipa can be signed by the developer (e.g. locally using codesign) or used for other purposes (e.g. upload to the Test service for UI testing on real devices or run in the simulator)
-* All builds kicked off after May 17th are generated by [xcodebuild](https://docs.microsoft.com/en-us/mobile-center/build/ios/xcodebuild). Unsigned builds will not produce an. ipa file. The artifact of an unsigned build is the .xcarchive file which can be used to generate an .ipa file with the Xcode Archives organizer.
+* All builds kicked off after May 17th are generated by [xcodebuild](http://bit.ly/2yzQ9bc). Unsigned builds will not produce an. ipa file. The artifact of an unsigned build is the .xcarchive file which can be used to generate an .ipa file with the Xcode Archives organizer.
 
 #### 4.3. The source maps and symbol files
 Upon building a React Native iOS app, a JavaScript source map and one or multiple .dsym files are automatically generated with each build and can be downloaded once the build is completed.+
@@ -212,7 +212,7 @@ If this app has the crashes SDK integrated, iOS symbols and source maps will aut
 ### 5. Build tips
 #### 5.1. Yarn
 
-[Yarn](https://yarnpkg.com/en/) is a faster, more deterministic replacement for ```npm```. If a ```yarn.lock``` file is present in your repo next to ```package.json```, then Mobile Center will use Yarn, doing ```yarn install``` at the start of the build. Otherwise, it will do ```npm install```.
+[Yarn](http://bit.ly/2yASfJm) is a faster, more deterministic replacement for ```npm```. If a ```yarn.lock``` file is present in your repo next to ```package.json```, then Mobile Center will use Yarn, doing ```yarn install``` at the start of the build. Otherwise, it will do ```npm install```.
 
 
 #### 5.2. Custom build scripts
@@ -220,7 +220,7 @@ If this app has the crashes SDK integrated, iOS symbols and source maps will aut
 In some scenarios you may want to run a script at the start of the build. For instance, if your React Native app uses TypeScript, then you'll want to run the ```tsc``` compiler at build start.
 <br>
 <br>
-Mobile Center will have a [dedicated feature](https://docs.microsoft.com/en-us/mobile-center/general/roadmap#build-service) for running custom scripts as part of a build. But for now you can achieve the same effect by creating a ```postinstall``` script in ```package.json```, adding a command like this:
+Mobile Center will have a [dedicated feature](http://bit.ly/2yDIRFi) for running custom scripts as part of a build. But for now you can achieve the same effect by creating a ```postinstall``` script in ```package.json```, adding a command like this:
 ```js
 "scripts": {
     ...
@@ -262,11 +262,11 @@ When enabled, the version code in the AndroidManifest.xml of your app automatica
 
 #### 3.5. Launch your successful build on a real device
 
-Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. [Read more about it here](https://docs.microsoft.com/en-us/mobile-center/build/build-test-integration).
+Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. [Read more about it here](http://bit.ly/2yk8SaG).
 
 #### 3.6. Code signing
 
-A successful build will produce an APK file. In order to release the build to the Play Store, it needs to be signed with a valid certificate stored in a keystore. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your keystore to your repository, and provide the relevant values in the configuration pane. You can read more about [code signing here](https://docs.microsoft.com/en-us/mobile-center/build/android/code-signing/setup).
+A successful build will produce an APK file. In order to release the build to the Play Store, it needs to be signed with a valid certificate stored in a keystore. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your keystore to your repository, and provide the relevant values in the configuration pane. You can read more about [code signing here](http://bit.ly/2kN5bXD).
 
 #### 3.7. Distribution to a distribution group
 
@@ -312,7 +312,7 @@ The minimum version supported to build Android apps is 4.0.3 (API level 15). And
 In some scenarios you may want to run a script at the start of the build. For instance, if your React Native app uses TypeScript, then you'll want to run the ```tsc``` compiler at build start.
 <br>
 <br>
-Mobile Center will have a [dedicated feature](https://docs.microsoft.com/en-us/mobile-center/general/roadmap#build-service) for running custom scripts as part of a build. But for now you can achieve the same effect by creating a ```postinstall``` script in package.json, adding a command like this:
+Mobile Center will have a [dedicated feature](http://bit.ly/2yDIRFi) for running custom scripts as part of a build. But for now you can achieve the same effect by creating a ```postinstall``` script in package.json, adding a command like this:
 ```js
 "scripts": {
     ...
@@ -321,7 +321,7 @@ Mobile Center will have a [dedicated feature](https://docs.microsoft.com/en-us/m
 ```
 
 #### 6.3. Building multiple APKs
-For React Native on Android, universal APK generation is disabled by default. If your app configuration is set up to build multiple APKs, e.g. different ones per CPU architecture or screen configuration, you need to make sure a universal APK is built as well. Our build system works with one main APK file and will ignore all APKs specific to a certain CPU/ABI or screen density. To learn more about APK splits and how to build a universal APK, please read the corresponding [Android developer guide](https://developer.android.com/studio/build/configure-apk-splits.html#configure-abi-split). In general, make sure that ```universalApk``` is set to ```true``` for your React Native build configuration.
+For React Native on Android, universal APK generation is disabled by default. If your app configuration is set up to build multiple APKs, e.g. different ones per CPU architecture or screen configuration, you need to make sure a universal APK is built as well. Our build system works with one main APK file and will ignore all APKs specific to a certain CPU/ABI or screen density. To learn more about APK splits and how to build a universal APK, please read the corresponding [Android developer guide](http://bit.ly/2ykaykj). In general, make sure that ```universalApk``` is set to ```true``` for your React Native build configuration.
 <br>
 <br>
 Postinstall scripts run right after all the ```package.json``` packages are installed, so you use those packages in your script.
@@ -332,7 +332,7 @@ Postinstall scripts run right after all the ```package.json``` packages are inst
 ## Getting Started with Test Cloud
 The prerequisite steps below must be completed before a project can be used with Mobile Center Test Cloud.
   1. Create a Mobile Center account
-Create a Mobile Center account at [mobile.azure.com](https://mobile.azure.com/login?original_url=%2F) to gain access to Test Cloud.
+Create a Mobile Center account at [mobile.azure.com](http://bit.ly/2ygLNrH) to gain access to Test Cloud.
   2. Install the Mobile Center CLI
 Test runs are executed using the Mobile Center CLI. If not already installed, follow [these instructions](https://docs.microsoft.com/en-us/mobile-center/cli/index) to install. After installation, run mobile-center login to link a Mobile Center account with the tool.
   3. Create an app in Mobile Center
