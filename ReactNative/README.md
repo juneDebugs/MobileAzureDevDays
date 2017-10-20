@@ -30,11 +30,11 @@ Let's get started with setting up Mobile Center React Native SDK in your app to 
 Before you begin, please make sure that the following prerequisites are met:
    * You are using a React Native project that runs React Native 0.34 or later.
    * You are targeting devices that are running on Android Version 4.0.3/API level 15 or later, or iOS version 8.0 or later.
-   * The default way to use the SDK requires [Cocoapods](https://cocoapods.org/). Nonetheless, it is possible to link the SDK manually.
+   * The default way to use the SDK requires [Cocoapods](http://bit.ly/2l0WWrb). Nonetheless, it is possible to link the SDK manually.
 
 ## 2. Create your app in the Mobile Center Portal to obtain the App Secret
 If you have already created your app in the Mobile Center portal, you can skip this step.
-  1) Head over to [mobile.azure.com](https://mobile.azure.com).
+  1) Head over to [mobile.azure.com](http://bit.ly/2ygLNrH).
   2) Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
   3) Enter a name and an optional desciption for your app.
   4) Select the appropriate OS (Android or iOS) and select **React Native** as the platform.
