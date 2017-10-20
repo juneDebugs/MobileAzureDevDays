@@ -522,7 +522,7 @@ pod 'MobileCenter/Distribute'
 ```
 
 #### Integration by copying the binaries into your project
-If you wish to manually integrate the module, follow this [documentation link](https://docs.microsoft.com/en-us/mobile-center/sdk/distribute/ios-manual-integration).
+If you wish to manually integrate the module, follow this [documentation link](http://bit.ly/2gonTQs).
 
 ### 2. Start Mobile Center Distribute
 In order to use Mobile Center, you need to opt in to the service(s) that you want to use, meaning by default no services are started and you will have to explicitly call each of them when starting the SDK.
@@ -541,7 +541,7 @@ Insert the following line to start the SDK in your app's **AppDelegate.m** class
 ```swift
 MSMobileCenter.start("{Your App Secret}", withServices: [MSDistribute.self])
 ```
-Make sure you have replaced ```{Your App Secret}``` in the code sample above with your App Secret. Please also check out the [Get started](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#get-started-with-ios) section if you haven't configured the SDK in your application.
+Make sure you have replaced ```{Your App Secret}``` in the code sample above with your App Secret. Please also check out the [Get started](http://bit.ly/2gww4ho) section if you haven't configured the SDK in your application.
 
 #### 2.3 Modify your Info.plist
   1) Add a new key for ```URL types``` or ```CFBundleURLTypes``` in your ```Info.plist``` file (in case Xcode displays your Info.plist as source code).
@@ -564,7 +564,7 @@ Make sure you have replaced ```{Your App Secret}``` in the code sample above wit
 
 ### 1. Customize or localize text
 
-You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at this [strings file](https://github.com/Microsoft/mobile-center-sdk-ios/blob/develop/MobileCenterDistribute/MobileCenterDistribute/Resources/en.lproj/MobileCenterDistribute.strings). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app strings files.
+You can easily provide your own resource strings if you'd like to localize the text displayed in the update dialog. Look at this [strings file](http://bit.ly/2gT9A75). Use the same string name/key and specify the localized value to be reflected in the dialog in your own app strings files.
 
 ### 2. Customize the update dialog
 
@@ -680,12 +680,12 @@ In Xcode's project editor, choose your target and click **Capabilities**. In the
 * Collect the following information:
 
 #### Prefix and ID
-1) Go to your Apple developer account and select your application from the [App ID](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&path=%2Faccount%2Fios%2Fidentifier%2Fbundle&rv=1) list in **Identifiers**.
+1) Go to your Apple developer account and select your application from the [App ID](http://apple.co/2xSckqU) list in **Identifiers**.
 2) Copy the **Prefix** value from this window and paste it to the Mobile Center push settings.
 3) Do the same with the **ID** value.
   
 #### Key ID
-  1) In your Apple developer account [create a new key](https://idmsa.apple.com/IDMSWebAuth/login?appIdKey=891bd3417a7776362562d2197f89480a8547b108fd934911bcbea0110d07f757&path=%2Faccount%2Fios%2Fauthkey%2Fcreate&rv=1) in **Certificates, Identifiers & Profiles/Keys**.
+  1) In your Apple developer account [create a new key](http://apple.co/2goSk9m) in **Certificates, Identifiers & Profiles/Keys**.
   2) Make sure to check the APNs checkbox.
   3) Fill in the key name
   4) Press **Continue** then **Confirm**.
@@ -694,10 +694,10 @@ In Xcode's project editor, choose your target and click **Capabilities**. In the
 
 #### Push Token
   1) Open your key file with a text editor and copy the authentication token it contains.
-  2) On the Mobile Center push settings, paste this token to the **Push Token** field then click **Done** to complete this configuration. For more information, refer to the [Apple documentation](http://help.apple.com/xcode/mac/current/#/dev11b059073).
+  2) On the Mobile Center push settings, paste this token to the **Push Token** field then click **Done** to complete this configuration. For more information, refer to the [Apple documentation](http://apple.co/2yC1FVu).
   
 #### [Optional] Enable silent notifications  
-Silent notifications give you a way to wake up your app so that it can refresh its data in the background (see [Apple documentation](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW8). To enable silent notifications open Xcode's project editor, choose your target and click **Capabilities**. Turn on **Background Modes** and check the **Remote notifications** checkbox.
+Silent notifications give you a way to wake up your app so that it can refresh its data in the background (see [Apple documentation](http://apple.co/2yA1wji). To enable silent notifications open Xcode's project editor, choose your target and click **Capabilities**. Turn on **Background Modes** and check the **Remote notifications** checkbox.
 
 ## Add Mobile Center Push to your app
 
@@ -711,7 +711,7 @@ If you are integrating Mobile Center into your app via Cocoapods, add the follow
 pod 'MobileCenter/Push'
 ```
 #### Integration by copying the binaries into your project
-If you wish to manually integrate the module, follow this [documentation link](https://docs.microsoft.com/en-us/mobile-center/sdk/push/ios-manual-integration).
+If you wish to manually integrate the module, follow this [documentation link](http://bit.ly/2gvq60k).
 
 ### 2.Start Mobile Center Push
 
@@ -732,7 +732,7 @@ Insert the following line to start the SDK in your app's ```AppDelegate.m``` cla
 MSMobileCenter.start("{Your App Secret}", withServices: [MSPush.self])
 ```
 
-Make sure you have replaced ```{Your App Secret}``` in the code sample above with your App Secret. Please also check out the [Get started section](https://github.com/jCho23/MobileAzureDevDays/tree/master/Swift#get-started-with-ios) if you haven't configured the SDK in your application.
+Make sure you have replaced ```{Your App Secret}``` in the code sample above with your App Secret. Please also check out the [Get started section](http://bit.ly/2gww4ho) if you haven't configured the SDK in your application.
 
 #### 2.3 [Optional] 
 Receive push notifications if you have already implemented ```application:didReceiveRemoteNotification:fetchCompletionHandler``` method
@@ -740,7 +740,7 @@ Receive push notifications if you have already implemented ```application:didRec
 If you or one of your third party libraries already implements ```application:didReceiveRemoteNotification:fetchCompletionHandler``` method, then follow step 4 to implement a callback to receive push notifications.
 
 ## Intercept push notifications
-You can set up a delegate to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The delegate may also be woken up when a notification is received in background if you have enable [silent notifications](https://docs.microsoft.com/en-us/mobile-center/sdk/push/ios#optional-enable-silent-notifications) and if the payload of the notification contains the [content-available](https://docs.microsoft.com/en-us/mobile-center/push/index#custom-data-in-your-notifications) flag set to true.
+You can set up a delegate to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The delegate may also be woken up when a notification is received in background if you have enable [silent notifications](http://bit.ly/2yvRSAK) and if the payload of the notification contains the [content-available](http://bit.ly/2hQWlDC) flag set to true.
 
 By default, iOS does not generate notifications when the push is received in foreground, you can use the delegate to customize the push experience when received in foreground or do a specific action when the application is launched by clicking on the push notification when received in background.
 
