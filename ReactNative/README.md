@@ -1,23 +1,23 @@
 # Abstract
-This simple app has a Text Entry Box and a button that triggers the text to hit the [Azure Sentiment Analysis API](https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/text-analytics-how-to-sentiment-analysis) and returns a corresponding Emoji and changes the background color appropriately.
+This simple app has a Text Entry Box and a button that triggers the text to hit the [Azure Sentiment Analysis API](http://bit.ly/2i9jc13) and returns a corresponding Emoji and changes the background color appropriately.
 
 # Index
-* [Get Started with React Native](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#get-started-with-react-native)
-    * [Prerequisites](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#1-prerequisites)
-* [Build](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-build)
-    * [React Native iOS Build](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#react-native-ios-build)
-    * [React Native Android Build](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#react-native-android-build)
-* [Test](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-test)
-    * [Getting Started with Test Cloud](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#getting-started-with-test-cloud)
-* [Distribute](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-distribute)
-    * [Getting Started with Distribute](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#getting-started-with-distribute)
-* [Analytics](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-analytics)
-    * [Custom Events](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#custom-events)
-* [Crashes](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-crashes)
-    * [Customize your usage of Mobile Center Crashes](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#customize-your-usage-of-mobile-center-crashes)
-* [Push Notifications](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#push-notifications)
-    * [React Native Android Push](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#react-native-android-push)
-    * [React Native iOS Push](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#react-native-ios-push)
+* [Get Started with React Native](http://bit.ly/2yEab6n)
+    * [Prerequisites](http://bit.ly/2zmG00D)
+* [Build](http://bit.ly/2xSLkMY)
+    * [React Native iOS Build](http://bit.ly/2xSBPNN)
+    * [React Native Android Build](http://bit.ly/2xarPet)
+* [Test](http://bit.ly/2zBRPkA)
+    * [Getting Started with Test Cloud](http://bit.ly/2yzCXD9)
+* [Distribute](http://bit.ly/2xabaYc)
+    * [Getting Started with Distribute](http://bit.ly/2gwahpV)
+* [Analytics](http://bit.ly/2zlVp1n)
+    * [Custom Events](http://bit.ly/2x8O0Sd)
+* [Crashes](http://bit.ly/2gSE210)
+    * [Customize your usage of Mobile Center Crashes](http://bit.ly/2gSEzA2)
+* [Push Notifications](http://bit.ly/2io7MXi)
+    * [React Native Android Push](http://bit.ly/2x9yju0)
+    * [React Native iOS Push](http://bit.ly/2gpCw5T)
     
 
 # Get Started with React Native
@@ -30,11 +30,11 @@ Let's get started with setting up Mobile Center React Native SDK in your app to 
 Before you begin, please make sure that the following prerequisites are met:
    * You are using a React Native project that runs React Native 0.34 or later.
    * You are targeting devices that are running on Android Version 4.0.3/API level 15 or later, or iOS version 8.0 or later.
-   * The default way to use the SDK requires [Cocoapods](https://cocoapods.org/). Nonetheless, it is possible to link the SDK manually.
+   * The default way to use the SDK requires [Cocoapods](http://bit.ly/2l0WWrb). Nonetheless, it is possible to link the SDK manually.
 
 ## 2. Create your app in the Mobile Center Portal to obtain the App Secret
 If you have already created your app in the Mobile Center portal, you can skip this step.
-  1) Head over to [mobile.azure.com](https://mobile.azure.com).
+  1) Head over to [mobile.azure.com](http://bit.ly/2ygLNrH).
   2) Sign up or log in and hit the blue button on the top right corner of the portal that says **Add new** and select **Add new app** from the dropdown menu.
   3) Enter a name and an optional desciption for your app.
   4) Select the appropriate OS (Android or iOS) and select **React Native** as the platform.
@@ -49,7 +49,7 @@ Open a Terminal and navigate to the root of your React Native project, then ente
 ```js
 npm install mobile-center mobile-center-analytics mobile-center-crashes --save
 ```
-  1) The Mobile Center SDK uses a modular approach, where you just add the modules for Mobile Center services that you want to use. mobile-center-analytics and mobile-center-crashes make sense to add to almost every app, as they provide value with no additional setup required. mobile-center provides general purpose [Mobile Center APIs](https://docs.microsoft.com/en-us/mobile-center/sdk/other-apis/react-native), useful for multiple services.
+  1) The Mobile Center SDK uses a modular approach, where you just add the modules for Mobile Center services that you want to use. mobile-center-analytics and mobile-center-crashes make sense to add to almost every app, as they provide value with no additional setup required. mobile-center provides general purpose [Mobile Center APIs](http://bit.ly/2gpxA0Y), useful for multiple services.
   2) Link the plugins to the React Native app by using the react-native link command.
   ```js
   react-native link
@@ -79,7 +79,7 @@ What is the iOS App Secret? 0000-0000-0000-0000-000000000000
 If you provided the App Secret previously, you won't be prompted again instead seeing the current value for the secret and where to change it in the source if needed.
 <br>
 <br>
-The SDK will then ask whether or not to send user events automatically. [Learn more about sending user events manually](https://docs.microsoft.com/en-us/mobile-center/sdk/analytics/react-native#wait-for-js-to-enable-mobile-center-analytics).
+The SDK will then ask whether or not to send user events automatically. [Learn more about sending user events manually](http://bit.ly/2yvd2io).
 ```js
 For the Android app, should user tracking be enabled automatically? (Use arrow keys)
     ❯ Enable Automatically
@@ -103,7 +103,7 @@ For the iOS app, should crashes be sent automatically or processed in JavaScript
  ### 3.2 [iOS only] Integrate the iOS SDK manually
  We **strongly** recommend integrating the SDK via Cocoapodse as described above. Nonetheless, it's also possible to integrate the iOS native SDK manually.
  
-  1) Download the [Mobile Center SDK for React Native frameworks](https://github.com/Microsoft/mobile-center-sdk-react-native/releases/tag/0.10.0) provided as a zip file.
+  1) Download the [Mobile Center SDK for React Native frameworks](http://bit.ly/2gSn3fy) provided as a zip file.
   2) From the release notes on Github, please also download the corresponding frameworks of the Mobile Center SDK for iOS.
   3) Unzip both archives and you will see a folder called ```MobileCenter-SDK-Apple/iOS``` that contains different frameworks for each Mobile Center service. The framework called ```MobileCenter``` is required in the project as it contains code that is shared between the different modules. You will also see a folder named ```RNMobileCenterShared``` which contains a single framework for the React Native bridge for iOS which is also required.
   4) [Optional] Create a subdirectory for 3rd-party libraries.
@@ -116,7 +116,7 @@ Now drag and drop ```MobileCenter.framework```, ```MobileCenterAnalytics.framewo
 A dialog will appear, make sure your app target is checked. Then click **Finish**.
 
 ## 4. Start the SDK
-Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. There is no additional setup required. Look at [Analytics](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-analytics) and [Crashes](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#mobile-center-crashes) section for APIs guides and walkthroughs to learn what Mobile Center can do.
+Great, you are all set to visualize Analytics and Crashes data on the portal that the SDK collects automatically. There is no additional setup required. Look at [Analytics](http://bit.ly/2zlVp1n) and [Crashes](http://bit.ly/2gSE210) section for APIs guides and walkthroughs to learn what Mobile Center can do.
 
 
 
@@ -158,11 +158,11 @@ When enabled, the ```CFBundleVersion``` in the Info.plist of your app automatica
 
 #### 3.5. Code signing
 
-A successful build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload a [provisioning profile (.mobileprovision) and a valid certificate (.p12)](https://docs.microsoft.com/en-us/mobile-center/build/ios/code-signing/uploading-files), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. You can read more about [code signing here](https://docs.microsoft.com/en-us/mobile-center/build/ios/code-signing/index) and in the [Apple Developer official documentation](https://developer.apple.com/support/code-signing/).
+A successful build will produce an ipa file. In order to install the build on a device, it needs to be signed with a valid provisioning profile and certificate. To sign the builds produced from a branch, enable code signing in the configuration pane and upload a [provisioning profile (.mobileprovision) and a valid certificate (.p12)](http://bit.ly/2g8RjSF), along with the password for the certificate. The settings in your Xcode project need to be compatible with the files you are uploading. You can read more about [code signing here](http://bit.ly/2yJfJxj) and in the [Apple Developer official documentation](http://apple.co/2yV5Ts6).
 
 #### 3.6. Launch your successful build on a real device
 
-Use your newly produced IPA file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. [Read more about it here](https://docs.microsoft.com/en-us/mobile-center/build/build-test-integration).
+Use your newly produced IPA file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. [Read more about it here](http://bit.ly/2yk8SaG).
 
 #### 3.7. CocoaPods
 
@@ -195,9 +195,9 @@ For a completed build (succeeded or failed), download the logs to understand mor
 
 #### 4.2. The app (.ipa)
 The .ipa is an iPhone application archive file which stores the iOS app.
-* if the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. More details about code signing and distribution with Mobile Center can be [found here](https://docs.microsoft.com/en-us/mobile-center/build/ios/code-signing/index).
+* if the build has been correctly signed, the .ipa can be installed on a real device, corresponding to the provisioning profile used when signing. More details about code signing and distribution with Mobile Center can be [found here](http://bit.ly/2yJfJxj).
 * if the build has not been signed, the .ipa can be signed by the developer (e.g. locally using codesign) or used for other purposes (e.g. upload to the Test service for UI testing on real devices or run in the simulator)
-* All builds kicked off after May 17th are generated by [xcodebuild](https://docs.microsoft.com/en-us/mobile-center/build/ios/xcodebuild). Unsigned builds will not produce an. ipa file. The artifact of an unsigned build is the .xcarchive file which can be used to generate an .ipa file with the Xcode Archives organizer.
+* All builds kicked off after May 17th are generated by [xcodebuild](http://bit.ly/2yzQ9bc). Unsigned builds will not produce an. ipa file. The artifact of an unsigned build is the .xcarchive file which can be used to generate an .ipa file with the Xcode Archives organizer.
 
 #### 4.3. The source maps and symbol files
 Upon building a React Native iOS app, a JavaScript source map and one or multiple .dsym files are automatically generated with each build and can be downloaded once the build is completed.+
@@ -212,7 +212,7 @@ If this app has the crashes SDK integrated, iOS symbols and source maps will aut
 ### 5. Build tips
 #### 5.1. Yarn
 
-[Yarn](https://yarnpkg.com/en/) is a faster, more deterministic replacement for ```npm```. If a ```yarn.lock``` file is present in your repo next to ```package.json```, then Mobile Center will use Yarn, doing ```yarn install``` at the start of the build. Otherwise, it will do ```npm install```.
+[Yarn](http://bit.ly/2yASfJm) is a faster, more deterministic replacement for ```npm```. If a ```yarn.lock``` file is present in your repo next to ```package.json```, then Mobile Center will use Yarn, doing ```yarn install``` at the start of the build. Otherwise, it will do ```npm install```.
 
 
 #### 5.2. Custom build scripts
@@ -220,7 +220,7 @@ If this app has the crashes SDK integrated, iOS symbols and source maps will aut
 In some scenarios you may want to run a script at the start of the build. For instance, if your React Native app uses TypeScript, then you'll want to run the ```tsc``` compiler at build start.
 <br>
 <br>
-Mobile Center will have a [dedicated feature](https://docs.microsoft.com/en-us/mobile-center/general/roadmap#build-service) for running custom scripts as part of a build. But for now you can achieve the same effect by creating a ```postinstall``` script in ```package.json```, adding a command like this:
+Mobile Center will have a [dedicated feature](http://bit.ly/2yDIRFi) for running custom scripts as part of a build. But for now you can achieve the same effect by creating a ```postinstall``` script in ```package.json```, adding a command like this:
 ```js
 "scripts": {
     ...
@@ -262,11 +262,11 @@ When enabled, the version code in the AndroidManifest.xml of your app automatica
 
 #### 3.5. Launch your successful build on a real device
 
-Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. [Read more about it here](https://docs.microsoft.com/en-us/mobile-center/build/build-test-integration).
+Use your newly produced APK file to test if your app starts on a real device. This will add approximately 10 more minutes to the total build time. [Read more about it here](http://bit.ly/2yk8SaG).
 
 #### 3.6. Code signing
 
-A successful build will produce an APK file. In order to release the build to the Play Store, it needs to be signed with a valid certificate stored in a keystore. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your keystore to your repository, and provide the relevant values in the configuration pane. You can read more about [code signing here](https://docs.microsoft.com/en-us/mobile-center/build/android/code-signing/setup).
+A successful build will produce an APK file. In order to release the build to the Play Store, it needs to be signed with a valid certificate stored in a keystore. To sign the builds produced from a branch, enable code signing in the configuration pane, upload your keystore to your repository, and provide the relevant values in the configuration pane. You can read more about [code signing here](http://bit.ly/2kN5bXD).
 
 #### 3.7. Distribution to a distribution group
 
@@ -312,7 +312,7 @@ The minimum version supported to build Android apps is 4.0.3 (API level 15). And
 In some scenarios you may want to run a script at the start of the build. For instance, if your React Native app uses TypeScript, then you'll want to run the ```tsc``` compiler at build start.
 <br>
 <br>
-Mobile Center will have a [dedicated feature](https://docs.microsoft.com/en-us/mobile-center/general/roadmap#build-service) for running custom scripts as part of a build. But for now you can achieve the same effect by creating a ```postinstall``` script in package.json, adding a command like this:
+Mobile Center will have a [dedicated feature](http://bit.ly/2yDIRFi) for running custom scripts as part of a build. But for now you can achieve the same effect by creating a ```postinstall``` script in package.json, adding a command like this:
 ```js
 "scripts": {
     ...
@@ -321,7 +321,7 @@ Mobile Center will have a [dedicated feature](https://docs.microsoft.com/en-us/m
 ```
 
 #### 6.3. Building multiple APKs
-For React Native on Android, universal APK generation is disabled by default. If your app configuration is set up to build multiple APKs, e.g. different ones per CPU architecture or screen configuration, you need to make sure a universal APK is built as well. Our build system works with one main APK file and will ignore all APKs specific to a certain CPU/ABI or screen density. To learn more about APK splits and how to build a universal APK, please read the corresponding [Android developer guide](https://developer.android.com/studio/build/configure-apk-splits.html#configure-abi-split). In general, make sure that ```universalApk``` is set to ```true``` for your React Native build configuration.
+For React Native on Android, universal APK generation is disabled by default. If your app configuration is set up to build multiple APKs, e.g. different ones per CPU architecture or screen configuration, you need to make sure a universal APK is built as well. Our build system works with one main APK file and will ignore all APKs specific to a certain CPU/ABI or screen density. To learn more about APK splits and how to build a universal APK, please read the corresponding [Android developer guide](http://bit.ly/2ykaykj). In general, make sure that ```universalApk``` is set to ```true``` for your React Native build configuration.
 <br>
 <br>
 Postinstall scripts run right after all the ```package.json``` packages are installed, so you use those packages in your script.
@@ -332,20 +332,20 @@ Postinstall scripts run right after all the ```package.json``` packages are inst
 ## Getting Started with Test Cloud
 The prerequisite steps below must be completed before a project can be used with Mobile Center Test Cloud.
   1. Create a Mobile Center account
-Create a Mobile Center account at [mobile.azure.com](https://mobile.azure.com/login?original_url=%2F) to gain access to Test Cloud.
+Create a Mobile Center account at [mobile.azure.com](http://bit.ly/2ygLNrH) to gain access to Test Cloud.
   2. Install the Mobile Center CLI
-Test runs are executed using the Mobile Center CLI. If not already installed, follow [these instructions](https://docs.microsoft.com/en-us/mobile-center/cli/index) to install. After installation, run mobile-center login to link a Mobile Center account with the tool.
+Test runs are executed using the Mobile Center CLI. If not already installed, follow [these instructions](http://bit.ly/2gClGRM) to install. After installation, run mobile-center login to link a Mobile Center account with the tool.
   3. Create an app in Mobile Center
 All test assets and operations are within the context of an app. Create the app project to be tested.
   4. Review the core concepts
-Understanding the core concepts of the Test Cloud experience improve ease of use, navigation, and communications with support. It is recommended to become familiar with [these concepts](https://docs.microsoft.com/en-us/mobile-center/test-cloud/core-concepts) before running your first tests.
+Understanding the core concepts of the Test Cloud experience improve ease of use, navigation, and communications with support. It is recommended to become familiar with [these concepts](http://bit.ly/2xDn38x) before running your first tests.
   5. Prepare the project for upload
-Each test framework has different requirements for uploading to Test Cloud. Follow the appropriate test framework branch from [this page.](https://docs.microsoft.com/en-us/mobile-center/test-cloud/preparing-for-upload/index)
+Each test framework has different requirements for uploading to Test Cloud. Follow the appropriate test framework branch from [this page.](http://bit.ly/2yhxeBC)
 
 ## Starting a Test Run
-This section provides instructions for initiating a test run with test suites that have been prepared for upload. To learn how to prepare a test suite for upload to Test Cloud, see [preparing tests for upload.](https://docs.microsoft.com/en-us/mobile-center/test-cloud/preparing-for-upload/index) <br>
+This section provides instructions for initiating a test run with test suites that have been prepared for upload. To learn how to prepare a test suite for upload to Test Cloud, see [preparing tests for upload.](http://bit.ly/2yhxeBC) <br>
 
-Initiating a test run in Test Cloud requires the [Mobile Center CLI tool.](https://docs.microsoft.com/en-us/mobile-center/cli/index) <br>
+Initiating a test run in Test Cloud requires the [Mobile Center CLI tool.](http://bit.ly/2gClGRM) <br>
 
 With the Mobile Center CLI tool installed and upload preparation complete, initiating a test run is very straightforward as the UI will guide you through the necessary steps. Begin by navigating to the Test Cloud section within the desired app. Clicking the ```new test run``` button will launch a dialog which will lead you through the 3 steps of preparing a test run.
 
@@ -353,7 +353,7 @@ With the Mobile Center CLI tool installed and upload preparation complete, initi
 Select the devices against which this test run should execute. This collection of devices can optionally be saved as a set for future use. To save the set, follow the on-screen prompts.
 
 ### Test run configuration
-Select the test framework, set the device locale, and select a test series. Device locale will determine the system-level device settings, such as language. For more on test series, [see this section.](https://docs.microsoft.com/en-us/mobile-center/test-cloud/core-concepts)
+Select the test framework, set the device locale, and select a test series. Device locale will determine the system-level device settings, such as language. For more on test series, [see this section.](http://bit.ly/2xDn38x)
 
 ### The generated command
 Each selection from the previous steps will be used to generate a command which is used with the Mobile Center CLI to initiate a test run. For example, a command generated for an Android app with Espresso tests might look like:
@@ -396,12 +396,12 @@ Mobile Center Distribution is a tool to for developers to release application bi
 
 ## Getting Started with Distribute
 Distributing with Mobile Center is easy, and only requires a few steps. No need for an SDK. Just the application binary.
-  1) [Add users to your app](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#creating-and-managing-apps) to grant access to all releases.
-  2) Create [Distribution Groups](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#manage-distribution-groups) to manage access.
-  3) [Upload](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#release-a-build) a new application release.
+  1) [Add users to your app](http://bit.ly/2l1IjE9) to grant access to all releases.
+  2) Create [Distribution Groups](http://bit.ly/2gSLKZ8) to manage access.
+  3) [Upload](http://bit.ly/2gTQ7TU) a new application release.
       * At the completion of the upload an email will be sent to all users of the app to notify them of the new release.
-  4) [Install](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#release-a-build) the release onto your device by clicking on the link in the email.
-  5) [Enable In-App Updates](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#in-app-updates) to help your users stay always on the latest release.
+  4) [Install](http://bit.ly/2gTQ7TU) the release onto your device by clicking on the link in the email.
+  5) [Enable In-App Updates](http://bit.ly/2gvXuUx) to help your users stay always on the latest release.
 
 ## Creating and managing apps
 
@@ -432,7 +432,7 @@ To create a new Distribution Group select the "New Group" group button from the 
 Clicking on a Distribution Group will allow for management of the group. You can use the invitation box to add additional users. Or select users from the table to remove them from the group. From this page you can also see the full release history for this Distribution Group by clicking on the releases tab.
 
 ### Releasing a Build to a Distribution Group
-To [release a new build](https://docs.microsoft.com/en-us/mobile-center/distribution/uploading) to a Distribution Group. Make use of the "Distribute new Release" button at the top of the screen and choose the Distribution Group from the list during the steps.
+To [release a new build](http://bit.ly/2yBFWes) to a Distribution Group. Make use of the "Distribute new Release" button at the top of the screen and choose the Distribution Group from the list during the steps.
 
 
 
@@ -441,23 +441,23 @@ In order to distribute a release via Mobile Center, you must first upload your a
 
 ### Generating an application binary package
 #### iOS
-You will need to use the following steps to generate an IPA package for your application. For full details of this process please see the official [Apple documentation.](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/TestingYouriOSApp/TestingYouriOSApp.html#//apple_ref/doc/uid/TP40012582-CH8-SW1) <br>
- 1) [Register UDIDs](https://docs.microsoft.com/en-us/mobile-center/distribution/auto-provisioning) for all hardware devices in your provisioning profile.
+You will need to use the following steps to generate an IPA package for your application. For full details of this process please see the official [Apple documentation.](http://apple.co/2zo1VEN) <br>
+ 1) [Register UDIDs](http://bit.ly/2hR6kcd) for all hardware devices in your provisioning profile.
  2) Archive your application. In Xcode go to ```Product > Archive```
  3) Export the archive using the proper provisioning profile. Make sure to remember where the IPA file was placed on disk.
 
 #### Android
-For Android you will need to produce a properly signed apk file. For full details of this process please see the official [Google documentation.](https://developer.android.com/studio/publish/preparing.html) <br>
- 1) Ensure you have [updated the manifest](https://developer.android.com/guide/topics/manifest/manifest-intro.html) and have a [properly configured Gradle build.](https://developer.android.com/studio/build/build-variants.html)
+For Android you will need to produce a properly signed apk file. For full details of this process please see the official [Google documentation.](http://bit.ly/2yViyvh) <br>
+ 1) Ensure you have [updated the manifest](http://bit.ly/2xTx8U7) and have a [properly configured Gradle build.](http://bit.ly/2ilzPqh)
 Build the APK. From Android Studio select the build variant and then execute command ```Build > Build APK```
 
 ### Uploading the package
 To upload a package to Mobile Center, use the navigation bar on the left to navigate to Distirbution. Then select "Distribute new release" button. Drag and drop or click to open a file dialog to upload your package. Optionally fill in some release notes. Select next and select a Distribution Group. This release will only be available to the users that have been added to that specific Distribution Group. Click next and review the release, then click distribute to release. On clicking the distribute button the release will be made available via Mobile Center and an email notification of the new version will be sent to all users of this application. Congrats, you have successful distributed a release via Mobile Center.
 
 ### Uploading using the APIs
- 1) Pre-req: [Obtain an API token.](https://docs.microsoft.com/en-us/mobile-center/api-docs/) API Token is used for authentication for all Mobile Center API calls.
+ 1) Pre-req: [Obtain an API token.](http://bit.ly/2gSRUIT) API Token is used for authentication for all Mobile Center API calls.
  2) Upload a new release. This is 3 or more API calls.
-    a. Create an upload resource and get an ```upload_url``` (good for 24 hours) — [POST /createReleaseUpload](https://docs.mobile.azure.com/api/#!/distribute/createReleaseUpload)
+    a. Create an upload resource and get an ```upload_url``` (good for 24 hours) — [POST /createReleaseUpload](http://bit.ly/2gRKrd0)
     ```csharp
     curl -X POST --header 'Content-Type: application/json' --header 'Accept:
     application/json' --header 'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
@@ -468,13 +468,13 @@ To upload a package to Mobile Center, use the navigation bar on the left to navi
     curl -F "ipa=@Versions_1_1_0_12.ipa" https://rink.hockeyapp.net/api/sonoma/apps/cacf9867-87f7-4649-
     a400-632a775dde2d/app_versions/upload\?upload_id\=c18df340-069f-0135-3290-22000b559634
     ```
-    c. After upload has finished, update upload resource's status to committed and get a ```release_url``` — [PATCH /updateReleaseUpload](https://docs.mobile.azure.com/api/#/distribute/updateReleaseUpload)
+    c. After upload has finished, update upload resource's status to committed and get a ```release_url``` — [PATCH /updateReleaseUpload](http://bit.ly/2io8Eva)
     ```csharp
     curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header 
     'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d '{ "status": "committed" }'
     'https://api.mobile.azure.com/v0.1/apps/JoshuaWeber/APITesting/release_uploads/c18df340-069f-0135-3290-22000b559634'
     ```
- 3) Distribute the uploaded release to a distribution group — [PATCH /updateRelease](https://docs.mobile.azure.com/api/#!/distribute/updateRelease)
+ 3) Distribute the uploaded release to a distribution group — [PATCH /updateRelease](http://bit.ly/2yCJQUp)
  ```csharp
  curl -X PATCH --header 'Content-Type: application/json' --header 'Accept: application/json' --header
  'X-API-Token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' -d 
@@ -484,13 +484,13 @@ To upload a package to Mobile Center, use the navigation bar on the left to navi
  
  
  ## Install a Build
-Installation of an application being distributed by Mobile Center begins with an email. If you have access to the application you will receive a notification email for each new version available. Simply click on the install link in the email to begin the process. You will need to enter your credentials to login. If this is your first time accessing Mobile Center, you can instead [create a new account](https://docs.microsoft.com/en-us/mobile-center/dashboard/creating-and-managing-apps). Once logged in you can review the application information and release notes, and click the install button to trigger installation onto your device.
+Installation of an application being distributed by Mobile Center begins with an email. If you have access to the application you will receive a notification email for each new version available. Simply click on the install link in the email to begin the process. You will need to enter your credentials to login. If this is your first time accessing Mobile Center, you can instead [create a new account](http://bit.ly/2yVphFJ). Once logged in you can review the application information and release notes, and click the install button to trigger installation onto your device.
 <br>
 <br>
 On **iOS** you must open the email install link in Safari, only Safari supports the installation APIs.
 <br>
 <br>
-On **Android** you must open the email install link in Chrome. On some devices, versions 57 and 58 of Chrome will not open the downloaded files (clicking the downloaded file will say "can't open file"). As a workaround, testers that hit this issue can use Chrome Canary instead. For more information about this bug see [Google Chrome Help Forum](https://productforums.google.com/forum/#!topic/chrome/gas7OCTHZHo).
+On **Android** you must open the email install link in Chrome. On some devices, versions 57 and 58 of Chrome will not open the downloaded files (clicking the downloaded file will say "can't open file"). As a workaround, testers that hit this issue can use Chrome Canary instead. For more information about this bug see [Google Chrome Help Forum](http://bit.ly/2yuJlxZ).
 
 ### Windows and Certificates Requirements
 To install a windows package requires a trusted root certificate installed in the root certificate chain for the device you are installing too. The most common solution is for the developer to sign a application package with a purchased 3rd party provider trusted root certificate. This certificate will chain to through the third party to the Microsoft root store and so will be a trusted cert for all user devices. Developers can opt to use a self-created test certificate and sign the application package, however it will result in additional steps for testers at installation time.
@@ -512,7 +512,7 @@ You can install a test signed app by first installing the test certificate (whic
 
 
 ## In-App Updates
-Enable your tester to easily stay up to date with the latest releases. Integrate the Mobile Center SDK (and the Distribution Module) for [iOS](https://docs.microsoft.com/en-us/mobile-center/sdk/distribute/ios) and [Android](https://docs.microsoft.com/en-us/mobile-center/sdk/distribute/android) to automatically enable in-app notification of new releases. Once completed all future releases through Mobile Center will trigger an in-app notification for each user allowing a quick upgrade to the latest version.
+Enable your tester to easily stay up to date with the latest releases. Integrate the Mobile Center SDK (and the Distribution Module) for [iOS](http://bit.ly/2hQofj3) and [Android](http://bit.ly/2gCC2Kr) to automatically enable in-app notification of new releases. Once completed all future releases through Mobile Center will trigger an in-app notification for each user allowing a quick upgrade to the latest version.
 
 
 
@@ -531,7 +531,7 @@ Enable your tester to easily stay up to date with the latest releases. Integrate
 # Mobile Center Analytics
 Mobile Center Analytics helps you understand user behavior and customer engagement to improve your app. The SDK automatically captures session count and device properties like model, OS version, etc. You can define your own custom events to measure things that matter to you. All the information captured is available in the Mobile Center portal for you to analyze the data.
 
-Please follow the [Get started section](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#get-started-with-react-native) if you haven't set up the SDK in your application yet.
+Please follow the [Get started section](http://bit.ly/2yEab6n) if you haven't set up the SDK in your application yet.
 
 ## Session and device information
 Once you add Mobile Center Analytics to your app and the SDK is started, it will automatically track sessions and device properties like OS Version, model, etc. You don’t need to write any additional code.
@@ -588,7 +588,7 @@ await Analytics.setEnabled(true);
 Mobile Center Crashes will automatically generate a crash log every time your app crashes. The log is first written to the device's storage and when the user starts the app again, the crash report will be sent to Mobile Center. Collecting crashes works for both beta and live apps, i.e. those submitted to Google Play. Crash logs contain valuable information for you to help fix the crash.
 <br>
 <br>
-Please follow the [Get started section](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#get-started-with-react-native) if you haven't set up the SDK in your application yet.
+Please follow the [Get started section](http://bit.ly/2yEab6n) if you haven't set up the SDK in your application yet.
 <br>
 <br>
 Wherever you are using Mobile Center Crashes, add the following import at the top of the file.
@@ -676,7 +676,7 @@ Crashes.setEventListener({
  All callbacks are optional. You don't have to provide all 3 methods in the event listener object, for example you can implement only ```willSendCrash```.
  <br>
  <br>
- To use that feature you need to have answered **Processed in JavaScript by user** when executing ```react-native link``` for the Crash service configuration. This feature is thus dependent on [Processing crashes in JavaScript](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#processing-crashes-in-javascript).
+ To use that feature you need to have answered **Processed in JavaScript by user** when executing ```react-native link``` for the Crash service configuration. This feature is thus dependent on [Processing crashes in JavaScript](http://bit.ly/2l3BqC8).
  
  If you configure crashes to be sent automatically, you will likely register the listener too late and thus the crashes would already be sent before Javascript loads your custom code.
  <br>
@@ -714,10 +714,10 @@ const enabled = await Crashes.isEnabled();
 In order to set up Push Notifications, you will have to set up the Push Mobile Center SDK, as well as the platform specific push services (Firebase Cloud Messaging (FCM), Apple Notifications Service (APNs), Windows Notifications Services (WNS). These instructions can be found in the Mobile Center Push portal, as well as in the Mobile Center SDK docs. You can follow the instructions provided in the Mobile Center portal, along with our detailed instructions found in the following links:
 
 ## React Native Android Push
-Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal. Mobile Center portal and the Push SDK is integrated with [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/).
+Mobile Center Push enables you to send push notifications to users of your app from the Mobile Center portal. Mobile Center portal and the Push SDK is integrated with [Firebase Cloud Messaging](http://bit.ly/2ylZCEt).
 <br>
 <br>
-Note that only devices having the [Google Play](https://play.google.com/store) store application or emulators with **Google APIs** images can receive the notifications.
+Note that only devices having the [Google Play](http://bit.ly/2kNmQ1p) store application or emulators with **Google APIs** images can receive the notifications.
 
 **Firebase displays a notification in the system notification center only if the application is in background at the moment the Push is received.**
 
@@ -725,14 +725,14 @@ Note that only devices having the [Google Play](https://play.google.com/store) s
 Before using Mobile Center Push service, you need to add Firebase to your application. You can either choose a manual integration or Firebase Assistant.
 
 ### 1. Prerequisites
-Please learn about [Prerequisites](https://firebase.google.com/docs/android/setup#prerequisites), in particular please make sure to keep Google Repository up-to-date in the [Android SDK Manager](https://developer.android.com/studio/intro/update.html#sdk-manager).
+Please learn about [Prerequisites](http://bit.ly/2z6oEov), in particular please make sure to keep Google Repository up-to-date in the [Android SDK Manager](http://bit.ly/2xDNqQI).
 
 ### 2. Manual integration
-  1) Follow the instructions listed in [Manually add Firebase](https://firebase.google.com/docs/android/setup#manually_add_firebase) section.
+  1) Follow the instructions listed in [Manually add Firebase](http://bit.ly/2ylgRGo) section.
   2) Make sure to continue following instructions in **Add the SDK** sub section right after but do not add ```compile "com.google.firebase:firebase-core:${version}"``` as the SDK manages this step for you can it could trigger incompatibilities if versions mismatch.
   
 ### Using Firebase Assistant
-  1) Follow [these instructions](https://developer.android.com/studio/write/firebase.html) if you don't see ```Firebase``` in the ```Tools``` menu.
+  1) Follow [these instructions](http://bit.ly/2gak4hQ) if you don't see ```Firebase``` in the ```Tools``` menu.
   2) Click on Tools > Firebase and follow **only** the first two following steps:
         * Connect your app to Firebase
         * Add FCM to your app
@@ -746,7 +746,7 @@ Please remove this if added automatically as the SDK manages this for you can it
 Go to Project Settings and under Cloud Messaging, copy your Server Key. This will be the Android API Key that you will need to set in the Mobile Center Push portal.
 
 ## Add Mobile Center Push to your app
-Please follow the [Get started section](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#get-started-with-react-native) if you haven't set up the SDK in your application yet.
+Please follow the [Get started section](http://bit.ly/2yEab6n) if you haven't set up the SDK in your application yet.
 <br>
 <br>
 The Mobile Center SDK is designed with a **modular approach** – you only need to integrate the services that you're interested in.
@@ -871,16 +871,16 @@ Collect the following information:
 
   **3) Push Token**
 * Open your key file with a text editor and copy the authentication token it contains.
-* On the Mobile Center push settings, paste this token to the **Push Token** field then click **Done** to complete this configuration. For more information, refer to the [Apple documentation](http://help.apple.com/xcode/mac/current/#/dev11b059073).
+* On the Mobile Center push settings, paste this token to the **Push Token** field then click **Done** to complete this configuration. For more information, refer to the [Apple documentation](http://apple.co/2yC1FVu).
 
 #### [Optional] Enable silent notifications
-Silent notifications give you a way to wake up your app so that it can refresh its data in the background (see [Apple documentation](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW8)). To enable silent notifications open Xcode's project editor, choose your target and click **Capabilities**. Turn on **Background Modes** and check the **Remote notifications** checkbox.
+Silent notifications give you a way to wake up your app so that it can refresh its data in the background (see [Apple documentation](http://apple.co/2yA1wji. To enable silent notifications open Xcode's project editor, choose your target and click **Capabilities**. Turn on **Background Modes** and check the **Remote notifications** checkbox.
  
 ## Add Mobile Center Push to your app
 
 ### 1) Add the Mobile Center Push module
 
-Please follow the [Get started section](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#get-started-with-react-native) if you haven't set up the SDK in your application yet.
+Please follow the [Get started section](http://bit.ly/2yEab6n) if you haven't set up the SDK in your application yet.
 <br>
 <br>
 The Mobile Center SDK is designed with a **modular approach** – you only need to integrate the services that you're interested in.
@@ -896,7 +896,7 @@ The default integration of the SDK uses Cocoapods for iOS.
    react-native link mobile-center-push
    ```
 #### Integrate the iOS SDK manually
-If you wish to manually integrate the module, follow the manual integration steps at [documentation link](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#32-ios-only-integrate-the-ios-sdk-manually).
+If you wish to manually integrate the module, follow the manual integration steps at [documentation link](http://bit.ly/2xRNhEu).
 
 ### 2.Start Mobile Center Push
 
@@ -919,7 +919,7 @@ Note that when the app calls ```register``` for the first time after being insta
 If you or one of your third party libraries already implements application:didReceiveRemoteNotification:fetchCompletionHandler method, then follow step 4 to implement a callback to receive push notifications.
 
 ## Intercept push notifications
-You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The listener may also be woken up when a notification is received in background if you have enable [silent notifications](https://github.com/jCho23/MobileAzureDevDays/tree/master/ReactNative#22-optional-receive-push-notifications-if-you-have-already-implemented-applicationdidreceiveremotenotificationfetchcompletionhandler-method) and if the payload of the notification contains the [content-available](https://docs.microsoft.com/en-us/mobile-center/push/index#custom-data-in-your-notifications) flag set to true.
+You can set up a listener to be notified whenever a push notification is received in foreground or a background push notification has been tapped by the user. The listener may also be woken up when a notification is received in background if you have enable [silent notifications](http://bit.ly/2yCNFuK) and if the payload of the notification contains the [content-available](http://bit.ly/2hQWlDC) flag set to true.
 <br>
 <br>
 If silent notifications are enabled and you push a notification with ```content-available```: 1, then the listener may be triggered twice for the same notification: when the notification is received in background and when it is tapped.
