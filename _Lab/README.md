@@ -43,7 +43,8 @@ To check to see if you have an Azure subscription already, browse to [https://po
 
 If you do not already have an account/subscription, you will be prompted to create one.  If you need to create a new account/subscription, browse to [https://azure.microsoft.com/en-us/free/](https://azure.microsoft.com/en-us/free/), and click the "Start free" button to begin starting your account.
 
-Note: You will need to enter in a credit card to create your account.  This card will _only_ be used to pay for charges that exceeed your monthly allocation (e.g. $150/mo for Enterprise users).
+### Note: 
+You will need to enter in a credit card to create your account.  This card will _only_ be used to pay for charges that exceeed your monthly allocation (e.g. $150/mo for Enterprise users).
 
 # Step 4: Grab your "Sentiment Analysis" API Key
 
