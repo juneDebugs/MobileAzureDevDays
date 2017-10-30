@@ -9,7 +9,7 @@ If you already have a GitHub account, you can jump directly to Step 2 below.  Ot
 
 3. Chose "Unlimited public repositories for free." This is sufficient for this exercise, and you can easily upgrade to a paid account later.
 
-![Create new account](images/1-2-choose-free-account.png)
+![Create new account](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/1-2-choose-free-account.png)
 
 4. Choose any additional options, or simply click "skip this step"
 
