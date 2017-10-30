@@ -13,11 +13,11 @@ If you already have a GitHub account, you can jump directly to Step 2 below.  Ot
 
 4. Choose any additional options, or simply click "skip this step"
 
-![Create new account](images/1-3-additional-account-options.png)
+![Create new account](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/1-3-additional-account-options.png)
 
 5. Confirm your e-mail address by clicking the "Verify email address" link in the e-mail you received to the address used in step 2 above. (note, if you skip this step, you won't be able to continue with the tutorial).
 
-![Create new account](images/1-4-verify-email.png)
+![Create new account](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/1-4-verify-email.png)
 
 Congrats! You're now ready to move on to Step 2: Forking the repo
 
