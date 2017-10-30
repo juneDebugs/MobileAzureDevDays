@@ -49,12 +49,12 @@ Note: You will need to enter in a credit card to create your account.  This card
 
 1. Navigation to [https://ms.portal.azure.com/#blade/HubsExtension/Resources/resourceType/Microsoft.CognitiveServices%2Faccounts](https://ms.portal.azure.com/#blade/HubsExtension/Resources/resourceType/Microsoft.CognitiveServices%2Faccounts).
 
-![Create new account](images/4-1-cognitive-services.png)
+![Create new account](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/4-1-cognitive-services.png)
 
 2. Click the "Add" button
 3. Search for `Text Analytics API`
 
-![Search Results](images/4-2-search-results.png)
+![Search Results](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/4-2-search-results.png)
 
 
 
