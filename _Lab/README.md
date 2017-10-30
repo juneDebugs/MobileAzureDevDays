@@ -82,6 +82,8 @@ Complete the fields as required
 - MobileAzureDevDays > Xamarin > MobileAzureDevDays > Services
 
 2. Choose the file TextAnalysis.cs, end then choose the "Edit" icon
+
+
 3. Paste your API key from step 4.3 above into the `_sentimentAPIKey` variable on line 14
 4. Scroll to the bottom and enter in any comment into the "Commit changes" field set, and click "Commit changes" button to commit your key to source control
 
