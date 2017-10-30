@@ -25,11 +25,11 @@ Congrats! You're now ready to move on to Step 2: Forking the repo
 
 1. Navigate to [https://github.com/jCho23/MobileAzureDevDays](https://github.com/jCho23/MobileAzureDevDays)
 
-![Create new account](images/2-1-fork-repo.png)
+![Create new account](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/2-1-fork-repo.png)
 
 2. Click the "Fork" icon in the top right corner.  You'll be brought to a subsequent screen showing that the repo is being forked, and then you'll ultimately arrive at your own forked copy of the repo that you'll use for the remainder of this exercise.
 
-![Create new account](images/2-2-repo-forking.png)
+![Create new account](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/2-2-repo-forking.png)
 
 # Step 3: Create your Azure Account
 
