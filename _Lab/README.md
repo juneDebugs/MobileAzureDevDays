@@ -1,4 +1,4 @@
-#Step 1: Create a GitHub Account
+# Step 1: Create a GitHub Account
 
 If you already have a GitHub account, you can jump directly to Step 2 below.  Otherwise, please follow these steps to create your account:
 
@@ -21,7 +21,7 @@ If you already have a GitHub account, you can jump directly to Step 2 below.  Ot
 
 Congrats! You're now ready to move on to Step 2: Forking the repo
 
-#Step 2: Forking the "MobileAzureDevDays" repo
+# Step 2: Forking the "MobileAzureDevDays" repo
 
 1. Navigate to [https://github.com/jCho23/MobileAzureDevDays](https://github.com/jCho23/MobileAzureDevDays)
 
@@ -31,7 +31,7 @@ Congrats! You're now ready to move on to Step 2: Forking the repo
 
 ![Create new account](images/2-2-repo-forking.png)
 
-#Step 3: Create your Azure Account
+# Step 3: Create your Azure Account
 
 There are several different ways to create an Azure account.  A few examples are:
 
@@ -45,7 +45,7 @@ If you do not already have an account/subscription, you will be prompted to crea
 
 Note: You will need to enter in a credit card to create your account.  This card will _only_ be used to pay for charges that exceeed your monthly allocation (e.g. $150/mo for Enterprise users).
 
-#Step 4: Grab your "Sentiment Analysis" API Key
+# Step 4: Grab your "Sentiment Analysis" API Key
 
 1. Navigation to [https://ms.portal.azure.com/#blade/HubsExtension/Resources/resourceType/Microsoft.CognitiveServices%2Faccounts](https://ms.portal.azure.com/#blade/HubsExtension/Resources/resourceType/Microsoft.CognitiveServices%2Faccounts).
 
@@ -71,7 +71,7 @@ Complete the fields as required
 2. Once your Computer Vision app has been created, browse to the resource in the Azure portal.
 3. Select the "Keys" blade, and copy one of the two available keys
 
-#Step 5: Update your code in GitHub with the API key
+# Step 5: Update your code in GitHub with the API key
 
 1. Browse to your GitHub repo, and then select 
 
@@ -84,7 +84,7 @@ Complete the fields as required
 Note: For this exercise, we are commiting your API key to source control.  In general, we recommend using services like [Azure Key Vault](https://azure.microsoft.com/en-us/services/key-vault/) to securely store your API keys, and integrate them into your code during your build.
 
 
-#Step 6: Create your Mobile Center Account
+# Step 6: Create your Mobile Center Account
 
 In this step, we're not going to sign into Mobile Center using our Github credentials, and set up our builds. Since you are already signed in to GitHub, we can simply authorize Mobile Center to access your GitHub repositories using the following steps.
 
@@ -92,7 +92,8 @@ In this step, we're not going to sign into Mobile Center using our Github creden
 2. Click on "Connect with GitHub"
 3. Click the "Authorize MobileCenter" button
 
-#Step 7: Create and App in Mobile Center
+
+# Step 7: Create and App in Mobile Center
 
 1. In the top right corner of Mobile Center, click the "Add new" button, and select "Add new app"
 2. Enter `MobileAzureDevDays [Android]` in the name field
@@ -101,7 +102,7 @@ In this step, we're not going to sign into Mobile Center using our Github creden
 
 Once created, Mobile Center will automatically navigate you to your newly created app
 
-#Step 8: Set up a Build
+# Step 8: Set up a Build
 
 
 5. Click on the "Build" service from the left hand menu
@@ -125,7 +126,7 @@ Mobile Center will now perform it's magic, and connect up to your repo. Once thi
 Mobile center will now go ahead and build your app, and create a signed APK file.  Go ahead, grab a cup of coffee, this will only take a minute
 
 
-#Step 8: Distribute your app
+# Step 9: Distribute your app
 
 Awesome, we're back.  Now that we've built an app, we can go ahead and distribute it
 
@@ -136,23 +137,8 @@ Awesome, we're back.  Now that we've built an app, we can go ahead and distribut
 
 Once the distribution is complete, everyone in the distribution list will receive an e-mail letting them know that they can download/install the release.  Alternatively, you can browse to [https://install.mobile.azure.com](https://install.mobile.azure.com) from your mobile device (Safari on iOS, Chrome on Android) to view available releases.
 
-#Congratulations!
+# Congratulations!
 
 You've not built, and distributed your first app using Visual Studio Mobile Center.  For more information on how to ship 5-start apps with Visual Studio Mobile Center, please visit [https://docs.mobile.azure.com](https://docs.mobile.azure.com).  There you can find information on the Crash, Test, and Analytics capabilities of Visual Studio Mobile Center, as well as how to integrate into additional services like Application Insights, or Visual Studio Team Services.
 
-#Appendix
 
-Stuff I dont' think we need to do.
-
-Step 3: Downloading the repo
-
-In these steps, we will simply "Download" the code from
-
-1. Click the "Clone or download" button
-2. Click on "Download ZIP" to download the source code
-
-![Create new account](images/3-2-download-zip.png)
-
-3. Navigate to the folder where your source code is located, and extract the .zip file
-
-Note: we recomend that you move this downloaded folder to a path where you keep your code (e.g. ~/projects or c:\projects)
