@@ -137,7 +137,7 @@ Mobile center will now go ahead and build your app, and create a signed APK file
 Awesome, we're back.  Now that we've built an app, we can go ahead and distribute it
 
 1. On your completed build, click the "Distribute" button
-2. Choose the group you want to distribute to (you will only see "Collaborators", but documentation on creating additional distribution groups can be found [here](https://docs.microsoft.com/en-us/mobile-center/distribution/groups)), and click "Next"
+2. Choose the group you want to distribute to (you will only see "Collaborators", but documentation on creating additional distribution groups can be found [here](http://bit.ly/2iltJT6)), and click "Next"
 3. Enter in any comments that you want to show as release notes
 4. Click "Distribute"
 
