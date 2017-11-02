@@ -141,10 +141,10 @@ Awesome, we're back.  Now that we've built an app, we can go ahead and distribut
 3. Enter in any comments that you want to show as release notes
 4. Click "Distribute"
 
-Once the distribution is complete, everyone in the distribution list will receive an e-mail letting them know that they can download/install the release.  Alternatively, you can browse to [https://install.mobile.azure.com](https://install.mobile.azure.com) from your mobile device (Safari on iOS, Chrome on Android) to view available releases.
+Once the distribution is complete, everyone in the distribution list will receive an e-mail letting them know that they can download/install the release.  Alternatively, you can browse to [install.mobile.azure.com](http://bit.ly/2gWf2Wi) from your mobile device (Safari on iOS, Chrome on Android) to view available releases.
 
 # Congratulations!
 
-You've not built, and distributed your first app using Visual Studio Mobile Center.  For more information on how to ship 5-start apps with Visual Studio Mobile Center, please visit [https://docs.mobile.azure.com](https://docs.mobile.azure.com).  There you can find information on the Crash, Test, and Analytics capabilities of Visual Studio Mobile Center, as well as how to integrate into additional services like Application Insights, or Visual Studio Team Services.
+You've not built, and distributed your first app using Visual Studio Mobile Center.  For more information on how to ship 5-start apps with Visual Studio Mobile Center, please visit [docs.mobile.azure.com](http://bit.ly/2gV5uuV).  There you can find information on the Crash, Test, and Analytics capabilities of Visual Studio Mobile Center, as well as how to integrate into additional services like Application Insights, or Visual Studio Team Services.
 
 
