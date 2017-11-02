@@ -2,7 +2,7 @@
 
 If you already have a GitHub account, you can jump directly to Step 2 below.  Otherwise, please follow these steps to create your account:
 
-1. Browse to [https://github.com/join](http://bit.ly/2h4uALD)
+1. Browse to [github.com/join](http://bit.ly/2h4uALD)
 2. Enter in your username, e-mail address, and a password
 
 ![Create new account](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/1-1-create-account.png)
@@ -87,7 +87,7 @@ Complete the fields as required
 3. Paste your API key from step 4.3 above into the `_sentimentAPIKey` variable on line 14
 4. Scroll to the bottom and enter in any comment into the "Commit changes" field set, and click "Commit changes" button to commit your key to source control
 
-Note: For this exercise, we are commiting your API key to source control.  In general, we recommend using services like [Azure Key Vault](https://azure.microsoft.com/en-us/services/key-vault/) to securely store your API keys, and integrate them into your code during your build.
+Note: For this exercise, we are commiting your API key to source control.  In general, we recommend using services like [Azure Key Vault](http://bit.ly/2zdZ9oR) to securely store your API keys, and integrate them into your code during your build.
 
 
 # Step 6: Create your Mobile Center Account
