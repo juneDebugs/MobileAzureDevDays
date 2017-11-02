@@ -94,7 +94,7 @@ Note: For this exercise, we are commiting your API key to source control.  In ge
 
 In this step, we're not going to sign into Mobile Center using our Github credentials, and set up our builds. Since you are already signed in to GitHub, we can simply authorize Mobile Center to access your GitHub repositories using the following steps.
 
-1. Browse to [https://mobile.azure.com](http://bit.ly/2ygLNrH)
+1. Browse to [mobile.azure.com](http://bit.ly/2ygLNrH)
 2. Click on "Connect with GitHub"
 3. Click the "Authorize MobileCenter" button
 
