@@ -23,7 +23,7 @@ Congrats! You're now ready to move on to Step 2: Forking the repo
 
 # Step 2: Forking the "MobileAzureDevDays" repo
 
-1. Navigate to [https://github.com/jCho23/MobileAzureDevDays](https://github.com/jCho23/MobileAzureDevDays)
+1. Navigate to [https://github.com/jCho23/MobileAzureDevDays](http://bit.ly/2zqoeO7)
 
 ![Create new account](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/2-1-fork-repo.png)
 
@@ -39,7 +39,7 @@ a. Your company/employer has a subscription, and has added you to it
 b. You have a visualstudio.com subscription (i.e. Enterprise, Professional, or Dev Essentials), and you have the associated Azure credits
 c. You've already signed up for the "Azure free account"
 
-To check to see if you have an Azure subscription already, browse to [https://portal.azure.com](https://portal.azure.com).  Sign in with your existing Microsoft.com account, and browse to the "Subscriptions" blade in the Azure portal.
+To check to see if you have an Azure subscription already, browse to [portal.azure.com](https://portal.azure.com).  Sign in with your existing Microsoft.com account, and browse to the "Subscriptions" blade in the Azure portal.
 
 If you do not already have an account/subscription, you will be prompted to create one.  If you need to create a new account/subscription, browse to [https://azure.microsoft.com/en-us/free/](https://azure.microsoft.com/en-us/free/), and click the **"Start free"** button to begin starting your account.
 
@@ -51,7 +51,7 @@ You will need to enter in a credit card to create your account.  This card will 
 
 # Step 4: Grab your "Sentiment Analysis" API Key
 
-1. Navigation to [https://ms.portal.azure.com/#blade/HubsExtension/Resources/resourceType/Microsoft.CognitiveServices%2Faccounts](https://ms.portal.azure.com/#blade/HubsExtension/Resources/resourceType/Microsoft.CognitiveServices%2Faccounts).
+1. Navigation to [ms.portal.azure.com/](http://bit.ly/2iSQ8LK).
 
 ![Create new account](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/4-1-cognitive-services.png)
 
