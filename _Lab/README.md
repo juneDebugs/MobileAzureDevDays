@@ -2,10 +2,10 @@
 
 If you already have a GitHub account, you can jump directly to Step 2 below.  Otherwise, please follow these steps to create your account:
 
-1. Browse to [https://github.com/join](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/1-1-create-account.png)
+1. Browse to [https://github.com/join](http://bit.ly/2h4uALD)
 2. Enter in your username, e-mail address, and a password
 
-![Create new account](http://bit.ly/2iT9HUf)
+![Create new account](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/1-1-create-account.png)
 
 3. Chose "Unlimited public repositories for free." This is sufficient for this exercise, and you can easily upgrade to a paid account later.
 
