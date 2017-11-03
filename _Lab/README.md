@@ -60,8 +60,6 @@ You will need to enter in a credit card to create your account.  This card will 
 
 ![Search Results](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/4-2-search-results.png)
 
-
-
 Complete the fields as required
 
 - Name: enter in any unique name
