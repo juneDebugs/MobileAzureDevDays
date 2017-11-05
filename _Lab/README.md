@@ -131,5 +131,4 @@ Mobile center will now go ahead and build your app, and create a signed APK file
 
 
 # Congratulations!
-
 You've not built your first app using Visual Studio Mobile Center.  For more information on how to ship 5-start apps with Visual Studio Mobile Center, please visit [docs.mobile.azure.com](http://bit.ly/2gV5uuV).  There you can find information on the Crash, Test, and Analytics capabilities of Visual Studio Mobile Center, as well as how to integrate into additional services like Application Insights, or Visual Studio Team Services.
