@@ -73,22 +73,7 @@ Complete the fields as required
 2. Once your Computer Vision app has been created, browse to the resource in the Azure portal.
 3. Select the "Keys" blade, and copy one of the two available keys
 
-# Step 5: Update your code in GitHub with the API key
-
-1. Browse to your GitHub repo, and then select 
-
-- MobileAzureDevDays > Xamarin > MobileAzureDevDays > Services
-
-2. Choose the file TextAnalysis.cs, end then choose the "Edit" icon
-
-
-3. Paste your API key from step 4.3 above into the `_sentimentAPIKey` variable on line 14
-4. Scroll to the bottom and enter in any comment into the "Commit changes" field set, and click "Commit changes" button to commit your key to source control
-
-Note: For this exercise, we are commiting your API key to source control.  In general, we recommend using services like [Azure Key Vault](http://bit.ly/2zdZ9oR) to securely store your API keys, and integrate them into your code during your build.
-
-
-# Step 6: Create your Mobile Center Account
+# Step 5: Create your Mobile Center Account
 
 In this step, we're not going to sign into Mobile Center using our Github credentials, and set up our builds. Since you are already signed in to GitHub, we can simply authorize Mobile Center to access your GitHub repositories using the following steps.
 
@@ -97,7 +82,7 @@ In this step, we're not going to sign into Mobile Center using our Github creden
 3. Click the "Authorize MobileCenter" button
 
 
-# Step 7: Create and App in Mobile Center
+# Step 6: Create and App in Mobile Center
 
 1. In the top right corner of Mobile Center, click the "Add new" button, and select "Add new app"
 2. Enter `MobileAzureDevDays [Android]` in the name field
@@ -106,7 +91,7 @@ In this step, we're not going to sign into Mobile Center using our Github creden
 
 Once created, Mobile Center will automatically navigate you to your newly created app
 
-# Step 8: Set up a Build
+# Step 7: Set up a Build
 
 
 5. Click on the "Build" service from the left hand menu
