@@ -122,8 +122,6 @@ Mobile Center will now perform it's magic, and connect up to your repo. Once thi
 9. Click on the "Master" branch
 10. Click "Configure build"
 11. Configure your app as show in the image below
-
-
 12. Click "Save & Build"
 
 
