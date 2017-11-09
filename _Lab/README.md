@@ -35,9 +35,9 @@ Congrats! You're now ready to move on to Step 2: Forking the repo
 
 There are several different ways to create an Azure account.  A few examples are:
 
-a. Your company/employer has a subscription, and has added you to it
-b. You have a visualstudio.com subscription (i.e. Enterprise, Professional, or Dev Essentials), and you have the associated Azure credits
-c. You've already signed up for the "Azure free account"
+1) Your company/employer has a subscription, and has added you to it
+2) You have a visualstudio.com subscription (i.e. Enterprise, Professional, or Dev Essentials), and you have the associated Azure credits
+3) You've already signed up for the "Azure free account"
 
 To check to see if you have an Azure subscription already, browse to [portal.azure.com](http://bit.ly/2imxXdv).  Sign in with your existing Microsoft.com account, and browse to the "Subscriptions" blade in the Azure portal.
 
