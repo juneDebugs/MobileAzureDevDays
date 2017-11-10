@@ -81,7 +81,6 @@ In this step, we're not going to sign into Mobile Center using our Github creden
 2. Click on "Connect with GitHub"
 3. Click the "Authorize MobileCenter" button
 
-
 # Step 6: Create and App in Mobile Center
 
 1. In the top right corner of Mobile Center, click the "Add new" button, and select "Add new app"
@@ -92,7 +91,6 @@ In this step, we're not going to sign into Mobile Center using our Github creden
 Once created, Mobile Center will automatically navigate you to your newly created app
 
 # Step 7: Set up a Build
-
 
 5. Click on the "Build" service from the left hand menu
 
