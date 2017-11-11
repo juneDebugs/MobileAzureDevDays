@@ -17,9 +17,6 @@ This simple app has a Text Entry Box and a button that triggers the text to hit 
 * [Push Notifications](http://bit.ly/2wT151Z)
     * [Prerequisites](http://bit.ly/2wTR2tw)
 
-
-
-
 # Get Started with Android
 The Mobile Center SDK uses a modular architecture so you can use any or all of the services.
 Let's get started with setting up Mobile Center Android SDK in your app to use Mobile Center Analytics and Mobile Center Crashes. To add Mobile Center Distribute to you app, please have a look at the documentation for [Mobile Center Distribute](http://bit.ly/2gCC2Kr).
