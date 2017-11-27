@@ -107,7 +107,6 @@ Mobile Center will now perform it's magic, and connect up to your repo. Once thi
 11. Configure your app as show in the image below
 12. Click "Save & Build"
 
-
 Mobile center will now go ahead and build your app, and create a signed APK file.  Go ahead, grab a cup of coffee, this will only take a minute!
 
 # Congratulations!
