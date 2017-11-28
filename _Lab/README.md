@@ -82,7 +82,6 @@ In this step, we're not going to sign into Mobile Center using our Github creden
 3. Click the "Authorize MobileCenter" button
 
 # Step 6: Create and App in Mobile Center
-
 1. In the top right corner of Mobile Center, click the "Add new" button, and select "Add new app"
 2. Enter `MobileAzureDevDays [Android]` in the name field
 3. For this exercise, choose Android for the OS, and Xamarin for the Platform.
