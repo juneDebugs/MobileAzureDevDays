@@ -31,7 +31,7 @@ Congrats! You're now ready to move on to Step 2: Forking the repo
 
 ![Create new account](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/2-2-repo-forking.png)
 
-# Step 4: Grab your "Sentiment Analysis" API Key
+# Step 3: Grab your "Sentiment Analysis" API Key
 
 1. Navigation to [ms.portal.azure.com](http://bit.ly/2iSQ8LK).
 
@@ -55,7 +55,7 @@ Complete the fields as required
 2. Once your Computer Vision app has been created, browse to the resource in the Azure portal.
 3. Select the "Keys" blade, and copy one of the two available keys
 
-# Step 5: Create your App Center Account
+# Step 4: Create your App Center Account
 
 In this step, we're not going to sign into App Center using our Github credentials, and set up our builds. Since you are already signed in to GitHub, we can simply authorize Mobile Center to access your GitHub repositories using the following steps.
 
@@ -63,7 +63,7 @@ In this step, we're not going to sign into App Center using our Github credentia
 2. Click on "Connect with GitHub"
 3. Click the "Authorize MobileCenter" button
 
-# Step 6: Create and App in Mobile Center
+# Step 5: Create an App in Visual Studio App Center
 1. In the top right corner of Mobile Center, click the "Add new" button, and select "Add new app"
 2. Enter `MobileAzureDevDays [Android]` in the name field
 3. For this exercise, choose Android for the OS, and Xamarin for the Platform.
@@ -71,7 +71,7 @@ In this step, we're not going to sign into App Center using our Github credentia
 
 Once created, Mobile Center will automatically navigate you to your newly created app
 
-# Step 7: Set up a Build
+# Step 6: Set up a Build
 
 5. Click on the "Build" service from the left hand menu
 
@@ -81,14 +81,14 @@ Here, you will connect Mobile Center to your GitHub repository that you created 
 7. Search for "MobileAzureDevDays"
 8. Click on the "MobileAzureDevDays" repo in the search results
 
-Mobile Center will now perform it's magic, and connect up to your repo. Once this is done, we can set up our build.
+App Center will now perform it's magic, and connect up to your repo. Once this is done, we can set up our build.
 
 9. Click on the "Master" branch
 10. Click "Configure build"
 11. Configure your app as show in the image below
 12. Click "Save & Build"
 
-Mobile center will now go ahead and build your app, and create a signed APK file.  Go ahead, grab a cup of coffee, this will only take a minute!
+App Center will now go ahead and build your app, and create a signed APK file.  Go ahead, grab a cup of coffee, this will only take a minute!
 
 # Congratulations!
 You've not built your first app using Visual Studio Mobile Center.  For more information on how to ship 5-start apps with Visual Studio Mobile Center, please visit [docs.mobile.azure.com](http://bit.ly/2gV5uuV).  There you can find information on the Crash, Test, and Analytics capabilities of Visual Studio Mobile Center, as well as how to integrate into additional services like Application Insights, or Visual Studio Team Services.
