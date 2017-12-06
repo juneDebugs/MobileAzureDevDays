@@ -31,24 +31,6 @@ Congrats! You're now ready to move on to Step 2: Forking the repo
 
 ![Create new account](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/2-2-repo-forking.png)
 
-# Step 3: Create your Azure Account
-
-There are several different ways to create an Azure account.  A few examples are:
-
-1) Your company/employer has a subscription, and has added you to it
-2) You have a visualstudio.com subscription (i.e. Enterprise, Professional, or Dev Essentials), and you have the associated Azure credits
-3) You've already signed up for the "Azure free account"
-
-To check to see if you have an Azure subscription already, browse to [portal.azure.com](http://bit.ly/2imxXdv).  Sign in with your existing Microsoft.com account, and browse to the "Subscriptions" blade in the Azure portal.
-
-If you do not already have an account/subscription, you will be prompted to create one.  If you need to create a new account/subscription, browse to [azure.microsoft.com/en-us/free/](http://bit.ly/2h4RceI), and click the **"Start free"** button to begin starting your account.
-
-
-![Start Free](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/3-1-start-free.png)
-
-### Note: 
-You will need to enter in a credit card to create your account.  This card will _only_ be used to pay for charges that exceeed your monthly allocation (e.g. $150/mo for Enterprise users).
-
 # Step 4: Grab your "Sentiment Analysis" API Key
 
 1. Navigation to [ms.portal.azure.com](http://bit.ly/2iSQ8LK).
@@ -73,9 +55,9 @@ Complete the fields as required
 2. Once your Computer Vision app has been created, browse to the resource in the Azure portal.
 3. Select the "Keys" blade, and copy one of the two available keys
 
-# Step 5: Create your Mobile Center Account
+# Step 5: Create your App Center Account
 
-In this step, we're not going to sign into Mobile Center using our Github credentials, and set up our builds. Since you are already signed in to GitHub, we can simply authorize Mobile Center to access your GitHub repositories using the following steps.
+In this step, we're not going to sign into App Center using our Github credentials, and set up our builds. Since you are already signed in to GitHub, we can simply authorize Mobile Center to access your GitHub repositories using the following steps.
 
 1. Browse to [mobile.azure.com](http://bit.ly/2ygLNrH)
 2. Click on "Connect with GitHub"
