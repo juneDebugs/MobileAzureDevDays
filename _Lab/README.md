@@ -33,35 +33,7 @@ Congrats! You're now ready to move on to Step 2: Forking the repo
 
 # Step 3: Grab your "Sentiment Analysis" API Key
 
-1. Navigation to [ms.portal.azure.com](http://bit.ly/2iSQ8LK).
-
-![Create new account](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/4-1-cognitive-services.png)
-
-2. Click the "Add" button
-3. Search for `Text Analytics API`
-
-![Search Results](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/4-2-search-results.png)
-
-Complete the fields as required
-
-- Name: enter in any unique name
-- Subscription: Choose whichever subscription you have access to
-- Location: Choose a location for the data center
-- Pricing Tier: F0 (20 Calls per minute, 5K Calls per month)
-- Resource Group (Create new): enter in a name for your resource group
-- Click to confirm the terms of service
-- Click "Create"
-
-2. Once your Computer Vision app has been created, browse to the resource in the Azure portal.
-3. Select the "Keys" blade, and copy one of the two available keys
-
-# Step 4: Create your App Center Account
-
-In this step, we're not going to sign into App Center using our Github credentials, and set up our builds. Since you are already signed in to GitHub, we can simply authorize Mobile Center to access your GitHub repositories using the following steps.
-
-1. Browse to [mobile.azure.com](http://bit.ly/2ygLNrH)
-2. Click on "Connect with GitHub"
-3. Click the "Authorize MobileCenter" button
+1. Please go to: https://gist.github.com/jCho23
 
 # Step 5: Create an App in Visual Studio App Center
 1. In the top right corner of Mobile Center, click the "Add new" button, and select "Add new app"
