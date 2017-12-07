@@ -35,7 +35,7 @@ Congrats! You're now ready to move on to Step 2: Forking the repo
 
 1. Please go to: https://gist.github.com/jCho23
 
-# Step 5: Create an App in Visual Studio App Center
+# Step 4: Create an App in Visual Studio App Center
 1. In the top right corner of Mobile Center, click the "Add new" button, and select "Add new app"
 2. Enter `MobileAzureDevDays [Android]` in the name field
 3. For this exercise, choose Android for the OS, and Xamarin for the Platform.
@@ -43,7 +43,7 @@ Congrats! You're now ready to move on to Step 2: Forking the repo
 
 Once created, Mobile Center will automatically navigate you to your newly created app
 
-# Step 6: Set up a Build
+# Step 5: Set up a Build
 
 5. Click on the "Build" service from the left hand menu
 
