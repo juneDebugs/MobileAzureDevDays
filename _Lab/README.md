@@ -33,7 +33,7 @@ Congrats! You're now ready to move on to Step 2: Forking the repo
 
 # Step 3: Grab your "Sentiment Analysis" API Key
 
-1. Please go to: https://gist.github.com/jCho23
+1. Please go to: [gist.github.com/jCho23](https://gist.github.com/jCho23/4fe26f529c084f941d82e510c3368a0c)
 
 # Step 4: Create an App in Visual Studio App Center
 1. In the top right corner of Mobile Center, click the "Add new" button, and select "Add new app"
