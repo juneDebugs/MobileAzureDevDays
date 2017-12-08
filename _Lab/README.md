@@ -35,10 +35,8 @@ Congrats! You're now ready to move on to Step 2: Forking the repo
 
 1. Please go to: [gist.github.com/jCho23](https://gist.github.com/jCho23/4fe26f529c084f941d82e510c3368a0c)
 
-2. After you have copied the Sentiment Analysis API Key, please insert the key after: 
-<br>
-```const string _sentimentAPIKey```
-<br>
+2. After you have copied the Sentiment Analysis API Key, please insert the key after: ```const string _sentimentAPIKey```
+
 ![SentimentKey](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/Sentiment%20Key.png)
 
 # Step 4: Create an App in Visual Studio App Center
