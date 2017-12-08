@@ -67,4 +67,4 @@ App Center will now perform it's magic, and connect up to your repo. Once this i
 App Center will now go ahead and build your app, and create a signed APK file.  Go ahead, grab a cup of coffee, this will only take a minute!
 
 # Congratulations!
-You've not built your first app using Visual Studio App Center.  For more information on how to ship 5-start apps with Visual Studio App Center, please visit [docs.mobile.azure.com](http://bit.ly/2gV5uuV).  There you can find information on the Crash, Test, and Analytics capabilities of Visual Studio App Center, as well as how to integrate into additional services like Application Insights, or Visual Studio Team Services.
+You've not built your first app using Visual Studio App Center.  For more information on how to ship 5-start apps with Visual Studio App Center, please visit [docs.microsoft.com/en-us/appcenter/](docs.microsoft.com/en-us/appcenter/).  There you can find information on the Crash, Test, and Analytics capabilities of Visual Studio App Center, as well as how to integrate into additional services like Application Insights, or Visual Studio Team Services.
