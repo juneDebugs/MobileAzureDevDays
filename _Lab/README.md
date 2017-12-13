@@ -26,11 +26,11 @@ Congrats! You're now ready to move on to Step 2: Forking the repo
 
 # Step 2: Forking the "MobileAzureDevDays" repo
 
-1. Navigate to [github.com/jCho23/MobileAzureDevDays](http://bit.ly/2zqoeO7)
+### 1. Navigate to [github.com/jCho23/MobileAzureDevDays](http://bit.ly/2zqoeO7)
 
 ![Create new account](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/2-1-fork-repo.png)
 
-2. Click the "Fork" icon in the top right corner.  You'll be brought to a subsequent screen showing that the repo is being forked, and then you'll ultimately arrive at your own forked copy of the repo that you'll use for the remainder of this exercise.
+### 2. Click the "Fork" icon in the top right corner.  You'll be brought to a subsequent screen showing that the repo is being forked, and then you'll ultimately arrive at your own forked copy of the repo that you'll use for the remainder of this exercise.
 
 ![Create new account](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/2-2-repo-forking.png)
 
