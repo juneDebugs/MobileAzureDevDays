@@ -6,19 +6,19 @@ Otherwise, please follow these steps to create your account:
 
 ### 1. Browse to [github.com/join](http://bit.ly/2h4uALD)
 
-2. Enter in your username, e-mail address, and a password
+### 2. Enter in your username, e-mail address, and a password
 
 ![Create new account](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/1-1-create-account.png)
 
-3. Chose "Unlimited public repositories for free." This is sufficient for this exercise, and you can easily upgrade to a paid account later.
+### 3. Chose "Unlimited public repositories for free." This is sufficient for this exercise, and you can easily upgrade to a paid account later.
 
 ![Create new account](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/1-2-choose-free-account.png)
 
-4. Choose any additional options, or simply click "skip this step"
+### 4. Choose any additional options, or simply click "skip this step"
 
 ![Create new account](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/1-3-additional-account-options.png)
 
-5. Confirm your e-mail address by clicking the "Verify email address" link in the e-mail you received to the address used in step 2 above. (note, if you skip this step, you won't be able to continue with the tutorial).
+### 5. Confirm your e-mail address by clicking the "Verify email address" link in the e-mail you received to the address used in step 2 above. (note, if you skip this step, you won't be able to continue with the tutorial).
 
 ![Create new account](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/1-4-verify-email.png)
 
