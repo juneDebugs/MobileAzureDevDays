@@ -59,7 +59,7 @@ Congrats! You're now ready to move on to Step 2: Forking the repo
 
 ### 2. Select "Github"
 ### 3. Search for "MobileAzureDevDays"
-8. Click on the "MobileAzureDevDays" repo in the search results
+### 4. Click on the "MobileAzureDevDays" repo in the search results
 
 App Center will now perform it's magic, and connect up to your repo. Once this is done, we can set up our build.
 
