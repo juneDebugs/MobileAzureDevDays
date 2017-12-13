@@ -53,7 +53,7 @@ Congrats! You're now ready to move on to Step 2: Forking the repo
 
 # Step 5: Set up a Build
 
-5. Click on the "Build" service from the left hand menu
+### 1. Click on the "Build" service from the left hand menu
 
 Here, you will connect Mobile Center to your GitHub repository that you created at the beginning of this exercise
 
