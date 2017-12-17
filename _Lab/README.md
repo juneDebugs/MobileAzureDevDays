@@ -64,7 +64,7 @@ Congrats! You're now ready to move on to Step 2: Forking the repo
 **App Center will now perform it's magic, and connect up to your repo. Once this is done, we can set up our build.**
 
 ### 5. Click on the "Master" branch
-10. Click "Configure build"
+### 6. Click "Configure build"
 11. Configure your app as show in the image below
 12. Click "Save & Build"
 
