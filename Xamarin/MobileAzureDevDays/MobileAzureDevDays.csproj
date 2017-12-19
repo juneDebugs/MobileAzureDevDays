@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
@@ -11,8 +11,8 @@
         <Folder Include="Controls\" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Xamarin.Forms" Version="2.4.0.282" />
         <PackageReference Include="Microsoft.ProjectOxford.Text" Version="1.1.7" />
+        <PackageReference Include="Xamarin.Forms" Version="2.5.0.121934" />
     </ItemGroup>
     <ItemGroup>
         <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="Pages\HomePage_old.xaml.cs">
