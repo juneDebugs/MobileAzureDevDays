@@ -66,7 +66,7 @@ Congrats! You're now ready to move on to Step 2: Forking the repo
 ### 5. Click on the "Master" branch
 ### 6. Click "Configure build"
 ### 7. Configure your app as show in the image below
-12. Click "Save & Build"
+### 8. Click "Save & Build"
 
 App Center will now go ahead and build your app, and create a signed APK file.  Go ahead, grab a cup of coffee, this will only take a minute!
 
