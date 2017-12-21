@@ -49,7 +49,7 @@ Congrats! You're now ready to move on to Step 2: Forking the repo
 ### 3. For this exercise, choose Android for the OS, and Xamarin for the Platform.
 ### 4. Click "Add new app" in the bottom right corner
 
-**Once created, Mobile Center will automatically navigate you to your newly created app**
+**Once created, App Center will automatically navigate you to your newly created app**
 
 # Step 5: Set up a Build
 
