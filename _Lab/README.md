@@ -23,7 +23,6 @@ Otherwise, please follow these steps to create your account:
 Congrats! You're now ready to move on to Step 2: Forking the repo
 
 # Step 2: Forking the "MobileAzureDevDays" repo
-
 ### 1. Navigate to [github.com/jCho23/MobileAzureDevDays](http://bit.ly/2zqoeO7)
 
 ![Create new account](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/2-1-fork-repo.png)
