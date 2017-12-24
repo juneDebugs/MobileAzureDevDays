@@ -41,7 +41,7 @@ Congrats! You're now ready to move on to Step 2: Forking the repo
 ![SentimentKey](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/Sentiment%20Key.png)
 
 # Step 4: Create an App in Visual Studio App Center
-### 1. In the top right corner of App Center, click the "Add new" button, and select "Add new app"
+### 1. In the top right corner of Visual Studio App Center, click the "Add new" button, and select "Add new app"
 ### 2. Enter `MobileAzureDevDays [Android]` in the name field
 ### 3. For this exercise, choose Android for the OS, and Xamarin for the Platform.
 ### 4. Click "Add new app" in the bottom right corner
