@@ -48,7 +48,6 @@ Congrats! You're now ready to move on to Step 2: Forking the repo
 **Once created, App Center will automatically navigate you to your newly created app**
 
 # Step 5: Set up a Build
-
 ### 1. Click on the "Build" service from the left hand menu
 
 **Here, you will connect App Center to your GitHub repository that you created at the beginning of this exercise**
