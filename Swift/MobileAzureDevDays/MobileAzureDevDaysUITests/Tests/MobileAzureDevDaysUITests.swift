@@ -2,7 +2,7 @@
 //  MobileAzureDevDaysUITests.swift
 //  MobileAzureDevDaysUITests
 //
-//  Edited by Brandon Minnick on Feb 02 2018
+//  Edited by Brandon Minnick on 02 February 2018.
 //  Created by Sweekriti Satpathy on 11 October 2017.
 //  Copyright © 2017 Colby Williams. All rights reserved.
 //
