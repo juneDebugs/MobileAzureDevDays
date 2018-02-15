@@ -28,7 +28,7 @@ class MobileAzureDevDaysUITests: XCTestCase {
         super.tearDown()
     }
     
-    func test_SentimentPage_SubmitHappyText_ResultShouldBeHapyEmoji() {
+    func test_SentimentPage_SubmitHappyText_ResultShouldBeHappyEmoji() {
         //Arrange
         let happyText = "Happy"
         

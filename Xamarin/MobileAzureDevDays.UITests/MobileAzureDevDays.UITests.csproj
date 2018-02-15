@@ -44,22 +44,22 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Droid\MobileAzureDevDays.Droid.csproj">
-      <Project>{70D43340-110E-4E42-98E2-CEA9438A05B3}</Project>
-      <Name>MobileAzureDevDays.Droid</Name>
-      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
-      <Private>False</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\iOS\MobileAzureDevDays.iOS.csproj">
+    <Folder Include="Pages\" />
+    <Folder Include="Tests\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MobileAzureDevDays.iOS\MobileAzureDevDays.iOS.csproj">
       <Project>{1AF5635E-57B8-49A3-80F1-130EDF9E5381}</Project>
       <Name>MobileAzureDevDays.iOS</Name>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pages\" />
-    <Folder Include="Tests\" />
+    <ProjectReference Include="..\MobileAzureDevDays.Droid\MobileAzureDevDays.Droid.csproj">
+      <Project>{70D43340-110E-4E42-98E2-CEA9438A05B3}</Project>
+      <Name>MobileAzureDevDays.Droid</Name>
+      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+      <Private>False</Private>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\MobileAzureDevDays.Shared\MobileAzureDevDays.Shared.projitems" Label="Shared" Condition="Exists('..\MobileAzureDevDays.Shared\MobileAzureDevDays.Shared.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
