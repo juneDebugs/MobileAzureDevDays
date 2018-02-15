@@ -18,8 +18,7 @@ namespace MobileAzureDevDays.UITests
 
         #region Properties
         protected IApp App { get; private set; }
-        protected FoodListPage FoodListPage { get; private set; }
-        protected AddFoodPage AddFoodPage { get; private set; }
+        protected SentimentPage SentimentPage { get; private set; }
         #endregion
 
         #region Methods
@@ -28,12 +27,9 @@ namespace MobileAzureDevDays.UITests
         {
             App = AppInitializer.StartApp(_platform);
 
-            FoodListPage = new FoodListPage(App);
-            AddFoodPage = new AddFoodPage(App);
+            SentimentPage = new SentimentPage(App);
 
             App.Screenshot("App Launched");
-
-            BackdoorMethodServices.DeleteTestFoodFromAPI(App);
         }
 
         [TearDown]

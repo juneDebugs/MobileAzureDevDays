@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileAzureDevDays", "Mobil
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileAzureDevDays.UITests", "MobileAzureDevDays.UITests\MobileAzureDevDays.UITests.csproj", "{61A21751-B285-40B1-8A46-EA63E00AFBFD}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "MobileAzureDevDays.Shared", "MobileAzureDevDays.Shared\MobileAzureDevDays.Shared.shproj", "{E67D1672-A63B-4C91-B54F-CC49DCE69C7E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

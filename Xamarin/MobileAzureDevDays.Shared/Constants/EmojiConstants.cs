@@ -1,4 +1,4 @@
-﻿namespace MobileAzureDevDays.Constants
+﻿namespace MobileAzureDevDays.Shared.Constants
 {
     public static class EmojiConstants
     {
