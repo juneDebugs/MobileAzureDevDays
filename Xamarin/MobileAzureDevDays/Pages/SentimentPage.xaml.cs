@@ -1,20 +1,18 @@
-﻿using System;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 using MobileAzureDevDays.ViewModels;
 
 namespace MobileAzureDevDays.Pages
 {
-    public partial class HomePage : ContentPage
+    public partial class SentimentPage : ContentPage
     {
-        readonly HomeViewModel viewModel;
+        readonly SentimentViewModel viewModel;
 
-        public HomePage()
+        public SentimentPage()
         {
             InitializeComponent();
 
-            viewModel = new HomeViewModel();
+            viewModel = new SentimentViewModel();
             BindingContext = viewModel;
         }
 

@@ -1,6 +1,6 @@
 ﻿using Xamarin.Forms;
 
-namespace MobileAzureDevDays.Constants
+namespace MobileAzureDevDays.Shared.Constants
 {
     public static class ColorConstants
     {

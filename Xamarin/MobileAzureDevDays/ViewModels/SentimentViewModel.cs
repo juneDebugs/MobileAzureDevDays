@@ -10,11 +10,11 @@ using Microsoft.ProjectOxford.Text.Core;
 using Xamarin.Forms;
 
 using MobileAzureDevDays.Services;
-using MobileAzureDevDays.Constants;
+using MobileAzureDevDays.Shared.Constants;
 
 namespace MobileAzureDevDays.ViewModels
 {
-    public class HomeViewModel : INotifyPropertyChanged
+    public class SentimentViewModel : INotifyPropertyChanged
     {
         string emojiLabelText = string.Empty;
         string userInputEntryText = string.Empty;
