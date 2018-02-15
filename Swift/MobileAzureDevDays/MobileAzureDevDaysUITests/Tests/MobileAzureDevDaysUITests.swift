@@ -28,14 +28,13 @@ class MobileAzureDevDaysUITests: XCTestCase {
         super.tearDown()
     }
     
-    func happyTest() {
+    func test_SentimentPage_SubmitHappyText_ResultShouldBe😃() {
         //Arrange
         let happyText = "Happy"
         
         //Act
         sentimentPage.enterText(text: happyText)
         sentimentPage.tapSubmitButton()
-        sentimentPage.waitForActivityIndicator(timeout: 10)
         sentimentPage.waitForNoActivityIndicator(timeout: 10)
         
         //Assert
