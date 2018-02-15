@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		72C9949308021F71940701DC /* Pods_MobileAzureDevDaysUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A40BCF0D48302AB7ACE6A2 /* Pods_MobileAzureDevDaysUITests.framework */; };
 		9010155F1F8E8AFF00A5274E /* MobileAzureDevDaysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9010155E1F8E8AFF00A5274E /* MobileAzureDevDaysUITests.swift */; };
 		B576FD021F75987E007E2415 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B576FD011F75987E007E2415 /* AppDelegate.swift */; };
 		B576FD041F75987E007E2415 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B576FD031F75987E007E2415 /* ViewController.swift */; };
@@ -17,6 +16,7 @@
 		B576FD141F75A8CE007E2415 /* Sentiment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B576FD131F75A8CE007E2415 /* Sentiment.swift */; };
 		B576FD161F75ABDB007E2415 /* SentimentClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B576FD151F75ABDB007E2415 /* SentimentClient.swift */; };
 		B576FD181F76B01F007E2415 /* SentimentResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B576FD171F76B01F007E2415 /* SentimentResponse.swift */; };
+		BF39F20420350D0B0075D537 /* SentimentPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF39F20320350D0B0075D537 /* SentimentPage.swift */; };
 		CBEFCE421F8C3F73009A16BF /* SentimentKeyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBEFCE411F8C3F73009A16BF /* SentimentKeyResponse.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,7 +45,6 @@
 /* Begin PBXFileReference section */
 		229C8421CD0E390E863BDE2F /* Pods-MobileAzureDevDaysUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileAzureDevDaysUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MobileAzureDevDaysUITests/Pods-MobileAzureDevDaysUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2DEAA7553670A7C7BC4149ED /* Pods-MobileAzureDevDaysUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MobileAzureDevDaysUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MobileAzureDevDaysUITests/Pods-MobileAzureDevDaysUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		79A40BCF0D48302AB7ACE6A2 /* Pods_MobileAzureDevDaysUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileAzureDevDaysUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9010155C1F8E8AFF00A5274E /* MobileAzureDevDaysUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileAzureDevDaysUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9010155E1F8E8AFF00A5274E /* MobileAzureDevDaysUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileAzureDevDaysUITests.swift; sourceTree = "<group>"; };
 		901015601F8E8AFF00A5274E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +58,7 @@
 		B576FD131F75A8CE007E2415 /* Sentiment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentiment.swift; sourceTree = "<group>"; };
 		B576FD151F75ABDB007E2415 /* SentimentClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentClient.swift; sourceTree = "<group>"; };
 		B576FD171F76B01F007E2415 /* SentimentResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentResponse.swift; sourceTree = "<group>"; };
+		BF39F20320350D0B0075D537 /* SentimentPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentPage.swift; sourceTree = "<group>"; };
 		BF3D8C39203502330077141D /* AppCenterXCUITestExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppCenterXCUITestExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBEFCE411F8C3F73009A16BF /* SentimentKeyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentKeyResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,7 +68,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72C9949308021F71940701DC /* Pods_MobileAzureDevDaysUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +84,8 @@
 		9010155D1F8E8AFF00A5274E /* MobileAzureDevDaysUITests */ = {
 			isa = PBXGroup;
 			children = (
-				9010155E1F8E8AFF00A5274E /* MobileAzureDevDaysUITests.swift */,
+				BF39F20220350CE00075D537 /* Pages */,
+				BF39F20120350CD70075D537 /* Tests */,
 				901015601F8E8AFF00A5274E /* Info.plist */,
 			);
 			path = MobileAzureDevDaysUITests;
@@ -95,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				BF3D8C39203502330077141D /* AppCenterXCUITestExtensions.framework */,
-				79A40BCF0D48302AB7ACE6A2 /* Pods_MobileAzureDevDaysUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -144,6 +143,22 @@
 				229C8421CD0E390E863BDE2F /* Pods-MobileAzureDevDaysUITests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		BF39F20120350CD70075D537 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				9010155E1F8E8AFF00A5274E /* MobileAzureDevDaysUITests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		BF39F20220350CE00075D537 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				BF39F20320350D0B0075D537 /* SentimentPage.swift */,
+			);
+			path = Pages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,7 +220,7 @@
 					};
 					B576FCFD1F75987E007E2415 = {
 						CreatedOnToolsVersion = 9.0;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -307,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF39F20420350D0B0075D537 /* SentimentPage.swift in Sources */,
 				9010155F1F8E8AFF00A5274E /* MobileAzureDevDaysUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -510,7 +526,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MobileAzureDevDays/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -528,14 +544,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = PJ9L5WFREM;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = MobileAzureDevDays/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.colbywillams.MobileAzureDevDays;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "b849eb64-ddff-4ce1-aa65-5d8dd155e76d";
-				PROVISIONING_PROFILE_SPECIFIER = "Xcode iOS Wildcard";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
