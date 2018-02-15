@@ -1,12 +1,12 @@
 PODS:
-  - VSMobileCenterExtensions (0.9.0)
+  - AppCenterXCUITestExtensions (1.0.0)
 
 DEPENDENCIES:
-  - VSMobileCenterExtensions
+  - AppCenterXCUITestExtensions
 
 SPEC CHECKSUMS:
-  VSMobileCenterExtensions: dd7b96bd7b1495f7af8d3af1bfe286f56757a6af
+  AppCenterXCUITestExtensions: 8825ed941664fa21d6740a5ed6928a84c06623ac
 
-PODFILE CHECKSUM: 456191d6c66afe84b4374d18aa1bfce7225d7d32
+PODFILE CHECKSUM: 17ba4ab539f16865cacb3ee7dbb3295076ba014f
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.1.1

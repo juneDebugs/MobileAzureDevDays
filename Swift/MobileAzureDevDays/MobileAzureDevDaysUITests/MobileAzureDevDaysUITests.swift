@@ -7,15 +7,13 @@
 //
 
 import XCTest
-import VSMobileCenterExtensions
+import AppCenterXCUITestExtensions
 
 class MobileAzureDevDaysUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()
         continueAfterFailure = false
-//        XCUIApplication().launch()
-//        MCLaunch.launch()
     }
     
     override func tearDown() {
@@ -24,20 +22,21 @@ class MobileAzureDevDaysUITests: XCTestCase {
     
     func testExample() {
         let app = XCUIApplication()
-        let launched = MCLaunch.launch(app)
+        ACTLaunch.launch(app)
         
         let textView = app.textViews.element(boundBy: 0)
-        MCLabel.labelStep("On Main Page")
+        ACTLabel.labelStep("On Main Page")
+        
         textView.tap()
         textView.typeText("Happy")
-        MCLabel.labelStep("Text Happy Entered")
+        ACTLabel.labelStep("Text Happy Entered")
+        
         app.buttons["Submit"].tap()
         
         let result = app.staticTexts["😃"]
         XCTAssertTrue((result.waitForExistence(timeout: 10)))
         
-        
-        MCLabel.labelStep("Result Present")
+        ACTLabel.labelStep("Result Present")
     }
     
 }
