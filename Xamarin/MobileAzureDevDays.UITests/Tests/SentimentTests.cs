@@ -21,7 +21,6 @@ namespace MobileAzureDevDays.UITests
             //Act
             SentimentPage.EnterText(happyText);
             SentimentPage.TapSubmitButton();
-            SentimentPage.WaitForActivityIndicator();
             SentimentPage.WaitForNoActivityIndicator();
 
             //Assert
@@ -37,7 +36,6 @@ namespace MobileAzureDevDays.UITests
             //Act
             SentimentPage.EnterText(sadText);
             SentimentPage.TapSubmitButton();
-            SentimentPage.WaitForActivityIndicator();
             SentimentPage.WaitForNoActivityIndicator();
 
             //Assert
@@ -53,7 +51,6 @@ namespace MobileAzureDevDays.UITests
             //Act
             SentimentPage.EnterText(neutralText);
             SentimentPage.TapSubmitButton();
-            SentimentPage.WaitForActivityIndicator();
             SentimentPage.WaitForNoActivityIndicator();
 
             //Assert
