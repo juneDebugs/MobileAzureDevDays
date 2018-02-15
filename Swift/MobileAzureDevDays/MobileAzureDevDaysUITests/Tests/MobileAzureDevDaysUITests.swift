@@ -28,7 +28,7 @@ class MobileAzureDevDaysUITests: XCTestCase {
         super.tearDown()
     }
     
-    func test_SentimentPage_SubmitHappyText_ResultShouldBe😃() {
+    func test_SentimentPage_SubmitHappyText_ResultShouldBeHapyEmoji() {
         //Arrange
         let happyText = "Happy"
         
@@ -39,7 +39,37 @@ class MobileAzureDevDaysUITests: XCTestCase {
         
         //Assert
         let result = sentimentPage.getResults()
-        XCTAssertTrue(result == "😃")        
+        XCTAssertTrue(result == "😃")
+        ACTLabel.labelStep("Correct Result Present")
+    }
+    
+    func test_SentimentPage_SubmitSadText_ResultShouldBeSadEmoji() {
+        //Arrange
+        let sadText = "Sad"
+        
+        //Act
+        sentimentPage.enterText(text: sadText)
+        sentimentPage.tapSubmitButton()
+        sentimentPage.waitForNoActivityIndicator(timeout: 10)
+        
+        //Assert
+        let result = sentimentPage.getResults()
+        XCTAssertTrue(result == "☹️")
+        ACTLabel.labelStep("Correct Result Present")
+    }
+    
+    func test_SentimentPage_SubmitSadText_ResultShouldBeNeutralEmoji() {
+        //Arrange
+        let neutralText = "Mitigations in Seattle"
+        
+        //Act
+        sentimentPage.enterText(text: neutralText)
+        sentimentPage.tapSubmitButton()
+        sentimentPage.waitForNoActivityIndicator(timeout: 10)
+        
+        //Assert
+        let result = sentimentPage.getResults()
+        XCTAssertTrue(result == "😐")
         ACTLabel.labelStep("Correct Result Present")
     }
 }
