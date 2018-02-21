@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4AB4DEA4629D08F799A8105B /* Pods_MobileAzureDevDaysUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E06C87AE23200E84134A8693 /* Pods_MobileAzureDevDaysUITests.framework */; };
+		4DCC87913895E4827B20025B /* Pods_MobileAzureDevDaysUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F237C097D459492FEA92862C /* Pods_MobileAzureDevDaysUITests.framework */; };
 		9010155F1F8E8AFF00A5274E /* MobileAzureDevDaysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9010155E1F8E8AFF00A5274E /* MobileAzureDevDaysUITests.swift */; };
 		B576FD021F75987E007E2415 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B576FD011F75987E007E2415 /* AppDelegate.swift */; };
 		B576FD041F75987E007E2415 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B576FD031F75987E007E2415 /* ViewController.swift */; };
@@ -62,7 +62,7 @@
 		BF39F20320350D0B0075D537 /* SentimentPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentPage.swift; sourceTree = "<group>"; };
 		BF3D8C39203502330077141D /* AppCenterXCUITestExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppCenterXCUITestExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBEFCE411F8C3F73009A16BF /* SentimentKeyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentKeyResponse.swift; sourceTree = "<group>"; };
-		E06C87AE23200E84134A8693 /* Pods_MobileAzureDevDaysUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileAzureDevDaysUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F237C097D459492FEA92862C /* Pods_MobileAzureDevDaysUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileAzureDevDaysUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AB4DEA4629D08F799A8105B /* Pods_MobileAzureDevDaysUITests.framework in Frameworks */,
+				4DCC87913895E4827B20025B /* Pods_MobileAzureDevDaysUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				BF3D8C39203502330077141D /* AppCenterXCUITestExtensions.framework */,
-				E06C87AE23200E84134A8693 /* Pods_MobileAzureDevDaysUITests.framework */,
+				F237C097D459492FEA92862C /* Pods_MobileAzureDevDaysUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
