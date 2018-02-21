@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DCC87913895E4827B20025B /* Pods_MobileAzureDevDaysUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F237C097D459492FEA92862C /* Pods_MobileAzureDevDaysUITests.framework */; };
 		9010155F1F8E8AFF00A5274E /* MobileAzureDevDaysUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9010155E1F8E8AFF00A5274E /* MobileAzureDevDaysUITests.swift */; };
 		B576FD021F75987E007E2415 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B576FD011F75987E007E2415 /* AppDelegate.swift */; };
 		B576FD041F75987E007E2415 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B576FD031F75987E007E2415 /* ViewController.swift */; };
@@ -61,6 +62,7 @@
 		BF39F20320350D0B0075D537 /* SentimentPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentPage.swift; sourceTree = "<group>"; };
 		BF3D8C39203502330077141D /* AppCenterXCUITestExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = AppCenterXCUITestExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBEFCE411F8C3F73009A16BF /* SentimentKeyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentimentKeyResponse.swift; sourceTree = "<group>"; };
+		F237C097D459492FEA92862C /* Pods_MobileAzureDevDaysUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MobileAzureDevDaysUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DCC87913895E4827B20025B /* Pods_MobileAzureDevDaysUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				BF3D8C39203502330077141D /* AppCenterXCUITestExtensions.framework */,
+				F237C097D459492FEA92862C /* Pods_MobileAzureDevDaysUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -271,11 +275,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-MobileAzureDevDaysUITests/Pods-MobileAzureDevDaysUITests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/VSMobileCenterExtensions/VSMobileCenterExtensions.framework",
+				"${BUILT_PRODUCTS_DIR}/AppCenterXCUITestExtensions/AppCenterXCUITestExtensions.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/VSMobileCenterExtensions.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AppCenterXCUITestExtensions.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -312,7 +316,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
