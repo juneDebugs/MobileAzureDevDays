@@ -22,10 +22,16 @@ class MobileAzureDevDaysUITests: XCTestCase {
         
         ACTLaunch.launch(app)
         sentimentPage = SentimentPage(app: app)
+        
+        ACTLabel.labelStep("App Launched")
     }
     
     override func tearDown() {
         super.tearDown()
+    }
+    
+    func test_LauncheApp_TakeNoAction_ConfirmAppLaunches(){
+        
     }
     
     func test_SentimentPage_SubmitHappyText_ResultShouldBeHappyEmoji() {
