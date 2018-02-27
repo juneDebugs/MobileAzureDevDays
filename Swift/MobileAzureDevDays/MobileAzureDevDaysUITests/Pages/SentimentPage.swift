@@ -43,10 +43,12 @@ class SentimentPage{
     
     public func waitForActivityIndicator(timeout: TimeInterval){
         XCTAssertTrue((activityIndicator.waitForExistence(timeout: timeout)))
+        ACTLabel.labelStep("Activity Indicator Appeared")
     }
     
     public func waitForNoActivityIndicator(timeout: TimeInterval){
         XCTAssertFalse((activityIndicator.waitForExistence(timeout: timeout)))
+        ACTLabel.labelStep("Activity Indicator Disappeared")
     }
     
     func ensureXCUIElementsExist() {
