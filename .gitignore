@@ -230,6 +230,7 @@ Thumbs.db
 ## Build generated
 build/
 DerivedData/
+Swift/MobileAzureDevDays/ddp/*
 
 ## Various settings
 *.pbxuser
