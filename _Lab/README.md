@@ -32,7 +32,7 @@ Congrats! You're now ready to move on to Step 2: Forking the repo
 ![Create new account](https://github.com/jCho23/MobileAzureDevDays/blob/master/_Resources/Images/2-2-repo-forking.png)
 
 # Step 3: Grab your "Sentiment Analysis" API Key
-### 1. Please go to: [gist.github.com/jCho23](https://gist.github.com/jCho23/fe8270805e7a729ebc31c2d3620d6923)
+### 1. Please go to: [gist.github.com/jCho23]()
 
 ### 2. After you have copied the Sentiment Analysis API Key, please insert the key after: 
 ```const string _sentimentAPIKey```
