@@ -10,7 +10,7 @@ namespace MobileAzureDevDays.Services
 {
     static class TextAnalysis
     {
-        const string sentimentAPIKey = "b94d27788b514a33bc6e8029e16fd1d5";
+        const string sentimentAPIKey = "ADD KEY";
 
         readonly static Lazy<SentimentClient> sentimentClientHolder = new Lazy<SentimentClient>(() => new SentimentClient(sentimentAPIKey));
 
