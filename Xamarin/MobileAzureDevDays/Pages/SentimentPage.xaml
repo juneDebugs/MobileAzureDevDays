@@ -41,6 +41,9 @@
             HorizontalOptions= "FillAndExpand" VerticalOptions= "Center" 
             AutomationId="{x:Static sharedConstants:AutomationIdConstants.SubmitButton}" />
 
+          
+
+        
         <ActivityIndicator
             Color= "White"
             Margin= "20,20"
