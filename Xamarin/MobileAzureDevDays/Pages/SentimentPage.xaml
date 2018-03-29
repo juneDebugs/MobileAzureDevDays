@@ -40,9 +40,11 @@
             BorderRadius="0" BorderWidth="1" BorderColor = "White"
             HorizontalOptions= "FillAndExpand" VerticalOptions= "Center" 
             AutomationId="{x:Static sharedConstants:AutomationIdConstants.SubmitButton}" />
-
-          
-
+        <Button
+            Text="Watts"
+            FontSize="50"
+            BorderWidth="1"
+            Clicked="Handle_Clicked"/>
         
         <ActivityIndicator
             Color= "White"
