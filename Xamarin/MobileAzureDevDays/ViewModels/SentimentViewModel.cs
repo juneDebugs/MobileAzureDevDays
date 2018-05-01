@@ -31,7 +31,7 @@ namespace MobileAzureDevDays.ViewModels
 		public bool IsInternetConnectionInactive => !IsInternetConnectionActive;
 
 		public ICommand SubmitButtonCommand => submitButtonCommand ??
-			(submitButtonCommand = new Command(async () => await ExecuteSubmitButtonCommand()));
+			(submitButtonCommand = new Command(async () => await ExecuteSubmitButtonCommand(UserInputEntryText)));
 
 		public bool IsInternetConnectionActive
 		{
@@ -57,21 +57,21 @@ namespace MobileAzureDevDays.ViewModels
 			set => SetProperty(ref backgroundColor, value);
 		}
 
-		async Task ExecuteSubmitButtonCommand()
+		async Task ExecuteSubmitButtonCommand(string userInputEntryText)
 		{
 			SetIsBusy(true);
 
 			try
 			{
-				var result = await TextAnalysisService.GetSentiment(UserInputEntryText);
-				if (result == null)
+				var result = await TextAnalysisService.GetSentiment(userInputEntryText).ConfigureAwait(false);
+				if (result is null)
 				{
 					OnSentimentAnalyisFailed("No Results Returned");
 				}
 				else
 				{
-					SetBackgroundColor((float)result);
-					SetEmoji((float)result);
+					SetBackgroundColor((double)result);
+					SetEmoji((double)result);
 				}
 			}
 			catch(ErrorResponseException e) when (e.Response.StatusCode.Equals(HttpStatusCode.Unauthorized))
@@ -96,51 +96,51 @@ namespace MobileAzureDevDays.ViewModels
 			}
 		}
 
-		void SetEmoji(float result)
+		void SetEmoji(double result)
 		{
 			switch (result)
 			{
-				case float number when (number < 0.4):
+				case double number when (number < 0.4):
 					EmojiLabelText = EmojiConstants.SadFaceEmoji;
 					break;
-				case float number when (number >= 0.4 && number <= 0.6):
+				case double number when (number >= 0.4 && number <= 0.6):
 					EmojiLabelText = EmojiConstants.NeutralFaceEmoji;
 					break;
-				case float number when (number > 0.6):
+				case double number when (number > 0.6):
 					EmojiLabelText = EmojiConstants.HappyFaceEmoji;
 					break;
 			}
 		}
 
-		void SetBackgroundColor(float result)
+		void SetBackgroundColor(double result)
 		{
 			switch (result)
 			{
-				case float number when (number <= 0.1):
+				case double number when (number <= 0.1):
 					BackgroundColor = ColorConstants.EmotionColor1;
 					break;
-				case float number when (number > 0.1 && number <= 0.2):
+				case double number when (number > 0.1 && number <= 0.2):
 					BackgroundColor = ColorConstants.EmotionColor2;
 					break;
-				case float number when (number > 0.2 && number <= 0.3):
+				case double number when (number > 0.2 && number <= 0.3):
 					BackgroundColor = ColorConstants.EmotionColor3;
 					break;
-				case float number when (number > 0.3 && number <= 0.4):
+				case double number when (number > 0.3 && number <= 0.4):
 					BackgroundColor = ColorConstants.EmotionColor4;
 					break;
-				case float number when (number > 0.4 && number <= 0.6):
+				case double number when (number > 0.4 && number <= 0.6):
 					BackgroundColor = ColorConstants.EmotionColor5;
 					break;
-				case float number when (number > 0.6 && number <= 0.7):
+				case double number when (number > 0.6 && number <= 0.7):
 					BackgroundColor = ColorConstants.EmotionColor6;
 					break;
-				case float number when (number > 0.7 && number <= 0.8):
+				case double number when (number > 0.7 && number <= 0.8):
 					BackgroundColor = ColorConstants.EmotionColor7;
 					break;
-				case float number when (number > 0.8 && number <= 0.9):
+				case double number when (number > 0.8 && number <= 0.9):
 					BackgroundColor = ColorConstants.EmotionColor8;
 					break;
-				case float number when (number > 0.9):
+				case double number when (number > 0.9):
 					BackgroundColor = ColorConstants.EmotionColor9;
 					break;
 			}
