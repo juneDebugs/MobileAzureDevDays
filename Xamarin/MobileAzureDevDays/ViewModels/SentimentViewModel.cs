@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Net;
 using System.Linq;
-using System.Diagnostics;
 using System.Windows.Input;
 using System.ComponentModel;
 using System.Threading.Tasks;
@@ -89,7 +88,6 @@ namespace MobileAzureDevDays.ViewModels
 			}
 			catch (Exception e)
 			{
-				Debug.WriteLine(e.GetType());
 				OnSentimentAnalyisFailed(e.Message);
 			}
 			finally

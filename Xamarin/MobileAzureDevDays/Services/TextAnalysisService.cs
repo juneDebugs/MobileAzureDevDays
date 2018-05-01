@@ -25,11 +25,9 @@ namespace MobileAzureDevDays.Services
 
 			var sentimentResults = await TextAnalyticsApiClient.SentimentAsync(sentimentDocument).ConfigureAwait(false);
 
-            if(sentimentResults?.Errors?.Any() ?? false)
+			if (sentimentResults?.Errors?.Any() ?? false)
 			{
-				var errorMessageList = sentimentResults.Errors.Select(x => x.Message);
-				var exceptionList = errorMessageList.Select(x => new Exception(x));
-
+				var exceptionList = sentimentResults.Errors.Select(x => new Exception($"Id: {x.Id}, Message: {x.Message}"));
 				throw new AggregateException(exceptionList);
 			}
 
