@@ -40,6 +40,7 @@
             BorderRadius="0" BorderWidth="1" BorderColor = "White"
             HorizontalOptions= "FillAndExpand" VerticalOptions= "Center" 
             AutomationId="{x:Static sharedConstants:AutomationIdConstants.SubmitButton}" />
+           
         
         <ActivityIndicator
             Color= "White"
